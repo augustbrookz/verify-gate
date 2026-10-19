@@ -329,8 +329,12 @@ const titleOf = (s) => `${s.citation} — ${topic(s.heading)}`;
 // Build
 // ---------------------------------------------------------------------------
 
-function main() {
-  const doc = JSON.parse(readFileSync(SRC, 'utf8'));
+/**
+ * Families and the balancing record for a source document. `prefix` names the families
+ * ("pub" for v1.1; the head-to-head set uses its own). Exported so other sets are built by
+ * exactly the same construction; the v1.1 output is unchanged.
+ */
+export function buildFamilies(doc, prefix = 'pub') {
   const sections = doc.sections.filter((s) => s.paragraphs.join(' ').length > 400);
   const byPart = new Map();
   for (const s of sections) {
@@ -359,7 +363,7 @@ function main() {
         const claim = lead.text.trim();
         if (!selfContained(claim) || usedClaims.has(claim)) continue;
         usedClaims.add(claim);
-        const fam = `pub-${section.key}-p${pi}-s${si}`;
+        const fam = `${prefix}-${section.key}-p${pi}-s${si}`;
         const evidence = evidencePassage(section, pi);
         if (!evidence.includes(claim)) continue;
         const distractor = siblings[pick(`${fam}:d`, siblings.length)];
@@ -552,9 +556,12 @@ function main() {
   }
   for (const f of families) f.items = f.items.filter((it) => keep.has(it.id));
   const kept = families.filter((f) => f.items.length);
-  families.length = 0;
-  families.push(...kept);
+  return { families: kept, quota, generated };
+}
 
+function main() {
+  const doc = JSON.parse(readFileSync(SRC, 'utf8'));
+  const { families, quota, generated } = buildFamilies(doc);
   const shard = {
     shard: 'public-shard-01',
     balancing: { quota_per_category: quota, generated },

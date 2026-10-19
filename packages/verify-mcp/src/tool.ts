@@ -48,12 +48,16 @@ export const INPUT_SCHEMA = {
   additionalProperties: false,
 } as const;
 
+// Nullable as anyOf branches, each with one type: portable to clients that map schemas onto a
+// single-type dialect (the Inspector's schema-portability check).
+const NULLABLE_STRING = { anyOf: [{ type: 'string' }, { type: 'null' }] } as const;
+
 const ITEM = {
   type: 'object',
   properties: {
     statement: { type: 'string', description: 'The statement in the answer' },
-    source_text: { type: ['string', 'null'], description: 'The source wording it drops, contradicts or lacks' },
-    source_id: { type: ['string', 'null'] },
+    source_text: { ...NULLABLE_STRING, description: 'The source wording it drops, contradicts or lacks' },
+    source_id: NULLABLE_STRING,
     reason: { type: 'string' },
   },
   required: ['statement', 'source_text', 'source_id', 'reason'],
@@ -72,9 +76,9 @@ export const OUTPUT_SCHEMA = {
     statements: { type: 'integer' },
     supported: { type: 'integer' },
     mode: { type: 'string', enum: ['fast', 'strict'] },
-    request_id: { type: ['string', 'null'] },
-    evidence_ledger_id: { type: ['string', 'null'] },
-    rules_version: { type: ['string', 'null'] },
+    request_id: NULLABLE_STRING,
+    evidence_ledger_id: NULLABLE_STRING,
+    rules_version: NULLABLE_STRING,
   },
   required: ['verdict', 'release_recommendation', 'summary', 'dropped', 'contradicted', 'unsupported', 'unresolved', 'statements', 'supported', 'mode', 'request_id', 'evidence_ledger_id', 'rules_version'],
 } as const;
