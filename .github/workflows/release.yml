@@ -1,0 +1,31 @@
+# Publish every public package to npm with provenance when a signed release tag (v*) is pushed.
+# Needs the repository secret NPM_TOKEN (an npm automation token with publish rights on @xyntherium).
+name: Release
+on:
+  push: { tags: ['v*.*.*'] }
+permissions:
+  contents: read
+  id-token: write   # npm provenance
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - name: The tag is signed by a release key
+        run: |
+          git config gpg.ssh.allowedSignersFile .github/allowed_signers
+          git verify-tag "$GITHUB_REF_NAME"
+      - uses: actions/setup-node@v4
+        with: { node-version: '20', registry-url: 'https://registry.npmjs.org' }
+      - run: npm install --no-audit --no-fund
+      - run: npm run build
+      - run: npm test
+      - name: Publish (skips versions already on npm)
+        env: { NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}' }
+        run: |
+          for p in verify-core verify-parity verify-policy verify-sdk verify-bench verify-cli verify-mcp xyntherium; do
+            name=$(node -p "require('./packages/$p/package.json').name"); version=$(node -p "require('./packages/$p/package.json').version")
+            if npm view "$name@$version" version >/dev/null 2>&1; then echo "$name@$version already published"; continue; fi
+            (cd "packages/$p" && npm publish --provenance --access public)
+          done

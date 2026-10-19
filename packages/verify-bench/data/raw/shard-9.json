@@ -1,0 +1,1207 @@
+{
+  "shard": 9,
+  "domain": "saas_billing_api_docs",
+  "families": [
+    {
+      "family_id": "q9-f1",
+      "items": [
+        {
+          "id": "q9-f1-sup-verbatim",
+          "family_id": "q9-f1",
+          "domain": "saas_billing_api_docs",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Can I get a refund if I cancel my Brindlecast subscription?",
+          "answer": "When you cancel an annual subscription, Brindlecast refunds the unused portion if the cancellation is made within 30 days of the most recent renewal date.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Brindlecast - Plans and pricing",
+              "retrieved_at": "2026-09-14",
+              "text": "Brindlecast offers three plans for podcasters. Hobby is for a single show with up to 3 hours of new audio per month. Creator supports up to 5 shows, unlimited upload hours and advanced listener analytics. Network is built for production companies and includes unlimited shows, team roles and a dedicated account manager.\n\nEvery plan can be billed monthly or annually. Annual billing is charged once a year on the anniversary of the day you first subscribed, and it costs the same as ten months of monthly billing. You can move from monthly to annual billing at any time; the new annual term starts on the day you switch.\n\nAll plans include unlimited listener downloads, a customisable podcast website and distribution to the major podcast directories. Dynamic ad insertion is available on Creator and Network. Prices are shown in US dollars and exclude any sales tax or VAT that applies where you live; tax is calculated at checkout from your billing address.\n\nWe email the account owner 7 days before each annual renewal with the amount that will be charged and the card it will be charged to."
+            },
+            {
+              "id": "S2",
+              "title": "Brindlecast Help Centre - Cancelling your subscription",
+              "retrieved_at": "2026-09-14",
+              "text": "You can cancel your Brindlecast subscription from Account Settings, then Billing, then Cancel subscription. Only the account owner can cancel; team members with the Producer or Editor role will see the option greyed out.\n\nAfter a cancellation takes effect, your account moves to read-only mode. Listeners can still play existing episodes and your RSS feeds keep working, but you cannot upload new episodes or edit show notes until you subscribe again.\n\nWhen you cancel an annual subscription, Brindlecast refunds the unused portion if the cancellation is made within 30 days of the most recent renewal date. The unused portion is calculated by day, from the date you cancel to the end of the annual term. Refunds go back to the payment method that paid for the renewal and usually arrive within 5 to 10 business days, depending on your bank.\n\nIf you would rather take a break than cancel, you can switch your shows to hiatus mode from the Show Settings page. Hiatus mode keeps your feeds online and your download statistics running, and it can be turned off at any time.\n\nCancelling does not delete your account or your audio files. To delete everything permanently, contact support after cancelling and we will confirm the request by email before removing your data."
+            },
+            {
+              "id": "S3",
+              "title": "Brindlecast - Moving your podcast to Brindlecast",
+              "retrieved_at": "2026-09-14",
+              "text": "Bringing an existing show to Brindlecast takes about ten minutes. Start by choosing Import a show from your dashboard and pasting the RSS feed address from your current host. Brindlecast copies your episodes, artwork, show notes and episode numbers, and keeps the original publish dates so your back catalogue appears in the right order.\n\nOnce the import finishes, set up a 301 redirect at your previous host so that it points to your new Brindlecast feed. Podcast apps follow the redirect automatically, and your existing subscribers move across without doing anything. Keep your old hosting account open for at least four weeks after setting the redirect, because some apps check feeds less often than others.\n\nDownload statistics from your previous host are not imported, since every host counts downloads slightly differently. Your Brindlecast analytics start from the day the redirect goes live. If your show is already listed in podcast directories, you do not need to submit it again; the directories pick up the new feed through the redirect.\n\nImports are free on every plan and do not count toward the monthly upload hours on the Hobby plan."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "When an annual Brindlecast subscription is cancelled within 30 days of its most recent renewal date, Brindlecast refunds the unused portion.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "When you cancel an annual subscription, Brindlecast refunds the unused portion if the cancellation is made within 30 days of the most recent renewal date."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the refund sentence copied verbatim from S2; the 30-days-from-renewal cancellation condition is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q9-f1-ql-condition",
+          "family_id": "q9-f1",
+          "domain": "saas_billing_api_docs",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "Can I get a refund if I cancel my Brindlecast subscription?",
+          "answer": "When you cancel an annual subscription, Brindlecast refunds the unused portion.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Brindlecast - Plans and pricing",
+              "retrieved_at": "2026-09-14",
+              "text": "Brindlecast offers three plans for podcasters. Hobby is for a single show with up to 3 hours of new audio per month. Creator supports up to 5 shows, unlimited upload hours and advanced listener analytics. Network is built for production companies and includes unlimited shows, team roles and a dedicated account manager.\n\nEvery plan can be billed monthly or annually. Annual billing is charged once a year on the anniversary of the day you first subscribed, and it costs the same as ten months of monthly billing. You can move from monthly to annual billing at any time; the new annual term starts on the day you switch.\n\nAll plans include unlimited listener downloads, a customisable podcast website and distribution to the major podcast directories. Dynamic ad insertion is available on Creator and Network. Prices are shown in US dollars and exclude any sales tax or VAT that applies where you live; tax is calculated at checkout from your billing address.\n\nWe email the account owner 7 days before each annual renewal with the amount that will be charged and the card it will be charged to."
+            },
+            {
+              "id": "S2",
+              "title": "Brindlecast Help Centre - Cancelling your subscription",
+              "retrieved_at": "2026-09-14",
+              "text": "You can cancel your Brindlecast subscription from Account Settings, then Billing, then Cancel subscription. Only the account owner can cancel; team members with the Producer or Editor role will see the option greyed out.\n\nAfter a cancellation takes effect, your account moves to read-only mode. Listeners can still play existing episodes and your RSS feeds keep working, but you cannot upload new episodes or edit show notes until you subscribe again.\n\nWhen you cancel an annual subscription, Brindlecast refunds the unused portion if the cancellation is made within 30 days of the most recent renewal date. The unused portion is calculated by day, from the date you cancel to the end of the annual term. Refunds go back to the payment method that paid for the renewal and usually arrive within 5 to 10 business days, depending on your bank.\n\nIf you would rather take a break than cancel, you can switch your shows to hiatus mode from the Show Settings page. Hiatus mode keeps your feeds online and your download statistics running, and it can be turned off at any time.\n\nCancelling does not delete your account or your audio files. To delete everything permanently, contact support after cancelling and we will confirm the request by email before removing your data."
+            },
+            {
+              "id": "S3",
+              "title": "Brindlecast - Moving your podcast to Brindlecast",
+              "retrieved_at": "2026-09-14",
+              "text": "Bringing an existing show to Brindlecast takes about ten minutes. Start by choosing Import a show from your dashboard and pasting the RSS feed address from your current host. Brindlecast copies your episodes, artwork, show notes and episode numbers, and keeps the original publish dates so your back catalogue appears in the right order.\n\nOnce the import finishes, set up a 301 redirect at your previous host so that it points to your new Brindlecast feed. Podcast apps follow the redirect automatically, and your existing subscribers move across without doing anything. Keep your old hosting account open for at least four weeks after setting the redirect, because some apps check feeds less often than others.\n\nDownload statistics from your previous host are not imported, since every host counts downloads slightly differently. Your Brindlecast analytics start from the day the redirect goes live. If your show is already listed in podcast directories, you do not need to submit it again; the directories pick up the new feed through the redirect.\n\nImports are free on every plan and do not count toward the monthly upload hours on the Hobby plan."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "When an annual Brindlecast subscription is cancelled, Brindlecast refunds the unused portion.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "When you cancel an annual subscription, Brindlecast refunds the unused portion if the cancellation is made within 30 days of the most recent renewal date."
+              }
+            ],
+            "dropped_qualifier": "if the cancellation is made within 30 days of the most recent renewal date",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q9-f1-sup-verbatim",
+            "note": "Deleted only the condition 'if the cancellation is made within 30 days of the most recent renewal date'; S2 states the refund under that condition and no passage says what happens to later cancellations, so the unconditional claim is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q9-f2",
+      "items": [
+        {
+          "id": "q9-f2-sup-verbatim",
+          "family_id": "q9-f2",
+          "domain": "saas_billing_api_docs",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "What is the daily request limit for the Kestrune Geocoding API?",
+          "answer": "Once a verified billing account is attached, a Kestrune Geocoding API project has a daily limit of 50,000 requests.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Kestrune Geocoding API - Usage limits",
+              "retrieved_at": "2026-09-21",
+              "text": "Usage limits for the Kestrune Geocoding API are applied per project, not per API key. If a project has several keys, all of them draw from the same allowance, so adding or rotating keys does not change how much traffic the project can send.\n\nOnce a verified billing account is attached, a Kestrune Geocoding API project has a daily limit of 50,000 requests. The daily count resets at midnight UTC. Forward geocoding, reverse geocoding and autocomplete requests all count toward the same total, and a batch request counts as one request for each address it contains.\n\nTo attach a billing account, open the project in the Kestrune console, choose Billing, and either select an existing billing account or create a new one. Verification normally completes within a few minutes, but it can take up to one business day if the card issuer asks for extra checks. The Billing page shows the current verification status.\n\nWhen a project reaches its daily limit, further requests return HTTP 429 with the error code DAILY_LIMIT_REACHED until the count resets. Requests that fail because of a malformed query still count toward the daily total, so validate input on your side where you can.\n\nThe Quotas page in the console shows current usage for the project, updated every five minutes, along with the last 30 days of traffic."
+            },
+            {
+              "id": "S2",
+              "title": "Kestrune Geocoding API - Authentication",
+              "retrieved_at": "2026-09-21",
+              "text": "Every request to the Kestrune Geocoding API must include an API key, either in the key query parameter or in the X-Kestrune-Key header. Keys are created in the Kestrune console under Credentials, and each key belongs to a single project.\n\nWe recommend restricting each key before you use it in production. Browser keys can be limited to a list of allowed websites, and server keys can be limited to a list of IP addresses or address ranges. A restricted key that is used from somewhere not on its list is rejected with HTTP 403 and the error code KEY_RESTRICTED.\n\nNever embed an unrestricted server key in a mobile app or a public code repository. If a key is exposed, create a replacement, update your applications, and then delete the old key; deleted keys stop working within one minute.\n\nKeys do not expire on their own. Project owners receive an email reminder when a key has not been used for 180 days, so that unused keys can be cleaned up. Each project can hold up to 20 active keys at a time."
+            },
+            {
+              "id": "S3",
+              "title": "Kestrune Geocoding API - Response format and accuracy",
+              "retrieved_at": "2026-09-21",
+              "text": "Each Geocoding API response contains a results array, ordered from the best match to the weakest. A result includes the formatted address, the latitude and longitude, the address components, and a confidence score between 0 and 1.\n\nThe confidence score reflects how closely the result matches the text you sent, not how precise the coordinates are. For precision, read the location_type field: ROOFTOP means the point was matched to a specific building, INTERPOLATED means it was estimated between two known addresses on the same street, and AREA means the point is the centre of a postcode, district or city.\n\nIf no result reaches a confidence of 0.3, the results array is empty and the status field is ZERO_RESULTS. You can lower or raise this threshold for a single request with the min_confidence parameter.\n\nResponses are returned as JSON by default. Add format=geojson to receive a GeoJSON FeatureCollection instead, which many mapping libraries can display without conversion. Coordinates are always given in WGS 84."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "A Kestrune Geocoding API project that has a verified billing account attached has a daily limit of 50,000 requests.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Once a verified billing account is attached, a Kestrune Geocoding API project has a daily limit of 50,000 requests."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the daily-limit sentence copied verbatim from S1; the verified-billing-account condition is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q9-f2-ql-condition",
+          "family_id": "q9-f2",
+          "domain": "saas_billing_api_docs",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "What is the daily request limit for the Kestrune Geocoding API?",
+          "answer": "A Kestrune Geocoding API project has a daily limit of 50,000 requests.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Kestrune Geocoding API - Usage limits",
+              "retrieved_at": "2026-09-21",
+              "text": "Usage limits for the Kestrune Geocoding API are applied per project, not per API key. If a project has several keys, all of them draw from the same allowance, so adding or rotating keys does not change how much traffic the project can send.\n\nOnce a verified billing account is attached, a Kestrune Geocoding API project has a daily limit of 50,000 requests. The daily count resets at midnight UTC. Forward geocoding, reverse geocoding and autocomplete requests all count toward the same total, and a batch request counts as one request for each address it contains.\n\nTo attach a billing account, open the project in the Kestrune console, choose Billing, and either select an existing billing account or create a new one. Verification normally completes within a few minutes, but it can take up to one business day if the card issuer asks for extra checks. The Billing page shows the current verification status.\n\nWhen a project reaches its daily limit, further requests return HTTP 429 with the error code DAILY_LIMIT_REACHED until the count resets. Requests that fail because of a malformed query still count toward the daily total, so validate input on your side where you can.\n\nThe Quotas page in the console shows current usage for the project, updated every five minutes, along with the last 30 days of traffic."
+            },
+            {
+              "id": "S2",
+              "title": "Kestrune Geocoding API - Authentication",
+              "retrieved_at": "2026-09-21",
+              "text": "Every request to the Kestrune Geocoding API must include an API key, either in the key query parameter or in the X-Kestrune-Key header. Keys are created in the Kestrune console under Credentials, and each key belongs to a single project.\n\nWe recommend restricting each key before you use it in production. Browser keys can be limited to a list of allowed websites, and server keys can be limited to a list of IP addresses or address ranges. A restricted key that is used from somewhere not on its list is rejected with HTTP 403 and the error code KEY_RESTRICTED.\n\nNever embed an unrestricted server key in a mobile app or a public code repository. If a key is exposed, create a replacement, update your applications, and then delete the old key; deleted keys stop working within one minute.\n\nKeys do not expire on their own. Project owners receive an email reminder when a key has not been used for 180 days, so that unused keys can be cleaned up. Each project can hold up to 20 active keys at a time."
+            },
+            {
+              "id": "S3",
+              "title": "Kestrune Geocoding API - Response format and accuracy",
+              "retrieved_at": "2026-09-21",
+              "text": "Each Geocoding API response contains a results array, ordered from the best match to the weakest. A result includes the formatted address, the latitude and longitude, the address components, and a confidence score between 0 and 1.\n\nThe confidence score reflects how closely the result matches the text you sent, not how precise the coordinates are. For precision, read the location_type field: ROOFTOP means the point was matched to a specific building, INTERPOLATED means it was estimated between two known addresses on the same street, and AREA means the point is the centre of a postcode, district or city.\n\nIf no result reaches a confidence of 0.3, the results array is empty and the status field is ZERO_RESULTS. You can lower or raise this threshold for a single request with the min_confidence parameter.\n\nResponses are returned as JSON by default. Add format=geojson to receive a GeoJSON FeatureCollection instead, which many mapping libraries can display without conversion. Coordinates are always given in WGS 84."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "A Kestrune Geocoding API project has a daily limit of 50,000 requests.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Once a verified billing account is attached, a Kestrune Geocoding API project has a daily limit of 50,000 requests."
+              }
+            ],
+            "dropped_qualifier": "Once a verified billing account is attached",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q9-f2-sup-verbatim",
+            "note": "Deleted only the condition 'Once a verified billing account is attached' and recapitalised the sentence; S1 gives the 50,000 limit only for projects with a verified billing account and no passage gives a limit for other projects, so the unconditional limit is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q9-f3",
+      "items": [
+        {
+          "id": "q9-f3-sup-verbatim",
+          "family_id": "q9-f3",
+          "domain": "saas_billing_api_docs",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Do I get anything for referring someone to Ferrowick?",
+          "answer": "Ferrowick gives a $50 account credit for each referred workspace if that workspace stays on a paid plan for 60 days.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Ferrowick Forms - Plans and billing",
+              "retrieved_at": "2026-09-08",
+              "text": "Ferrowick has one free plan and two paid plans. The Free plan allows up to 3 published forms and 100 responses per month. Pro removes the form limit, raises the response allowance to 5,000 per month, and adds file uploads and custom thank-you pages. Business adds single sign-on, an audit log, and response data stored in the region of your choice.\n\nPaid plans are billed per workspace, not per user, so you can invite as many collaborators as you like without changing the price. You can pay monthly or annually, and you can move between Pro and Business at any time from Settings, then Billing. Upgrades are charged straight away for the rest of the current billing period; downgrades take effect at the start of the next period.\n\nInvoices are emailed to the workspace owner and to any extra billing contacts you add. Each invoice shows the plan, the billing period, any account credit applied and any tax charged. You can download past invoices as PDF files from the Billing page at any time."
+            },
+            {
+              "id": "S2",
+              "title": "Ferrowick Forms - Conditional logic",
+              "retrieved_at": "2026-09-08",
+              "text": "Conditional logic lets a form change as people fill it in. You can show or hide questions, skip whole pages, or send respondents to a different ending depending on the answers they give.\n\nTo add a rule, open the form editor, select a question and choose Add logic. Each rule has a condition and an action. Conditions can compare an answer with a fixed value, check whether a question was answered at all, or test a calculated score. Actions can show a question, hide a question, jump to a page, or end the form.\n\nRules are checked from top to bottom, and the first matching jump rule wins, so put your most specific rules first. Hidden questions are never required, even if they are marked as required in the editor, because respondents have no way to answer them.\n\nYou can preview the effect of your rules with the Test mode button in the top bar. Test responses are not saved and do not count toward your monthly response allowance. Conditional logic is available on every plan, including Free."
+            },
+            {
+              "id": "S3",
+              "title": "Ferrowick Forms - Referral programme",
+              "retrieved_at": "2026-09-08",
+              "text": "Every Ferrowick workspace has a personal referral link, which you can find under Settings, then Referrals. Share it with colleagues, clients or anyone else who builds forms, surveys or quizzes.\n\nWhen someone signs up through your link, their new workspace is tagged as referred by you, and the tag stays in place even if they take a few weeks to try the product before choosing a plan. A workspace can only be tagged once, and it cannot be tagged by a workspace that shares the same billing details, so you cannot refer yourself.\n\nFerrowick gives a $50 account credit for each referred workspace if that workspace stays on a paid plan for 60 days. Credits appear on the Referrals page as soon as they are earned and are applied automatically to your next invoices until they are used up. Account credit cannot be exchanged for cash or moved to another workspace.\n\nThere is no limit on how many people you can refer. The Referrals page lists every workspace that signed up through your link, along with the date it signed up and the plan it is on today.\n\nThe person you refer also benefits: their first invoice on any paid plan is reduced by 20%."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Ferrowick gives a $50 account credit for each referred workspace that stays on a paid plan for 60 days.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Ferrowick gives a $50 account credit for each referred workspace if that workspace stays on a paid plan for 60 days."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the referral-credit sentence copied verbatim from S3; the 60-days-on-a-paid-plan condition is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q9-f3-ql-condition",
+          "family_id": "q9-f3",
+          "domain": "saas_billing_api_docs",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "Do I get anything for referring someone to Ferrowick?",
+          "answer": "Ferrowick gives a $50 account credit for each referred workspace.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Ferrowick Forms - Plans and billing",
+              "retrieved_at": "2026-09-08",
+              "text": "Ferrowick has one free plan and two paid plans. The Free plan allows up to 3 published forms and 100 responses per month. Pro removes the form limit, raises the response allowance to 5,000 per month, and adds file uploads and custom thank-you pages. Business adds single sign-on, an audit log, and response data stored in the region of your choice.\n\nPaid plans are billed per workspace, not per user, so you can invite as many collaborators as you like without changing the price. You can pay monthly or annually, and you can move between Pro and Business at any time from Settings, then Billing. Upgrades are charged straight away for the rest of the current billing period; downgrades take effect at the start of the next period.\n\nInvoices are emailed to the workspace owner and to any extra billing contacts you add. Each invoice shows the plan, the billing period, any account credit applied and any tax charged. You can download past invoices as PDF files from the Billing page at any time."
+            },
+            {
+              "id": "S2",
+              "title": "Ferrowick Forms - Conditional logic",
+              "retrieved_at": "2026-09-08",
+              "text": "Conditional logic lets a form change as people fill it in. You can show or hide questions, skip whole pages, or send respondents to a different ending depending on the answers they give.\n\nTo add a rule, open the form editor, select a question and choose Add logic. Each rule has a condition and an action. Conditions can compare an answer with a fixed value, check whether a question was answered at all, or test a calculated score. Actions can show a question, hide a question, jump to a page, or end the form.\n\nRules are checked from top to bottom, and the first matching jump rule wins, so put your most specific rules first. Hidden questions are never required, even if they are marked as required in the editor, because respondents have no way to answer them.\n\nYou can preview the effect of your rules with the Test mode button in the top bar. Test responses are not saved and do not count toward your monthly response allowance. Conditional logic is available on every plan, including Free."
+            },
+            {
+              "id": "S3",
+              "title": "Ferrowick Forms - Referral programme",
+              "retrieved_at": "2026-09-08",
+              "text": "Every Ferrowick workspace has a personal referral link, which you can find under Settings, then Referrals. Share it with colleagues, clients or anyone else who builds forms, surveys or quizzes.\n\nWhen someone signs up through your link, their new workspace is tagged as referred by you, and the tag stays in place even if they take a few weeks to try the product before choosing a plan. A workspace can only be tagged once, and it cannot be tagged by a workspace that shares the same billing details, so you cannot refer yourself.\n\nFerrowick gives a $50 account credit for each referred workspace if that workspace stays on a paid plan for 60 days. Credits appear on the Referrals page as soon as they are earned and are applied automatically to your next invoices until they are used up. Account credit cannot be exchanged for cash or moved to another workspace.\n\nThere is no limit on how many people you can refer. The Referrals page lists every workspace that signed up through your link, along with the date it signed up and the plan it is on today.\n\nThe person you refer also benefits: their first invoice on any paid plan is reduced by 20%."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Ferrowick gives a $50 account credit for each referred workspace.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Ferrowick gives a $50 account credit for each referred workspace if that workspace stays on a paid plan for 60 days."
+              }
+            ],
+            "dropped_qualifier": "if that workspace stays on a paid plan for 60 days",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q9-f3-sup-verbatim",
+            "note": "Deleted only the condition 'if that workspace stays on a paid plan for 60 days'; S3 ties the credit to that condition, S1 shows referred workspaces could stay on the Free plan, and no passage says what happens to them, so the unconditional credit is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q9-f4",
+      "items": [
+        {
+          "id": "q9-f4-sup-verbatim",
+          "family_id": "q9-f4",
+          "domain": "saas_billing_api_docs",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "What is Quorvel's hourly sending limit for a new domain?",
+          "answer": "A new sending domain on Quorvel has an hourly sending limit of 1,000 emails if its DKIM record has been verified.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Quorvel Mail API - Sending your first message",
+              "retrieved_at": "2026-09-29",
+              "text": "To send a message, make a POST request to the /v1/messages endpoint with your API key in the Authorization header as a bearer token. The request body is JSON and must include from, to, subject, and at least one of text or html.\n\nThe from address must use a domain you have added to your Quorvel account. You can send to up to 50 recipients in a single request by passing an array in the to field; each recipient receives a separate copy, and other recipients' addresses are not shown.\n\nA successful request returns HTTP 202 with a message_id for each recipient. Keep these IDs if you want to match delivery, open and bounce events to the messages you sent; every webhook event includes the message_id it relates to.\n\nIf the request body is invalid, the API returns HTTP 422 with a list of the fields that failed validation. Authentication problems return HTTP 401. The official Quorvel client libraries for Node.js, Python, Ruby and Go wrap these responses in typed errors and retry network timeouts for you."
+            },
+            {
+              "id": "S2",
+              "title": "Quorvel Mail API - Sending limits for new domains",
+              "retrieved_at": "2026-09-29",
+              "text": "Mailbox providers are cautious about mail from domains they have not seen before, so Quorvel paces the volume a new domain can send while it builds a reputation. A domain counts as new for its first 30 days after it is added to your Quorvel account.\n\nA new sending domain on Quorvel has an hourly sending limit of 1,000 emails if its DKIM record has been verified. To verify DKIM, copy the two CNAME records shown on the Domains page into your DNS settings and choose Check records. Most DNS providers publish changes within an hour, although some take up to 48 hours.\n\nMessages that would go over the hourly limit are not rejected. The API accepts them with status 202 and places them in a queue, and Quorvel releases them in the following hours in the order they were received. The Activity page shows how many messages are waiting.\n\nTo help a new domain warm up smoothly, start with your most engaged recipients, such as people who signed up or bought something recently, and keep complaint rates below 0.1%. Large campaigns to old or purchased lists in the first month are the most common reason a domain's reputation suffers."
+            },
+            {
+              "id": "S3",
+              "title": "Quorvel Mail API - Suppression lists",
+              "retrieved_at": "2026-09-29",
+              "text": "Quorvel keeps a suppression list for each account so that you do not keep emailing addresses that cannot or should not receive your mail. An address is added automatically when a message to it hard bounces, when the recipient marks a message as spam, or when they use the unsubscribe link in a message sent through Quorvel.\n\nWhen you send to a suppressed address, the API still returns HTTP 202, but the message is not delivered and a suppressed event is sent to your webhook instead. This keeps your sending code simple, because you do not need to check the list yourself before every send.\n\nYou can view, search and export the suppression list from the Suppressions page or through the /v1/suppressions endpoint. Addresses that were added because of a hard bounce can be removed if you are confident the problem has been fixed, for example after a typo in a customer record is corrected. Addresses added because of a spam complaint or an unsubscribe can only be removed by the recipient opting in again."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "A new sending domain on Quorvel whose DKIM record has been verified has an hourly sending limit of 1,000 emails.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "A new sending domain on Quorvel has an hourly sending limit of 1,000 emails if its DKIM record has been verified."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the hourly-limit sentence copied verbatim from S2; the DKIM-verified condition is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q9-f4-ql-condition",
+          "family_id": "q9-f4",
+          "domain": "saas_billing_api_docs",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "What is Quorvel's hourly sending limit for a new domain?",
+          "answer": "A new sending domain on Quorvel has an hourly sending limit of 1,000 emails.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Quorvel Mail API - Sending your first message",
+              "retrieved_at": "2026-09-29",
+              "text": "To send a message, make a POST request to the /v1/messages endpoint with your API key in the Authorization header as a bearer token. The request body is JSON and must include from, to, subject, and at least one of text or html.\n\nThe from address must use a domain you have added to your Quorvel account. You can send to up to 50 recipients in a single request by passing an array in the to field; each recipient receives a separate copy, and other recipients' addresses are not shown.\n\nA successful request returns HTTP 202 with a message_id for each recipient. Keep these IDs if you want to match delivery, open and bounce events to the messages you sent; every webhook event includes the message_id it relates to.\n\nIf the request body is invalid, the API returns HTTP 422 with a list of the fields that failed validation. Authentication problems return HTTP 401. The official Quorvel client libraries for Node.js, Python, Ruby and Go wrap these responses in typed errors and retry network timeouts for you."
+            },
+            {
+              "id": "S2",
+              "title": "Quorvel Mail API - Sending limits for new domains",
+              "retrieved_at": "2026-09-29",
+              "text": "Mailbox providers are cautious about mail from domains they have not seen before, so Quorvel paces the volume a new domain can send while it builds a reputation. A domain counts as new for its first 30 days after it is added to your Quorvel account.\n\nA new sending domain on Quorvel has an hourly sending limit of 1,000 emails if its DKIM record has been verified. To verify DKIM, copy the two CNAME records shown on the Domains page into your DNS settings and choose Check records. Most DNS providers publish changes within an hour, although some take up to 48 hours.\n\nMessages that would go over the hourly limit are not rejected. The API accepts them with status 202 and places them in a queue, and Quorvel releases them in the following hours in the order they were received. The Activity page shows how many messages are waiting.\n\nTo help a new domain warm up smoothly, start with your most engaged recipients, such as people who signed up or bought something recently, and keep complaint rates below 0.1%. Large campaigns to old or purchased lists in the first month are the most common reason a domain's reputation suffers."
+            },
+            {
+              "id": "S3",
+              "title": "Quorvel Mail API - Suppression lists",
+              "retrieved_at": "2026-09-29",
+              "text": "Quorvel keeps a suppression list for each account so that you do not keep emailing addresses that cannot or should not receive your mail. An address is added automatically when a message to it hard bounces, when the recipient marks a message as spam, or when they use the unsubscribe link in a message sent through Quorvel.\n\nWhen you send to a suppressed address, the API still returns HTTP 202, but the message is not delivered and a suppressed event is sent to your webhook instead. This keeps your sending code simple, because you do not need to check the list yourself before every send.\n\nYou can view, search and export the suppression list from the Suppressions page or through the /v1/suppressions endpoint. Addresses that were added because of a hard bounce can be removed if you are confident the problem has been fixed, for example after a typo in a customer record is corrected. Addresses added because of a spam complaint or an unsubscribe can only be removed by the recipient opting in again."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "A new sending domain on Quorvel has an hourly sending limit of 1,000 emails.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "A new sending domain on Quorvel has an hourly sending limit of 1,000 emails if its DKIM record has been verified."
+              }
+            ],
+            "dropped_qualifier": "if its DKIM record has been verified",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q9-f4-sup-verbatim",
+            "note": "Deleted only the condition 'if its DKIM record has been verified'; S2 gives the 1,000-per-hour limit only for DKIM-verified new domains and no passage gives a limit for unverified ones, so the unconditional limit is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q9-f5",
+      "items": [
+        {
+          "id": "q9-f5-sup-verbatim",
+          "family_id": "q9-f5",
+          "domain": "saas_billing_api_docs",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "How many map tile loads per month does Tarnwise include?",
+          "answer": "Tarnwise includes 250,000 map tile loads per month for workspaces on the Growth plan.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Tarnwise Maps - Workspace members and roles",
+              "retrieved_at": "2026-08-31",
+              "text": "A Tarnwise workspace groups your styles, tokens, datasets and billing in one place. The person who creates the workspace becomes its owner and can invite other people by email from Workspace settings, then Members.\n\nThere are three roles. Owners can manage billing, change the plan and delete the workspace. Admins can invite and remove members, create and revoke access tokens, and publish styles. Viewers can open styles and datasets in Tarnwise Studio and see usage reports, but cannot change anything.\n\nA workspace must always have at least one owner. To hand over ownership, the current owner promotes another member to owner and can then leave or change their own role. If the only owner leaves the company without doing this, contact support from an address on the workspace's verified email domain and we will help you recover access.\n\nMembers who belong to several workspaces can switch between them from the menu in the top-left corner of Tarnwise Studio. Access tokens always belong to one workspace, and usage from a token is counted against that workspace only."
+            },
+            {
+              "id": "S2",
+              "title": "Tarnwise Maps - The Growth plan",
+              "retrieved_at": "2026-08-31",
+              "text": "The Growth plan is designed for products that have moved past the prototype stage and serve maps to real users every day. It sits between the Starter and Scale plans and costs $149 per month per workspace.\n\nTarnwise includes 250,000 map tile loads per month for workspaces on the Growth plan. A map tile load is counted each time a vector or raster tile is requested from our servers; tiles served from a browser or device cache are not counted. Static map images and geocoding requests are tracked separately and do not use tile loads.\n\nGrowth workspaces can create up to 25 custom map styles and publish them to any number of applications. Style changes go live within a minute of publishing, so you can adjust colours, labels and layers without shipping a new version of your app.\n\nThe plan also adds team access for up to 10 members, email alerts when the workspace reaches 50%, 80% and 100% of its included tile loads, and email support with a response target of one business day.\n\nTo move to Growth, open Workspace settings, choose Plan, and select Growth. The change takes effect straight away, and the rest of the current month is charged on a pro rata basis."
+            },
+            {
+              "id": "S3",
+              "title": "Tarnwise Maps - Map SDK for iOS and Android",
+              "retrieved_at": "2026-08-31",
+              "text": "The Tarnwise Map SDK brings interactive vector maps to native iOS and Android apps. It supports iOS 15 and later and Android 8.0 (API level 26) and later. Install it with Swift Package Manager or CocoaPods on iOS, and from the Tarnwise Maven repository on Android.\n\nAfter installing, add your public access token to the app's configuration and place a MapView in your layout. The SDK renders maps on the device using the GPU, so panning, zooming and rotating stay smooth even on older phones. Custom styles you publish in the Tarnwise Studio editor are loaded by style ID and update in your app without a new release.\n\nMarkers, lines and polygons can be added from code or loaded from a GeoJSON source. For large datasets, use clustering, which groups nearby markers at low zoom levels and splits them apart as the user zooms in.\n\nAccess tokens used in mobile apps are public by design. Restrict them to your app's bundle identifier or package name on the Tokens page so that they cannot be reused by someone else's app."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Tarnwise workspaces on the Growth plan include 250,000 map tile loads per month.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Tarnwise includes 250,000 map tile loads per month for workspaces on the Growth plan."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the included-tile-loads sentence copied verbatim from S2; the Growth-plan scope is the material qualifier (S2 names Starter and Scale as other plans)."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q9-f5-ql-scope",
+          "family_id": "q9-f5",
+          "domain": "saas_billing_api_docs",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "How many map tile loads per month does Tarnwise include?",
+          "answer": "Tarnwise includes 250,000 map tile loads per month.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Tarnwise Maps - Workspace members and roles",
+              "retrieved_at": "2026-08-31",
+              "text": "A Tarnwise workspace groups your styles, tokens, datasets and billing in one place. The person who creates the workspace becomes its owner and can invite other people by email from Workspace settings, then Members.\n\nThere are three roles. Owners can manage billing, change the plan and delete the workspace. Admins can invite and remove members, create and revoke access tokens, and publish styles. Viewers can open styles and datasets in Tarnwise Studio and see usage reports, but cannot change anything.\n\nA workspace must always have at least one owner. To hand over ownership, the current owner promotes another member to owner and can then leave or change their own role. If the only owner leaves the company without doing this, contact support from an address on the workspace's verified email domain and we will help you recover access.\n\nMembers who belong to several workspaces can switch between them from the menu in the top-left corner of Tarnwise Studio. Access tokens always belong to one workspace, and usage from a token is counted against that workspace only."
+            },
+            {
+              "id": "S2",
+              "title": "Tarnwise Maps - The Growth plan",
+              "retrieved_at": "2026-08-31",
+              "text": "The Growth plan is designed for products that have moved past the prototype stage and serve maps to real users every day. It sits between the Starter and Scale plans and costs $149 per month per workspace.\n\nTarnwise includes 250,000 map tile loads per month for workspaces on the Growth plan. A map tile load is counted each time a vector or raster tile is requested from our servers; tiles served from a browser or device cache are not counted. Static map images and geocoding requests are tracked separately and do not use tile loads.\n\nGrowth workspaces can create up to 25 custom map styles and publish them to any number of applications. Style changes go live within a minute of publishing, so you can adjust colours, labels and layers without shipping a new version of your app.\n\nThe plan also adds team access for up to 10 members, email alerts when the workspace reaches 50%, 80% and 100% of its included tile loads, and email support with a response target of one business day.\n\nTo move to Growth, open Workspace settings, choose Plan, and select Growth. The change takes effect straight away, and the rest of the current month is charged on a pro rata basis."
+            },
+            {
+              "id": "S3",
+              "title": "Tarnwise Maps - Map SDK for iOS and Android",
+              "retrieved_at": "2026-08-31",
+              "text": "The Tarnwise Map SDK brings interactive vector maps to native iOS and Android apps. It supports iOS 15 and later and Android 8.0 (API level 26) and later. Install it with Swift Package Manager or CocoaPods on iOS, and from the Tarnwise Maven repository on Android.\n\nAfter installing, add your public access token to the app's configuration and place a MapView in your layout. The SDK renders maps on the device using the GPU, so panning, zooming and rotating stay smooth even on older phones. Custom styles you publish in the Tarnwise Studio editor are loaded by style ID and update in your app without a new release.\n\nMarkers, lines and polygons can be added from code or loaded from a GeoJSON source. For large datasets, use clustering, which groups nearby markers at low zoom levels and splits them apart as the user zooms in.\n\nAccess tokens used in mobile apps are public by design. Restrict them to your app's bundle identifier or package name on the Tokens page so that they cannot be reused by someone else's app."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Tarnwise includes 250,000 map tile loads per month.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Tarnwise includes 250,000 map tile loads per month for workspaces on the Growth plan."
+              }
+            ],
+            "dropped_qualifier": "for workspaces on the Growth plan",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q9-f5-sup-verbatim",
+            "note": "Deleted only the scope 'for workspaces on the Growth plan'; S2 states the allowance for Growth only, names Starter and Scale as other plans, and no passage gives their allowances, so the plan-wide claim is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q9-f6",
+      "items": [
+        {
+          "id": "q9-f6-sup-verbatim",
+          "family_id": "q9-f6",
+          "domain": "saas_billing_api_docs",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "How much does the Inkravel Sign Team plan cost?",
+          "answer": "For customers with a billing address in India, the Inkravel Sign Team plan costs $6 per user per month.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Inkravel Sign - Pricing and billing in India",
+              "retrieved_at": "2026-09-17",
+              "text": "This page covers prices, tax and payment for Inkravel Sign accounts whose billing address is in India.\n\nFor customers with a billing address in India, the Inkravel Sign Team plan costs $6 per user per month. Prices are set in US dollars, and your bank may show the charge in rupees after converting it at its own exchange rate. Annual billing is also available and is charged once a year for the full number of users on the account.\n\nGoods and services tax (GST) at 18% is added to every charge. If your business is registered for GST, enter your GSTIN under Billing, then Company details, and it will appear on every invoice so that you can claim input tax credit. Invoices are issued by our Indian billing entity and can be downloaded as PDF files from the Billing page.\n\nPayments can be made with Indian debit and credit cards that are enabled for international recurring payments. Some banks ask you to approve each recurring charge; if a charge is declined because it was not approved, we retry it after 24 hours and send an email to the account owner.\n\nUsers are counted on the first day of each billing period. If you add users partway through a period, they are charged pro rata from the day they are added."
+            },
+            {
+              "id": "S2",
+              "title": "Inkravel Sign - Signer authentication options",
+              "retrieved_at": "2026-09-17",
+              "text": "By default, a signer opens a document from the link in their invitation email. For documents that need stronger proof of identity, you can add an authentication step that the signer must complete before the document opens.\n\nThree options are available. Access code: you choose a code and share it with the signer by another channel, such as a phone call. SMS code: Inkravel Sign texts a six-digit code to a mobile number you enter for the signer. Identity document check: the signer photographs a passport or driving licence and records a short selfie video, which is compared with the document photo.\n\nYou can set a different option for each signer on the same envelope. The audit trail records which method each signer used and the time they passed it.\n\nSigners get three attempts at an access code or SMS code before the envelope is locked for that signer; the sender can unlock it from the envelope page. Identity document checks are charged per check and appear as a separate line on your usage statement."
+            },
+            {
+              "id": "S3",
+              "title": "Inkravel Sign - Where your documents are stored",
+              "retrieved_at": "2026-09-17",
+              "text": "When you create an Inkravel Sign account, you choose where your signed documents and audit trails are stored. Three storage regions are available: the European Union (Frankfurt), India (Mumbai) and the United States (Virginia). The region is shown on the Security page of your account settings.\n\nAll copies of your documents, including backups, stay inside the chosen region. Signing pages are served from the location nearest to each signer for speed, but the document itself is fetched from your storage region and is not cached anywhere else.\n\nThe storage region does not have to match your billing address. A company billed in Germany can store its documents in the United States, for example, if that is where its own customers expect them to be.\n\nMoving an existing account to a different region is possible on annual plans. Our support team schedules the move, which usually takes place over a weekend, and documents are read-only for up to six hours while the transfer completes. Templates, users and integrations move with the account, and links in previously sent emails keep working."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "For customers with a billing address in India, the Inkravel Sign Team plan costs $6 per user per month.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "For customers with a billing address in India, the Inkravel Sign Team plan costs $6 per user per month."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the Team plan price sentence copied verbatim from S1; the India billing-address scope is the material qualifier (S3 shows customers billed elsewhere, such as Germany)."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q9-f6-ql-scope",
+          "family_id": "q9-f6",
+          "domain": "saas_billing_api_docs",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "How much does the Inkravel Sign Team plan cost?",
+          "answer": "The Inkravel Sign Team plan costs $6 per user per month.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Inkravel Sign - Pricing and billing in India",
+              "retrieved_at": "2026-09-17",
+              "text": "This page covers prices, tax and payment for Inkravel Sign accounts whose billing address is in India.\n\nFor customers with a billing address in India, the Inkravel Sign Team plan costs $6 per user per month. Prices are set in US dollars, and your bank may show the charge in rupees after converting it at its own exchange rate. Annual billing is also available and is charged once a year for the full number of users on the account.\n\nGoods and services tax (GST) at 18% is added to every charge. If your business is registered for GST, enter your GSTIN under Billing, then Company details, and it will appear on every invoice so that you can claim input tax credit. Invoices are issued by our Indian billing entity and can be downloaded as PDF files from the Billing page.\n\nPayments can be made with Indian debit and credit cards that are enabled for international recurring payments. Some banks ask you to approve each recurring charge; if a charge is declined because it was not approved, we retry it after 24 hours and send an email to the account owner.\n\nUsers are counted on the first day of each billing period. If you add users partway through a period, they are charged pro rata from the day they are added."
+            },
+            {
+              "id": "S2",
+              "title": "Inkravel Sign - Signer authentication options",
+              "retrieved_at": "2026-09-17",
+              "text": "By default, a signer opens a document from the link in their invitation email. For documents that need stronger proof of identity, you can add an authentication step that the signer must complete before the document opens.\n\nThree options are available. Access code: you choose a code and share it with the signer by another channel, such as a phone call. SMS code: Inkravel Sign texts a six-digit code to a mobile number you enter for the signer. Identity document check: the signer photographs a passport or driving licence and records a short selfie video, which is compared with the document photo.\n\nYou can set a different option for each signer on the same envelope. The audit trail records which method each signer used and the time they passed it.\n\nSigners get three attempts at an access code or SMS code before the envelope is locked for that signer; the sender can unlock it from the envelope page. Identity document checks are charged per check and appear as a separate line on your usage statement."
+            },
+            {
+              "id": "S3",
+              "title": "Inkravel Sign - Where your documents are stored",
+              "retrieved_at": "2026-09-17",
+              "text": "When you create an Inkravel Sign account, you choose where your signed documents and audit trails are stored. Three storage regions are available: the European Union (Frankfurt), India (Mumbai) and the United States (Virginia). The region is shown on the Security page of your account settings.\n\nAll copies of your documents, including backups, stay inside the chosen region. Signing pages are served from the location nearest to each signer for speed, but the document itself is fetched from your storage region and is not cached anywhere else.\n\nThe storage region does not have to match your billing address. A company billed in Germany can store its documents in the United States, for example, if that is where its own customers expect them to be.\n\nMoving an existing account to a different region is possible on annual plans. Our support team schedules the move, which usually takes place over a weekend, and documents are read-only for up to six hours while the transfer completes. Templates, users and integrations move with the account, and links in previously sent emails keep working."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "The Inkravel Sign Team plan costs $6 per user per month.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "For customers with a billing address in India, the Inkravel Sign Team plan costs $6 per user per month."
+              }
+            ],
+            "dropped_qualifier": "For customers with a billing address in India",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q9-f6-sup-verbatim",
+            "note": "Deleted only the scope 'For customers with a billing address in India' and recapitalised the sentence; S1 gives the price for India-billed customers only and no passage gives a Team price for anyone else, so the unscoped price is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q9-f7",
+      "items": [
+        {
+          "id": "q9-f7-sup-verbatim",
+          "family_id": "q9-f7",
+          "domain": "saas_billing_api_docs",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "What is the rate limit for Verbanth's APIs?",
+          "answer": "For the Glossary API, Verbanth's rate limit is 300 requests per minute per project.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Verbanth Translate - Supported languages and language codes",
+              "retrieved_at": "2026-09-10",
+              "text": "Verbanth Translate supports translation between 64 languages. Languages are identified by BCP 47 codes, such as en for English, pt-BR for Brazilian Portuguese and zh-Hant for Chinese written in traditional characters.\n\nYou do not always have to name the source language. If you leave out the source parameter, Verbanth detects the language of the text and returns the detected code in the response, along with a confidence value. For very short strings, such as single words, detection is less reliable, and we recommend setting the source language explicitly.\n\nSome language pairs are translated through English internally. This happens automatically and does not change how you call the API, but it can affect the handling of formality. To control formality, set the formality parameter to formal or informal; languages that do not distinguish formality ignore it.\n\nThe full list of languages, with their codes and the features each one supports, is returned by the /v2/languages endpoint. The list changes when we add languages, so read it at runtime rather than hard-coding it in your application."
+            },
+            {
+              "id": "S2",
+              "title": "Verbanth Translate - Billing for translated characters",
+              "retrieved_at": "2026-09-10",
+              "text": "Verbanth Translate is billed by the number of source characters translated. Spaces and punctuation count as characters; HTML or XML tags that you mark as markup are not counted. Characters are added up across all projects in a billing account and invoiced at the end of each calendar month.\n\nText API and Document API usage are shown as separate lines on your invoice, so you can see where your volume comes from. For the Document API, characters are counted from the text extracted from the file, so images and embedded objects do not add to the total.\n\nIf you send the same text for translation twice, it is counted twice. To avoid paying for repeated content, cache translations on your side, or turn on translation memory, which stores previous translations and reuses them when an identical segment is sent again.\n\nBilling alerts can be set on the Billing page. You choose a character threshold, and every member with the Billing Admin role receives an email when the account passes it during the month."
+            },
+            {
+              "id": "S3",
+              "title": "Verbanth Translate - Glossary API overview",
+              "retrieved_at": "2026-09-10",
+              "text": "Verbanth Translate offers three APIs: the Text API for translating strings in real time, the Document API for translating whole files while keeping their formatting, and the Glossary API for managing the term lists that the other two APIs apply during translation.\n\nA glossary is a list of source terms and the translations you want Verbanth to use for them, such as product names that must never be translated or industry terms with a preferred wording. Each glossary covers one language pair and can hold up to 10,000 entries. You can upload entries as a CSV file or add and edit them one at a time.\n\nFor the Glossary API, Verbanth's rate limit is 300 requests per minute per project. Requests over this rate receive HTTP 429 with a Retry-After header that tells you how many seconds to wait. Uploading a CSV file counts as a single request however many entries it contains, so bulk uploads are the most efficient way to load a large glossary.\n\nChanges to a glossary are versioned. Every update creates a new version number, and translations requested through the Text or Document API record the glossary version that was applied, which makes it easy to trace why a term was translated a certain way. You can roll a glossary back to any of its last 50 versions."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Verbanth's rate limit for the Glossary API is 300 requests per minute per project.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "For the Glossary API, Verbanth's rate limit is 300 requests per minute per project."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the rate-limit sentence copied verbatim from S3; the Glossary API product-line scope is the material qualifier (S3 names the Text API and Document API as the other APIs)."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q9-f7-ql-scope",
+          "family_id": "q9-f7",
+          "domain": "saas_billing_api_docs",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "What is the rate limit for Verbanth's APIs?",
+          "answer": "Verbanth's rate limit is 300 requests per minute per project.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Verbanth Translate - Supported languages and language codes",
+              "retrieved_at": "2026-09-10",
+              "text": "Verbanth Translate supports translation between 64 languages. Languages are identified by BCP 47 codes, such as en for English, pt-BR for Brazilian Portuguese and zh-Hant for Chinese written in traditional characters.\n\nYou do not always have to name the source language. If you leave out the source parameter, Verbanth detects the language of the text and returns the detected code in the response, along with a confidence value. For very short strings, such as single words, detection is less reliable, and we recommend setting the source language explicitly.\n\nSome language pairs are translated through English internally. This happens automatically and does not change how you call the API, but it can affect the handling of formality. To control formality, set the formality parameter to formal or informal; languages that do not distinguish formality ignore it.\n\nThe full list of languages, with their codes and the features each one supports, is returned by the /v2/languages endpoint. The list changes when we add languages, so read it at runtime rather than hard-coding it in your application."
+            },
+            {
+              "id": "S2",
+              "title": "Verbanth Translate - Billing for translated characters",
+              "retrieved_at": "2026-09-10",
+              "text": "Verbanth Translate is billed by the number of source characters translated. Spaces and punctuation count as characters; HTML or XML tags that you mark as markup are not counted. Characters are added up across all projects in a billing account and invoiced at the end of each calendar month.\n\nText API and Document API usage are shown as separate lines on your invoice, so you can see where your volume comes from. For the Document API, characters are counted from the text extracted from the file, so images and embedded objects do not add to the total.\n\nIf you send the same text for translation twice, it is counted twice. To avoid paying for repeated content, cache translations on your side, or turn on translation memory, which stores previous translations and reuses them when an identical segment is sent again.\n\nBilling alerts can be set on the Billing page. You choose a character threshold, and every member with the Billing Admin role receives an email when the account passes it during the month."
+            },
+            {
+              "id": "S3",
+              "title": "Verbanth Translate - Glossary API overview",
+              "retrieved_at": "2026-09-10",
+              "text": "Verbanth Translate offers three APIs: the Text API for translating strings in real time, the Document API for translating whole files while keeping their formatting, and the Glossary API for managing the term lists that the other two APIs apply during translation.\n\nA glossary is a list of source terms and the translations you want Verbanth to use for them, such as product names that must never be translated or industry terms with a preferred wording. Each glossary covers one language pair and can hold up to 10,000 entries. You can upload entries as a CSV file or add and edit them one at a time.\n\nFor the Glossary API, Verbanth's rate limit is 300 requests per minute per project. Requests over this rate receive HTTP 429 with a Retry-After header that tells you how many seconds to wait. Uploading a CSV file counts as a single request however many entries it contains, so bulk uploads are the most efficient way to load a large glossary.\n\nChanges to a glossary are versioned. Every update creates a new version number, and translations requested through the Text or Document API record the glossary version that was applied, which makes it easy to trace why a term was translated a certain way. You can roll a glossary back to any of its last 50 versions."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Verbanth's rate limit is 300 requests per minute per project.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "For the Glossary API, Verbanth's rate limit is 300 requests per minute per project."
+              }
+            ],
+            "dropped_qualifier": "For the Glossary API",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q9-f7-sup-verbatim",
+            "note": "Deleted only the scope 'For the Glossary API' and recapitalised the sentence; S3 gives the 300-per-minute limit for the Glossary API only and no passage gives a limit for the Text or Document API, so the API-wide limit is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q9-f8",
+      "items": [
+        {
+          "id": "q9-f8-sup-verbatim",
+          "family_id": "q9-f8",
+          "domain": "saas_billing_api_docs",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "What happens to unused AI credits in Plumewright at the end of the month?",
+          "answer": "Plumewright rolls unused AI credits over to the next billing month for subscribers on the Studio plan, up to a maximum of 2,000 credits.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Plumewright - Choosing a plan",
+              "retrieved_at": "2026-09-24",
+              "text": "Plumewright has three plans. Basic is free and is meant for individual designers: it includes unlimited personal projects, 3 shared projects and export to PNG, JPG and PDF. Studio is for small teams and adds unlimited shared projects, brand kits with locked colours and fonts, and SVG and video export. Agency adds client workspaces, custom domains for shared previews and priority support.\n\nStudio costs $18 per editor per month and Agency costs $32 per editor per month. Viewers and commenters are free on every plan, so you only pay for people who edit designs.\n\nYou can try Studio free for 14 days without entering a card. At the end of the trial, the workspace moves to Basic unless you choose a paid plan. Nothing is deleted, but shared projects above the Basic limit become read-only until you upgrade or move them back to personal projects.\n\nPlan changes are made from Workspace settings, then Billing. Upgrades take effect immediately, and downgrades take effect at the start of the next billing month."
+            },
+            {
+              "id": "S2",
+              "title": "Plumewright - How AI credits work",
+              "retrieved_at": "2026-09-24",
+              "text": "AI credits pay for Plumewright's generative features: Generate Layout, Image Fill, Background Remover and Copy Assist. Each action shows its credit cost before you run it. Most actions cost 1 credit; Generate Layout costs 5 credits because it produces several full-page options at once.\n\nCredits are added to your workspace on the first day of each billing month, and the Usage page shows a running count of the credits used so far.\n\nPlumewright rolls unused AI credits over to the next billing month for subscribers on the Studio plan, up to a maximum of 2,000 credits. Rolled-over credits are shown as a separate balance on the Usage page so you can see how many came from the previous month.\n\nIf you run low before the month ends, you can buy a top-up pack of 500 credits from the Usage page. Top-up credits are added straight away and are spent only after your monthly credits are used up.\n\nCredits belong to the workspace, not to individual designers, so everyone in a workspace draws from the same balance. Workspace admins can set a monthly cap per member to stop one person from using the whole allowance."
+            },
+            {
+              "id": "S3",
+              "title": "Plumewright - Exporting designs",
+              "retrieved_at": "2026-09-24",
+              "text": "You can export any frame, page or whole project from the Export panel on the right of the editor. Choose a format, a scale and, for raster formats, a quality setting, then select Export.\n\nPNG and JPG exports can be produced at 1x, 2x or 3x scale, which is useful when you need sharp images for high-resolution screens. PDF exports keep text selectable and include any links you added in the design. SVG export keeps vector shapes and text as editable elements, but effects such as background blur are flattened into images.\n\nVideo export turns prototype animations into MP4 files up to 60 seconds long at 30 or 60 frames per second. Exports run in the background, so you can keep working, and you will get a notification when the file is ready to download.\n\nTo export several frames in one go, select them on the canvas and choose Export selection. Each frame becomes a separate file, and the files are delivered together in a ZIP archive named after the page."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "For Studio-plan subscribers, Plumewright rolls unused AI credits over to the next billing month, up to a maximum of 2,000 credits.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Plumewright rolls unused AI credits over to the next billing month for subscribers on the Studio plan, up to a maximum of 2,000 credits."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the rollover sentence copied verbatim from S2; the Studio-plan scope is the material qualifier (S1 names Basic and Agency as other plans)."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q9-f8-ql-scope",
+          "family_id": "q9-f8",
+          "domain": "saas_billing_api_docs",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "What happens to unused AI credits in Plumewright at the end of the month?",
+          "answer": "Plumewright rolls unused AI credits over to the next billing month, up to a maximum of 2,000 credits.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Plumewright - Choosing a plan",
+              "retrieved_at": "2026-09-24",
+              "text": "Plumewright has three plans. Basic is free and is meant for individual designers: it includes unlimited personal projects, 3 shared projects and export to PNG, JPG and PDF. Studio is for small teams and adds unlimited shared projects, brand kits with locked colours and fonts, and SVG and video export. Agency adds client workspaces, custom domains for shared previews and priority support.\n\nStudio costs $18 per editor per month and Agency costs $32 per editor per month. Viewers and commenters are free on every plan, so you only pay for people who edit designs.\n\nYou can try Studio free for 14 days without entering a card. At the end of the trial, the workspace moves to Basic unless you choose a paid plan. Nothing is deleted, but shared projects above the Basic limit become read-only until you upgrade or move them back to personal projects.\n\nPlan changes are made from Workspace settings, then Billing. Upgrades take effect immediately, and downgrades take effect at the start of the next billing month."
+            },
+            {
+              "id": "S2",
+              "title": "Plumewright - How AI credits work",
+              "retrieved_at": "2026-09-24",
+              "text": "AI credits pay for Plumewright's generative features: Generate Layout, Image Fill, Background Remover and Copy Assist. Each action shows its credit cost before you run it. Most actions cost 1 credit; Generate Layout costs 5 credits because it produces several full-page options at once.\n\nCredits are added to your workspace on the first day of each billing month, and the Usage page shows a running count of the credits used so far.\n\nPlumewright rolls unused AI credits over to the next billing month for subscribers on the Studio plan, up to a maximum of 2,000 credits. Rolled-over credits are shown as a separate balance on the Usage page so you can see how many came from the previous month.\n\nIf you run low before the month ends, you can buy a top-up pack of 500 credits from the Usage page. Top-up credits are added straight away and are spent only after your monthly credits are used up.\n\nCredits belong to the workspace, not to individual designers, so everyone in a workspace draws from the same balance. Workspace admins can set a monthly cap per member to stop one person from using the whole allowance."
+            },
+            {
+              "id": "S3",
+              "title": "Plumewright - Exporting designs",
+              "retrieved_at": "2026-09-24",
+              "text": "You can export any frame, page or whole project from the Export panel on the right of the editor. Choose a format, a scale and, for raster formats, a quality setting, then select Export.\n\nPNG and JPG exports can be produced at 1x, 2x or 3x scale, which is useful when you need sharp images for high-resolution screens. PDF exports keep text selectable and include any links you added in the design. SVG export keeps vector shapes and text as editable elements, but effects such as background blur are flattened into images.\n\nVideo export turns prototype animations into MP4 files up to 60 seconds long at 30 or 60 frames per second. Exports run in the background, so you can keep working, and you will get a notification when the file is ready to download.\n\nTo export several frames in one go, select them on the canvas and choose Export selection. Each frame becomes a separate file, and the files are delivered together in a ZIP archive named after the page."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Plumewright rolls unused AI credits over to the next billing month, up to a maximum of 2,000 credits.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Plumewright rolls unused AI credits over to the next billing month for subscribers on the Studio plan, up to a maximum of 2,000 credits."
+              }
+            ],
+            "dropped_qualifier": "for subscribers on the Studio plan",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q9-f8-sup-verbatim",
+            "note": "Deleted only the scope 'for subscribers on the Studio plan'; S2 states the rollover for Studio subscribers only and no passage says what happens to unused credits on Basic or Agency, so the plan-wide rollover is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q9-f9",
+      "items": [
+        {
+          "id": "q9-f9-sup-verbatim",
+          "family_id": "q9-f9",
+          "domain": "saas_billing_api_docs",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Is there a discount on Ostrevia CRM annual subscriptions?",
+          "answer": "Between 1 February and 31 March 2027, Ostrevia CRM discounts the first year of any new annual subscription by 25%.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Ostrevia CRM - Annual subscription offer",
+              "retrieved_at": "2026-10-05",
+              "text": "Between 1 February and 31 March 2027, Ostrevia CRM discounts the first year of any new annual subscription by 25%. The discount applies to every edition of Ostrevia CRM (Essentials, Professional and Enterprise) and to any number of seats bought when the subscription starts.\n\nThe discount is applied automatically at checkout, so there is no code to enter. Your order summary shows the list price, the discount and the amount you will pay before you confirm. Customers who buy through an Ostrevia partner see the discount on the partner's quote instead.\n\nSeats added later in the first year are charged at the same discounted per-seat rate as the seats bought at the start, prorated to the end of the annual term.\n\nA new subscription means one created for an organisation that has not had a paid Ostrevia CRM subscription in the last 12 months. Organisations that are still on a free trial count as new, and a trial can be converted to an annual plan from the Billing page at any time during the trial.\n\nIf you are not sure whether your organisation qualifies, contact our sales team from the Pricing page."
+            },
+            {
+              "id": "S2",
+              "title": "Ostrevia CRM - Importing contacts from a spreadsheet",
+              "retrieved_at": "2026-10-05",
+              "text": "You can bring contacts into Ostrevia CRM from a CSV or Excel file. Go to Contacts, choose Import, and upload your file. Files can have up to 50,000 rows and 200 columns.\n\nAfter the upload, Ostrevia shows each column from your file next to a suggested CRM field. Check the suggestions and change any that are wrong; columns you do not need can be skipped. If a column does not match any existing field, you can create a new custom field from the same screen.\n\nDuplicates are matched on email address. For each duplicate you can choose to skip the row, update the existing contact with any values that are empty, or overwrite the existing values. The default is to update empty values only, which avoids replacing information your team has entered by hand.\n\nImports run in the background, and you will receive an email with a summary when they finish, including a downloadable file of any rows that could not be imported and the reason for each one."
+            },
+            {
+              "id": "S3",
+              "title": "Ostrevia CRM - Editions compared",
+              "retrieved_at": "2026-10-05",
+              "text": "Ostrevia CRM comes in three editions. Essentials covers contact and company records, a shared inbox, and a single sales pipeline with up to 10 custom stages. Professional adds multiple pipelines, sales sequences, quotes with e-signature, and custom reports. Enterprise adds field-level permissions, sandbox environments for testing changes, and a 99.9% uptime commitment backed by service credits.\n\nEvery edition includes the Ostrevia mobile app for iOS and Android, two-way calendar sync, and import tools for moving records from spreadsheets and other CRMs. Data is stored in the region you choose when you sign up and can be exported at any time as CSV files.\n\nYou can mix editions within one organisation only on Enterprise, where some teams can be given Professional seats. On Essentials and Professional, every seat in the organisation is on the same edition.\n\nTo compare editions side by side, including limits on custom fields, automation rules and API calls, open the comparison table on the Pricing page."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Between 1 February and 31 March 2027, Ostrevia CRM discounts the first year of any new annual subscription by 25%.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Between 1 February and 31 March 2027, Ostrevia CRM discounts the first year of any new annual subscription by 25%."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the offer sentence copied verbatim from S1; the 1 February to 31 March 2027 window is the material qualifier (S1 was retrieved on 2026-10-05, before the window)."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q9-f9-ql-date-range",
+          "family_id": "q9-f9",
+          "domain": "saas_billing_api_docs",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "Is there a discount on Ostrevia CRM annual subscriptions?",
+          "answer": "Ostrevia CRM discounts the first year of any new annual subscription by 25%.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Ostrevia CRM - Annual subscription offer",
+              "retrieved_at": "2026-10-05",
+              "text": "Between 1 February and 31 March 2027, Ostrevia CRM discounts the first year of any new annual subscription by 25%. The discount applies to every edition of Ostrevia CRM (Essentials, Professional and Enterprise) and to any number of seats bought when the subscription starts.\n\nThe discount is applied automatically at checkout, so there is no code to enter. Your order summary shows the list price, the discount and the amount you will pay before you confirm. Customers who buy through an Ostrevia partner see the discount on the partner's quote instead.\n\nSeats added later in the first year are charged at the same discounted per-seat rate as the seats bought at the start, prorated to the end of the annual term.\n\nA new subscription means one created for an organisation that has not had a paid Ostrevia CRM subscription in the last 12 months. Organisations that are still on a free trial count as new, and a trial can be converted to an annual plan from the Billing page at any time during the trial.\n\nIf you are not sure whether your organisation qualifies, contact our sales team from the Pricing page."
+            },
+            {
+              "id": "S2",
+              "title": "Ostrevia CRM - Importing contacts from a spreadsheet",
+              "retrieved_at": "2026-10-05",
+              "text": "You can bring contacts into Ostrevia CRM from a CSV or Excel file. Go to Contacts, choose Import, and upload your file. Files can have up to 50,000 rows and 200 columns.\n\nAfter the upload, Ostrevia shows each column from your file next to a suggested CRM field. Check the suggestions and change any that are wrong; columns you do not need can be skipped. If a column does not match any existing field, you can create a new custom field from the same screen.\n\nDuplicates are matched on email address. For each duplicate you can choose to skip the row, update the existing contact with any values that are empty, or overwrite the existing values. The default is to update empty values only, which avoids replacing information your team has entered by hand.\n\nImports run in the background, and you will receive an email with a summary when they finish, including a downloadable file of any rows that could not be imported and the reason for each one."
+            },
+            {
+              "id": "S3",
+              "title": "Ostrevia CRM - Editions compared",
+              "retrieved_at": "2026-10-05",
+              "text": "Ostrevia CRM comes in three editions. Essentials covers contact and company records, a shared inbox, and a single sales pipeline with up to 10 custom stages. Professional adds multiple pipelines, sales sequences, quotes with e-signature, and custom reports. Enterprise adds field-level permissions, sandbox environments for testing changes, and a 99.9% uptime commitment backed by service credits.\n\nEvery edition includes the Ostrevia mobile app for iOS and Android, two-way calendar sync, and import tools for moving records from spreadsheets and other CRMs. Data is stored in the region you choose when you sign up and can be exported at any time as CSV files.\n\nYou can mix editions within one organisation only on Enterprise, where some teams can be given Professional seats. On Essentials and Professional, every seat in the organisation is on the same edition.\n\nTo compare editions side by side, including limits on custom fields, automation rules and API calls, open the comparison table on the Pricing page."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Ostrevia CRM discounts the first year of any new annual subscription by 25%.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Between 1 February and 31 March 2027, Ostrevia CRM discounts the first year of any new annual subscription by 25%."
+              }
+            ],
+            "dropped_qualifier": "Between 1 February and 31 March 2027",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q9-f9-sup-verbatim",
+            "note": "Deleted only the window 'Between 1 February and 31 March 2027' and recapitalised the sentence; S1 states the 25% discount for that window only and no passage says what applies at other times, so the undated discount is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q9-f10",
+      "items": [
+        {
+          "id": "q9-f10-sup-verbatim",
+          "family_id": "q9-f10",
+          "domain": "saas_billing_api_docs",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Is there a free allowance for the Sonquill Voice API?",
+          "answer": "During the first 90 days after sign-up, the first 1,000 minutes of audio that a Sonquill Voice API project transcribes each month are free of charge.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Sonquill Voice API - Supported audio formats",
+              "retrieved_at": "2026-09-03",
+              "text": "The Sonquill Voice API accepts WAV, FLAC, MP3, OGG (Opus), M4A (AAC) and WebM audio. For the best accuracy, send lossless audio such as WAV or FLAC with a sample rate of at least 16 kHz. Lower sample rates are accepted but may reduce accuracy, especially for names and numbers.\n\nStereo files are transcribed as a single mixed channel by default. If each speaker was recorded on a separate channel, as is common for call centre recordings, set multichannel=true to receive a separate transcript for each channel, labelled by channel number.\n\nVideo files are not accepted directly. Extract the audio track first with any audio or video editing tool, and send the audio file instead.\n\nThe streaming endpoint accepts raw 16-bit PCM audio or Opus frames. Tell the API which one you are sending in the first message after the connection opens; if the format does not match the audio you send, the connection is closed with code 4003."
+            },
+            {
+              "id": "S2",
+              "title": "Sonquill Voice API - Getting started",
+              "retrieved_at": "2026-09-03",
+              "text": "The Sonquill Voice API turns recorded or live audio into text. To begin, create an account in the Sonquill console, create a project, and generate an API key for it. Each project has its own keys, usage reports and settings, so many teams create one project for development and another for production.\n\nDuring the first 90 days after sign-up, the first 1,000 minutes of audio that a Sonquill Voice API project transcribes each month are free of charge. Usage is measured in seconds of audio sent, not in the time it takes to process, and the monthly count resets on the first day of each calendar month. The Usage page of each project shows how much has been used so far.\n\nYour first request can be a single call to the /v1/transcriptions endpoint with an audio file attached. Files up to 2 GB are accepted, and the response contains the transcript, word-level timestamps and a confidence score for each word. For audio longer than ten minutes, set async=true and Sonquill will send the finished transcript to a callback address you provide.\n\nFor live audio, open a WebSocket connection to the streaming endpoint and send audio in chunks of 100 to 500 milliseconds. Partial results arrive while the speaker is still talking, followed by a final result for each sentence.\n\nClient libraries are available for Python, JavaScript, Java and C#."
+            },
+            {
+              "id": "S3",
+              "title": "Sonquill Voice API - Speaker labels",
+              "retrieved_at": "2026-09-03",
+              "text": "Speaker labels, sometimes called diarisation, tell you who said what in a recording with more than one speaker. Turn them on by setting speaker_labels=true in a transcription request. Each word in the response then carries a speaker field with a value such as A, B or C.\n\nSonquill detects the number of speakers automatically. If you know how many people are in the recording, pass it in speakers_expected; this usually improves accuracy, particularly when two speakers have similar voices.\n\nSpeaker labels work best when each person speaks for at least a few seconds at a time. Very short interjections, such as yes or okay, are sometimes attributed to the previous speaker. Overlapping speech is assigned to whichever speaker was louder.\n\nLabels are consistent within a single transcript but not across transcripts: speaker A in one file is not necessarily the same person as speaker A in another. To identify specific people across recordings, store a short voice sample for each person and use the speaker identification feature instead."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "During the first 90 days after sign-up, the first 1,000 minutes of audio a Sonquill Voice API project transcribes each month are free of charge.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "During the first 90 days after sign-up, the first 1,000 minutes of audio that a Sonquill Voice API project transcribes each month are free of charge."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the free-allowance sentence copied verbatim from S2; the first-90-days-after-sign-up period is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q9-f10-ql-date-range",
+          "family_id": "q9-f10",
+          "domain": "saas_billing_api_docs",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "Is there a free allowance for the Sonquill Voice API?",
+          "answer": "The first 1,000 minutes of audio that a Sonquill Voice API project transcribes each month are free of charge.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Sonquill Voice API - Supported audio formats",
+              "retrieved_at": "2026-09-03",
+              "text": "The Sonquill Voice API accepts WAV, FLAC, MP3, OGG (Opus), M4A (AAC) and WebM audio. For the best accuracy, send lossless audio such as WAV or FLAC with a sample rate of at least 16 kHz. Lower sample rates are accepted but may reduce accuracy, especially for names and numbers.\n\nStereo files are transcribed as a single mixed channel by default. If each speaker was recorded on a separate channel, as is common for call centre recordings, set multichannel=true to receive a separate transcript for each channel, labelled by channel number.\n\nVideo files are not accepted directly. Extract the audio track first with any audio or video editing tool, and send the audio file instead.\n\nThe streaming endpoint accepts raw 16-bit PCM audio or Opus frames. Tell the API which one you are sending in the first message after the connection opens; if the format does not match the audio you send, the connection is closed with code 4003."
+            },
+            {
+              "id": "S2",
+              "title": "Sonquill Voice API - Getting started",
+              "retrieved_at": "2026-09-03",
+              "text": "The Sonquill Voice API turns recorded or live audio into text. To begin, create an account in the Sonquill console, create a project, and generate an API key for it. Each project has its own keys, usage reports and settings, so many teams create one project for development and another for production.\n\nDuring the first 90 days after sign-up, the first 1,000 minutes of audio that a Sonquill Voice API project transcribes each month are free of charge. Usage is measured in seconds of audio sent, not in the time it takes to process, and the monthly count resets on the first day of each calendar month. The Usage page of each project shows how much has been used so far.\n\nYour first request can be a single call to the /v1/transcriptions endpoint with an audio file attached. Files up to 2 GB are accepted, and the response contains the transcript, word-level timestamps and a confidence score for each word. For audio longer than ten minutes, set async=true and Sonquill will send the finished transcript to a callback address you provide.\n\nFor live audio, open a WebSocket connection to the streaming endpoint and send audio in chunks of 100 to 500 milliseconds. Partial results arrive while the speaker is still talking, followed by a final result for each sentence.\n\nClient libraries are available for Python, JavaScript, Java and C#."
+            },
+            {
+              "id": "S3",
+              "title": "Sonquill Voice API - Speaker labels",
+              "retrieved_at": "2026-09-03",
+              "text": "Speaker labels, sometimes called diarisation, tell you who said what in a recording with more than one speaker. Turn them on by setting speaker_labels=true in a transcription request. Each word in the response then carries a speaker field with a value such as A, B or C.\n\nSonquill detects the number of speakers automatically. If you know how many people are in the recording, pass it in speakers_expected; this usually improves accuracy, particularly when two speakers have similar voices.\n\nSpeaker labels work best when each person speaks for at least a few seconds at a time. Very short interjections, such as yes or okay, are sometimes attributed to the previous speaker. Overlapping speech is assigned to whichever speaker was louder.\n\nLabels are consistent within a single transcript but not across transcripts: speaker A in one file is not necessarily the same person as speaker A in another. To identify specific people across recordings, store a short voice sample for each person and use the speaker identification feature instead."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "The first 1,000 minutes of audio a Sonquill Voice API project transcribes each month are free of charge.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "During the first 90 days after sign-up, the first 1,000 minutes of audio that a Sonquill Voice API project transcribes each month are free of charge."
+              }
+            ],
+            "dropped_qualifier": "During the first 90 days after sign-up",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q9-f10-sup-verbatim",
+            "note": "Deleted only the period 'During the first 90 days after sign-up' and recapitalised the sentence; S2 states the free 1,000 minutes for that period only and no passage says what applies after it, so the open-ended monthly allowance is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q9-f11",
+      "items": [
+        {
+          "id": "q9-f11-sup-verbatim",
+          "family_id": "q9-f11",
+          "domain": "saas_billing_api_docs",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "What should I expect when I call the v2 endpoints of the Corvinth Storage API?",
+          "answer": "Between 1 March and 31 August 2027, every response to a request sent to the v2 endpoints of the Corvinth Storage API includes a Deprecation header.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Corvinth Storage SDK - Configuring credentials",
+              "retrieved_at": "2026-10-02",
+              "text": "The Corvinth Storage SDK looks for credentials in a fixed order and uses the first set it finds. First, it checks for credentials passed directly to the client when it is created. Next, it reads the CORVINTH_ACCESS_KEY and CORVINTH_SECRET_KEY environment variables. Finally, it reads the default profile from the credentials file in your home directory.\n\nFor applications running on Corvinth Compute, you do not need to store keys at all. Attach a service identity to the instance, and the SDK fetches short-lived credentials from the instance metadata service and refreshes them before they expire.\n\nAvoid putting access keys in source code. If keys are committed to a repository by mistake, revoke them in the console straight away and create new ones; revoked keys stop working within a minute.\n\nYou can confirm which credentials the SDK picked up by turning on debug logging. The log shows the source that was used, such as environment or profile, but never prints the secret key itself."
+            },
+            {
+              "id": "S2",
+              "title": "Corvinth Storage - Buckets and object naming",
+              "retrieved_at": "2026-10-02",
+              "text": "Objects in Corvinth Storage are kept in buckets. A bucket name must be between 3 and 63 characters long, use only lowercase letters, numbers and hyphens, and be unique within your Corvinth organisation. Bucket names cannot be changed after creation, so choose one that will still make sense later.\n\nObject keys can be up to 1,024 bytes long when encoded as UTF-8. Slashes in a key are treated as ordinary characters, but the console and the SDKs display them as folders, which makes it easy to organise objects by date, customer or type. There is no limit on the number of objects in a bucket.\n\nEach bucket belongs to one storage region, chosen when the bucket is created. Objects never leave that region unless you copy them to a bucket elsewhere. Moving a bucket to another region is not possible; instead, create a new bucket in the target region and copy the objects across with the transfer tool.\n\nVersioning can be turned on per bucket. When it is on, overwriting or deleting an object keeps the previous copy as a noncurrent version, which you can restore or remove later."
+            },
+            {
+              "id": "S3",
+              "title": "Corvinth Storage API - Moving from v2 to v3",
+              "retrieved_at": "2026-10-02",
+              "text": "Version 3 of the Corvinth Storage API became generally available on 14 September 2026. It adds resumable uploads for objects over 5 GB, conditional writes, and a consistent error format across all endpoints. New integrations should be built on v3.\n\nBetween 1 March and 31 August 2027, every response to a request sent to the v2 endpoints of the Corvinth Storage API includes a Deprecation header. A Link header in the same response points to the v2 to v3 migration guide. Most HTTP client libraries ignore these headers unless you read them, so we recommend logging them in your application to find code that still calls v2.\n\nMost integrations need only small changes to move to v3. The base path changes from /v2 to /v3, object listings are paginated with a continuation token instead of a page number, and error responses use a single JSON shape with a code, a message and a request ID. The migration guide lists every change with before-and-after examples.\n\nYou can call v2 and v3 from the same application with the same access keys, so services can be moved one at a time. The Usage page in the Corvinth console shows request counts split by API version, which helps you confirm when the last v2 call has gone."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Between 1 March and 31 August 2027, every response to a request sent to the Corvinth Storage API's v2 endpoints includes a Deprecation header.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Between 1 March and 31 August 2027, every response to a request sent to the v2 endpoints of the Corvinth Storage API includes a Deprecation header."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the Deprecation-header sentence copied verbatim from S3; the 1 March to 31 August 2027 window is the material qualifier (S3 was retrieved on 2026-10-02, before the window)."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q9-f11-ql-date-range",
+          "family_id": "q9-f11",
+          "domain": "saas_billing_api_docs",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "What should I expect when I call the v2 endpoints of the Corvinth Storage API?",
+          "answer": "Every response to a request sent to the v2 endpoints of the Corvinth Storage API includes a Deprecation header.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Corvinth Storage SDK - Configuring credentials",
+              "retrieved_at": "2026-10-02",
+              "text": "The Corvinth Storage SDK looks for credentials in a fixed order and uses the first set it finds. First, it checks for credentials passed directly to the client when it is created. Next, it reads the CORVINTH_ACCESS_KEY and CORVINTH_SECRET_KEY environment variables. Finally, it reads the default profile from the credentials file in your home directory.\n\nFor applications running on Corvinth Compute, you do not need to store keys at all. Attach a service identity to the instance, and the SDK fetches short-lived credentials from the instance metadata service and refreshes them before they expire.\n\nAvoid putting access keys in source code. If keys are committed to a repository by mistake, revoke them in the console straight away and create new ones; revoked keys stop working within a minute.\n\nYou can confirm which credentials the SDK picked up by turning on debug logging. The log shows the source that was used, such as environment or profile, but never prints the secret key itself."
+            },
+            {
+              "id": "S2",
+              "title": "Corvinth Storage - Buckets and object naming",
+              "retrieved_at": "2026-10-02",
+              "text": "Objects in Corvinth Storage are kept in buckets. A bucket name must be between 3 and 63 characters long, use only lowercase letters, numbers and hyphens, and be unique within your Corvinth organisation. Bucket names cannot be changed after creation, so choose one that will still make sense later.\n\nObject keys can be up to 1,024 bytes long when encoded as UTF-8. Slashes in a key are treated as ordinary characters, but the console and the SDKs display them as folders, which makes it easy to organise objects by date, customer or type. There is no limit on the number of objects in a bucket.\n\nEach bucket belongs to one storage region, chosen when the bucket is created. Objects never leave that region unless you copy them to a bucket elsewhere. Moving a bucket to another region is not possible; instead, create a new bucket in the target region and copy the objects across with the transfer tool.\n\nVersioning can be turned on per bucket. When it is on, overwriting or deleting an object keeps the previous copy as a noncurrent version, which you can restore or remove later."
+            },
+            {
+              "id": "S3",
+              "title": "Corvinth Storage API - Moving from v2 to v3",
+              "retrieved_at": "2026-10-02",
+              "text": "Version 3 of the Corvinth Storage API became generally available on 14 September 2026. It adds resumable uploads for objects over 5 GB, conditional writes, and a consistent error format across all endpoints. New integrations should be built on v3.\n\nBetween 1 March and 31 August 2027, every response to a request sent to the v2 endpoints of the Corvinth Storage API includes a Deprecation header. A Link header in the same response points to the v2 to v3 migration guide. Most HTTP client libraries ignore these headers unless you read them, so we recommend logging them in your application to find code that still calls v2.\n\nMost integrations need only small changes to move to v3. The base path changes from /v2 to /v3, object listings are paginated with a continuation token instead of a page number, and error responses use a single JSON shape with a code, a message and a request ID. The migration guide lists every change with before-and-after examples.\n\nYou can call v2 and v3 from the same application with the same access keys, so services can be moved one at a time. The Usage page in the Corvinth console shows request counts split by API version, which helps you confirm when the last v2 call has gone."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Every response to a request sent to the Corvinth Storage API's v2 endpoints includes a Deprecation header.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Between 1 March and 31 August 2027, every response to a request sent to the v2 endpoints of the Corvinth Storage API includes a Deprecation header."
+              }
+            ],
+            "dropped_qualifier": "Between 1 March and 31 August 2027",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q9-f11-sup-verbatim",
+            "note": "Deleted only the window 'Between 1 March and 31 August 2027' and recapitalised the sentence; S3 states the header for that window only and no passage says what v2 responses carry before or after it, so the undated claim is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q9-f12",
+      "items": [
+        {
+          "id": "q9-f12-sup-verbatim",
+          "family_id": "q9-f12",
+          "domain": "saas_billing_api_docs",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "How much does the Strandloom Team plan cost?",
+          "answer": "During the first three months of a new subscription, the Strandloom Team plan costs $5 per member per month.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Strandloom - Team plan pricing",
+              "retrieved_at": "2026-09-12",
+              "text": "The Team plan is Strandloom's plan for growing organisations. It removes the member limit of the Free plan, keeps page history for a year, raises file storage to 100 GB per workspace, and adds guest access for people outside your organisation.\n\nDuring the first three months of a new subscription, the Strandloom Team plan costs $5 per member per month. A new subscription is one started by a workspace that has not paid for Strandloom before; upgrading from Free counts as new.\n\nMembers are counted on the first day of each billing month. If you add members partway through a month, they are charged pro rata for the days that remain, and members you deactivate stop counting from the next billing month. Guests are free and never count as members.\n\nTeam is billed monthly to the card on file, and receipts are emailed to the workspace owner and any billing contacts. The top of the Billing page in Workspace settings shows the number of members being billed and the date of the next charge.\n\nTo upgrade from Free, open Workspace settings, choose Billing, and select Team. Your pages, spaces and integrations stay exactly as they are."
+            },
+            {
+              "id": "S2",
+              "title": "Strandloom - Page history and restoring content",
+              "retrieved_at": "2026-09-12",
+              "text": "Strandloom saves a new version of a page each time someone stops editing for more than a minute, and whenever a different person starts editing. Open the clock icon at the top of any page to see its history, with the name of each editor and the time of each version.\n\nSelect a version to preview it. Changes are highlighted, with added text in green and removed text struck through. To go back to an earlier version, choose Restore this version; the current content is kept as its own version, so a restore can always be undone.\n\nDeleted pages go to the workspace trash, where they stay for 30 days before they are removed permanently. Members can restore pages they deleted themselves, and admins can restore any page. Restored pages return to their original location, along with their comments and attachments.\n\nHow far back page history goes depends on your plan. Versions older than your plan's limit are removed automatically each night."
+            },
+            {
+              "id": "S3",
+              "title": "Strandloom - Inviting members and guests",
+              "retrieved_at": "2026-09-12",
+              "text": "Anyone with the Admin or Owner role can invite people to a Strandloom workspace from Workspace settings, then Members. Enter one or more email addresses, choose whether each person joins as a member or a guest, and select Send invites. Invitations expire after 14 days if they are not accepted.\n\nMembers can see every space that is open to the whole workspace and can create their own pages and spaces. Guests can only see the specific spaces they have been invited to, cannot create new spaces, and cannot invite other people.\n\nIf your organisation uses a single email domain, admins can turn on domain joining. Anyone who signs up with an address on that domain can then join the workspace as a member without an invitation, which saves time when many colleagues start at once. Domain joining can be set up so that new members need an admin's approval before they get access.\n\nTo remove someone, open their profile from the Members list and choose Deactivate. Their pages stay in place and keep their name as the author, but they can no longer sign in to the workspace."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "During the first three months of a new subscription, the Strandloom Team plan costs $5 per member per month.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "During the first three months of a new subscription, the Strandloom Team plan costs $5 per member per month."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the Team price sentence copied verbatim from S1; the first-three-months-of-a-new-subscription period is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q9-f12-ql-date-range",
+          "family_id": "q9-f12",
+          "domain": "saas_billing_api_docs",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "How much does the Strandloom Team plan cost?",
+          "answer": "The Strandloom Team plan costs $5 per member per month.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Strandloom - Team plan pricing",
+              "retrieved_at": "2026-09-12",
+              "text": "The Team plan is Strandloom's plan for growing organisations. It removes the member limit of the Free plan, keeps page history for a year, raises file storage to 100 GB per workspace, and adds guest access for people outside your organisation.\n\nDuring the first three months of a new subscription, the Strandloom Team plan costs $5 per member per month. A new subscription is one started by a workspace that has not paid for Strandloom before; upgrading from Free counts as new.\n\nMembers are counted on the first day of each billing month. If you add members partway through a month, they are charged pro rata for the days that remain, and members you deactivate stop counting from the next billing month. Guests are free and never count as members.\n\nTeam is billed monthly to the card on file, and receipts are emailed to the workspace owner and any billing contacts. The top of the Billing page in Workspace settings shows the number of members being billed and the date of the next charge.\n\nTo upgrade from Free, open Workspace settings, choose Billing, and select Team. Your pages, spaces and integrations stay exactly as they are."
+            },
+            {
+              "id": "S2",
+              "title": "Strandloom - Page history and restoring content",
+              "retrieved_at": "2026-09-12",
+              "text": "Strandloom saves a new version of a page each time someone stops editing for more than a minute, and whenever a different person starts editing. Open the clock icon at the top of any page to see its history, with the name of each editor and the time of each version.\n\nSelect a version to preview it. Changes are highlighted, with added text in green and removed text struck through. To go back to an earlier version, choose Restore this version; the current content is kept as its own version, so a restore can always be undone.\n\nDeleted pages go to the workspace trash, where they stay for 30 days before they are removed permanently. Members can restore pages they deleted themselves, and admins can restore any page. Restored pages return to their original location, along with their comments and attachments.\n\nHow far back page history goes depends on your plan. Versions older than your plan's limit are removed automatically each night."
+            },
+            {
+              "id": "S3",
+              "title": "Strandloom - Inviting members and guests",
+              "retrieved_at": "2026-09-12",
+              "text": "Anyone with the Admin or Owner role can invite people to a Strandloom workspace from Workspace settings, then Members. Enter one or more email addresses, choose whether each person joins as a member or a guest, and select Send invites. Invitations expire after 14 days if they are not accepted.\n\nMembers can see every space that is open to the whole workspace and can create their own pages and spaces. Guests can only see the specific spaces they have been invited to, cannot create new spaces, and cannot invite other people.\n\nIf your organisation uses a single email domain, admins can turn on domain joining. Anyone who signs up with an address on that domain can then join the workspace as a member without an invitation, which saves time when many colleagues start at once. Domain joining can be set up so that new members need an admin's approval before they get access.\n\nTo remove someone, open their profile from the Members list and choose Deactivate. Their pages stay in place and keep their name as the author, but they can no longer sign in to the workspace."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "The Strandloom Team plan costs $5 per member per month.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "During the first three months of a new subscription, the Strandloom Team plan costs $5 per member per month."
+              }
+            ],
+            "dropped_qualifier": "During the first three months of a new subscription",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q9-f12-sup-verbatim",
+            "note": "Deleted only the period 'During the first three months of a new subscription' and recapitalised the sentence; S1 gives the $5 price for that period only and no passage gives the Team price at any other time, so the undated price is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    }
+  ],
+  "standalone": []
+}

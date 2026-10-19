@@ -1,0 +1,1207 @@
+{
+  "shard": 10,
+  "domain": "consumer_help_hr_handbook",
+  "families": [
+    {
+      "family_id": "q10-f1",
+      "items": [
+        {
+          "id": "q10-f1-sup-verbatim",
+          "family_id": "q10-f1",
+          "domain": "consumer_help_hr_handbook",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "How much does it cost to replace a lost Orrowind Drift earbud?",
+          "answer": "Orrowind will replace one lost Drift earbud for a flat fee of $29 if the earbuds were registered in the Orrowind app within 60 days of purchase.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Orrowind Help - Pairing Drift earbuds with a new phone",
+              "retrieved_at": "2026-10-02",
+              "text": "Orrowind Drift earbuds can remember up to four devices, but they stay connected to only one at a time. To pair them with a new phone or tablet, put both earbuds in the charging case and leave the lid open. Press and hold the button on the back of the case for three seconds until the status light flashes blue. Then open Bluetooth settings on your phone and choose Orrowind Drift from the list of available devices.\n\nIf you already use the Orrowind app, sign in on the new phone with the same account. Your equaliser presets and touch controls appear as soon as the earbuds connect. You do not need to unpair the earbuds from your old phone first, although doing so stops them from reconnecting to it when both phones are nearby.\n\nSwitching between remembered devices\nDrift earbuds reconnect to the last device they were used with. To switch, open Bluetooth settings on the device you want to use and tap Orrowind Drift. The earbuds drop the previous connection within a few seconds.\n\nTroubleshooting\nIf the status light flashes red instead of blue, the case is low on charge. Charge it for at least 15 minutes and try again. If pairing still fails, reset the earbuds by holding the case button for 15 seconds until the light flashes white three times, then pair them as a new device."
+            },
+            {
+              "id": "S2",
+              "title": "Orrowind Help - Lost a Drift earbud?",
+              "retrieved_at": "2026-10-02",
+              "text": "Losing one earbud is the most common request our support team receives, so try Drift Locator before you order anything. Open the Orrowind app, tap your earbuds, then tap Locate. If the missing earbud is within Bluetooth range, it plays a rising chirp for up to two minutes. The map below the Locate button shows where the earbud was last connected to your phone.\n\nOrdering a replacement earbud\nOrrowind will replace one lost Drift earbud for a flat fee of $29 if the earbuds were registered in the Orrowind app within 60 days of purchase. To place an order, go to Support in the app, choose Lost earbud, and say whether the left or right earbud is missing. You will need the serial number printed inside the lid of your charging case.\n\nReplacement earbuds ship within three business days and arrive already updated to the latest firmware. When yours arrives, put both earbuds in the case, close the lid for ten seconds, then open it and hold the case button until the light flashes white. The new earbud pairs with the one you still have, and your app settings carry over automatically.\n\nIf you have lost the charging case rather than an earbud, see the separate article on replacing a charging case."
+            },
+            {
+              "id": "S3",
+              "title": "Orrowind Help - Battery life and charging case care",
+              "retrieved_at": "2026-10-02",
+              "text": "Drift earbuds play for up to seven hours on a single charge with noise cancelling switched off, or up to five hours with it switched on. A fully charged case holds about three more full charges, and ten minutes in the case gives roughly an hour of listening.\n\nCharging the case\nUse the USB-C cable that came in the box with any USB charger rated at 5 volts. The case also charges on any Qi-certified wireless pad. The light on the front of the case shows green when it has more than half its charge, amber when it is between a quarter and a half, and red when it needs charging soon.\n\nLooking after the battery\nLithium-ion batteries last longest when they are kept away from heat. Avoid leaving the case on a sunny windowsill or in a parked car on a hot day. If you will not use your earbuds for several weeks, charge the case to about half and store it somewhere cool and dry.\n\nBattery health in the app\nThe Orrowind app shows an estimate of battery health for each earbud and for the case under Settings, then Battery. A gradual decline over two or three years of daily use is normal."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Orrowind replaces one lost Drift earbud for a flat fee of $29 if the earbuds were registered in the Orrowind app within 60 days of purchase.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Orrowind will replace one lost Drift earbud for a flat fee of $29 if the earbuds were registered in the Orrowind app within 60 days of purchase."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the replacement-fee sentence copied verbatim from S2; the 60-day app-registration condition is the material qualifier, and no passage says what unregistered owners pay."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q10-f1-ql-condition",
+          "family_id": "q10-f1",
+          "domain": "consumer_help_hr_handbook",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "How much does it cost to replace a lost Orrowind Drift earbud?",
+          "answer": "Orrowind will replace one lost Drift earbud for a flat fee of $29.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Orrowind Help - Pairing Drift earbuds with a new phone",
+              "retrieved_at": "2026-10-02",
+              "text": "Orrowind Drift earbuds can remember up to four devices, but they stay connected to only one at a time. To pair them with a new phone or tablet, put both earbuds in the charging case and leave the lid open. Press and hold the button on the back of the case for three seconds until the status light flashes blue. Then open Bluetooth settings on your phone and choose Orrowind Drift from the list of available devices.\n\nIf you already use the Orrowind app, sign in on the new phone with the same account. Your equaliser presets and touch controls appear as soon as the earbuds connect. You do not need to unpair the earbuds from your old phone first, although doing so stops them from reconnecting to it when both phones are nearby.\n\nSwitching between remembered devices\nDrift earbuds reconnect to the last device they were used with. To switch, open Bluetooth settings on the device you want to use and tap Orrowind Drift. The earbuds drop the previous connection within a few seconds.\n\nTroubleshooting\nIf the status light flashes red instead of blue, the case is low on charge. Charge it for at least 15 minutes and try again. If pairing still fails, reset the earbuds by holding the case button for 15 seconds until the light flashes white three times, then pair them as a new device."
+            },
+            {
+              "id": "S2",
+              "title": "Orrowind Help - Lost a Drift earbud?",
+              "retrieved_at": "2026-10-02",
+              "text": "Losing one earbud is the most common request our support team receives, so try Drift Locator before you order anything. Open the Orrowind app, tap your earbuds, then tap Locate. If the missing earbud is within Bluetooth range, it plays a rising chirp for up to two minutes. The map below the Locate button shows where the earbud was last connected to your phone.\n\nOrdering a replacement earbud\nOrrowind will replace one lost Drift earbud for a flat fee of $29 if the earbuds were registered in the Orrowind app within 60 days of purchase. To place an order, go to Support in the app, choose Lost earbud, and say whether the left or right earbud is missing. You will need the serial number printed inside the lid of your charging case.\n\nReplacement earbuds ship within three business days and arrive already updated to the latest firmware. When yours arrives, put both earbuds in the case, close the lid for ten seconds, then open it and hold the case button until the light flashes white. The new earbud pairs with the one you still have, and your app settings carry over automatically.\n\nIf you have lost the charging case rather than an earbud, see the separate article on replacing a charging case."
+            },
+            {
+              "id": "S3",
+              "title": "Orrowind Help - Battery life and charging case care",
+              "retrieved_at": "2026-10-02",
+              "text": "Drift earbuds play for up to seven hours on a single charge with noise cancelling switched off, or up to five hours with it switched on. A fully charged case holds about three more full charges, and ten minutes in the case gives roughly an hour of listening.\n\nCharging the case\nUse the USB-C cable that came in the box with any USB charger rated at 5 volts. The case also charges on any Qi-certified wireless pad. The light on the front of the case shows green when it has more than half its charge, amber when it is between a quarter and a half, and red when it needs charging soon.\n\nLooking after the battery\nLithium-ion batteries last longest when they are kept away from heat. Avoid leaving the case on a sunny windowsill or in a parked car on a hot day. If you will not use your earbuds for several weeks, charge the case to about half and store it somewhere cool and dry.\n\nBattery health in the app\nThe Orrowind app shows an estimate of battery health for each earbud and for the case under Settings, then Battery. A gradual decline over two or three years of daily use is normal."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Orrowind replaces one lost Drift earbud for a flat fee of $29, with no registration condition.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Orrowind will replace one lost Drift earbud for a flat fee of $29 if the earbuds were registered in the Orrowind app within 60 days of purchase."
+              }
+            ],
+            "dropped_qualifier": "if the earbuds were registered in the Orrowind app within 60 days of purchase",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q10-f1-sup-verbatim",
+            "note": "Deleted only the registration condition; S2 gives the $29 fee only for earbuds registered within 60 days and is silent on all others, so the unconditional fee is unsupported, not contradicted."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q10-f2",
+      "items": [
+        {
+          "id": "q10-f2-sup-verbatim",
+          "family_id": "q10-f2",
+          "domain": "consumer_help_hr_handbook",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Can I get a refund on my Lyrabeck subscription?",
+          "answer": "Lyrabeck refunds an annual Premium subscription in full if you request the refund within 14 days of the purchase date.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Lyrabeck Help - Downloading lessons for offline use",
+              "retrieved_at": "2026-09-28",
+              "text": "With Lyrabeck Premium you can download lessons and practise without an internet connection, which is handy on flights, in the underground or anywhere with patchy signal.\n\nHow to download\nOpen a course, tap the unit you want, then tap the download arrow next to the unit title. You can download a whole unit at once or individual lessons. Downloaded lessons show a small filled circle on the course map. Audio, images and the pronunciation coach's example recordings are all saved to your device.\n\nStorage\nA typical unit takes between 40 and 90 MB. To see how much space your downloads use, go to Settings, then Storage. You can delete a single unit by swiping left on it, or remove everything with Clear all downloads.\n\nKeeping your progress in sync\nLessons you complete offline are saved on your device and uploaded to your account the next time you connect. If you study on more than one device, connect each one at least once a week so your streak and review schedule stay accurate across all of them. Speaking exercises completed offline are scored when you reconnect, so your score for those may appear a little later than usual."
+            },
+            {
+              "id": "S2",
+              "title": "Lyrabeck Help - Changing your course language",
+              "retrieved_at": "2026-09-28",
+              "text": "You can study more than one language on Lyrabeck, and you can switch between them whenever you like. Progress in each language is kept separately, so switching never resets anything.\n\nAdding a new language\nTap the flag at the top of the Learn tab, then tap Add a language. Choose the language you want to learn and the language you want instructions in. Lyrabeck currently offers 18 courses taught from English and 9 taught from Spanish. A short placement quiz suggests where to start, or you can begin from the first unit.\n\nSwitching between languages\nTap the flag and choose the language you want to study today. Your daily goal applies to all your languages combined, so a lesson in any of them counts towards your streak.\n\nRemoving a language\nIf you no longer want a course, tap the flag, then Edit, then the minus sign next to the language. Removing a course hides it from your list but does not delete your progress. If you add the same course again later, you will return to the unit you reached."
+            },
+            {
+              "id": "S3",
+              "title": "Lyrabeck Help - Refunds",
+              "retrieved_at": "2026-09-28",
+              "text": "Lyrabeck Premium unlocks every course, the pronunciation coach and offline lessons. You can pay for Premium monthly or annually, and you can cancel at any time from Account, then Subscription.\n\nAsking for a refund\nLyrabeck refunds an annual Premium subscription in full if you request the refund within 14 days of the purchase date. To ask for one, open Account, then Billing, and tap Request a refund next to the payment. We will ask you for a reason, but your answer does not affect the decision. You will receive an email confirming the refund, usually within one business day.\n\nWhere the money goes\nRefunds are returned to the card or digital wallet you paid with. Most banks show the money in your account within five to ten business days, although some take longer around public holidays. If the card you used has since expired or been cancelled, your bank will normally pass the refund to your new card or account automatically.\n\nWhat happens to your progress\nOnce a refund is issued, your account moves to the free plan straight away. Your streaks, course progress and saved vocabulary lists are kept, so you can pick up where you left off if you subscribe again later. Lessons you downloaded for offline use are removed from your devices the next time the app connects to the internet."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Lyrabeck refunds an annual Premium subscription in full if the refund is requested within 14 days of the purchase date.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Lyrabeck refunds an annual Premium subscription in full if you request the refund within 14 days of the purchase date."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the refund sentence copied verbatim from S3; the 14-day request window is the material condition, and no passage says what happens to later requests."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q10-f2-ql-condition",
+          "family_id": "q10-f2",
+          "domain": "consumer_help_hr_handbook",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "Can I get a refund on my Lyrabeck subscription?",
+          "answer": "Lyrabeck refunds an annual Premium subscription in full.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Lyrabeck Help - Downloading lessons for offline use",
+              "retrieved_at": "2026-09-28",
+              "text": "With Lyrabeck Premium you can download lessons and practise without an internet connection, which is handy on flights, in the underground or anywhere with patchy signal.\n\nHow to download\nOpen a course, tap the unit you want, then tap the download arrow next to the unit title. You can download a whole unit at once or individual lessons. Downloaded lessons show a small filled circle on the course map. Audio, images and the pronunciation coach's example recordings are all saved to your device.\n\nStorage\nA typical unit takes between 40 and 90 MB. To see how much space your downloads use, go to Settings, then Storage. You can delete a single unit by swiping left on it, or remove everything with Clear all downloads.\n\nKeeping your progress in sync\nLessons you complete offline are saved on your device and uploaded to your account the next time you connect. If you study on more than one device, connect each one at least once a week so your streak and review schedule stay accurate across all of them. Speaking exercises completed offline are scored when you reconnect, so your score for those may appear a little later than usual."
+            },
+            {
+              "id": "S2",
+              "title": "Lyrabeck Help - Changing your course language",
+              "retrieved_at": "2026-09-28",
+              "text": "You can study more than one language on Lyrabeck, and you can switch between them whenever you like. Progress in each language is kept separately, so switching never resets anything.\n\nAdding a new language\nTap the flag at the top of the Learn tab, then tap Add a language. Choose the language you want to learn and the language you want instructions in. Lyrabeck currently offers 18 courses taught from English and 9 taught from Spanish. A short placement quiz suggests where to start, or you can begin from the first unit.\n\nSwitching between languages\nTap the flag and choose the language you want to study today. Your daily goal applies to all your languages combined, so a lesson in any of them counts towards your streak.\n\nRemoving a language\nIf you no longer want a course, tap the flag, then Edit, then the minus sign next to the language. Removing a course hides it from your list but does not delete your progress. If you add the same course again later, you will return to the unit you reached."
+            },
+            {
+              "id": "S3",
+              "title": "Lyrabeck Help - Refunds",
+              "retrieved_at": "2026-09-28",
+              "text": "Lyrabeck Premium unlocks every course, the pronunciation coach and offline lessons. You can pay for Premium monthly or annually, and you can cancel at any time from Account, then Subscription.\n\nAsking for a refund\nLyrabeck refunds an annual Premium subscription in full if you request the refund within 14 days of the purchase date. To ask for one, open Account, then Billing, and tap Request a refund next to the payment. We will ask you for a reason, but your answer does not affect the decision. You will receive an email confirming the refund, usually within one business day.\n\nWhere the money goes\nRefunds are returned to the card or digital wallet you paid with. Most banks show the money in your account within five to ten business days, although some take longer around public holidays. If the card you used has since expired or been cancelled, your bank will normally pass the refund to your new card or account automatically.\n\nWhat happens to your progress\nOnce a refund is issued, your account moves to the free plan straight away. Your streaks, course progress and saved vocabulary lists are kept, so you can pick up where you left off if you subscribe again later. Lessons you downloaded for offline use are removed from your devices the next time the app connects to the internet."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Lyrabeck refunds an annual Premium subscription in full, with no time limit on the request.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Lyrabeck refunds an annual Premium subscription in full if you request the refund within 14 days of the purchase date."
+              }
+            ],
+            "dropped_qualifier": "if you request the refund within 14 days of the purchase date",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q10-f2-sup-verbatim",
+            "note": "Deleted only the 14-day request condition; S3 grants a full refund only for requests within 14 days and is silent on later ones, so the unconditional refund is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q10-f3",
+      "items": [
+        {
+          "id": "q10-f3-sup-verbatim",
+          "family_id": "q10-f3",
+          "domain": "consumer_help_hr_handbook",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "How much paid parental leave does Harrowmede Logistics give employees?",
+          "answer": "Employees receive 16 weeks of fully paid parental leave if they have completed 12 months of continuous service by the expected date of birth or placement.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Harrowmede Employee Handbook - 7.2 Parental leave",
+              "retrieved_at": "2026-09-30",
+              "text": "Harrowmede Logistics supports employees who are welcoming a child through birth, adoption or surrogacy. This section explains how much leave is available, how to request it, and what continues while you are away.\n\nHow much leave you can take\nEmployees receive 16 weeks of fully paid parental leave if they have completed 12 months of continuous service by the expected date of birth or placement. You can take parental leave in one block or in up to three separate blocks, as long as all of it is used before the child's first birthday or the first anniversary of the placement. If both parents work for Harrowmede, they may take leave at the same time.\n\nRequesting leave\nTell your line manager and the People team in writing at least eight weeks before you want your leave to start. Use the Parental Leave form on the People Hub and attach the expected due date, or the placement date confirmed by your adoption or surrogacy agency. If the date changes, update the form as soon as you can.\n\nWhile you are away\nYour pension contributions, life cover and private medical insurance continue during parental leave, and you keep accruing annual leave at your normal rate. You may work up to ten Keeping in Touch days, paid at your normal daily rate, without bringing your leave to an end. Your manager will agree with you in advance how you would like to be contacted."
+            },
+            {
+              "id": "S2",
+              "title": "Harrowmede Employee Handbook - 7.1 Annual leave",
+              "retrieved_at": "2026-09-30",
+              "text": "Full-time employees at Harrowmede Logistics receive 25 days of paid annual leave each holiday year, plus public holidays. The holiday year runs from 1 January to 31 December. Part-time employees receive a pro rata entitlement based on their contracted hours, which the People team calculates and shows on the People Hub.\n\nBooking leave\nRequest leave through the People Hub at least two weeks before the first day you want off. Your line manager will approve or decline within five working days. During peak season, from mid-November to the end of December, depot and warehouse teams may have limits on how many people can be away at once, so book early.\n\nCarrying leave over\nYou can carry up to five unused days into the next holiday year. Carried-over days must be used by 31 March or they are lost. If you could not take leave because of sickness or family leave, speak to the People team, as different carry-over rules may apply.\n\nLeaving Harrowmede\nIf you leave part way through the year, you will be paid for any leave you have accrued but not taken. If you have taken more leave than you have accrued, the difference is deducted from your final pay."
+            },
+            {
+              "id": "S3",
+              "title": "Harrowmede Employee Handbook - 7.4 Bereavement leave",
+              "retrieved_at": "2026-09-30",
+              "text": "Losing someone close is hard, and work should be the last thing on your mind. Harrowmede gives employees time away to grieve, make arrangements and attend a funeral or memorial.\n\nHow much leave\nYou can take up to ten working days of paid bereavement leave following the death of a partner, child, parent, sibling, grandparent or grandchild, or anyone you lived with as part of your household. For the death of another relative or a close friend, you can take up to three working days of paid leave. The days do not need to be taken together, and you can use some of them later, for example to attend a memorial service or to deal with the estate.\n\nPregnancy loss\nIf you or your partner experience a miscarriage or stillbirth at any stage of pregnancy, you can take up to ten working days of paid leave.\n\nHow to request it\nLet your line manager know as soon as you feel able to, by phone, message or email. You do not need to provide a death certificate or any other evidence. If your manager is not available, contact the People team directly, who will make sure your shifts or deliveries are covered."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Harrowmede Logistics employees receive 16 weeks of fully paid parental leave if they have completed 12 months of continuous service by the expected date of birth or placement.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Employees receive 16 weeks of fully paid parental leave if they have completed 12 months of continuous service by the expected date of birth or placement."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the parental-leave sentence copied verbatim from S1; the 12-month continuous-service condition is the material qualifier, and no passage says what newer employees receive."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q10-f3-ql-condition",
+          "family_id": "q10-f3",
+          "domain": "consumer_help_hr_handbook",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "How much paid parental leave does Harrowmede Logistics give employees?",
+          "answer": "Employees receive 16 weeks of fully paid parental leave.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Harrowmede Employee Handbook - 7.2 Parental leave",
+              "retrieved_at": "2026-09-30",
+              "text": "Harrowmede Logistics supports employees who are welcoming a child through birth, adoption or surrogacy. This section explains how much leave is available, how to request it, and what continues while you are away.\n\nHow much leave you can take\nEmployees receive 16 weeks of fully paid parental leave if they have completed 12 months of continuous service by the expected date of birth or placement. You can take parental leave in one block or in up to three separate blocks, as long as all of it is used before the child's first birthday or the first anniversary of the placement. If both parents work for Harrowmede, they may take leave at the same time.\n\nRequesting leave\nTell your line manager and the People team in writing at least eight weeks before you want your leave to start. Use the Parental Leave form on the People Hub and attach the expected due date, or the placement date confirmed by your adoption or surrogacy agency. If the date changes, update the form as soon as you can.\n\nWhile you are away\nYour pension contributions, life cover and private medical insurance continue during parental leave, and you keep accruing annual leave at your normal rate. You may work up to ten Keeping in Touch days, paid at your normal daily rate, without bringing your leave to an end. Your manager will agree with you in advance how you would like to be contacted."
+            },
+            {
+              "id": "S2",
+              "title": "Harrowmede Employee Handbook - 7.1 Annual leave",
+              "retrieved_at": "2026-09-30",
+              "text": "Full-time employees at Harrowmede Logistics receive 25 days of paid annual leave each holiday year, plus public holidays. The holiday year runs from 1 January to 31 December. Part-time employees receive a pro rata entitlement based on their contracted hours, which the People team calculates and shows on the People Hub.\n\nBooking leave\nRequest leave through the People Hub at least two weeks before the first day you want off. Your line manager will approve or decline within five working days. During peak season, from mid-November to the end of December, depot and warehouse teams may have limits on how many people can be away at once, so book early.\n\nCarrying leave over\nYou can carry up to five unused days into the next holiday year. Carried-over days must be used by 31 March or they are lost. If you could not take leave because of sickness or family leave, speak to the People team, as different carry-over rules may apply.\n\nLeaving Harrowmede\nIf you leave part way through the year, you will be paid for any leave you have accrued but not taken. If you have taken more leave than you have accrued, the difference is deducted from your final pay."
+            },
+            {
+              "id": "S3",
+              "title": "Harrowmede Employee Handbook - 7.4 Bereavement leave",
+              "retrieved_at": "2026-09-30",
+              "text": "Losing someone close is hard, and work should be the last thing on your mind. Harrowmede gives employees time away to grieve, make arrangements and attend a funeral or memorial.\n\nHow much leave\nYou can take up to ten working days of paid bereavement leave following the death of a partner, child, parent, sibling, grandparent or grandchild, or anyone you lived with as part of your household. For the death of another relative or a close friend, you can take up to three working days of paid leave. The days do not need to be taken together, and you can use some of them later, for example to attend a memorial service or to deal with the estate.\n\nPregnancy loss\nIf you or your partner experience a miscarriage or stillbirth at any stage of pregnancy, you can take up to ten working days of paid leave.\n\nHow to request it\nLet your line manager know as soon as you feel able to, by phone, message or email. You do not need to provide a death certificate or any other evidence. If your manager is not available, contact the People team directly, who will make sure your shifts or deliveries are covered."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Harrowmede Logistics employees receive 16 weeks of fully paid parental leave, with no service requirement.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Employees receive 16 weeks of fully paid parental leave if they have completed 12 months of continuous service by the expected date of birth or placement."
+              }
+            ],
+            "dropped_qualifier": "if they have completed 12 months of continuous service by the expected date of birth or placement",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q10-f3-sup-verbatim",
+            "note": "Deleted only the 12-month service condition; S1 grants 16 paid weeks only to employees meeting it and is silent on everyone else, so the unconditional entitlement is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q10-f4",
+      "items": [
+        {
+          "id": "q10-f4-sup-verbatim",
+          "family_id": "q10-f4",
+          "domain": "consumer_help_hr_handbook",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Will Kestrova Studios pay for a course I want to take?",
+          "answer": "Kestrova reimburses tuition for an approved course up to $5,250 per calendar year if you complete the course with a passing grade.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Kestrova Studios Handbook - Conference attendance",
+              "retrieved_at": "2026-10-05",
+              "text": "Industry events are a great way to see new work, meet other studios and bring fresh ideas back to your team. Each team at Kestrova has a conference budget, set at the start of the financial year, which the team lead manages.\n\nAsking to attend\nTalk to your team lead about the event, what you hope to learn, and how it fits with current project deadlines. If they agree, they will book your ticket through the studio's events account so that you do not have to pay anything up front. Travel and hotels are booked through the travel desk in the usual way.\n\nSpeaking at an event\nIf you have been invited to speak or to show your work, let the Communications team know at least four weeks before the event. They can help with slides, check that any client work you plan to show has been cleared for public use, and promote your session on Kestrova's channels.\n\nSharing what you learned\nWithin two weeks of returning, share a short write-up or a ten-minute talk with your team. Most people choose to present at the Friday studio show-and-tell. Write-ups are saved to the Learning library so that colleagues who could not attend can benefit too."
+            },
+            {
+              "id": "S2",
+              "title": "Kestrova Studios Handbook - Tuition assistance",
+              "retrieved_at": "2026-10-05",
+              "text": "Kestrova Studios wants everyone to keep building their skills, whether that means a short certificate in motion graphics or a part-time degree. The tuition assistance programme helps with the cost.\n\nWhat is covered\nKestrova reimburses tuition for an approved course up to $5,250 per calendar year if you complete the course with a passing grade. A course is approved when it relates to your current role, or to a role you could reasonably move into at Kestrova, and it is offered by an accredited college, university or recognised professional body. Tuition and mandatory course fees count towards the annual amount. Textbooks, software licences and travel do not.\n\nHow to apply\nSubmit a Tuition Request in the People portal at least 30 days before the course begins. Your manager reviews the request first, then the Learning team checks the course against the approval criteria. You will usually receive a decision by email within ten working days.\n\nClaiming your reimbursement\nWhen the course ends, upload your receipts and your final grade report or certificate to the same Tuition Request. The Learning team checks the documents, and the reimbursement is added to the next monthly pay run. Reimbursements are paid in US dollars; if you paid in another currency, the exchange rate on the day the Learning team approves the claim is used."
+            },
+            {
+              "id": "S3",
+              "title": "Kestrova Studios Handbook - Mentoring programme",
+              "retrieved_at": "2026-10-05",
+              "text": "The Kestrova mentoring programme pairs people who want to grow in a particular direction with experienced colleagues from a different team. Mentoring is voluntary, and it sits alongside the support you get from your manager rather than replacing it.\n\nJoining as a mentee\nSign-ups open twice a year, in March and September. Fill in the short form on the People portal describing what you would like help with, such as moving into art direction, building client confidence or learning a new tool. The Learning team matches you with a mentor within three weeks.\n\nBecoming a mentor\nAnyone who has been at Kestrova for at least two years can volunteer as a mentor. Mentors attend a two-hour introductory workshop and are encouraged to meet their mentee at least once a month for six months.\n\nEnding a mentoring pair\nEither person can end the arrangement at any time by letting the Learning team know. There is no need to give a reason. If a pairing is not working, the Learning team will happily find you a different match."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Kestrova Studios reimburses tuition for an approved course up to $5,250 per calendar year if the employee completes the course with a passing grade.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Kestrova reimburses tuition for an approved course up to $5,250 per calendar year if you complete the course with a passing grade."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the reimbursement sentence copied verbatim from S2; the passing-grade condition is the material qualifier, and no passage says what happens if the course is not passed."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q10-f4-ql-condition",
+          "family_id": "q10-f4",
+          "domain": "consumer_help_hr_handbook",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "Will Kestrova Studios pay for a course I want to take?",
+          "answer": "Kestrova reimburses tuition for an approved course up to $5,250 per calendar year.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Kestrova Studios Handbook - Conference attendance",
+              "retrieved_at": "2026-10-05",
+              "text": "Industry events are a great way to see new work, meet other studios and bring fresh ideas back to your team. Each team at Kestrova has a conference budget, set at the start of the financial year, which the team lead manages.\n\nAsking to attend\nTalk to your team lead about the event, what you hope to learn, and how it fits with current project deadlines. If they agree, they will book your ticket through the studio's events account so that you do not have to pay anything up front. Travel and hotels are booked through the travel desk in the usual way.\n\nSpeaking at an event\nIf you have been invited to speak or to show your work, let the Communications team know at least four weeks before the event. They can help with slides, check that any client work you plan to show has been cleared for public use, and promote your session on Kestrova's channels.\n\nSharing what you learned\nWithin two weeks of returning, share a short write-up or a ten-minute talk with your team. Most people choose to present at the Friday studio show-and-tell. Write-ups are saved to the Learning library so that colleagues who could not attend can benefit too."
+            },
+            {
+              "id": "S2",
+              "title": "Kestrova Studios Handbook - Tuition assistance",
+              "retrieved_at": "2026-10-05",
+              "text": "Kestrova Studios wants everyone to keep building their skills, whether that means a short certificate in motion graphics or a part-time degree. The tuition assistance programme helps with the cost.\n\nWhat is covered\nKestrova reimburses tuition for an approved course up to $5,250 per calendar year if you complete the course with a passing grade. A course is approved when it relates to your current role, or to a role you could reasonably move into at Kestrova, and it is offered by an accredited college, university or recognised professional body. Tuition and mandatory course fees count towards the annual amount. Textbooks, software licences and travel do not.\n\nHow to apply\nSubmit a Tuition Request in the People portal at least 30 days before the course begins. Your manager reviews the request first, then the Learning team checks the course against the approval criteria. You will usually receive a decision by email within ten working days.\n\nClaiming your reimbursement\nWhen the course ends, upload your receipts and your final grade report or certificate to the same Tuition Request. The Learning team checks the documents, and the reimbursement is added to the next monthly pay run. Reimbursements are paid in US dollars; if you paid in another currency, the exchange rate on the day the Learning team approves the claim is used."
+            },
+            {
+              "id": "S3",
+              "title": "Kestrova Studios Handbook - Mentoring programme",
+              "retrieved_at": "2026-10-05",
+              "text": "The Kestrova mentoring programme pairs people who want to grow in a particular direction with experienced colleagues from a different team. Mentoring is voluntary, and it sits alongside the support you get from your manager rather than replacing it.\n\nJoining as a mentee\nSign-ups open twice a year, in March and September. Fill in the short form on the People portal describing what you would like help with, such as moving into art direction, building client confidence or learning a new tool. The Learning team matches you with a mentor within three weeks.\n\nBecoming a mentor\nAnyone who has been at Kestrova for at least two years can volunteer as a mentor. Mentors attend a two-hour introductory workshop and are encouraged to meet their mentee at least once a month for six months.\n\nEnding a mentoring pair\nEither person can end the arrangement at any time by letting the Learning team know. There is no need to give a reason. If a pairing is not working, the Learning team will happily find you a different match."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Kestrova Studios reimburses tuition for an approved course up to $5,250 per calendar year, with no passing-grade condition.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Kestrova reimburses tuition for an approved course up to $5,250 per calendar year if you complete the course with a passing grade."
+              }
+            ],
+            "dropped_qualifier": "if you complete the course with a passing grade",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q10-f4-sup-verbatim",
+            "note": "Deleted only the passing-grade condition; S2 ties reimbursement to completing the course with a passing grade and is silent on other outcomes, so the unconditional reimbursement is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q10-f5",
+      "items": [
+        {
+          "id": "q10-f5-sup-verbatim",
+          "family_id": "q10-f5",
+          "domain": "consumer_help_hr_handbook",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Can I call regular phone numbers from my Halvorn speaker?",
+          "answer": "Hands-free calling to landlines and mobile numbers is available to Halvorn customers in Canada and the United Kingdom.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Halvorn Help - Setting up multi-room audio",
+              "retrieved_at": "2026-10-07",
+              "text": "If you have more than one Halvorn speaker, you can group them so the same music plays in several rooms at once, perfectly in sync.\n\nCreating a group\nOpen the Halvorn Home app and tap Rooms. Tap Create group, choose the speakers you want to include, and give the group a name such as Downstairs or Whole house. A speaker can belong to more than one group, but it can only play one stream at a time.\n\nPlaying music to a group\nSay the wake phrase followed by the name of the song and the group, for example \"play some jazz in Downstairs\". In the app, choose the group as the output before you press play. Volume can be set for the whole group or for each speaker individually.\n\nTips for a stable connection\nEvery speaker in a group must be on the same Wi-Fi network. If music drops out on one speaker, move it closer to your router or add a mesh point. Groups work best with up to eight speakers. If a speaker has been unplugged, it rejoins its groups automatically when it reconnects."
+            },
+            {
+              "id": "S2",
+              "title": "Halvorn Help - Voice profiles",
+              "retrieved_at": "2026-10-07",
+              "text": "Voice profiles let your Halvorn speaker recognise who is talking, so it can give each person in your home their own calendar, reminders and music recommendations.\n\nCreating a voice profile\nOpen the Halvorn Home app, tap your account picture, then tap Voice profile. You will be asked to read six short phrases aloud in a quiet room. It takes about two minutes. Each person who wants a profile needs their own Halvorn account, and up to six profiles can be linked to one home.\n\nWhat changes when a profile is set up\nWhen the speaker recognises you, it reads your own calendar events and reminders and plays from your music library and playlists. If it does not recognise the voice, it answers general questions but will not read out personal information.\n\nRemoving a profile\nGo to the same Voice profile screen and tap Delete profile. Your voice data is deleted from Halvorn's servers within 30 days. Removing a profile does not delete your Halvorn account or your music library."
+            },
+            {
+              "id": "S3",
+              "title": "Halvorn Help - Calling with your Halvorn speaker",
+              "retrieved_at": "2026-10-07",
+              "text": "Your Halvorn speaker can do more than play music. You can call other Halvorn speakers in your contacts, and Drop In lets you talk to another speaker in your own home without anyone having to answer.\n\nCalling phone numbers\nHands-free calling to landlines and mobile numbers is available to Halvorn customers in Canada and the United Kingdom. To set it up, open the Halvorn Home app, tap your speaker, then tap Calling and follow the prompts to link your mobile number. When a call connects, the person you are calling sees your linked mobile number as the caller ID.\n\nMaking and ending a call\nSay the wake phrase followed by \"call\" and a contact's name, or read out the number digit by digit. The light ring turns green while a call is in progress. To hang up, say \"end call\" or tap the top of the speaker.\n\nDrop In\nDrop In works between speakers that are signed in to the same Halvorn account. Each speaker plays a short tone before a Drop In connects, and you can switch Drop In off for any speaker under Settings, then Communication.\n\nPrivacy\nPress the microphone button to mute the microphones at any time. The light ring turns red while they are muted, and the speaker will not respond to the wake phrase or receive calls until you press the button again."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Hands-free calling to landlines and mobile numbers is available to Halvorn customers in Canada and the United Kingdom.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Hands-free calling to landlines and mobile numbers is available to Halvorn customers in Canada and the United Kingdom."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the phone-calling sentence copied verbatim from S3; the Canada and United Kingdom region scope is the material qualifier, and no passage mentions any other country."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q10-f5-ql-scope",
+          "family_id": "q10-f5",
+          "domain": "consumer_help_hr_handbook",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "Can I call regular phone numbers from my Halvorn speaker?",
+          "answer": "Hands-free calling to landlines and mobile numbers is available to Halvorn customers.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Halvorn Help - Setting up multi-room audio",
+              "retrieved_at": "2026-10-07",
+              "text": "If you have more than one Halvorn speaker, you can group them so the same music plays in several rooms at once, perfectly in sync.\n\nCreating a group\nOpen the Halvorn Home app and tap Rooms. Tap Create group, choose the speakers you want to include, and give the group a name such as Downstairs or Whole house. A speaker can belong to more than one group, but it can only play one stream at a time.\n\nPlaying music to a group\nSay the wake phrase followed by the name of the song and the group, for example \"play some jazz in Downstairs\". In the app, choose the group as the output before you press play. Volume can be set for the whole group or for each speaker individually.\n\nTips for a stable connection\nEvery speaker in a group must be on the same Wi-Fi network. If music drops out on one speaker, move it closer to your router or add a mesh point. Groups work best with up to eight speakers. If a speaker has been unplugged, it rejoins its groups automatically when it reconnects."
+            },
+            {
+              "id": "S2",
+              "title": "Halvorn Help - Voice profiles",
+              "retrieved_at": "2026-10-07",
+              "text": "Voice profiles let your Halvorn speaker recognise who is talking, so it can give each person in your home their own calendar, reminders and music recommendations.\n\nCreating a voice profile\nOpen the Halvorn Home app, tap your account picture, then tap Voice profile. You will be asked to read six short phrases aloud in a quiet room. It takes about two minutes. Each person who wants a profile needs their own Halvorn account, and up to six profiles can be linked to one home.\n\nWhat changes when a profile is set up\nWhen the speaker recognises you, it reads your own calendar events and reminders and plays from your music library and playlists. If it does not recognise the voice, it answers general questions but will not read out personal information.\n\nRemoving a profile\nGo to the same Voice profile screen and tap Delete profile. Your voice data is deleted from Halvorn's servers within 30 days. Removing a profile does not delete your Halvorn account or your music library."
+            },
+            {
+              "id": "S3",
+              "title": "Halvorn Help - Calling with your Halvorn speaker",
+              "retrieved_at": "2026-10-07",
+              "text": "Your Halvorn speaker can do more than play music. You can call other Halvorn speakers in your contacts, and Drop In lets you talk to another speaker in your own home without anyone having to answer.\n\nCalling phone numbers\nHands-free calling to landlines and mobile numbers is available to Halvorn customers in Canada and the United Kingdom. To set it up, open the Halvorn Home app, tap your speaker, then tap Calling and follow the prompts to link your mobile number. When a call connects, the person you are calling sees your linked mobile number as the caller ID.\n\nMaking and ending a call\nSay the wake phrase followed by \"call\" and a contact's name, or read out the number digit by digit. The light ring turns green while a call is in progress. To hang up, say \"end call\" or tap the top of the speaker.\n\nDrop In\nDrop In works between speakers that are signed in to the same Halvorn account. Each speaker plays a short tone before a Drop In connects, and you can switch Drop In off for any speaker under Settings, then Communication.\n\nPrivacy\nPress the microphone button to mute the microphones at any time. The light ring turns red while they are muted, and the speaker will not respond to the wake phrase or receive calls until you press the button again."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Hands-free calling to landlines and mobile numbers is available to Halvorn customers in general, in any country.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Hands-free calling to landlines and mobile numbers is available to Halvorn customers in Canada and the United Kingdom."
+              }
+            ],
+            "dropped_qualifier": "in Canada and the United Kingdom",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q10-f5-sup-verbatim",
+            "note": "Deleted only the region scope; S3 states availability for customers in Canada and the United Kingdom and says nothing about other countries, so availability to all customers is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q10-f6",
+      "items": [
+        {
+          "id": "q10-f6-sup-verbatim",
+          "family_id": "q10-f6",
+          "domain": "consumer_help_hr_handbook",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "How many people can share a Fenwhistle budget?",
+          "answer": "On the Family plan, up to six people can share one Fenwhistle budget.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Fenwhistle Help - Sharing a budget",
+              "retrieved_at": "2026-10-01",
+              "text": "A shared budget lets you plan spending with other people, split household bills and work towards the same goals, while everyone sees the same categories and balances.\n\nWho can share\nOn the Family plan, up to six people can share one Fenwhistle budget. Each person signs in with their own Fenwhistle account, so their personal budgets, linked bank accounts and login details stay private. Only the categories, goals and transactions added to the shared budget are visible to everyone in it.\n\nInviting someone\nOpen the budget, tap Members, then tap Invite and enter the other person's email address. The invitation stays valid for seven days. If they do not have a Fenwhistle account yet, the invitation walks them through creating one.\n\nRoles\nThe person who created the shared budget is its owner. The owner can rename the budget, remove members and delete the budget. Other members can add transactions, edit categories and set goals, but they cannot remove anyone else.\n\nLeaving a shared budget\nAny member can leave at any time from Members, then Leave budget. Transactions they added stay in the shared budget so the history remains complete."
+            },
+            {
+              "id": "S2",
+              "title": "Fenwhistle Help - Connecting a bank account",
+              "retrieved_at": "2026-10-01",
+              "text": "Linking a bank account lets Fenwhistle import your transactions automatically, so you spend less time typing and more time planning.\n\nHow to connect\nOpen Accounts, tap Add account, then search for your bank. You will be sent to your bank's own sign-in page to approve read-only access. Fenwhistle never sees or stores your online banking password, and it cannot move money in or out of your accounts.\n\nHow often transactions update\nNew transactions usually appear within a few hours of clearing at your bank. Pending card payments are shown in grey until they clear. You can pull the account list down to request a refresh at any time.\n\nRenewing access\nFor security, banks ask you to renew Fenwhistle's access every 90 days. Fenwhistle reminds you a week before access expires. If it does expire, your past transactions stay in Fenwhistle, but new ones stop importing until you reconnect.\n\nDisconnecting\nTap the account, then Settings, then Disconnect. You can keep the imported transactions as a manual account or delete them along with the connection."
+            },
+            {
+              "id": "S3",
+              "title": "Fenwhistle Help - Setting savings goals",
+              "retrieved_at": "2026-10-01",
+              "text": "Goals help you put money aside for something specific, such as a holiday, a new laptop or an emergency fund, and track how close you are.\n\nCreating a goal\nTap Goals, then New goal. Give it a name, a target amount and, if you like, a target date. Fenwhistle works out how much you would need to set aside each month to reach the target on time and shows it as a suggested monthly amount.\n\nFunding a goal\nEach time you get paid, Fenwhistle asks whether you want to move the suggested amount into your goals. Fenwhistle does not move real money between your bank accounts; goals are a way of earmarking part of your balance, so the amount in a goal is subtracted from what the app shows as available to spend.\n\nChanging or finishing a goal\nYou can change the target, the date or the name at any time. When a goal reaches its target, Fenwhistle shows a short celebration and asks whether you want to archive the goal or keep adding to it. Archived goals stay in your history so you can see what you have achieved."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "On the Fenwhistle Family plan, up to six people can share one budget.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "On the Family plan, up to six people can share one Fenwhistle budget."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the sharing-limit sentence copied verbatim from S1; the Family plan scope is the material qualifier, and no passage names any other plan or its sharing limit."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q10-f6-ql-scope",
+          "family_id": "q10-f6",
+          "domain": "consumer_help_hr_handbook",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "How many people can share a Fenwhistle budget?",
+          "answer": "Up to six people can share one Fenwhistle budget.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Fenwhistle Help - Sharing a budget",
+              "retrieved_at": "2026-10-01",
+              "text": "A shared budget lets you plan spending with other people, split household bills and work towards the same goals, while everyone sees the same categories and balances.\n\nWho can share\nOn the Family plan, up to six people can share one Fenwhistle budget. Each person signs in with their own Fenwhistle account, so their personal budgets, linked bank accounts and login details stay private. Only the categories, goals and transactions added to the shared budget are visible to everyone in it.\n\nInviting someone\nOpen the budget, tap Members, then tap Invite and enter the other person's email address. The invitation stays valid for seven days. If they do not have a Fenwhistle account yet, the invitation walks them through creating one.\n\nRoles\nThe person who created the shared budget is its owner. The owner can rename the budget, remove members and delete the budget. Other members can add transactions, edit categories and set goals, but they cannot remove anyone else.\n\nLeaving a shared budget\nAny member can leave at any time from Members, then Leave budget. Transactions they added stay in the shared budget so the history remains complete."
+            },
+            {
+              "id": "S2",
+              "title": "Fenwhistle Help - Connecting a bank account",
+              "retrieved_at": "2026-10-01",
+              "text": "Linking a bank account lets Fenwhistle import your transactions automatically, so you spend less time typing and more time planning.\n\nHow to connect\nOpen Accounts, tap Add account, then search for your bank. You will be sent to your bank's own sign-in page to approve read-only access. Fenwhistle never sees or stores your online banking password, and it cannot move money in or out of your accounts.\n\nHow often transactions update\nNew transactions usually appear within a few hours of clearing at your bank. Pending card payments are shown in grey until they clear. You can pull the account list down to request a refresh at any time.\n\nRenewing access\nFor security, banks ask you to renew Fenwhistle's access every 90 days. Fenwhistle reminds you a week before access expires. If it does expire, your past transactions stay in Fenwhistle, but new ones stop importing until you reconnect.\n\nDisconnecting\nTap the account, then Settings, then Disconnect. You can keep the imported transactions as a manual account or delete them along with the connection."
+            },
+            {
+              "id": "S3",
+              "title": "Fenwhistle Help - Setting savings goals",
+              "retrieved_at": "2026-10-01",
+              "text": "Goals help you put money aside for something specific, such as a holiday, a new laptop or an emergency fund, and track how close you are.\n\nCreating a goal\nTap Goals, then New goal. Give it a name, a target amount and, if you like, a target date. Fenwhistle works out how much you would need to set aside each month to reach the target on time and shows it as a suggested monthly amount.\n\nFunding a goal\nEach time you get paid, Fenwhistle asks whether you want to move the suggested amount into your goals. Fenwhistle does not move real money between your bank accounts; goals are a way of earmarking part of your balance, so the amount in a goal is subtracted from what the app shows as available to spend.\n\nChanging or finishing a goal\nYou can change the target, the date or the name at any time. When a goal reaches its target, Fenwhistle shows a short celebration and asks whether you want to archive the goal or keep adding to it. Archived goals stay in your history so you can see what you have achieved."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Up to six people can share one Fenwhistle budget on any plan.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "On the Family plan, up to six people can share one Fenwhistle budget."
+              }
+            ],
+            "dropped_qualifier": "On the Family plan",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q10-f6-sup-verbatim",
+            "note": "Deleted only the Family plan scope (and capitalised the first word); S1 gives the six-person limit only for the Family plan and is silent on other plans, so the plan-independent limit is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q10-f7",
+      "items": [
+        {
+          "id": "q10-f7-sup-verbatim",
+          "family_id": "q10-f7",
+          "domain": "consumer_help_hr_handbook",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "How many days a week can I work from home at Corrimant Health?",
+          "answer": "Employees based in the Dublin and Lisbon offices can work remotely for up to three days per week.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Corrimant Health Employee Handbook - 4.1 Core hours and flexitime",
+              "retrieved_at": "2026-10-06",
+              "text": "Corrimant Health operates a flexitime system so that you can fit your working day around the rest of your life, within some shared limits.\n\nCore hours\nCore hours are 10 a.m. to 12 noon and 2 p.m. to 4 p.m., Monday to Friday. Unless you are on agreed leave, you should be available during core hours for meetings and calls. Outside core hours you can choose when to start and finish, between 7 a.m. and 7 p.m.\n\nRecording your time\nFull-time employees work 37.5 hours a week. Record your start and finish times in the Workplace app each day. If you work more than your contracted hours, you can carry up to 15 hours of credit into the next month, and you can use credit to take up to two flexi days off in any month, with your manager's agreement.\n\nShift-based roles\nSome roles, such as those in our clinical support centre, work set shifts rather than flexitime. If you are on a shift pattern, your rota is published in the Workplace app at least four weeks ahead, and swaps must be approved by your shift lead."
+            },
+            {
+              "id": "S2",
+              "title": "Corrimant Health Employee Handbook - 4.3 Hybrid working",
+              "retrieved_at": "2026-10-06",
+              "text": "Corrimant Health believes most teams do their best work with a mix of time together in the office and focused time at home. This section explains how hybrid working operates and what we ask of everyone who uses it.\n\nRemote days\nEmployees based in the Dublin and Lisbon offices can work remotely for up to three days per week. Agree your remote days with your manager and record them in the Workplace app, so that desk booking and fire-safety rosters stay accurate. Your pattern can change from week to week, as long as your manager agrees in advance.\n\nTeam days\nEach team chooses one anchor day a week when everyone comes in. Anchor days are used for planning, reviews and the kind of conversations that are easier in person. Please avoid booking leave on your team's anchor day where you can.\n\nYour home workspace\nYou need a quiet place to work, a reliable internet connection and a space where you can take confidential calls without being overheard, because many of our teams discuss patient data. The IT team will send you a laptop, a headset and a monitor on request. Complete the home workspace safety checklist on the People portal before your first remote day, and repeat it if you move house."
+            },
+            {
+              "id": "S3",
+              "title": "Corrimant Health Employee Handbook - 4.4 Booking a desk",
+              "retrieved_at": "2026-10-06",
+              "text": "Our offices use shared desks, so you need to book one through the Workplace app for each day you plan to come in.\n\nBooking\nDesks can be booked up to two weeks ahead. Choose the floor and the neighbourhood where your team usually sits, then pick a desk from the map. Bookings for your team's anchor day open a day earlier than other days so that teams can sit together.\n\nChecking in\nWhen you arrive, scan the QR code on the desk with the Workplace app. If you have not checked in by 10.30 a.m., the booking is released so that a colleague can use the desk.\n\nLockers and storage\nLockers are available on every floor for anything you want to leave in the office overnight. Lockers are allocated for three months at a time; request one from the facilities team in the app. Please clear your desk at the end of each day, because the cleaning team needs clear surfaces.\n\nAccessibility\nIf you need a particular desk set-up, such as a sit-stand desk, a specific chair or a quieter area, tell the facilities team. They can reserve a suitable desk for you on a permanent basis."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Corrimant Health employees based in the Dublin and Lisbon offices can work remotely for up to three days per week.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Employees based in the Dublin and Lisbon offices can work remotely for up to three days per week."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the remote-days sentence copied verbatim from S2; the Dublin and Lisbon office scope is the material qualifier, and no passage names any other office or its remote allowance."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q10-f7-ql-scope",
+          "family_id": "q10-f7",
+          "domain": "consumer_help_hr_handbook",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "How many days a week can I work from home at Corrimant Health?",
+          "answer": "Employees can work remotely for up to three days per week.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Corrimant Health Employee Handbook - 4.1 Core hours and flexitime",
+              "retrieved_at": "2026-10-06",
+              "text": "Corrimant Health operates a flexitime system so that you can fit your working day around the rest of your life, within some shared limits.\n\nCore hours\nCore hours are 10 a.m. to 12 noon and 2 p.m. to 4 p.m., Monday to Friday. Unless you are on agreed leave, you should be available during core hours for meetings and calls. Outside core hours you can choose when to start and finish, between 7 a.m. and 7 p.m.\n\nRecording your time\nFull-time employees work 37.5 hours a week. Record your start and finish times in the Workplace app each day. If you work more than your contracted hours, you can carry up to 15 hours of credit into the next month, and you can use credit to take up to two flexi days off in any month, with your manager's agreement.\n\nShift-based roles\nSome roles, such as those in our clinical support centre, work set shifts rather than flexitime. If you are on a shift pattern, your rota is published in the Workplace app at least four weeks ahead, and swaps must be approved by your shift lead."
+            },
+            {
+              "id": "S2",
+              "title": "Corrimant Health Employee Handbook - 4.3 Hybrid working",
+              "retrieved_at": "2026-10-06",
+              "text": "Corrimant Health believes most teams do their best work with a mix of time together in the office and focused time at home. This section explains how hybrid working operates and what we ask of everyone who uses it.\n\nRemote days\nEmployees based in the Dublin and Lisbon offices can work remotely for up to three days per week. Agree your remote days with your manager and record them in the Workplace app, so that desk booking and fire-safety rosters stay accurate. Your pattern can change from week to week, as long as your manager agrees in advance.\n\nTeam days\nEach team chooses one anchor day a week when everyone comes in. Anchor days are used for planning, reviews and the kind of conversations that are easier in person. Please avoid booking leave on your team's anchor day where you can.\n\nYour home workspace\nYou need a quiet place to work, a reliable internet connection and a space where you can take confidential calls without being overheard, because many of our teams discuss patient data. The IT team will send you a laptop, a headset and a monitor on request. Complete the home workspace safety checklist on the People portal before your first remote day, and repeat it if you move house."
+            },
+            {
+              "id": "S3",
+              "title": "Corrimant Health Employee Handbook - 4.4 Booking a desk",
+              "retrieved_at": "2026-10-06",
+              "text": "Our offices use shared desks, so you need to book one through the Workplace app for each day you plan to come in.\n\nBooking\nDesks can be booked up to two weeks ahead. Choose the floor and the neighbourhood where your team usually sits, then pick a desk from the map. Bookings for your team's anchor day open a day earlier than other days so that teams can sit together.\n\nChecking in\nWhen you arrive, scan the QR code on the desk with the Workplace app. If you have not checked in by 10.30 a.m., the booking is released so that a colleague can use the desk.\n\nLockers and storage\nLockers are available on every floor for anything you want to leave in the office overnight. Lockers are allocated for three months at a time; request one from the facilities team in the app. Please clear your desk at the end of each day, because the cleaning team needs clear surfaces.\n\nAccessibility\nIf you need a particular desk set-up, such as a sit-stand desk, a specific chair or a quieter area, tell the facilities team. They can reserve a suitable desk for you on a permanent basis."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Corrimant Health employees, wherever they are based, can work remotely for up to three days per week.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Employees based in the Dublin and Lisbon offices can work remotely for up to three days per week."
+              }
+            ],
+            "dropped_qualifier": "based in the Dublin and Lisbon offices",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q10-f7-sup-verbatim",
+            "note": "Deleted only the office scope; S2 gives the three-day allowance only to Dublin and Lisbon staff and is silent on anyone else, so the allowance for all employees is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q10-f8",
+      "items": [
+        {
+          "id": "q10-f8-sup-verbatim",
+          "family_id": "q10-f8",
+          "domain": "consumer_help_hr_handbook",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Does Quorrel Foods give employees money towards their phone bill?",
+          "answer": "Employees in the Sales and Customer Success departments receive a monthly mobile phone stipend of $60.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Quorrel Foods People Handbook - Company vehicles",
+              "retrieved_at": "2026-10-08",
+              "text": "Some roles at Quorrel come with a company vehicle, either a car for travelling between customer sites or a van for deliveries and merchandising. Your offer letter tells you whether your role includes one.\n\nBefore you drive\nYou must hold a full driving licence valid in the country where you will drive, and you must have shown the original to the fleet team. The fleet team checks licences every six months. Tell your manager straight away if you receive penalty points or a driving ban.\n\nFuel and charging\nEach vehicle comes with a fuel or charging card. Use it only for the vehicle it belongs to. Private mileage in a company car is allowed, but it is recorded and may affect the tax you pay.\n\nAccidents and breakdowns\nIf you are involved in an accident, make sure everyone is safe first, then call the 24-hour fleet helpline printed on the key fob. Do not admit liability at the scene. Report every accident, however minor, within 24 hours.\n\nLooking after the vehicle\nKeep the vehicle clean and book it in for servicing when the dashboard reminder appears."
+            },
+            {
+              "id": "S2",
+              "title": "Quorrel Foods People Handbook - Business travel",
+              "retrieved_at": "2026-10-08",
+              "text": "When you travel for Quorrel, book flights, trains and hotels through the travel portal so that we can find you quickly if something goes wrong while you are away.\n\nBooking\nBook at least 14 days ahead where you can. Economy class is standard for all flights. For journeys by train, standard class is the default, but first class can be booked if the journey is over three hours and you need to work on the way. Hotels should be within the nightly limits shown in the portal for each city.\n\nUsing your own car\nIf you drive your own car on business, claim mileage through the expenses system. Keep a note of the start and end points and the purpose of each trip. Mileage covers fuel and wear and tear, so you cannot claim fuel separately.\n\nMeals\nWhile travelling overnight, you can claim up to $55 a day for meals. Keep itemised receipts. Alcohol cannot be claimed.\n\nClaiming expenses\nSubmit claims within 60 days of the expense. Claims approved by your manager are paid with your next salary payment."
+            },
+            {
+              "id": "S3",
+              "title": "Quorrel Foods People Handbook - Mobile phones",
+              "retrieved_at": "2026-10-08",
+              "text": "Many colleagues rely on their own phones to stay in touch with stores, distributors and customers while they are out and about. This section explains how phone costs are handled and what we expect when you use your phone for work.\n\nPhone stipend\nEmployees in the Sales and Customer Success departments receive a monthly mobile phone stipend of $60. The stipend is added to your salary payment on the last working day of each month and appears on your payslip as Mobile Allowance. It is treated as taxable income in the same way as your salary.\n\nYou choose your own handset, network and plan. Quorrel does not pay for the cost of buying a phone.\n\nUsing your phone for work\nInstall the Quorrel Workspace app before you access work email or chat on your phone. The app keeps work data in a separate, encrypted area, which the IT team can wipe remotely if your phone is lost or you leave Quorrel. IT cannot see your personal photos, messages or browsing.\n\nLost or stolen phones\nReport a lost or stolen phone to the IT service desk straight away, at any time of day, so that work data can be removed."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Quorrel Foods employees in the Sales and Customer Success departments receive a monthly mobile phone stipend of $60.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Employees in the Sales and Customer Success departments receive a monthly mobile phone stipend of $60."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the stipend sentence copied verbatim from S3; the Sales and Customer Success department scope is the material qualifier, and no passage says what other departments receive."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q10-f8-ql-scope",
+          "family_id": "q10-f8",
+          "domain": "consumer_help_hr_handbook",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "Does Quorrel Foods give employees money towards their phone bill?",
+          "answer": "Employees receive a monthly mobile phone stipend of $60.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Quorrel Foods People Handbook - Company vehicles",
+              "retrieved_at": "2026-10-08",
+              "text": "Some roles at Quorrel come with a company vehicle, either a car for travelling between customer sites or a van for deliveries and merchandising. Your offer letter tells you whether your role includes one.\n\nBefore you drive\nYou must hold a full driving licence valid in the country where you will drive, and you must have shown the original to the fleet team. The fleet team checks licences every six months. Tell your manager straight away if you receive penalty points or a driving ban.\n\nFuel and charging\nEach vehicle comes with a fuel or charging card. Use it only for the vehicle it belongs to. Private mileage in a company car is allowed, but it is recorded and may affect the tax you pay.\n\nAccidents and breakdowns\nIf you are involved in an accident, make sure everyone is safe first, then call the 24-hour fleet helpline printed on the key fob. Do not admit liability at the scene. Report every accident, however minor, within 24 hours.\n\nLooking after the vehicle\nKeep the vehicle clean and book it in for servicing when the dashboard reminder appears."
+            },
+            {
+              "id": "S2",
+              "title": "Quorrel Foods People Handbook - Business travel",
+              "retrieved_at": "2026-10-08",
+              "text": "When you travel for Quorrel, book flights, trains and hotels through the travel portal so that we can find you quickly if something goes wrong while you are away.\n\nBooking\nBook at least 14 days ahead where you can. Economy class is standard for all flights. For journeys by train, standard class is the default, but first class can be booked if the journey is over three hours and you need to work on the way. Hotels should be within the nightly limits shown in the portal for each city.\n\nUsing your own car\nIf you drive your own car on business, claim mileage through the expenses system. Keep a note of the start and end points and the purpose of each trip. Mileage covers fuel and wear and tear, so you cannot claim fuel separately.\n\nMeals\nWhile travelling overnight, you can claim up to $55 a day for meals. Keep itemised receipts. Alcohol cannot be claimed.\n\nClaiming expenses\nSubmit claims within 60 days of the expense. Claims approved by your manager are paid with your next salary payment."
+            },
+            {
+              "id": "S3",
+              "title": "Quorrel Foods People Handbook - Mobile phones",
+              "retrieved_at": "2026-10-08",
+              "text": "Many colleagues rely on their own phones to stay in touch with stores, distributors and customers while they are out and about. This section explains how phone costs are handled and what we expect when you use your phone for work.\n\nPhone stipend\nEmployees in the Sales and Customer Success departments receive a monthly mobile phone stipend of $60. The stipend is added to your salary payment on the last working day of each month and appears on your payslip as Mobile Allowance. It is treated as taxable income in the same way as your salary.\n\nYou choose your own handset, network and plan. Quorrel does not pay for the cost of buying a phone.\n\nUsing your phone for work\nInstall the Quorrel Workspace app before you access work email or chat on your phone. The app keeps work data in a separate, encrypted area, which the IT team can wipe remotely if your phone is lost or you leave Quorrel. IT cannot see your personal photos, messages or browsing.\n\nLost or stolen phones\nReport a lost or stolen phone to the IT service desk straight away, at any time of day, so that work data can be removed."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Quorrel Foods employees in every department receive a monthly mobile phone stipend of $60.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Employees in the Sales and Customer Success departments receive a monthly mobile phone stipend of $60."
+              }
+            ],
+            "dropped_qualifier": "in the Sales and Customer Success departments",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q10-f8-sup-verbatim",
+            "note": "Deleted only the department scope; S3 gives the $60 stipend only to Sales and Customer Success staff and is silent on other departments, so a stipend for all employees is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q10-f9",
+      "items": [
+        {
+          "id": "q10-f9-sup-verbatim",
+          "family_id": "q10-f9",
+          "domain": "consumer_help_hr_handbook",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "How long do I have to return a Pagewyn e-reader?",
+          "answer": "Pagewyn e-readers ordered between 1 November and 31 December 2026 can be returned within 60 days of delivery.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Pagewyn Help - Holiday returns",
+              "retrieved_at": "2026-10-09",
+              "text": "Buying a Pagewyn e-reader as a present? Here is how holiday returns work, including returns made by the person who received the gift.\n\nPagewyn e-readers ordered between 1 November and 31 December 2026 can be returned within 60 days of delivery. This covers every Pagewyn e-reader model, including bundles that come with a cover or a charging dock. The person returning the e-reader does not need the order confirmation; the serial number on the back of the device is enough for us to find the order.\n\nHow to send it back\nSign in to your Pagewyn account, open Orders, then choose Return an item. If you received the e-reader as a gift, choose Gift return on the Help page instead and enter the serial number. Either way, you will get a prepaid shipping label by email. Pack the e-reader securely, ideally in its original box, and drop it at any parcel point listed on the label.\n\nRefunds and gift returns\nOnce the e-reader reaches our returns centre and passes a quick check, we refund the original payment method. Gift recipients can choose a Pagewyn store credit instead, so the person who bought the present is not told about the return. Refunds and credits are usually issued within five business days of the e-reader arriving."
+            },
+            {
+              "id": "S2",
+              "title": "Pagewyn Help - Sending documents to your e-reader",
+              "retrieved_at": "2026-10-09",
+              "text": "You can read your own documents on a Pagewyn e-reader as well as books from the Pagewyn store. Documents you send are stored in your Pagewyn library, so they appear on every e-reader and in every reading app signed in to your account.\n\nSending by email\nEvery Pagewyn account has a personal send-to address, shown under Settings, then Documents in the Pagewyn app. Attach a file to an email and send it to that address from an email account you have approved on the same screen. Files arrive on your e-reader the next time it connects to Wi-Fi.\n\nSupported files\nYou can send EPUB, PDF, DOCX, TXT and RTF files, as well as JPEG and PNG images, up to 50 MB each. EPUB and DOCX files are converted so that you can change the font size and layout. PDFs keep their original layout, which works best for documents with complex formatting.\n\nUsing the desktop app\nOn a computer, drag files onto the Pagewyn desktop app window, or connect the e-reader with a USB-C cable and copy files into the Documents folder. Files copied over USB stay on that device only and are not added to your library."
+            },
+            {
+              "id": "S3",
+              "title": "Pagewyn Help - Battery life and charging",
+              "retrieved_at": "2026-10-09",
+              "text": "A Pagewyn e-reader can last for weeks on a single charge, because the screen uses power only when the page changes. How long it lasts for you depends on how you read.\n\nWhat affects battery life\nFront light brightness, Wi-Fi, page-turn animations and audiobook playback all use extra power. On average, reading for 30 minutes a day with Wi-Fi off and the light at the middle setting, a full charge lasts about six weeks. Listening to audiobooks over Bluetooth uses the battery much faster.\n\nCharging\nUse the USB-C cable that came with your e-reader and any USB charger rated at 5 volts. A full charge takes about two and a half hours. Models with wireless charging can also be placed on a Qi-certified pad or the Pagewyn charging dock. The battery icon at the top of the screen shows a lightning bolt while charging.\n\nSaving power\nTurn on Battery saver in Settings to switch off Wi-Fi when you are not downloading books. If you will not read for several weeks, charge the e-reader to about half and turn it off completely by holding the power button for five seconds."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Pagewyn e-readers ordered between 1 November and 31 December 2026 can be returned within 60 days of delivery.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Pagewyn e-readers ordered between 1 November and 31 December 2026 can be returned within 60 days of delivery."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the return-window sentence copied verbatim from S1; the 1 November to 31 December 2026 order period is the material qualifier, and no passage states a return window for orders outside it."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q10-f9-ql-date-range",
+          "family_id": "q10-f9",
+          "domain": "consumer_help_hr_handbook",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "How long do I have to return a Pagewyn e-reader?",
+          "answer": "Pagewyn e-readers can be returned within 60 days of delivery.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Pagewyn Help - Holiday returns",
+              "retrieved_at": "2026-10-09",
+              "text": "Buying a Pagewyn e-reader as a present? Here is how holiday returns work, including returns made by the person who received the gift.\n\nPagewyn e-readers ordered between 1 November and 31 December 2026 can be returned within 60 days of delivery. This covers every Pagewyn e-reader model, including bundles that come with a cover or a charging dock. The person returning the e-reader does not need the order confirmation; the serial number on the back of the device is enough for us to find the order.\n\nHow to send it back\nSign in to your Pagewyn account, open Orders, then choose Return an item. If you received the e-reader as a gift, choose Gift return on the Help page instead and enter the serial number. Either way, you will get a prepaid shipping label by email. Pack the e-reader securely, ideally in its original box, and drop it at any parcel point listed on the label.\n\nRefunds and gift returns\nOnce the e-reader reaches our returns centre and passes a quick check, we refund the original payment method. Gift recipients can choose a Pagewyn store credit instead, so the person who bought the present is not told about the return. Refunds and credits are usually issued within five business days of the e-reader arriving."
+            },
+            {
+              "id": "S2",
+              "title": "Pagewyn Help - Sending documents to your e-reader",
+              "retrieved_at": "2026-10-09",
+              "text": "You can read your own documents on a Pagewyn e-reader as well as books from the Pagewyn store. Documents you send are stored in your Pagewyn library, so they appear on every e-reader and in every reading app signed in to your account.\n\nSending by email\nEvery Pagewyn account has a personal send-to address, shown under Settings, then Documents in the Pagewyn app. Attach a file to an email and send it to that address from an email account you have approved on the same screen. Files arrive on your e-reader the next time it connects to Wi-Fi.\n\nSupported files\nYou can send EPUB, PDF, DOCX, TXT and RTF files, as well as JPEG and PNG images, up to 50 MB each. EPUB and DOCX files are converted so that you can change the font size and layout. PDFs keep their original layout, which works best for documents with complex formatting.\n\nUsing the desktop app\nOn a computer, drag files onto the Pagewyn desktop app window, or connect the e-reader with a USB-C cable and copy files into the Documents folder. Files copied over USB stay on that device only and are not added to your library."
+            },
+            {
+              "id": "S3",
+              "title": "Pagewyn Help - Battery life and charging",
+              "retrieved_at": "2026-10-09",
+              "text": "A Pagewyn e-reader can last for weeks on a single charge, because the screen uses power only when the page changes. How long it lasts for you depends on how you read.\n\nWhat affects battery life\nFront light brightness, Wi-Fi, page-turn animations and audiobook playback all use extra power. On average, reading for 30 minutes a day with Wi-Fi off and the light at the middle setting, a full charge lasts about six weeks. Listening to audiobooks over Bluetooth uses the battery much faster.\n\nCharging\nUse the USB-C cable that came with your e-reader and any USB charger rated at 5 volts. A full charge takes about two and a half hours. Models with wireless charging can also be placed on a Qi-certified pad or the Pagewyn charging dock. The battery icon at the top of the screen shows a lightning bolt while charging.\n\nSaving power\nTurn on Battery saver in Settings to switch off Wi-Fi when you are not downloading books. If you will not read for several weeks, charge the e-reader to about half and turn it off completely by holding the power button for five seconds."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Pagewyn e-readers can be returned within 60 days of delivery, whenever they were ordered.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Pagewyn e-readers ordered between 1 November and 31 December 2026 can be returned within 60 days of delivery."
+              }
+            ],
+            "dropped_qualifier": "ordered between 1 November and 31 December 2026",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q10-f9-sup-verbatim",
+            "note": "Deleted only the order-date range; S1 gives the 60-day window only for orders placed 1 November to 31 December 2026 and is silent on other orders, so a general 60-day window is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q10-f10",
+      "items": [
+        {
+          "id": "q10-f10-sup-verbatim",
+          "family_id": "q10-f10",
+          "domain": "consumer_help_hr_handbook",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Do I have to pay to book live classes on Mistlark?",
+          "answer": "Mistlark members can book unlimited live classes at no charge during the first 30 days after creating their account.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Mistlark Help - Pairing a heart-rate monitor",
+              "retrieved_at": "2026-10-03",
+              "text": "Pairing a heart-rate monitor lets Mistlark show your heart rate during workouts and live classes, and gives you more accurate calorie and training-load estimates.\n\nCompatible monitors\nMistlark works with chest straps and armbands that use Bluetooth Low Energy and the standard heart-rate profile. Most monitors sold in the last five years are compatible. Smartwatches can also share heart rate if their own app allows broadcasting to other apps.\n\nPairing\nWear the monitor, then open Mistlark and go to Profile, then Devices, then Add device. Choose Heart-rate monitor and wait for yours to appear in the list. Tap it to pair. You only need to do this once; Mistlark reconnects automatically the next time you start a workout while wearing it.\n\nDuring a workout\nYour heart rate appears at the top right of the screen, colour-coded by zone. In live classes, you can choose whether to share your zone, but never your exact heart rate, on the class leaderboard.\n\nTroubleshooting\nIf the reading drops out, moisten the chest strap's sensor pads and make sure the monitor is not paired to another app at the same time."
+            },
+            {
+              "id": "S2",
+              "title": "Mistlark Help - Booking live classes",
+              "retrieved_at": "2026-10-03",
+              "text": "Live classes are streamed from the Mistlark studio throughout the day, from early-morning yoga to evening strength sessions. Every class has a live instructor and up to 40 participants, and you can choose whether your camera is on or off.\n\nBooking a class\nOpen the Live tab to see the timetable for the next seven days. Tap a class to read a description, see the equipment you will need and check how many places are left, then tap Book. Mistlark members can book unlimited live classes at no charge during the first 30 days after creating their account. Your bookings appear under Live, then My classes, and Mistlark sends a reminder 15 minutes before each class starts.\n\nCancelling\nTo cancel, open My classes and tap Cancel booking. Please cancel at least two hours before the start so that someone on the waiting list can take your place.\n\nWaiting lists\nIf a class is full, tap Join waiting list. When a place opens up, Mistlark books it for you automatically and sends a notification. You can be on the waiting list for up to three classes at once.\n\nJoining\nClasses open five minutes before the start time. Tap Join from the reminder or from My classes."
+            },
+            {
+              "id": "S3",
+              "title": "Mistlark Help - Building a custom training plan",
+              "retrieved_at": "2026-10-03",
+              "text": "A custom training plan schedules on-demand workouts around your goals and the days you have free. You can change it at any time, and Mistlark adjusts the rest of the plan as you go.\n\nCreating a plan\nGo to Plan, then Create plan. Choose a goal, such as running your first 5K, building strength or improving mobility, and pick how many days a week you want to train. Mistlark builds a plan of four to twelve weeks using workouts from the on-demand library.\n\nAdjusting your plan\nIf you miss a workout, Mistlark moves it to your next free day rather than skipping it. You can also swap any workout for a similar one by tapping it and choosing Swap. After every two weeks, Mistlark asks how the plan feels and makes the next fortnight easier or harder depending on your answers.\n\nFinishing a plan\nWhen you complete a plan, Mistlark shows a summary of your workouts, total minutes and progress against your goal. You can start a new plan straight away or repeat the same plan at a higher level."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Mistlark members can book unlimited live classes at no charge during the first 30 days after creating their account.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Mistlark members can book unlimited live classes at no charge during the first 30 days after creating their account."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the free-booking sentence copied verbatim from S2; the first 30 days after account creation is the material period, and no passage says what live classes cost after it."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q10-f10-ql-date-range",
+          "family_id": "q10-f10",
+          "domain": "consumer_help_hr_handbook",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "Do I have to pay to book live classes on Mistlark?",
+          "answer": "Mistlark members can book unlimited live classes at no charge.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Mistlark Help - Pairing a heart-rate monitor",
+              "retrieved_at": "2026-10-03",
+              "text": "Pairing a heart-rate monitor lets Mistlark show your heart rate during workouts and live classes, and gives you more accurate calorie and training-load estimates.\n\nCompatible monitors\nMistlark works with chest straps and armbands that use Bluetooth Low Energy and the standard heart-rate profile. Most monitors sold in the last five years are compatible. Smartwatches can also share heart rate if their own app allows broadcasting to other apps.\n\nPairing\nWear the monitor, then open Mistlark and go to Profile, then Devices, then Add device. Choose Heart-rate monitor and wait for yours to appear in the list. Tap it to pair. You only need to do this once; Mistlark reconnects automatically the next time you start a workout while wearing it.\n\nDuring a workout\nYour heart rate appears at the top right of the screen, colour-coded by zone. In live classes, you can choose whether to share your zone, but never your exact heart rate, on the class leaderboard.\n\nTroubleshooting\nIf the reading drops out, moisten the chest strap's sensor pads and make sure the monitor is not paired to another app at the same time."
+            },
+            {
+              "id": "S2",
+              "title": "Mistlark Help - Booking live classes",
+              "retrieved_at": "2026-10-03",
+              "text": "Live classes are streamed from the Mistlark studio throughout the day, from early-morning yoga to evening strength sessions. Every class has a live instructor and up to 40 participants, and you can choose whether your camera is on or off.\n\nBooking a class\nOpen the Live tab to see the timetable for the next seven days. Tap a class to read a description, see the equipment you will need and check how many places are left, then tap Book. Mistlark members can book unlimited live classes at no charge during the first 30 days after creating their account. Your bookings appear under Live, then My classes, and Mistlark sends a reminder 15 minutes before each class starts.\n\nCancelling\nTo cancel, open My classes and tap Cancel booking. Please cancel at least two hours before the start so that someone on the waiting list can take your place.\n\nWaiting lists\nIf a class is full, tap Join waiting list. When a place opens up, Mistlark books it for you automatically and sends a notification. You can be on the waiting list for up to three classes at once.\n\nJoining\nClasses open five minutes before the start time. Tap Join from the reminder or from My classes."
+            },
+            {
+              "id": "S3",
+              "title": "Mistlark Help - Building a custom training plan",
+              "retrieved_at": "2026-10-03",
+              "text": "A custom training plan schedules on-demand workouts around your goals and the days you have free. You can change it at any time, and Mistlark adjusts the rest of the plan as you go.\n\nCreating a plan\nGo to Plan, then Create plan. Choose a goal, such as running your first 5K, building strength or improving mobility, and pick how many days a week you want to train. Mistlark builds a plan of four to twelve weeks using workouts from the on-demand library.\n\nAdjusting your plan\nIf you miss a workout, Mistlark moves it to your next free day rather than skipping it. You can also swap any workout for a similar one by tapping it and choosing Swap. After every two weeks, Mistlark asks how the plan feels and makes the next fortnight easier or harder depending on your answers.\n\nFinishing a plan\nWhen you complete a plan, Mistlark shows a summary of your workouts, total minutes and progress against your goal. You can start a new plan straight away or repeat the same plan at a higher level."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Mistlark members can book unlimited live classes at no charge, with no time limit.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Mistlark members can book unlimited live classes at no charge during the first 30 days after creating their account."
+              }
+            ],
+            "dropped_qualifier": "during the first 30 days after creating their account",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q10-f10-sup-verbatim",
+            "note": "Deleted only the 30-day period; S2 makes unlimited free booking hold for the first 30 days after account creation and is silent on later periods, so open-ended free booking is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q10-f11",
+      "items": [
+        {
+          "id": "q10-f11-sup-verbatim",
+          "family_id": "q10-f11",
+          "domain": "consumer_help_hr_handbook",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "How much is the employee referral bonus at Vellacourt Insurance?",
+          "answer": "Vellacourt pays referring employees a $3,000 bonus for each referred hire who starts between 1 November 2026 and 28 February 2027.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Vellacourt People Hub - Employee referral programme",
+              "retrieved_at": "2026-10-10",
+              "text": "Great colleagues often know other great people. Our referral programme thanks you for introducing candidates who go on to join Vellacourt Insurance.\n\nReferral bonus\nVellacourt pays referring employees a $3,000 bonus for each referred hire who starts between 1 November 2026 and 28 February 2027. The bonus is added to your salary in the first payroll run after your referred colleague's start date and is taxed in the same way as your salary.\n\nHow to refer someone\nOpen the Careers page on the People Hub, find the role, and choose Refer a friend. Add the candidate's name, email address and CV, along with a few lines about why you think they would be a good fit. The candidate receives an email inviting them to complete their application. You can track the progress of each referral from the My referrals page, although interview feedback stays confidential.\n\nGood practice\nOnly refer people you know and would be happy to work with. Ask the candidate before you share their details, and do not promise them an interview or an offer, because every referred candidate goes through the same selection process as other applicants. If you are on the interview panel for someone you referred, tell the Talent team so that they can arrange a replacement panel member."
+            },
+            {
+              "id": "S2",
+              "title": "Vellacourt People Hub - Onboarding a new starter",
+              "retrieved_at": "2026-10-10",
+              "text": "A good first week makes a lasting difference. If someone is joining your team, these steps help them settle in quickly.\n\nBefore they arrive\nThe Talent team sends the new starter a welcome pack about two weeks before their first day. As their manager, add them to your team's calendar invitations and chat channels, and choose an onboarding buddy from the team. The IT team ships a laptop to their home address or leaves it at the reception of their office, depending on what they chose.\n\nThe first day\nPlan to spend the first morning with your new starter. Introduce them to the team, walk them through the week's schedule and make sure they can sign in to their laptop and the People Hub. Vellacourt's company induction takes place on the first Tuesday of every month, and the Talent team books new starters onto the next available session.\n\nThe first 90 days\nAgree three to five goals in the first two weeks and hold a short check-in each week. At 90 days, complete the probation review form on the People Hub together. Most probation periods end at 90 days, but they can be extended once by up to a further 90 days."
+            },
+            {
+              "id": "S3",
+              "title": "Vellacourt People Hub - Interview panels",
+              "retrieved_at": "2026-10-10",
+              "text": "Every role at Vellacourt is filled through a structured interview, so that candidates are assessed fairly and on the same criteria.\n\nWho sits on a panel\nEach panel has two or three members: the hiring manager, a colleague from the team and, for senior roles, a member of the leadership group. At least one panel member must have completed the structured interviewing course in the last two years.\n\nPreparing\nThe Talent team shares the interview questions and the scoring guide three days before the interview. Read the candidate's CV and application, but do not search for them on social media.\n\nDuring the interview\nAsk every candidate the same core questions, in the same order. You can ask follow-up questions to understand an answer better. Take notes as you go, focusing on what the candidate said and did rather than your impressions.\n\nScoring and feedback\nScore each answer independently, before talking to the other panel members. Then meet as a panel to agree an overall decision. Submit scores and notes in the hiring system within 24 hours, so that the Talent team can give the candidate timely feedback."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Vellacourt Insurance pays referring employees a $3,000 bonus for each referred hire who starts between 1 November 2026 and 28 February 2027.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Vellacourt pays referring employees a $3,000 bonus for each referred hire who starts between 1 November 2026 and 28 February 2027."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the referral-bonus sentence copied verbatim from S1; the 1 November 2026 to 28 February 2027 start-date range is the material qualifier, and no passage states a bonus for hires starting at other times."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q10-f11-ql-date-range",
+          "family_id": "q10-f11",
+          "domain": "consumer_help_hr_handbook",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "How much is the employee referral bonus at Vellacourt Insurance?",
+          "answer": "Vellacourt pays referring employees a $3,000 bonus for each referred hire.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Vellacourt People Hub - Employee referral programme",
+              "retrieved_at": "2026-10-10",
+              "text": "Great colleagues often know other great people. Our referral programme thanks you for introducing candidates who go on to join Vellacourt Insurance.\n\nReferral bonus\nVellacourt pays referring employees a $3,000 bonus for each referred hire who starts between 1 November 2026 and 28 February 2027. The bonus is added to your salary in the first payroll run after your referred colleague's start date and is taxed in the same way as your salary.\n\nHow to refer someone\nOpen the Careers page on the People Hub, find the role, and choose Refer a friend. Add the candidate's name, email address and CV, along with a few lines about why you think they would be a good fit. The candidate receives an email inviting them to complete their application. You can track the progress of each referral from the My referrals page, although interview feedback stays confidential.\n\nGood practice\nOnly refer people you know and would be happy to work with. Ask the candidate before you share their details, and do not promise them an interview or an offer, because every referred candidate goes through the same selection process as other applicants. If you are on the interview panel for someone you referred, tell the Talent team so that they can arrange a replacement panel member."
+            },
+            {
+              "id": "S2",
+              "title": "Vellacourt People Hub - Onboarding a new starter",
+              "retrieved_at": "2026-10-10",
+              "text": "A good first week makes a lasting difference. If someone is joining your team, these steps help them settle in quickly.\n\nBefore they arrive\nThe Talent team sends the new starter a welcome pack about two weeks before their first day. As their manager, add them to your team's calendar invitations and chat channels, and choose an onboarding buddy from the team. The IT team ships a laptop to their home address or leaves it at the reception of their office, depending on what they chose.\n\nThe first day\nPlan to spend the first morning with your new starter. Introduce them to the team, walk them through the week's schedule and make sure they can sign in to their laptop and the People Hub. Vellacourt's company induction takes place on the first Tuesday of every month, and the Talent team books new starters onto the next available session.\n\nThe first 90 days\nAgree three to five goals in the first two weeks and hold a short check-in each week. At 90 days, complete the probation review form on the People Hub together. Most probation periods end at 90 days, but they can be extended once by up to a further 90 days."
+            },
+            {
+              "id": "S3",
+              "title": "Vellacourt People Hub - Interview panels",
+              "retrieved_at": "2026-10-10",
+              "text": "Every role at Vellacourt is filled through a structured interview, so that candidates are assessed fairly and on the same criteria.\n\nWho sits on a panel\nEach panel has two or three members: the hiring manager, a colleague from the team and, for senior roles, a member of the leadership group. At least one panel member must have completed the structured interviewing course in the last two years.\n\nPreparing\nThe Talent team shares the interview questions and the scoring guide three days before the interview. Read the candidate's CV and application, but do not search for them on social media.\n\nDuring the interview\nAsk every candidate the same core questions, in the same order. You can ask follow-up questions to understand an answer better. Take notes as you go, focusing on what the candidate said and did rather than your impressions.\n\nScoring and feedback\nScore each answer independently, before talking to the other panel members. Then meet as a panel to agree an overall decision. Submit scores and notes in the hiring system within 24 hours, so that the Talent team can give the candidate timely feedback."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Vellacourt Insurance pays referring employees a $3,000 bonus for each referred hire, whenever the hire starts.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Vellacourt pays referring employees a $3,000 bonus for each referred hire who starts between 1 November 2026 and 28 February 2027."
+              }
+            ],
+            "dropped_qualifier": "who starts between 1 November 2026 and 28 February 2027",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q10-f11-sup-verbatim",
+            "note": "Deleted only the start-date range clause; S1 pays $3,000 only for hires starting 1 November 2026 to 28 February 2027 and is silent on other start dates, so a standing $3,000 bonus is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q10-f12",
+      "items": [
+        {
+          "id": "q10-f12-sup-verbatim",
+          "family_id": "q10-f12",
+          "domain": "consumer_help_hr_handbook",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "What time do Quillfen studios close on Fridays?",
+          "answer": "Between 4 June and 27 August 2027, Quillfen studios close at 1 p.m. on Fridays.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Quillfen Staff Handbook - Annual leave",
+              "retrieved_at": "2026-10-12",
+              "text": "Everyone at Quillfen Architects receives 27 days of paid annual leave a year, plus public holidays, rising to 30 days after five years with the practice. The leave year runs from 1 April to 31 March.\n\nBooking leave\nRequest leave in the HR system and copy in your project lead. Try to give at least four weeks' notice for anything longer than a week, and check the project calendar first so that you are not away during a planned submission or a key client presentation.\n\nSickness during leave\nIf you are ill during a period of annual leave, tell your line manager as soon as you can. Days of illness covered by a fit note can be reclaimed and taken as annual leave at another time.\n\nCarrying over leave\nUp to five days can be carried over into the next leave year with your project lead's agreement. Carried-over days must be used by 30 June.\n\nBuying extra leave\nOnce a year, in March, you can buy up to five extra days of leave. The cost is spread across your salary payments for the following twelve months."
+            },
+            {
+              "id": "S2",
+              "title": "Quillfen Staff Handbook - Professional registration and CPD",
+              "retrieved_at": "2026-10-12",
+              "text": "Quillfen supports architects, architectural assistants and technologists in gaining and keeping their professional registration.\n\nRegistration fees\nThe practice pays the annual registration fee and one professional institute membership for every member of staff who holds, or is working towards, a professional qualification. Submit the invoice to the finance team before the renewal date and they will pay it directly.\n\nContinuing professional development\nRegistered architects must complete at least 35 hours of CPD each year. Quillfen runs a lunchtime CPD talk every other Wednesday, covering topics such as building regulations, fire safety, sustainable materials and contract law. Talks are recorded and saved to the learning library for anyone who cannot attend.\n\nStudy leave for qualifications\nIf you are studying for Part 2 or Part 3, you can take up to ten days of paid study leave a year for exams and submissions, in addition to annual leave. Agree the dates with your project lead as early as you can.\n\nKeeping records\nLog your CPD hours in the HR system. Your line manager reviews them with you at your mid-year conversation."
+            },
+            {
+              "id": "S3",
+              "title": "Quillfen Staff Handbook - Summer Fridays",
+              "retrieved_at": "2026-10-12",
+              "text": "Summer Fridays give everyone at Quillfen time to enjoy the long evenings while the weather is good.\n\nBetween 4 June and 27 August 2027, Quillfen studios close at 1 p.m. on Fridays. The closed afternoons are paid and do not count against your annual leave.\n\nClient commitments\nProject deadlines, site visits and client meetings still come first. If a planning hearing, site inspection or client presentation is booked for a Friday afternoon during this period, your project lead will agree with you who needs to attend. Anyone who works a Friday afternoon during the period can take the same number of hours off on another day within four weeks, agreed with their project lead.\n\nPart-time staff\nIf you do not normally work on Fridays, you can take an equivalent half day on another day in the same week, agreed with your project lead.\n\nGetting into the building\nThe studio buildings are locked from 1.30 p.m. on these Fridays, and the alarm is set at 2 p.m. If you need to collect drawings or models after that time, ask the office manager in advance for an out-of-hours pass. Remote access to the project server and email is available as usual."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Between 4 June and 27 August 2027, Quillfen Architects' studios close at 1 p.m. on Fridays.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Between 4 June and 27 August 2027, Quillfen studios close at 1 p.m. on Fridays."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the Friday closing sentence copied verbatim from S3; the 4 June to 27 August 2027 period is the material qualifier, and no passage states studio hours on any other Friday."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q10-f12-ql-date-range",
+          "family_id": "q10-f12",
+          "domain": "consumer_help_hr_handbook",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "What time do Quillfen studios close on Fridays?",
+          "answer": "Quillfen studios close at 1 p.m. on Fridays.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Quillfen Staff Handbook - Annual leave",
+              "retrieved_at": "2026-10-12",
+              "text": "Everyone at Quillfen Architects receives 27 days of paid annual leave a year, plus public holidays, rising to 30 days after five years with the practice. The leave year runs from 1 April to 31 March.\n\nBooking leave\nRequest leave in the HR system and copy in your project lead. Try to give at least four weeks' notice for anything longer than a week, and check the project calendar first so that you are not away during a planned submission or a key client presentation.\n\nSickness during leave\nIf you are ill during a period of annual leave, tell your line manager as soon as you can. Days of illness covered by a fit note can be reclaimed and taken as annual leave at another time.\n\nCarrying over leave\nUp to five days can be carried over into the next leave year with your project lead's agreement. Carried-over days must be used by 30 June.\n\nBuying extra leave\nOnce a year, in March, you can buy up to five extra days of leave. The cost is spread across your salary payments for the following twelve months."
+            },
+            {
+              "id": "S2",
+              "title": "Quillfen Staff Handbook - Professional registration and CPD",
+              "retrieved_at": "2026-10-12",
+              "text": "Quillfen supports architects, architectural assistants and technologists in gaining and keeping their professional registration.\n\nRegistration fees\nThe practice pays the annual registration fee and one professional institute membership for every member of staff who holds, or is working towards, a professional qualification. Submit the invoice to the finance team before the renewal date and they will pay it directly.\n\nContinuing professional development\nRegistered architects must complete at least 35 hours of CPD each year. Quillfen runs a lunchtime CPD talk every other Wednesday, covering topics such as building regulations, fire safety, sustainable materials and contract law. Talks are recorded and saved to the learning library for anyone who cannot attend.\n\nStudy leave for qualifications\nIf you are studying for Part 2 or Part 3, you can take up to ten days of paid study leave a year for exams and submissions, in addition to annual leave. Agree the dates with your project lead as early as you can.\n\nKeeping records\nLog your CPD hours in the HR system. Your line manager reviews them with you at your mid-year conversation."
+            },
+            {
+              "id": "S3",
+              "title": "Quillfen Staff Handbook - Summer Fridays",
+              "retrieved_at": "2026-10-12",
+              "text": "Summer Fridays give everyone at Quillfen time to enjoy the long evenings while the weather is good.\n\nBetween 4 June and 27 August 2027, Quillfen studios close at 1 p.m. on Fridays. The closed afternoons are paid and do not count against your annual leave.\n\nClient commitments\nProject deadlines, site visits and client meetings still come first. If a planning hearing, site inspection or client presentation is booked for a Friday afternoon during this period, your project lead will agree with you who needs to attend. Anyone who works a Friday afternoon during the period can take the same number of hours off on another day within four weeks, agreed with their project lead.\n\nPart-time staff\nIf you do not normally work on Fridays, you can take an equivalent half day on another day in the same week, agreed with your project lead.\n\nGetting into the building\nThe studio buildings are locked from 1.30 p.m. on these Fridays, and the alarm is set at 2 p.m. If you need to collect drawings or models after that time, ask the office manager in advance for an out-of-hours pass. Remote access to the project server and email is available as usual."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Quillfen Architects' studios close at 1 p.m. on Fridays all year round.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Between 4 June and 27 August 2027, Quillfen studios close at 1 p.m. on Fridays."
+              }
+            ],
+            "dropped_qualifier": "Between 4 June and 27 August 2027",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q10-f12-sup-verbatim",
+            "note": "Deleted only the date range (and its comma); S3 sets the 1 p.m. Friday closing for 4 June to 27 August 2027 only and states no hours for other Fridays, so a year-round 1 p.m. closing is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    }
+  ],
+  "standalone": []
+}

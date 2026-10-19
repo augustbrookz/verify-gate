@@ -1,0 +1,40 @@
+{
+  "tracks": {
+    "verification": {
+      "version": "2.1.0",
+      "files": {
+        "packages/verify-core/src/normalize.ts": "5a9ba4d2806ef611620829054d371e9ec5466062651e6b385dfee1edb5282fcf",
+        "packages/verify-core/src/spans.ts": "69db514b289458933913a60bbd1479b8e5130d3114c17403f612548af00c792e",
+        "packages/verify-core/src/sentences.ts": "75b65bfec2d9f0a6fc58c4fc0e7e6c7e8908ce2ed022b8120cd0d0533dcced1b",
+        "packages/verify-core/src/numbers.ts": "02aedac059563b0a46fa33c562cb7150fee9e1196854f69d4ad2b55326ee27eb",
+        "packages/verify-core/src/text.ts": "1e86283d17ddf3f88b0fe5440e7a7b94cedee7b624df0ca6938028208b69e303",
+        "packages/verify-core/src/qualifiers.ts": "4305fb4e71670b86fc49ca7a5d5230ef593d4f36bc69cc368a8ec2db8787141d",
+        "packages/verify-core/src/checks.ts": "b7cb4d6fef405f001a6cf942e72a4c5c1629266f4c7dfdd152f6e4cfbedf2682",
+        "packages/verify-core/src/templates.ts": "246c269f51387910c14d3da7f5f0cdb42aa483c1935ec79385b73ca58a4f1181",
+        "packages/verify-core/src/retrieve.ts": "6f95af89b77e1899fdd391c09167050aad349faf0f4e9bd6ea8e2e0eb5f018f7",
+        "packages/verify-core/src/claims.ts": "9d4067850a6d410fc3b22ea0ed266d7f5088d7e4bd010443feb205b68810699f",
+        "packages/verify-core/src/citations.ts": "a6b6dc7e1f66852d0583b8c82a201e02b9ca48389b359e1a0522aacae48de9f7",
+        "packages/verify-core/src/rules.ts": "001cd042079737413a8f712fd210305a999ca65a491743a5985d1709335d339f",
+        "packages/verify-core/src/release.ts": "1b245bd26fb5a2cec5882594fe0127e8940e089c8562873f16e3e8412568c55b",
+        "packages/verify-core/src/calibration.ts": "681e3d89db60086baba9a201c021f19d1fc2f3ef790bc01095725d8829adae16",
+        "packages/verify-core/src/engine.ts": "f2890f39757a40441d1017e666bd9db94175af882fab0660c5fb6755fd7e19d8",
+        "lib/verify/prompts.ts": "f5a95e13c1631751ad1de83c1ce254b9bc04c036340c02984e925b82165a559e"
+      }
+    },
+    "freshness": {
+      "version": "0.1.0",
+      "files": {
+        "packages/verify-core/src/freshness.ts": "08695cb18712b3fee10e22ad8361505a1b33a80025ab6cab8390d12beac27500"
+      }
+    },
+    "gate_policy": {
+      "version": "0.2.0",
+      "files": {
+        "packages/verify-policy/src/defaults.ts": "f0caad9fc7a49a515f47078d1706c0e3367b64c245ca3734d7c9fb75ac5d4913",
+        "packages/verify-policy/src/policy.ts": "ebf0a94f8c67ba2f59eaae46655c1cfbb5e0d46b79a1ebf4e802df9be5c1e41a",
+        "packages/verify-policy/src/evaluate.ts": "1160245c60f5d234f8545c302d3c1b1b0351271fdb8de8e6bc13a74977c82b42",
+        "packages/verify-policy/src/claims.ts": "ecfb9f0b2df150cf268b4ca24f2820a857d0aa13126f18d295f35b602929196c"
+      }
+    }
+  }
+}

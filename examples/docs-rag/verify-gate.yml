@@ -1,0 +1,68 @@
+# Verify Gate golden set for the Quillstack API docs assistant (fictional).
+# Recorded answers (answers/recorded.json is the copy a nightly job refreshes from the app); citations required.
+# Evidence support for supplied sources only; not a compliance certification.
+version: 1
+mode: local
+sources:
+  - id: rate-limits
+    path: kb/rate-limits.md
+    version: v3
+    sha256: 963e05d417f2307abf01b4df7aa7c5a22d7608c58a07a9a610886f083e7b075a
+  - id: auth
+    path: kb/authentication.md
+    version: v3
+    sha256: 12cb91470a3db7c43365509c68d5bfd459f5411e4f7dd7e310b53ee1360507b4
+policy:
+  enforcement: enforce
+  require_citations: true
+paths:
+  - answers/**
+cost:
+  expected_prs_per_day: 5
+suites:
+  - name: docs
+    cases:
+      - id: free-tier-limits
+        question: What are the free tier rate limits?
+        answer: The free tier allows 60 requests per minute and 10,000 requests per day [rate-limits].
+        sources:
+          - rate-limits
+        material_claims:
+          - claim: The free tier allows 60 requests per minute and 10,000 requests per day
+            materiality: critical
+            quote: The free tier allows 60 requests per minute and 10,000 requests per day.
+            source: rate-limits
+            require_citation: true
+      - id: limit-exceeded
+        question: What happens when I exceed the rate limit?
+        answer: When a limit is exceeded the API returns HTTP 429 with a Retry-After header [rate-limits].
+        sources:
+          - rate-limits
+        material_claims:
+          - claim: When a limit is exceeded the API returns HTTP 429 with a Retry-After header
+            materiality: high
+            quote: When a limit is exceeded the API returns HTTP 429 with a Retry-After header.
+            source: rate-limits
+            require_citation: true
+      - id: key-rotation
+        question: Does my old key stop working when I rotate it?
+        answer: Keys can be rotated at any time from the dashboard, and the previous key keeps working for 24 hours after rotation [auth].
+        sources:
+          - auth
+        material_claims:
+          - claim: Keys can be rotated at any time from the dashboard, and the previous key keeps working for 24 hours after rotation
+            materiality: critical
+            quote: Keys can be rotated at any time from the dashboard, and the previous key keeps working for 24 hours after rotation.
+            source: auth
+            require_citation: true
+      - id: batch-endpoints
+        question: Can free tier keys call the batch endpoints?
+        answer: Keys created on the free tier cannot call the batch endpoints [auth].
+        sources:
+          - auth
+        material_claims:
+          - claim: Keys created on the free tier cannot call the batch endpoints
+            materiality: high
+            quote: Keys created on the free tier cannot call the batch endpoints.
+            source: auth
+            require_citation: true

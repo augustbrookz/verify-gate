@@ -1,0 +1,1207 @@
+{
+  "shard": 12,
+  "domain": "privacy_fintech_travel_policies",
+  "families": [
+    {
+      "family_id": "q12-f1",
+      "items": [
+        {
+          "id": "q12-f1-sup-verbatim",
+          "family_id": "q12-f1",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Does Brisklane Messenger keep a copy of my messages on its servers?",
+          "answer": "If you turn on Chat Backup, a copy of your message history is stored in encrypted form on Brisklane servers.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Brisklane Messenger - Blocking and reporting contacts",
+              "retrieved_at": "2026-09-14",
+              "text": "If someone is bothering you on Brisklane Messenger, you can block them. Open your chat with that person, tap their name at the top of the screen and choose Block. You can also block a number that is not saved in your contacts from the same menu.\n\nOnce you block a contact, they can no longer call you or send you messages, and they will not see your profile photo, status or last-seen time. Blocking does not remove the person from your phone's address book, and they are not told that you have blocked them. If you are both members of the same group chat, you will still see each other's messages in that group.\n\nTo see everyone you have blocked, go to Settings > Privacy > Blocked contacts. Tap a name and choose Unblock to let that person contact you again. You will not receive any calls or messages they attempted while they were blocked.\n\nReporting\nIf a contact is sending spam or abusive content, choose Report instead of, or as well as, Block. A report sends the contact's phone number and the reason you selected to the Brisklane safety team, who may restrict or close accounts that break our community rules. You can report a group in the same way from the group's info screen."
+            },
+            {
+              "id": "S2",
+              "title": "Brisklane Messenger - Chat Backup and your privacy",
+              "retrieved_at": "2026-09-14",
+              "text": "Chat Backup helps you keep your conversations when you move to a new phone or reinstall Brisklane Messenger. You can turn it on or off at any time under Settings > Chats > Chat Backup.\n\nIf you turn on Chat Backup, a copy of your message history is stored in encrypted form on Brisklane servers. The backup is encrypted with a key created from a backup password that you choose during setup. Brisklane does not keep a copy of that password, so if you forget it we cannot open the backup for you, and you will need to create a new one.\n\nWhat a backup contains\nA backup includes the text of your messages, the names of the group chats you belong to, and the date and time each message was sent or received. Photos, videos and voice notes are added to the backup if you tick Include media during setup.\n\nWhen backups run\nA new backup is made once a day while your phone is charging and connected to Wi-Fi. You can also start a backup at any time by tapping Back up now.\n\nRestoring on a new phone\nWhen you install Brisklane Messenger on a new phone and verify your number, you will be asked whether you want to restore a backup. You will need your backup password. Restoring brings back your chats as they were at the time of the last backup.\n\nDeleting a backup\nTo delete your backup, open Chat Backup and choose Delete backup. Deleting a backup does not delete any messages that are still on your phone."
+            },
+            {
+              "id": "S3",
+              "title": "Brisklane Messenger - Changing your phone number",
+              "retrieved_at": "2026-09-14",
+              "text": "Your Brisklane Messenger account is linked to your phone number. If you get a new number, use Change number rather than creating a new account, so that you keep your profile, settings and group memberships.\n\nBefore you start, make sure the SIM card for your new number is in your phone and can receive text messages or calls. Then go to Settings > Account > Change number, enter your old number and your new number, and tap Next. We will send a six-digit verification code to the new number.\n\nOnce the change is complete, your profile photo, name, about text and privacy settings move to the new number. You stay a member of every group you belonged to, and the other members see a short notice in each group saying that your number has changed.\n\nYou can also choose whether to tell your individual contacts about the change. Pick All contacts, Contacts I have chats with, or Custom to choose people one by one. Contacts you do not notify will not see your new number until they add it themselves, so we recommend telling anyone you talk to often.\n\nIf you no longer have access to your old number, you can still move your account by contacting support from the Help screen in the app, but we may ask you to confirm your identity first."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Brisklane stores an encrypted copy of a user's message history on its servers if the user turns on Chat Backup.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "If you turn on Chat Backup, a copy of your message history is stored in encrypted form on Brisklane servers."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the Chat Backup storage sentence copied verbatim from S2; the trigger condition 'If you turn on Chat Backup' is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q12-f1-ql-condition",
+          "family_id": "q12-f1",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "Does Brisklane Messenger keep a copy of my messages on its servers?",
+          "answer": "A copy of your message history is stored in encrypted form on Brisklane servers.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Brisklane Messenger - Blocking and reporting contacts",
+              "retrieved_at": "2026-09-14",
+              "text": "If someone is bothering you on Brisklane Messenger, you can block them. Open your chat with that person, tap their name at the top of the screen and choose Block. You can also block a number that is not saved in your contacts from the same menu.\n\nOnce you block a contact, they can no longer call you or send you messages, and they will not see your profile photo, status or last-seen time. Blocking does not remove the person from your phone's address book, and they are not told that you have blocked them. If you are both members of the same group chat, you will still see each other's messages in that group.\n\nTo see everyone you have blocked, go to Settings > Privacy > Blocked contacts. Tap a name and choose Unblock to let that person contact you again. You will not receive any calls or messages they attempted while they were blocked.\n\nReporting\nIf a contact is sending spam or abusive content, choose Report instead of, or as well as, Block. A report sends the contact's phone number and the reason you selected to the Brisklane safety team, who may restrict or close accounts that break our community rules. You can report a group in the same way from the group's info screen."
+            },
+            {
+              "id": "S2",
+              "title": "Brisklane Messenger - Chat Backup and your privacy",
+              "retrieved_at": "2026-09-14",
+              "text": "Chat Backup helps you keep your conversations when you move to a new phone or reinstall Brisklane Messenger. You can turn it on or off at any time under Settings > Chats > Chat Backup.\n\nIf you turn on Chat Backup, a copy of your message history is stored in encrypted form on Brisklane servers. The backup is encrypted with a key created from a backup password that you choose during setup. Brisklane does not keep a copy of that password, so if you forget it we cannot open the backup for you, and you will need to create a new one.\n\nWhat a backup contains\nA backup includes the text of your messages, the names of the group chats you belong to, and the date and time each message was sent or received. Photos, videos and voice notes are added to the backup if you tick Include media during setup.\n\nWhen backups run\nA new backup is made once a day while your phone is charging and connected to Wi-Fi. You can also start a backup at any time by tapping Back up now.\n\nRestoring on a new phone\nWhen you install Brisklane Messenger on a new phone and verify your number, you will be asked whether you want to restore a backup. You will need your backup password. Restoring brings back your chats as they were at the time of the last backup.\n\nDeleting a backup\nTo delete your backup, open Chat Backup and choose Delete backup. Deleting a backup does not delete any messages that are still on your phone."
+            },
+            {
+              "id": "S3",
+              "title": "Brisklane Messenger - Changing your phone number",
+              "retrieved_at": "2026-09-14",
+              "text": "Your Brisklane Messenger account is linked to your phone number. If you get a new number, use Change number rather than creating a new account, so that you keep your profile, settings and group memberships.\n\nBefore you start, make sure the SIM card for your new number is in your phone and can receive text messages or calls. Then go to Settings > Account > Change number, enter your old number and your new number, and tap Next. We will send a six-digit verification code to the new number.\n\nOnce the change is complete, your profile photo, name, about text and privacy settings move to the new number. You stay a member of every group you belonged to, and the other members see a short notice in each group saying that your number has changed.\n\nYou can also choose whether to tell your individual contacts about the change. Pick All contacts, Contacts I have chats with, or Custom to choose people one by one. Contacts you do not notify will not see your new number until they add it themselves, so we recommend telling anyone you talk to often.\n\nIf you no longer have access to your old number, you can still move your account by contacting support from the Help screen in the app, but we may ask you to confirm your identity first."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Brisklane stores an encrypted copy of a user's message history on its servers, with no Chat Backup condition.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "If you turn on Chat Backup, a copy of your message history is stored in encrypted form on Brisklane servers."
+              }
+            ],
+            "dropped_qualifier": "If you turn on Chat Backup",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q12-f1-sup-verbatim",
+            "note": "Deleted only the condition 'If you turn on Chat Backup' (and capitalised 'A'); S2 ties server storage to Chat Backup being on and no passage says anything about server storage otherwise, so the unconditional claim is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q12-f2",
+      "items": [
+        {
+          "id": "q12-f2-sup-verbatim",
+          "family_id": "q12-f2",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Does Fallowmere Bank charge a fee if a card payment takes my balance below zero?",
+          "answer": "If your account has received at least two direct deposits in the past 35 days, card payments that take your balance up to $100 below zero are approved without a fee.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Fallowmere Bank - Cushion for your Everyday account",
+              "retrieved_at": "2026-09-21",
+              "text": "Cushion is a feature of the Fallowmere Everyday account that can help when your balance is running low. There is nothing to apply for, and Cushion does not involve a credit check or affect your credit score.\n\nIf your account has received at least two direct deposits in the past 35 days, card payments that take your balance up to $100 below zero are approved without a fee. A direct deposit is an electronic payment of wages, a pension or government benefits made into your account by an employer or other payer. Transfers between your own accounts do not count as direct deposits.\n\nThis applies to debit card purchases made in shops, online and over the phone, including subscriptions that renew automatically on your card.\n\nPaying it back\nWhen your balance is below zero, the amount you owe is shown in orange at the top of the Fallowmere app. The next money paid into your account is used to bring your balance back to zero before anything else. We ask you to bring your balance back to at least zero within 30 days.\n\nKeeping track\nThe Cushion screen in the app shows how far below zero your balance is at any time. We also send a notification each time a card payment takes your balance below zero, so that it never comes as a surprise."
+            },
+            {
+              "id": "S2",
+              "title": "Fallowmere Bank - Early Pay",
+              "retrieved_at": "2026-09-21",
+              "text": "Early Pay can make your wages available up to two days before your payday. It is included with every Fallowmere Everyday account at no extra cost, and it switches on automatically the first time your employer pays you by direct deposit.\n\nHow it works\nEmployers usually send details of a payroll payment to the bank a day or two before the money is due to arrive. When we receive those details for a payment to your account, we make the money available to you straight away instead of waiting for the payment date. You receive the same amount you would otherwise receive on payday.\n\nHow early your money arrives depends on when your employer sends the payment details, so it can vary from one payday to the next. If your employer sends the details late, your money will arrive on your usual payday.\n\nWhich payments are included\nEarly Pay works for wages, pensions and government benefits paid by direct deposit. It does not apply to transfers from friends or family, or to payments from your accounts at other banks.\n\nTurning Early Pay off\nSome people prefer to receive their wages on the same day each month. You can turn Early Pay off under Account > Early Pay and turn it back on whenever you like."
+            },
+            {
+              "id": "S3",
+              "title": "Fallowmere Bank - Lost or stolen cards",
+              "retrieved_at": "2026-09-21",
+              "text": "If you cannot find your Fallowmere debit card, freeze it straight away in the app by tapping Card > Freeze. A frozen card cannot be used for new purchases or cash withdrawals, but regular payments you have already set up, such as subscriptions, will continue. If you find the card again, tap Unfreeze and it will work as normal.\n\nIf you think your card has been stolen, or someone has used it without your permission, report it in the app under Card > Report stolen. This cancels the card permanently, and we will post a replacement to your home address. Replacement cards usually arrive within five to seven business days and have a new card number.\n\nYou can add your new card to your phone's wallet as soon as you order the replacement, so you can keep paying while you wait for the plastic card to arrive.\n\nUnrecognised payments\nIf you see a payment you do not recognise, tap it in your transaction list and choose Report a problem. Our team will contact you within one business day. You will not be held responsible for payments you did not make or authorise, as long as you report them promptly."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "On a Fallowmere account that has received at least two direct deposits in the past 35 days, card payments taking the balance up to $100 below zero are approved without a fee.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "If your account has received at least two direct deposits in the past 35 days, card payments that take your balance up to $100 below zero are approved without a fee."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the Cushion sentence copied verbatim from S1; the eligibility condition of two direct deposits in the past 35 days is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q12-f2-ql-condition",
+          "family_id": "q12-f2",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "Does Fallowmere Bank charge a fee if a card payment takes my balance below zero?",
+          "answer": "Card payments that take your balance up to $100 below zero are approved without a fee.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Fallowmere Bank - Cushion for your Everyday account",
+              "retrieved_at": "2026-09-21",
+              "text": "Cushion is a feature of the Fallowmere Everyday account that can help when your balance is running low. There is nothing to apply for, and Cushion does not involve a credit check or affect your credit score.\n\nIf your account has received at least two direct deposits in the past 35 days, card payments that take your balance up to $100 below zero are approved without a fee. A direct deposit is an electronic payment of wages, a pension or government benefits made into your account by an employer or other payer. Transfers between your own accounts do not count as direct deposits.\n\nThis applies to debit card purchases made in shops, online and over the phone, including subscriptions that renew automatically on your card.\n\nPaying it back\nWhen your balance is below zero, the amount you owe is shown in orange at the top of the Fallowmere app. The next money paid into your account is used to bring your balance back to zero before anything else. We ask you to bring your balance back to at least zero within 30 days.\n\nKeeping track\nThe Cushion screen in the app shows how far below zero your balance is at any time. We also send a notification each time a card payment takes your balance below zero, so that it never comes as a surprise."
+            },
+            {
+              "id": "S2",
+              "title": "Fallowmere Bank - Early Pay",
+              "retrieved_at": "2026-09-21",
+              "text": "Early Pay can make your wages available up to two days before your payday. It is included with every Fallowmere Everyday account at no extra cost, and it switches on automatically the first time your employer pays you by direct deposit.\n\nHow it works\nEmployers usually send details of a payroll payment to the bank a day or two before the money is due to arrive. When we receive those details for a payment to your account, we make the money available to you straight away instead of waiting for the payment date. You receive the same amount you would otherwise receive on payday.\n\nHow early your money arrives depends on when your employer sends the payment details, so it can vary from one payday to the next. If your employer sends the details late, your money will arrive on your usual payday.\n\nWhich payments are included\nEarly Pay works for wages, pensions and government benefits paid by direct deposit. It does not apply to transfers from friends or family, or to payments from your accounts at other banks.\n\nTurning Early Pay off\nSome people prefer to receive their wages on the same day each month. You can turn Early Pay off under Account > Early Pay and turn it back on whenever you like."
+            },
+            {
+              "id": "S3",
+              "title": "Fallowmere Bank - Lost or stolen cards",
+              "retrieved_at": "2026-09-21",
+              "text": "If you cannot find your Fallowmere debit card, freeze it straight away in the app by tapping Card > Freeze. A frozen card cannot be used for new purchases or cash withdrawals, but regular payments you have already set up, such as subscriptions, will continue. If you find the card again, tap Unfreeze and it will work as normal.\n\nIf you think your card has been stolen, or someone has used it without your permission, report it in the app under Card > Report stolen. This cancels the card permanently, and we will post a replacement to your home address. Replacement cards usually arrive within five to seven business days and have a new card number.\n\nYou can add your new card to your phone's wallet as soon as you order the replacement, so you can keep paying while you wait for the plastic card to arrive.\n\nUnrecognised payments\nIf you see a payment you do not recognise, tap it in your transaction list and choose Report a problem. Our team will contact you within one business day. You will not be held responsible for payments you did not make or authorise, as long as you report them promptly."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Fallowmere approves card payments that take the balance up to $100 below zero without a fee, with no direct-deposit condition.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "If your account has received at least two direct deposits in the past 35 days, card payments that take your balance up to $100 below zero are approved without a fee."
+              }
+            ],
+            "dropped_qualifier": "If your account has received at least two direct deposits in the past 35 days",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q12-f2-sup-verbatim",
+            "note": "Deleted only the direct-deposit condition (and capitalised 'Card'); S1 grants fee-free approval to accounts with two direct deposits in 35 days and no passage says what happens to other accounts, so the unconditional claim is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q12-f3",
+      "items": [
+        {
+          "id": "q12-f3-sup-verbatim",
+          "family_id": "q12-f3",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Does Talvery Air charge a fee to change my flight?",
+          "answer": "You can change your flight once without a change fee if you make the change at least 14 days before the original departure date.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Talvery Air - Choosing your seat",
+              "retrieved_at": "2026-09-03",
+              "text": "When you book a Talvery Air flight, you can choose your seat straight away or leave it until later. If you have not chosen a seat by the time you check in, we will assign one to you free of charge, and we will try to seat people on the same booking together.\n\nSeat prices\nStandard seats in rows 10 to 30 cost $12 per flight. Seats in rows 3 to 9 are near the front of the cabin, so you can leave the aircraft sooner, and cost $18 per flight. Extra legroom seats in row 1 and the exit rows cost $35 per flight.\n\nExit rows\nTo sit in an exit row you must be at least 15 years old, able to lift 15 kg, and willing to help the crew in an emergency. You cannot sit in an exit row if you are travelling with an infant.\n\nChanging your seat\nYou can change your seat in Manage Booking until check-in closes. If you move to a seat that costs more, you pay the difference. If you move to a cheaper seat, or give up a seat you paid for, the difference is not refunded.\n\nFamilies\nChildren under 12 are always seated next to at least one adult on the same booking at no charge, even if nobody on the booking has paid for a seat."
+            },
+            {
+              "id": "S2",
+              "title": "Talvery Air - Check-in and boarding",
+              "retrieved_at": "2026-09-03",
+              "text": "Online check-in opens 24 hours before departure and closes 60 minutes before departure. You can check in on our website or in the Talvery Air app, and keep your boarding pass on your phone or print it at home.\n\nIf you prefer to check in at the airport, our desks open three hours before departure and close 45 minutes before departure. You will need to check in at a desk if you need special assistance or are carrying sporting equipment or other items that must be declared.\n\nBag drop\nIf you have checked in online and have a bag to check, take it to the bag drop desk before it closes, 45 minutes before departure.\n\nBoarding\nBoarding usually starts 40 minutes before departure, and the gate closes 15 minutes before departure. We board by group number, which is printed on your boarding pass. Passengers who need extra time and families with children under 5 are invited to board first.\n\nIdentity documents\nBring a valid photo ID that matches the name on your booking. If you are flying abroad, you will need a passport that is valid for the whole of your trip, and any visa your destination requires."
+            },
+            {
+              "id": "S3",
+              "title": "Talvery Air - Changing your flight",
+              "retrieved_at": "2026-09-03",
+              "text": "You can change the date or time of your Talvery Air flight online in Manage Booking, in the Talvery Air app, or by calling our reservations team. Changes made by phone follow the same rules as changes made online.\n\nYou can change your flight once without a change fee if you make the change at least 14 days before the original departure date. If your new flight costs more than your original flight, you pay the difference in fare and any extra taxes. If your new flight costs less, we return the difference to you as Talvery travel credit, which is valid for 12 months from the date it is issued.\n\nWho travels on the new flight\nEveryone on the same booking must move to the new flight together. If only some of the passengers on a booking want to change, call our reservations team, who can split the booking for you first.\n\nNames on a booking\nTickets cannot be transferred to another person. If a passenger's name is misspelt on a booking, contact us before check-in opens and we will correct it free of charge.\n\nAfter you change\nWe will email you a new itinerary as soon as the change is confirmed. Any seats or extra bags you paid for are moved to your new flight where the same options are available."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Talvery Air passengers can change their flight once without a change fee if they make the change at least 14 days before the original departure date.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "You can change your flight once without a change fee if you make the change at least 14 days before the original departure date."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the change-fee sentence copied verbatim from S3; the eligibility condition of changing at least 14 days before departure is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q12-f3-ql-condition",
+          "family_id": "q12-f3",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "Does Talvery Air charge a fee to change my flight?",
+          "answer": "You can change your flight once without a change fee.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Talvery Air - Choosing your seat",
+              "retrieved_at": "2026-09-03",
+              "text": "When you book a Talvery Air flight, you can choose your seat straight away or leave it until later. If you have not chosen a seat by the time you check in, we will assign one to you free of charge, and we will try to seat people on the same booking together.\n\nSeat prices\nStandard seats in rows 10 to 30 cost $12 per flight. Seats in rows 3 to 9 are near the front of the cabin, so you can leave the aircraft sooner, and cost $18 per flight. Extra legroom seats in row 1 and the exit rows cost $35 per flight.\n\nExit rows\nTo sit in an exit row you must be at least 15 years old, able to lift 15 kg, and willing to help the crew in an emergency. You cannot sit in an exit row if you are travelling with an infant.\n\nChanging your seat\nYou can change your seat in Manage Booking until check-in closes. If you move to a seat that costs more, you pay the difference. If you move to a cheaper seat, or give up a seat you paid for, the difference is not refunded.\n\nFamilies\nChildren under 12 are always seated next to at least one adult on the same booking at no charge, even if nobody on the booking has paid for a seat."
+            },
+            {
+              "id": "S2",
+              "title": "Talvery Air - Check-in and boarding",
+              "retrieved_at": "2026-09-03",
+              "text": "Online check-in opens 24 hours before departure and closes 60 minutes before departure. You can check in on our website or in the Talvery Air app, and keep your boarding pass on your phone or print it at home.\n\nIf you prefer to check in at the airport, our desks open three hours before departure and close 45 minutes before departure. You will need to check in at a desk if you need special assistance or are carrying sporting equipment or other items that must be declared.\n\nBag drop\nIf you have checked in online and have a bag to check, take it to the bag drop desk before it closes, 45 minutes before departure.\n\nBoarding\nBoarding usually starts 40 minutes before departure, and the gate closes 15 minutes before departure. We board by group number, which is printed on your boarding pass. Passengers who need extra time and families with children under 5 are invited to board first.\n\nIdentity documents\nBring a valid photo ID that matches the name on your booking. If you are flying abroad, you will need a passport that is valid for the whole of your trip, and any visa your destination requires."
+            },
+            {
+              "id": "S3",
+              "title": "Talvery Air - Changing your flight",
+              "retrieved_at": "2026-09-03",
+              "text": "You can change the date or time of your Talvery Air flight online in Manage Booking, in the Talvery Air app, or by calling our reservations team. Changes made by phone follow the same rules as changes made online.\n\nYou can change your flight once without a change fee if you make the change at least 14 days before the original departure date. If your new flight costs more than your original flight, you pay the difference in fare and any extra taxes. If your new flight costs less, we return the difference to you as Talvery travel credit, which is valid for 12 months from the date it is issued.\n\nWho travels on the new flight\nEveryone on the same booking must move to the new flight together. If only some of the passengers on a booking want to change, call our reservations team, who can split the booking for you first.\n\nNames on a booking\nTickets cannot be transferred to another person. If a passenger's name is misspelt on a booking, contact us before check-in opens and we will correct it free of charge.\n\nAfter you change\nWe will email you a new itinerary as soon as the change is confirmed. Any seats or extra bags you paid for are moved to your new flight where the same options are available."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Talvery Air passengers can change their flight once without a change fee, whenever the change is made.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "You can change your flight once without a change fee if you make the change at least 14 days before the original departure date."
+              }
+            ],
+            "dropped_qualifier": "if you make the change at least 14 days before the original departure date",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q12-f3-sup-verbatim",
+            "note": "Deleted only the 14-day timing condition; S3 makes the free change conditional on changing at least 14 days before departure and no passage covers later changes, so the unconditional claim is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q12-f4",
+      "items": [
+        {
+          "id": "q12-f4-sup-verbatim",
+          "family_id": "q12-f4",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Do I pay interest on purchases with my Ostlemark card?",
+          "answer": "Purchases on your Ostlemark card are not charged interest if you pay your statement balance in full by the due date.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Ostlemark Card - Earning and using points",
+              "retrieved_at": "2026-09-28",
+              "text": "Every purchase you make with your Ostlemark credit card earns points. You earn 1 point for every $1 you spend, and 2 points for every $1 spent on flights, hotels and car hire booked directly with the airline, hotel or rental company. Points are added to your account when the purchase is posted, which usually takes one to three business days.\n\nUsing your points\nYou can redeem points in the Ostlemark app once you have 1,000 points or more. Points can be turned into a statement credit at 1 cent per point, transferred to a partner airline loyalty programme, or used to buy gift cards from our partner shops.\n\nPoints that are not earned\nPoints are not earned on cash withdrawals, balance transfers, fees, or payments to gambling websites. If you return an item, the points you earned on it are removed from your account.\n\nKeeping your points\nYour points do not expire as long as your account is open. If you close your account, any points you have not redeemed are lost, so remember to use them first."
+            },
+            {
+              "id": "S2",
+              "title": "Ostlemark Card - Statements and payment due dates",
+              "retrieved_at": "2026-09-28",
+              "text": "Your Ostlemark statement is produced on the same date each month. It lists every transaction posted since your last statement and shows your statement balance, your minimum payment and your payment due date. Your payment due date is 25 days after your statement date.\n\nPurchases on your Ostlemark card are not charged interest if you pay your statement balance in full by the due date.\n\nWays to pay\nYou can pay from any US bank account in the Ostlemark app, set up an automatic payment, or mail a check. Automatic payments can be set to pay your statement balance, your minimum payment or a fixed amount each month, and they are taken on your due date. Payments made in the app before 8 p.m. Eastern time count as received that day.\n\nYour minimum payment\nYour minimum payment is $25 or 1% of your statement balance, whichever is higher. If your statement balance is less than $25, your minimum payment is the full statement balance.\n\nChanging your statement date\nYou can ask to move your statement date once every 12 months from Settings > Statements. The change takes effect after your next statement, so one statement may cover a shorter or longer period than usual."
+            },
+            {
+              "id": "S3",
+              "title": "Ostlemark Card - Authorised users",
+              "retrieved_at": "2026-09-28",
+              "text": "You can add up to four authorised users to your Ostlemark credit card account. Each authorised user gets their own card with their name on it, and their purchases appear on your statement. You are responsible for paying for everything they spend.\n\nWho can be added\nAuthorised users must be at least 16 years old. You will need their full name, date of birth and home address. We do not run a credit check on authorised users.\n\nSetting limits\nFor each authorised user, you can set a monthly spending limit in the app, from $100 up to your own credit limit. You can also turn off cash withdrawals or online purchases for any authorised user's card. Changes take effect straight away.\n\nPoints\nPoints earned on purchases made by authorised users are added to your account, and only you can redeem them.\n\nRemoving an authorised user\nYou can remove an authorised user at any time in the app. Their card stops working immediately. Any purchases they made before you removed them still appear on your statement and must be paid."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Ostlemark card purchases are not charged interest if the statement balance is paid in full by the due date.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Purchases on your Ostlemark card are not charged interest if you pay your statement balance in full by the due date."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the interest sentence copied verbatim from S2; the condition of paying the statement balance in full by the due date is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q12-f4-ql-condition",
+          "family_id": "q12-f4",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "Do I pay interest on purchases with my Ostlemark card?",
+          "answer": "Purchases on your Ostlemark card are not charged interest.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Ostlemark Card - Earning and using points",
+              "retrieved_at": "2026-09-28",
+              "text": "Every purchase you make with your Ostlemark credit card earns points. You earn 1 point for every $1 you spend, and 2 points for every $1 spent on flights, hotels and car hire booked directly with the airline, hotel or rental company. Points are added to your account when the purchase is posted, which usually takes one to three business days.\n\nUsing your points\nYou can redeem points in the Ostlemark app once you have 1,000 points or more. Points can be turned into a statement credit at 1 cent per point, transferred to a partner airline loyalty programme, or used to buy gift cards from our partner shops.\n\nPoints that are not earned\nPoints are not earned on cash withdrawals, balance transfers, fees, or payments to gambling websites. If you return an item, the points you earned on it are removed from your account.\n\nKeeping your points\nYour points do not expire as long as your account is open. If you close your account, any points you have not redeemed are lost, so remember to use them first."
+            },
+            {
+              "id": "S2",
+              "title": "Ostlemark Card - Statements and payment due dates",
+              "retrieved_at": "2026-09-28",
+              "text": "Your Ostlemark statement is produced on the same date each month. It lists every transaction posted since your last statement and shows your statement balance, your minimum payment and your payment due date. Your payment due date is 25 days after your statement date.\n\nPurchases on your Ostlemark card are not charged interest if you pay your statement balance in full by the due date.\n\nWays to pay\nYou can pay from any US bank account in the Ostlemark app, set up an automatic payment, or mail a check. Automatic payments can be set to pay your statement balance, your minimum payment or a fixed amount each month, and they are taken on your due date. Payments made in the app before 8 p.m. Eastern time count as received that day.\n\nYour minimum payment\nYour minimum payment is $25 or 1% of your statement balance, whichever is higher. If your statement balance is less than $25, your minimum payment is the full statement balance.\n\nChanging your statement date\nYou can ask to move your statement date once every 12 months from Settings > Statements. The change takes effect after your next statement, so one statement may cover a shorter or longer period than usual."
+            },
+            {
+              "id": "S3",
+              "title": "Ostlemark Card - Authorised users",
+              "retrieved_at": "2026-09-28",
+              "text": "You can add up to four authorised users to your Ostlemark credit card account. Each authorised user gets their own card with their name on it, and their purchases appear on your statement. You are responsible for paying for everything they spend.\n\nWho can be added\nAuthorised users must be at least 16 years old. You will need their full name, date of birth and home address. We do not run a credit check on authorised users.\n\nSetting limits\nFor each authorised user, you can set a monthly spending limit in the app, from $100 up to your own credit limit. You can also turn off cash withdrawals or online purchases for any authorised user's card. Changes take effect straight away.\n\nPoints\nPoints earned on purchases made by authorised users are added to your account, and only you can redeem them.\n\nRemoving an authorised user\nYou can remove an authorised user at any time in the app. Their card stops working immediately. Any purchases they made before you removed them still appear on your statement and must be paid."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Ostlemark card purchases are not charged interest, with no condition on paying the statement balance in full.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Purchases on your Ostlemark card are not charged interest if you pay your statement balance in full by the due date."
+              }
+            ],
+            "dropped_qualifier": "if you pay your statement balance in full by the due date",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q12-f4-sup-verbatim",
+            "note": "Deleted only the pay-in-full condition; S2 makes interest-free purchases conditional on paying the statement balance in full and no passage says how interest works otherwise, so the unconditional claim is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q12-f5",
+      "items": [
+        {
+          "id": "q12-f5-sup-verbatim",
+          "family_id": "q12-f5",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Where does Varrowby store my profile data?",
+          "answer": "For users in the European Economic Area, Varrowby stores profile data in data centres located in Frankfurt and Dublin.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Varrowby Privacy Notice - Cookies and similar technologies",
+              "retrieved_at": "2026-08-30",
+              "text": "Varrowby uses cookies and similar technologies on our website and in our apps. A cookie is a small text file that a website saves on your device so that it can recognise your device on a later visit.\n\nEssential cookies\nSome cookies are needed for Varrowby to work. They keep you signed in, remember the club events you have saved, and help protect your account against fraud. These cookies cannot be switched off, because the service would not work without them.\n\nPreference cookies\nPreference cookies remember choices you make, such as your language and whether you prefer the light or dark theme. If you switch them off, you will need to make these choices again each time you visit.\n\nAnalytics cookies\nWith your permission, we use analytics cookies to count visits and see which pages are used most, so that we can improve Varrowby. The information is grouped together and does not tell us who you are.\n\nManaging your choices\nWhen you first visit Varrowby, we ask which optional cookies you are happy for us to use. You can change your choices at any time from the Cookie settings link at the bottom of every page. Your choices apply to the device and browser you are using at the time."
+            },
+            {
+              "id": "S2",
+              "title": "Varrowby Privacy Notice - Where your data is stored",
+              "retrieved_at": "2026-08-30",
+              "text": "This section of the Varrowby Privacy Notice explains where the information in your Varrowby account is kept and how we look after it.\n\nProfile data is the information you add to your Varrowby profile: your display name, profile photo, short bio, the clubs you have joined and your notification preferences. Posts and messages you share in clubs are covered in the Club Content section of this notice.\n\nFor users in the European Economic Area, Varrowby stores profile data in data centres located in Frankfurt and Dublin. These data centres are run by our hosting partner under a written contract that requires the partner to handle the data only as we instruct and to keep it secure.\n\nBackups\nCopies of profile data are kept in encrypted backups so that we can restore the service if equipment fails. Backups are replaced on a rolling basis, and no backup is kept for longer than 35 days.\n\nWho can access it\nAccess to profile data is limited to Varrowby staff who need it to run the service, such as our support and trust and safety teams. Each time a member of staff opens a profile record, the access is logged, and our data protection team reviews these logs every month.\n\nQuestions\nIf you have questions about where your data is stored, you can contact our data protection officer using the details in the Contact Us section of this notice."
+            },
+            {
+              "id": "S3",
+              "title": "Varrowby - Who can see your profile",
+              "retrieved_at": "2026-08-30",
+              "text": "Your Varrowby profile helps other members of your clubs recognise you. You decide how much of it other people can see.\n\nProfile visibility\nUnder Settings > Privacy > Profile visibility, choose one of three options. Everyone means anyone signed in to Varrowby can view your profile. Club members means only people who belong to at least one of the same clubs as you can view it. Only me hides your profile from everyone except you, although other members will still see your display name next to your posts.\n\nYour display name and profile photo\nYour display name and profile photo are always shown next to anything you post in a club, whatever your visibility setting. If you would rather not show a photo, you can remove it and a coloured initial will be shown instead.\n\nClubs you have joined\nYou can hide the list of clubs you belong to from your profile by turning off Show my clubs. Club organisers can still see that you are a member of their own club.\n\nSearch\nMembers can find your profile by searching for your display name unless you turn off Let others find me by name. Turning this off does not hide you from people who already follow you."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "For users in the European Economic Area, Varrowby stores profile data in data centres in Frankfurt and Dublin.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "For users in the European Economic Area, Varrowby stores profile data in data centres located in Frankfurt and Dublin."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the data-location sentence copied verbatim from S2; the regional scope 'For users in the European Economic Area' is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q12-f5-ql-scope",
+          "family_id": "q12-f5",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "Where does Varrowby store my profile data?",
+          "answer": "Varrowby stores profile data in data centres located in Frankfurt and Dublin.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Varrowby Privacy Notice - Cookies and similar technologies",
+              "retrieved_at": "2026-08-30",
+              "text": "Varrowby uses cookies and similar technologies on our website and in our apps. A cookie is a small text file that a website saves on your device so that it can recognise your device on a later visit.\n\nEssential cookies\nSome cookies are needed for Varrowby to work. They keep you signed in, remember the club events you have saved, and help protect your account against fraud. These cookies cannot be switched off, because the service would not work without them.\n\nPreference cookies\nPreference cookies remember choices you make, such as your language and whether you prefer the light or dark theme. If you switch them off, you will need to make these choices again each time you visit.\n\nAnalytics cookies\nWith your permission, we use analytics cookies to count visits and see which pages are used most, so that we can improve Varrowby. The information is grouped together and does not tell us who you are.\n\nManaging your choices\nWhen you first visit Varrowby, we ask which optional cookies you are happy for us to use. You can change your choices at any time from the Cookie settings link at the bottom of every page. Your choices apply to the device and browser you are using at the time."
+            },
+            {
+              "id": "S2",
+              "title": "Varrowby Privacy Notice - Where your data is stored",
+              "retrieved_at": "2026-08-30",
+              "text": "This section of the Varrowby Privacy Notice explains where the information in your Varrowby account is kept and how we look after it.\n\nProfile data is the information you add to your Varrowby profile: your display name, profile photo, short bio, the clubs you have joined and your notification preferences. Posts and messages you share in clubs are covered in the Club Content section of this notice.\n\nFor users in the European Economic Area, Varrowby stores profile data in data centres located in Frankfurt and Dublin. These data centres are run by our hosting partner under a written contract that requires the partner to handle the data only as we instruct and to keep it secure.\n\nBackups\nCopies of profile data are kept in encrypted backups so that we can restore the service if equipment fails. Backups are replaced on a rolling basis, and no backup is kept for longer than 35 days.\n\nWho can access it\nAccess to profile data is limited to Varrowby staff who need it to run the service, such as our support and trust and safety teams. Each time a member of staff opens a profile record, the access is logged, and our data protection team reviews these logs every month.\n\nQuestions\nIf you have questions about where your data is stored, you can contact our data protection officer using the details in the Contact Us section of this notice."
+            },
+            {
+              "id": "S3",
+              "title": "Varrowby - Who can see your profile",
+              "retrieved_at": "2026-08-30",
+              "text": "Your Varrowby profile helps other members of your clubs recognise you. You decide how much of it other people can see.\n\nProfile visibility\nUnder Settings > Privacy > Profile visibility, choose one of three options. Everyone means anyone signed in to Varrowby can view your profile. Club members means only people who belong to at least one of the same clubs as you can view it. Only me hides your profile from everyone except you, although other members will still see your display name next to your posts.\n\nYour display name and profile photo\nYour display name and profile photo are always shown next to anything you post in a club, whatever your visibility setting. If you would rather not show a photo, you can remove it and a coloured initial will be shown instead.\n\nClubs you have joined\nYou can hide the list of clubs you belong to from your profile by turning off Show my clubs. Club organisers can still see that you are a member of their own club.\n\nSearch\nMembers can find your profile by searching for your display name unless you turn off Let others find me by name. Turning this off does not hide you from people who already follow you."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Varrowby stores all users' profile data in data centres in Frankfurt and Dublin, with no regional limit.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "For users in the European Economic Area, Varrowby stores profile data in data centres located in Frankfurt and Dublin."
+              }
+            ],
+            "dropped_qualifier": "For users in the European Economic Area",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q12-f5-sup-verbatim",
+            "note": "Deleted only the EEA scope; S2 gives the Frankfurt and Dublin location for EEA users and no passage says where other users' data is stored, so the claim for all users is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q12-f6",
+      "items": [
+        {
+          "id": "q12-f6-sup-verbatim",
+          "family_id": "q12-f6",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "What interest rate do Glenmarrow Savings Vaults pay?",
+          "answer": "On the Premium plan, Savings Vaults earn 3.20% AER on balances up to $50,000.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Glenmarrow Money - Setting up a Savings Vault",
+              "retrieved_at": "2026-09-10",
+              "text": "Savings Vaults let you put money aside inside your Glenmarrow account, separate from the money you spend day to day. You can have up to ten Vaults open at once and give each one a name, an emoji and an optional savings goal.\n\nCreating a Vault\nIn the app, tap Vaults, then New Vault. Choose a name, set a goal amount and a target date if you want one, and decide how much to move in to start. You can create a Vault with a zero balance and add money later.\n\nMoving money in and out\nYou can move money between your main balance and any Vault instantly, as often as you like, at no cost. Money in a Vault cannot be spent with your card until you move it back to your main balance.\n\nRound-ups\nTurn on Round-ups and every card purchase is rounded up to the nearest dollar, with the spare change moved into the Vault of your choice. For example, a $3.40 coffee moves 60 cents into your Vault.\n\nClosing a Vault\nWhen you close a Vault, the money in it goes straight back to your main balance. You can reopen a closed Vault within 30 days from the Vaults screen."
+            },
+            {
+              "id": "S2",
+              "title": "Glenmarrow Money - Sending money abroad",
+              "retrieved_at": "2026-09-10",
+              "text": "You can send money from your Glenmarrow account to bank accounts in more than 40 countries. Open Payments, choose Send abroad, and enter your recipient's name, bank details and the amount you want to send, either in dollars or in their currency.\n\nFees and exchange rates\nBefore you confirm a transfer, the app shows the exchange rate, our fee and exactly how much your recipient will receive. Our fee is 0.6% of the amount you send, with a minimum of $2. There are no hidden charges added to the exchange rate, but your recipient's bank may charge its own fee for receiving the money.\n\nHow long it takes\nMost transfers arrive within one business day. Transfers to some countries, or transfers that need extra security checks, can take up to five business days. We will tell you the expected arrival date before you confirm.\n\nLimits\nYou can send up to $10,000 abroad in a single transfer and up to $25,000 in any 30-day period.\n\nCancelling a transfer\nYou can cancel a transfer in the app as long as its status still shows Scheduled. Once a transfer shows Sent, it cannot be cancelled."
+            },
+            {
+              "id": "S3",
+              "title": "Glenmarrow Money - Premium plan",
+              "retrieved_at": "2026-09-10",
+              "text": "Glenmarrow Premium is a monthly subscription plan for your Glenmarrow account. It costs $8 per month, taken from your main balance on the same day each month. You can cancel at any time in the app, and Premium stays active until the end of the month you have already paid for.\n\nWhat Premium includes\n- A daily ATM withdrawal limit of $1,500\n- Free replacement cards, sent by express delivery\n- Priority support through in-app chat, seven days a week\n- Travel insurance for trips of up to 31 days\n\nSavings Vaults on Premium\nOn the Premium plan, Savings Vaults earn 3.20% AER on balances up to $50,000. Interest is calculated on your end-of-day balance and paid into each Vault on the first business day of the following month. The rate is variable, and we will give you at least 30 days' notice before we lower it.\n\nUpgrading\nYou can upgrade from Account > Plan in the app. Premium starts straight away, and your first monthly fee is taken on the day you upgrade.\n\nTravel insurance\nTravel insurance covers you and your partner for medical emergencies, cancelled trips and lost luggage. Details of what is covered, and how to make a claim, are in the policy document in the app."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "On Glenmarrow's Premium plan, Savings Vaults earn 3.20% AER on balances up to $50,000.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "On the Premium plan, Savings Vaults earn 3.20% AER on balances up to $50,000."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the Vault rate sentence copied verbatim from S3; the plan scope 'On the Premium plan' is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q12-f6-ql-scope",
+          "family_id": "q12-f6",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "What interest rate do Glenmarrow Savings Vaults pay?",
+          "answer": "Savings Vaults earn 3.20% AER on balances up to $50,000.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Glenmarrow Money - Setting up a Savings Vault",
+              "retrieved_at": "2026-09-10",
+              "text": "Savings Vaults let you put money aside inside your Glenmarrow account, separate from the money you spend day to day. You can have up to ten Vaults open at once and give each one a name, an emoji and an optional savings goal.\n\nCreating a Vault\nIn the app, tap Vaults, then New Vault. Choose a name, set a goal amount and a target date if you want one, and decide how much to move in to start. You can create a Vault with a zero balance and add money later.\n\nMoving money in and out\nYou can move money between your main balance and any Vault instantly, as often as you like, at no cost. Money in a Vault cannot be spent with your card until you move it back to your main balance.\n\nRound-ups\nTurn on Round-ups and every card purchase is rounded up to the nearest dollar, with the spare change moved into the Vault of your choice. For example, a $3.40 coffee moves 60 cents into your Vault.\n\nClosing a Vault\nWhen you close a Vault, the money in it goes straight back to your main balance. You can reopen a closed Vault within 30 days from the Vaults screen."
+            },
+            {
+              "id": "S2",
+              "title": "Glenmarrow Money - Sending money abroad",
+              "retrieved_at": "2026-09-10",
+              "text": "You can send money from your Glenmarrow account to bank accounts in more than 40 countries. Open Payments, choose Send abroad, and enter your recipient's name, bank details and the amount you want to send, either in dollars or in their currency.\n\nFees and exchange rates\nBefore you confirm a transfer, the app shows the exchange rate, our fee and exactly how much your recipient will receive. Our fee is 0.6% of the amount you send, with a minimum of $2. There are no hidden charges added to the exchange rate, but your recipient's bank may charge its own fee for receiving the money.\n\nHow long it takes\nMost transfers arrive within one business day. Transfers to some countries, or transfers that need extra security checks, can take up to five business days. We will tell you the expected arrival date before you confirm.\n\nLimits\nYou can send up to $10,000 abroad in a single transfer and up to $25,000 in any 30-day period.\n\nCancelling a transfer\nYou can cancel a transfer in the app as long as its status still shows Scheduled. Once a transfer shows Sent, it cannot be cancelled."
+            },
+            {
+              "id": "S3",
+              "title": "Glenmarrow Money - Premium plan",
+              "retrieved_at": "2026-09-10",
+              "text": "Glenmarrow Premium is a monthly subscription plan for your Glenmarrow account. It costs $8 per month, taken from your main balance on the same day each month. You can cancel at any time in the app, and Premium stays active until the end of the month you have already paid for.\n\nWhat Premium includes\n- A daily ATM withdrawal limit of $1,500\n- Free replacement cards, sent by express delivery\n- Priority support through in-app chat, seven days a week\n- Travel insurance for trips of up to 31 days\n\nSavings Vaults on Premium\nOn the Premium plan, Savings Vaults earn 3.20% AER on balances up to $50,000. Interest is calculated on your end-of-day balance and paid into each Vault on the first business day of the following month. The rate is variable, and we will give you at least 30 days' notice before we lower it.\n\nUpgrading\nYou can upgrade from Account > Plan in the app. Premium starts straight away, and your first monthly fee is taken on the day you upgrade.\n\nTravel insurance\nTravel insurance covers you and your partner for medical emergencies, cancelled trips and lost luggage. Details of what is covered, and how to make a claim, are in the policy document in the app."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Glenmarrow Savings Vaults earn 3.20% AER on balances up to $50,000 on any plan.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "On the Premium plan, Savings Vaults earn 3.20% AER on balances up to $50,000."
+              }
+            ],
+            "dropped_qualifier": "On the Premium plan",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q12-f6-sup-verbatim",
+            "note": "Deleted only the Premium-plan scope; S3 states the 3.20% Vault rate for Premium and no passage gives a Vault rate for any other plan, so the plan-wide claim is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q12-f7",
+      "items": [
+        {
+          "id": "q12-f7-sup-verbatim",
+          "family_id": "q12-f7",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Can I bring my dog or cat in the cabin on Merrowind Air?",
+          "answer": "On domestic flights, small dogs and cats can travel in the cabin in a soft-sided carrier that fits under the seat in front of you.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Merrowind Air - Pets in the cabin",
+              "retrieved_at": "2026-09-17",
+              "text": "On domestic flights, small dogs and cats can travel in the cabin in a soft-sided carrier that fits under the seat in front of you. The carrier can be no larger than 45 x 30 x 25 cm, and your pet must stay inside it, with the carrier closed, for the whole flight, including take-off, landing and taxiing.\n\nAdding your pet to a booking\nCall our reservations team at least 48 hours before departure to add your pet to your booking. Pets cannot be added in the app or at the airport. The pet fee is $95 for each flight and is paid when your pet is added.\n\nEach passenger can bring one pet carrier. The carrier counts as your personal item, but you can still bring one cabin bag for the overhead locker.\n\nBefore you fly\nYour pet must be at least 10 weeks old and able to stand up and turn around inside the carrier. Make sure your pet has had a chance to eat, drink and go to the toilet before you leave for the airport. Please check in at the airport desk rather than online, so that our staff can check the carrier and attach a pet tag to it.\n\nOn board\nYou will be seated in a window seat, away from the exit rows. Your pet must not be taken out of the carrier during the flight and must not be given food on board, although small amounts of water are fine."
+            },
+            {
+              "id": "S2",
+              "title": "Merrowind Air - Flying with infants",
+              "retrieved_at": "2026-09-17",
+              "text": "Children under two years old can travel on your lap rather than in their own seat. Each adult can hold one infant on their lap, and the infant must be added to the booking when you book or later in Manage Booking. Infants on your lap travel for 10% of the adult fare, plus taxes.\n\nInfant seats\nIf you would like your child to have their own seat, you can book a child ticket for them and bring an approved car seat. The car seat must fit in a standard economy seat and carry a label showing it is approved for use in aircraft.\n\nBassinets\nA limited number of bassinets are available on flights longer than four hours, for babies weighing up to 10 kg. Request one by calling our reservations team. Bassinets are given out in the order requests are received.\n\nStrollers and car seats\nYou can check in one stroller and one car seat for each child at no charge, in addition to your normal baggage allowance. Folding strollers can be left at the aircraft door and returned to you when you get off.\n\nFeeding\nYou are welcome to bring baby food, formula and milk through security in reasonable quantities for your journey."
+            },
+            {
+              "id": "S3",
+              "title": "Merrowind Air - Check-in times",
+              "retrieved_at": "2026-09-17",
+              "text": "Online check-in for Merrowind Air flights opens 24 hours before departure. You can check in on our website or in the app and keep your boarding pass on your phone.\n\nWhen check-in closes\nFor domestic flights, check-in closes 45 minutes before departure. For international flights, check-in closes 60 minutes before departure. These times apply whether you check in online or at the airport desk, and they also apply to bag drop.\n\nWho needs to check in at the desk\nYou will need to check in at an airport desk if you are travelling with an infant on your lap who is not yet on your booking, or with sporting equipment that must be measured. Desks open three hours before departure.\n\nAt the gate\nBoarding starts 40 minutes before departure. The gate closes 15 minutes before departure, and we cannot hold the flight for passengers who arrive after this.\n\nDocuments\nFor international flights, bring a passport that is valid for the whole of your trip. We may also need to see your visa or residence permit at check-in."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "On Merrowind Air domestic flights, small dogs and cats can travel in the cabin in a soft-sided carrier that fits under the seat in front.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "On domestic flights, small dogs and cats can travel in the cabin in a soft-sided carrier that fits under the seat in front of you."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the pets-in-cabin sentence copied verbatim from S1; the route scope 'On domestic flights' is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q12-f7-ql-scope",
+          "family_id": "q12-f7",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "Can I bring my dog or cat in the cabin on Merrowind Air?",
+          "answer": "Small dogs and cats can travel in the cabin in a soft-sided carrier that fits under the seat in front of you.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Merrowind Air - Pets in the cabin",
+              "retrieved_at": "2026-09-17",
+              "text": "On domestic flights, small dogs and cats can travel in the cabin in a soft-sided carrier that fits under the seat in front of you. The carrier can be no larger than 45 x 30 x 25 cm, and your pet must stay inside it, with the carrier closed, for the whole flight, including take-off, landing and taxiing.\n\nAdding your pet to a booking\nCall our reservations team at least 48 hours before departure to add your pet to your booking. Pets cannot be added in the app or at the airport. The pet fee is $95 for each flight and is paid when your pet is added.\n\nEach passenger can bring one pet carrier. The carrier counts as your personal item, but you can still bring one cabin bag for the overhead locker.\n\nBefore you fly\nYour pet must be at least 10 weeks old and able to stand up and turn around inside the carrier. Make sure your pet has had a chance to eat, drink and go to the toilet before you leave for the airport. Please check in at the airport desk rather than online, so that our staff can check the carrier and attach a pet tag to it.\n\nOn board\nYou will be seated in a window seat, away from the exit rows. Your pet must not be taken out of the carrier during the flight and must not be given food on board, although small amounts of water are fine."
+            },
+            {
+              "id": "S2",
+              "title": "Merrowind Air - Flying with infants",
+              "retrieved_at": "2026-09-17",
+              "text": "Children under two years old can travel on your lap rather than in their own seat. Each adult can hold one infant on their lap, and the infant must be added to the booking when you book or later in Manage Booking. Infants on your lap travel for 10% of the adult fare, plus taxes.\n\nInfant seats\nIf you would like your child to have their own seat, you can book a child ticket for them and bring an approved car seat. The car seat must fit in a standard economy seat and carry a label showing it is approved for use in aircraft.\n\nBassinets\nA limited number of bassinets are available on flights longer than four hours, for babies weighing up to 10 kg. Request one by calling our reservations team. Bassinets are given out in the order requests are received.\n\nStrollers and car seats\nYou can check in one stroller and one car seat for each child at no charge, in addition to your normal baggage allowance. Folding strollers can be left at the aircraft door and returned to you when you get off.\n\nFeeding\nYou are welcome to bring baby food, formula and milk through security in reasonable quantities for your journey."
+            },
+            {
+              "id": "S3",
+              "title": "Merrowind Air - Check-in times",
+              "retrieved_at": "2026-09-17",
+              "text": "Online check-in for Merrowind Air flights opens 24 hours before departure. You can check in on our website or in the app and keep your boarding pass on your phone.\n\nWhen check-in closes\nFor domestic flights, check-in closes 45 minutes before departure. For international flights, check-in closes 60 minutes before departure. These times apply whether you check in online or at the airport desk, and they also apply to bag drop.\n\nWho needs to check in at the desk\nYou will need to check in at an airport desk if you are travelling with an infant on your lap who is not yet on your booking, or with sporting equipment that must be measured. Desks open three hours before departure.\n\nAt the gate\nBoarding starts 40 minutes before departure. The gate closes 15 minutes before departure, and we cannot hold the flight for passengers who arrive after this.\n\nDocuments\nFor international flights, bring a passport that is valid for the whole of your trip. We may also need to see your visa or residence permit at check-in."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Small dogs and cats can travel in the cabin in a soft-sided under-seat carrier on any Merrowind Air flight, not only domestic ones.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "On domestic flights, small dogs and cats can travel in the cabin in a soft-sided carrier that fits under the seat in front of you."
+              }
+            ],
+            "dropped_qualifier": "On domestic flights",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q12-f7-sup-verbatim",
+            "note": "Deleted only the 'On domestic flights' scope (and capitalised 'Small'); S1 allows cabin pets on domestic flights and no passage says anything about pets on international flights, so the unscoped claim is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q12-f8",
+      "items": [
+        {
+          "id": "q12-f8-sup-verbatim",
+          "family_id": "q12-f8",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "How long does Hollicott keep the voice recordings from my speaker?",
+          "answer": "For child profiles, voice recordings are deleted automatically 30 days after they are made.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Hollicott Home - Setting up your speaker",
+              "retrieved_at": "2026-10-01",
+              "text": "To set up a Hollicott speaker you need the Hollicott app on a phone or tablet, a Hollicott account, and a Wi-Fi network that you know the password for.\n\n1. Plug the speaker in. The light ring glows white while it starts up, and then pulses orange when it is ready to be set up.\n2. Open the Hollicott app, tap Add device, and choose Speaker. The app will find speakers nearby that are ready to set up.\n3. Choose the room the speaker is in, such as Kitchen or Bedroom. This helps when you have more than one speaker.\n4. Select your Wi-Fi network and enter the password. The speaker connects and checks for updates, which can take a few minutes.\n5. When the light ring turns off, the speaker is ready. Try asking it about the weather to check that everything works.\n\nIf setup does not work\nMake sure your phone is connected to the same Wi-Fi network you are setting the speaker up on, and that the speaker is within range of your router. If the light ring flashes red, hold the action button for 15 seconds to reset the speaker, then start again.\n\nAdding other people\nAnyone in your household can use the speaker. To let them control it from their own phone, invite them from Home > Members in the app."
+            },
+            {
+              "id": "S2",
+              "title": "Hollicott Home - Voice recordings and your privacy",
+              "retrieved_at": "2026-10-01",
+              "text": "A Hollicott speaker starts recording when it hears the wake word, Hey Hollicott, and the light ring turns blue while it is recording. The recording is sent to Hollicott so that we can work out what you asked for and respond.\n\nVoice profiles\nEach person in your household can create a voice profile, so that the speaker can tell who is talking and give personal answers, such as reading out their own calendar. A parent or guardian can set up a child profile for a child under 13 from the Family section of the Hollicott app.\n\nFor child profiles, voice recordings are deleted automatically 30 days after they are made. The parent or guardian who set up a child profile can listen to that child's recordings in the app and can delete any of them sooner.\n\nReviewing your recordings\nOpen the Hollicott app and go to Privacy > Voice history to see a list of requests made on your speakers. You can play back a request, read its transcript and delete it. You can also say Hey Hollicott, delete what I just said, to remove your most recent request.\n\nMuting the microphone\nPress the microphone button on top of the speaker to turn the microphone off. The light ring turns red, and the speaker will not respond to the wake word until you press the button again.\n\nWho can hear recordings\nRecordings are not shared with advertisers. A small number of recordings may be reviewed by trained Hollicott staff to improve speech recognition if you have turned on Help improve Hollicott in Privacy settings."
+            },
+            {
+              "id": "S3",
+              "title": "Hollicott Home - Linking music services",
+              "retrieved_at": "2026-10-01",
+              "text": "You can play music on your Hollicott speaker from the music services you already use. Open the Hollicott app, go to Settings > Music, tap Link a service, and sign in to your account with that service. Once a service is linked, you can ask for songs, albums, artists, playlists and radio stations by name.\n\nChoosing a default service\nIf you have linked more than one service, choose a default so the speaker knows where to play from when you do not say. You can still ask for a different service by naming it at the end of your request.\n\nPlaying on more than one speaker\nGroup speakers in the app under Home > Speaker groups, then ask for music on the group's name, such as Downstairs, to play the same music in several rooms at once.\n\nEach household member's own account\nIf each person in your household has a voice profile, the speaker plays from the music account linked to whoever is speaking. Otherwise it uses the account linked by the person who set up the speaker.\n\nUnlinking a service\nTo remove a service, go to Settings > Music, choose the service and tap Unlink. Any playlists you made stay in your account with the music service."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Hollicott automatically deletes voice recordings from child profiles 30 days after they are made.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "For child profiles, voice recordings are deleted automatically 30 days after they are made."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the automatic-deletion sentence copied verbatim from S2; the group scope 'For child profiles' is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q12-f8-ql-scope",
+          "family_id": "q12-f8",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "How long does Hollicott keep the voice recordings from my speaker?",
+          "answer": "Voice recordings are deleted automatically 30 days after they are made.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Hollicott Home - Setting up your speaker",
+              "retrieved_at": "2026-10-01",
+              "text": "To set up a Hollicott speaker you need the Hollicott app on a phone or tablet, a Hollicott account, and a Wi-Fi network that you know the password for.\n\n1. Plug the speaker in. The light ring glows white while it starts up, and then pulses orange when it is ready to be set up.\n2. Open the Hollicott app, tap Add device, and choose Speaker. The app will find speakers nearby that are ready to set up.\n3. Choose the room the speaker is in, such as Kitchen or Bedroom. This helps when you have more than one speaker.\n4. Select your Wi-Fi network and enter the password. The speaker connects and checks for updates, which can take a few minutes.\n5. When the light ring turns off, the speaker is ready. Try asking it about the weather to check that everything works.\n\nIf setup does not work\nMake sure your phone is connected to the same Wi-Fi network you are setting the speaker up on, and that the speaker is within range of your router. If the light ring flashes red, hold the action button for 15 seconds to reset the speaker, then start again.\n\nAdding other people\nAnyone in your household can use the speaker. To let them control it from their own phone, invite them from Home > Members in the app."
+            },
+            {
+              "id": "S2",
+              "title": "Hollicott Home - Voice recordings and your privacy",
+              "retrieved_at": "2026-10-01",
+              "text": "A Hollicott speaker starts recording when it hears the wake word, Hey Hollicott, and the light ring turns blue while it is recording. The recording is sent to Hollicott so that we can work out what you asked for and respond.\n\nVoice profiles\nEach person in your household can create a voice profile, so that the speaker can tell who is talking and give personal answers, such as reading out their own calendar. A parent or guardian can set up a child profile for a child under 13 from the Family section of the Hollicott app.\n\nFor child profiles, voice recordings are deleted automatically 30 days after they are made. The parent or guardian who set up a child profile can listen to that child's recordings in the app and can delete any of them sooner.\n\nReviewing your recordings\nOpen the Hollicott app and go to Privacy > Voice history to see a list of requests made on your speakers. You can play back a request, read its transcript and delete it. You can also say Hey Hollicott, delete what I just said, to remove your most recent request.\n\nMuting the microphone\nPress the microphone button on top of the speaker to turn the microphone off. The light ring turns red, and the speaker will not respond to the wake word until you press the button again.\n\nWho can hear recordings\nRecordings are not shared with advertisers. A small number of recordings may be reviewed by trained Hollicott staff to improve speech recognition if you have turned on Help improve Hollicott in Privacy settings."
+            },
+            {
+              "id": "S3",
+              "title": "Hollicott Home - Linking music services",
+              "retrieved_at": "2026-10-01",
+              "text": "You can play music on your Hollicott speaker from the music services you already use. Open the Hollicott app, go to Settings > Music, tap Link a service, and sign in to your account with that service. Once a service is linked, you can ask for songs, albums, artists, playlists and radio stations by name.\n\nChoosing a default service\nIf you have linked more than one service, choose a default so the speaker knows where to play from when you do not say. You can still ask for a different service by naming it at the end of your request.\n\nPlaying on more than one speaker\nGroup speakers in the app under Home > Speaker groups, then ask for music on the group's name, such as Downstairs, to play the same music in several rooms at once.\n\nEach household member's own account\nIf each person in your household has a voice profile, the speaker plays from the music account linked to whoever is speaking. Otherwise it uses the account linked by the person who set up the speaker.\n\nUnlinking a service\nTo remove a service, go to Settings > Music, choose the service and tap Unlink. Any playlists you made stay in your account with the music service."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Hollicott automatically deletes all voice recordings 30 days after they are made, not only those from child profiles.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "For child profiles, voice recordings are deleted automatically 30 days after they are made."
+              }
+            ],
+            "dropped_qualifier": "For child profiles",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q12-f8-sup-verbatim",
+            "note": "Deleted only the 'For child profiles' scope (and capitalised 'Voice'); S2 gives 30-day automatic deletion for child profiles and no passage says how long other recordings are kept, so the claim for all recordings is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q12-f9",
+      "items": [
+        {
+          "id": "q12-f9-sup-verbatim",
+          "family_id": "q12-f9",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Can I get back a photo I deleted in Ferrowyn Photos?",
+          "answer": "You can restore deleted photos from the Recently Deleted album during the first 30 days after you delete them.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Ferrowyn Photos - Storage plans",
+              "retrieved_at": "2026-09-25",
+              "text": "Every Ferrowyn account comes with 15 GB of free storage for your photos and videos. Photos and videos are stored at their original quality, and the space they use is shown in the app under Account > Storage.\n\nPaid plans\nIf you need more space, you can upgrade to a paid plan from Account > Storage:\n- Plus: 200 GB for $2.99 per month\n- Family: 2 TB for $9.99 per month, shared with up to five other people\n\nPlans renew automatically each month until you cancel. If you cancel, your plan stays active until the end of the month you have paid for.\n\nSharing a Family plan\nThe person who buys the Family plan can invite up to five people from Account > Family. Each member's photos stay private unless they choose to share them, and the app shows how much space each person is using.\n\nIf you run out of space\nWhen your storage is full, new photos and videos stop uploading from your devices until you free up space or upgrade. Photos that are already in your library are not affected."
+            },
+            {
+              "id": "S2",
+              "title": "Ferrowyn Photos - Face grouping and your privacy",
+              "retrieved_at": "2026-09-25",
+              "text": "Face grouping helps you find photos of the people who matter to you. When it is turned on, Ferrowyn Photos looks for faces in your library and puts photos of the same person together under People, so you can name them and search by name.\n\nHow face grouping works\nTo group faces, Ferrowyn creates a face model for each person it finds: a set of numbers that describes the shape of a face. Face models are used only for grouping photos in your own library. They are not used to identify people in other users' libraries, and they are never shared with advertisers.\n\nTurning face grouping off\nYou can turn face grouping on or off at any time under Settings > Privacy > Face grouping. When you turn it off, the People section disappears and the face models created from your library are deleted within 14 days. Your photos themselves are not deleted.\n\nNames you add\nNames you give to people in your library are visible only to you. If you share an album, the people in it are not labelled for the people you share it with."
+            },
+            {
+              "id": "S3",
+              "title": "Ferrowyn Photos - Deleting photos and videos",
+              "retrieved_at": "2026-09-25",
+              "text": "When you delete a photo or video in Ferrowyn Photos, it is removed from your library on every phone, tablet and computer signed in to your Ferrowyn account. If the photo was in a shared album, it is removed from that album too, and the people you shared it with will no longer see it.\n\nGetting a photo back\nYou can restore deleted photos from the Recently Deleted album during the first 30 days after you delete them. To restore a photo, open Albums > Recently Deleted, select the photo and tap Restore. It goes back to its original place in your library, with its date, location and album information unchanged.\n\nRecently Deleted and your storage\nPhotos and videos in Recently Deleted do not count toward your storage quota. Only you can see your Recently Deleted album, and it is not included when you share your library with a partner or family member.\n\nCopies stored elsewhere\nDeleting a photo in Ferrowyn Photos does not delete copies you have saved somewhere else, such as on a memory card, in a computer folder that is not synced with Ferrowyn, or in a messaging app.\n\nDeleting many photos at once\nTo delete several photos, tap Select, choose the photos and tap the bin icon. You can also select a whole day or month at once by tapping its date heading."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Ferrowyn Photos users can restore deleted photos from the Recently Deleted album during the first 30 days after deleting them.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "You can restore deleted photos from the Recently Deleted album during the first 30 days after you delete them."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the restore sentence copied verbatim from S3; the period 'during the first 30 days after you delete them' is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q12-f9-ql-date-range",
+          "family_id": "q12-f9",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "Can I get back a photo I deleted in Ferrowyn Photos?",
+          "answer": "You can restore deleted photos from the Recently Deleted album.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Ferrowyn Photos - Storage plans",
+              "retrieved_at": "2026-09-25",
+              "text": "Every Ferrowyn account comes with 15 GB of free storage for your photos and videos. Photos and videos are stored at their original quality, and the space they use is shown in the app under Account > Storage.\n\nPaid plans\nIf you need more space, you can upgrade to a paid plan from Account > Storage:\n- Plus: 200 GB for $2.99 per month\n- Family: 2 TB for $9.99 per month, shared with up to five other people\n\nPlans renew automatically each month until you cancel. If you cancel, your plan stays active until the end of the month you have paid for.\n\nSharing a Family plan\nThe person who buys the Family plan can invite up to five people from Account > Family. Each member's photos stay private unless they choose to share them, and the app shows how much space each person is using.\n\nIf you run out of space\nWhen your storage is full, new photos and videos stop uploading from your devices until you free up space or upgrade. Photos that are already in your library are not affected."
+            },
+            {
+              "id": "S2",
+              "title": "Ferrowyn Photos - Face grouping and your privacy",
+              "retrieved_at": "2026-09-25",
+              "text": "Face grouping helps you find photos of the people who matter to you. When it is turned on, Ferrowyn Photos looks for faces in your library and puts photos of the same person together under People, so you can name them and search by name.\n\nHow face grouping works\nTo group faces, Ferrowyn creates a face model for each person it finds: a set of numbers that describes the shape of a face. Face models are used only for grouping photos in your own library. They are not used to identify people in other users' libraries, and they are never shared with advertisers.\n\nTurning face grouping off\nYou can turn face grouping on or off at any time under Settings > Privacy > Face grouping. When you turn it off, the People section disappears and the face models created from your library are deleted within 14 days. Your photos themselves are not deleted.\n\nNames you add\nNames you give to people in your library are visible only to you. If you share an album, the people in it are not labelled for the people you share it with."
+            },
+            {
+              "id": "S3",
+              "title": "Ferrowyn Photos - Deleting photos and videos",
+              "retrieved_at": "2026-09-25",
+              "text": "When you delete a photo or video in Ferrowyn Photos, it is removed from your library on every phone, tablet and computer signed in to your Ferrowyn account. If the photo was in a shared album, it is removed from that album too, and the people you shared it with will no longer see it.\n\nGetting a photo back\nYou can restore deleted photos from the Recently Deleted album during the first 30 days after you delete them. To restore a photo, open Albums > Recently Deleted, select the photo and tap Restore. It goes back to its original place in your library, with its date, location and album information unchanged.\n\nRecently Deleted and your storage\nPhotos and videos in Recently Deleted do not count toward your storage quota. Only you can see your Recently Deleted album, and it is not included when you share your library with a partner or family member.\n\nCopies stored elsewhere\nDeleting a photo in Ferrowyn Photos does not delete copies you have saved somewhere else, such as on a memory card, in a computer folder that is not synced with Ferrowyn, or in a messaging app.\n\nDeleting many photos at once\nTo delete several photos, tap Select, choose the photos and tap the bin icon. You can also select a whole day or month at once by tapping its date heading."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Ferrowyn Photos users can restore deleted photos from the Recently Deleted album with no time limit.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "You can restore deleted photos from the Recently Deleted album during the first 30 days after you delete them."
+              }
+            ],
+            "dropped_qualifier": "during the first 30 days after you delete them",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q12-f9-sup-verbatim",
+            "note": "Deleted only the 30-day period; S3 supports restoring during the first 30 days after deletion and no passage says what happens after that, so the claim of restoration with no time limit is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q12-f10",
+      "items": [
+        {
+          "id": "q12-f10-sup-verbatim",
+          "family_id": "q12-f10",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Does Driftmoor charge extra when I pay by card in another currency?",
+          "answer": "Between 1 November 2026 and 31 January 2027, card payments in a foreign currency are converted at the network exchange rate with no Driftmoor markup.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Driftmoor - Using your card abroad",
+              "retrieved_at": "2026-10-06",
+              "text": "Your Driftmoor debit card can be used in shops, restaurants and online wherever the card network's logo is shown, in more than 150 countries. You do not need to tell us before you travel, but please check that your phone number is up to date in the app so that we can reach you if a payment looks unusual.\n\nBetween 1 November 2026 and 31 January 2027, card payments in a foreign currency are converted at the network exchange rate with no Driftmoor markup. Each payment appears in your transaction list in the local currency, alongside the amount in US dollars that was taken from your balance.\n\nPay in the local currency\nIf a card machine or website asks whether you want to pay in US dollars or in the local currency, choose the local currency. If you choose dollars, the shop's own provider converts the amount, often at a worse rate, and we cannot refund the difference.\n\nCash abroad\nYou can withdraw up to $400 a day from cash machines abroad. Some machine operators add their own fee, which should be shown on screen before you confirm the withdrawal.\n\nIf your card is lost abroad\nFreeze your card straight away in the app. You can keep paying with your phone using your digital card while a replacement is posted to your home address."
+            },
+            {
+              "id": "S2",
+              "title": "Driftmoor - Joint accounts",
+              "retrieved_at": "2026-10-06",
+              "text": "A Driftmoor joint account is shared by two people. Both of you can see every transaction, pay in money, make payments and order a card in your own name. It works well for paying household bills and shared costs.\n\nOpening a joint account\nOne of you starts the application in the Driftmoor app under Accounts > Open a joint account and invites the other person by phone number. Both of you need a personal Driftmoor account first, and both need to be at least 18 years old. The account opens once the second person accepts the invitation and confirms their identity.\n\nWho is responsible\nEach account holder is responsible for the whole balance of a joint account, not just their own spending. If the account goes below zero, we can ask either of you to repay the full amount.\n\nLeaving a joint account\nEither person can ask to leave. Before the account can be closed, you will need to agree how to split the remaining balance, and any regular payments will need to be moved to another account. If you cannot agree, the account will be frozen until you do or until we receive a court order.\n\nNotifications\nBoth of you receive a notification for every payment in or out of the joint account. You can turn these off for yourself without affecting the other person."
+            },
+            {
+              "id": "S3",
+              "title": "Driftmoor - Sending money to friends",
+              "retrieved_at": "2026-10-06",
+              "text": "You can send money instantly to anyone who has a Driftmoor account, using their phone number, their Driftmoor tag or a QR code from their app. Payments between Driftmoor accounts are free and usually arrive within seconds.\n\nPaying someone without Driftmoor\nIf your friend does not have a Driftmoor account, you can send them a payment link by text message or email. They can collect the money into any US bank account by entering their account details within 7 days. If the link is not used within 7 days, the money is returned to you.\n\nSplitting a bill\nAfter you pay for something with your card, open the transaction and tap Split. Choose who to split it with and whether to split evenly or by amount. Each person receives a request they can pay in one tap.\n\nRequesting money\nYou can send a request to any Driftmoor user from the Payments screen. Requests that are not paid within 30 days expire automatically.\n\nLimits\nYou can send up to $2,500 a day to other people. If you need to send more, you can make a bank transfer from the Payments screen instead."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Between 1 November 2026 and 31 January 2027, Driftmoor converts foreign-currency card payments at the network exchange rate with no Driftmoor markup.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Between 1 November 2026 and 31 January 2027, card payments in a foreign currency are converted at the network exchange rate with no Driftmoor markup."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the no-markup sentence copied verbatim from S1; the period 'Between 1 November 2026 and 31 January 2027' is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q12-f10-ql-date-range",
+          "family_id": "q12-f10",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "Does Driftmoor charge extra when I pay by card in another currency?",
+          "answer": "Card payments in a foreign currency are converted at the network exchange rate with no Driftmoor markup.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Driftmoor - Using your card abroad",
+              "retrieved_at": "2026-10-06",
+              "text": "Your Driftmoor debit card can be used in shops, restaurants and online wherever the card network's logo is shown, in more than 150 countries. You do not need to tell us before you travel, but please check that your phone number is up to date in the app so that we can reach you if a payment looks unusual.\n\nBetween 1 November 2026 and 31 January 2027, card payments in a foreign currency are converted at the network exchange rate with no Driftmoor markup. Each payment appears in your transaction list in the local currency, alongside the amount in US dollars that was taken from your balance.\n\nPay in the local currency\nIf a card machine or website asks whether you want to pay in US dollars or in the local currency, choose the local currency. If you choose dollars, the shop's own provider converts the amount, often at a worse rate, and we cannot refund the difference.\n\nCash abroad\nYou can withdraw up to $400 a day from cash machines abroad. Some machine operators add their own fee, which should be shown on screen before you confirm the withdrawal.\n\nIf your card is lost abroad\nFreeze your card straight away in the app. You can keep paying with your phone using your digital card while a replacement is posted to your home address."
+            },
+            {
+              "id": "S2",
+              "title": "Driftmoor - Joint accounts",
+              "retrieved_at": "2026-10-06",
+              "text": "A Driftmoor joint account is shared by two people. Both of you can see every transaction, pay in money, make payments and order a card in your own name. It works well for paying household bills and shared costs.\n\nOpening a joint account\nOne of you starts the application in the Driftmoor app under Accounts > Open a joint account and invites the other person by phone number. Both of you need a personal Driftmoor account first, and both need to be at least 18 years old. The account opens once the second person accepts the invitation and confirms their identity.\n\nWho is responsible\nEach account holder is responsible for the whole balance of a joint account, not just their own spending. If the account goes below zero, we can ask either of you to repay the full amount.\n\nLeaving a joint account\nEither person can ask to leave. Before the account can be closed, you will need to agree how to split the remaining balance, and any regular payments will need to be moved to another account. If you cannot agree, the account will be frozen until you do or until we receive a court order.\n\nNotifications\nBoth of you receive a notification for every payment in or out of the joint account. You can turn these off for yourself without affecting the other person."
+            },
+            {
+              "id": "S3",
+              "title": "Driftmoor - Sending money to friends",
+              "retrieved_at": "2026-10-06",
+              "text": "You can send money instantly to anyone who has a Driftmoor account, using their phone number, their Driftmoor tag or a QR code from their app. Payments between Driftmoor accounts are free and usually arrive within seconds.\n\nPaying someone without Driftmoor\nIf your friend does not have a Driftmoor account, you can send them a payment link by text message or email. They can collect the money into any US bank account by entering their account details within 7 days. If the link is not used within 7 days, the money is returned to you.\n\nSplitting a bill\nAfter you pay for something with your card, open the transaction and tap Split. Choose who to split it with and whether to split evenly or by amount. Each person receives a request they can pay in one tap.\n\nRequesting money\nYou can send a request to any Driftmoor user from the Payments screen. Requests that are not paid within 30 days expire automatically.\n\nLimits\nYou can send up to $2,500 a day to other people. If you need to send more, you can make a bank transfer from the Payments screen instead."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Driftmoor converts foreign-currency card payments at the network exchange rate with no Driftmoor markup at any time, not only between 1 November 2026 and 31 January 2027.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Between 1 November 2026 and 31 January 2027, card payments in a foreign currency are converted at the network exchange rate with no Driftmoor markup."
+              }
+            ],
+            "dropped_qualifier": "Between 1 November 2026 and 31 January 2027",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q12-f10-sup-verbatim",
+            "note": "Deleted only the date range (and capitalised 'Card'); S1 states the no-markup conversion for 1 November 2026 to 31 January 2027 only, and no passage describes conversion outside that window, so the timeless claim is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q12-f11",
+      "items": [
+        {
+          "id": "q12-f11-sup-verbatim",
+          "family_id": "q12-f11",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Is a checked bag included with my Skelvane Air ticket?",
+          "answer": "For travel between 1 December 2026 and 15 January 2027, every Skelvane Air ticket includes one free checked bag of up to 23 kg.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Skelvane Air - Cabin bags",
+              "retrieved_at": "2026-10-02",
+              "text": "Every Skelvane Air passenger can bring one small personal item on board, such as a handbag, laptop bag or small backpack. It must fit under the seat in front of you and be no larger than 40 x 30 x 15 cm.\n\nCabin bags\nYou can also bring one cabin bag for the overhead locker, up to 55 x 40 x 20 cm and 10 kg, including handles and wheels. On busy flights, we may ask some passengers to leave their cabin bag at the gate. These bags are labelled and returned to you at the baggage reclaim belt.\n\nLiquids\nLiquids in your cabin bag must be in containers of 100 ml or less, packed together in one clear, resealable bag of up to 1 litre. Medicines and baby food needed during the flight are allowed in larger amounts.\n\nPower banks and batteries\nPower banks and spare lithium batteries must be carried in your cabin bag or personal item. Each passenger can carry up to two power banks of up to 100 Wh each.\n\nDuty-free shopping\nItems bought in the airport after security can be carried on board in addition to your cabin bag, as long as they fit in one shopping bag."
+            },
+            {
+              "id": "S2",
+              "title": "Skelvane Air - Checked bags",
+              "retrieved_at": "2026-10-02",
+              "text": "Checked bags are dropped off at the bag drop desk after you check in online, or at the check-in desk if you check in at the airport. Bag drop closes 45 minutes before departure, and we cannot accept bags after that time.\n\nFor travel between 1 December 2026 and 15 January 2027, every Skelvane Air ticket includes one free checked bag of up to 23 kg. The bag can measure up to 158 cm when you add together its length, width and height, including handles and wheels.\n\nHeavy bags\nBags weighing more than 23 kg are accepted up to a maximum of 32 kg, and must have a heavy-bag label attached at the desk so that baggage handlers know to take care when lifting them. No single bag can weigh more than 32 kg.\n\nSports equipment\nSkis, golf clubs and bicycles can be checked in, but they must be packed in a dedicated bag or box. Bicycles must have the pedals removed and the handlebars turned sideways.\n\nWhat not to pack\nKeep valuables, keys, medicines and electronic devices in your cabin bag. Power banks and spare lithium batteries are not allowed in checked bags at all."
+            },
+            {
+              "id": "S3",
+              "title": "Skelvane Air - Delayed, damaged or lost bags",
+              "retrieved_at": "2026-10-02",
+              "text": "If your checked bag does not arrive on the baggage belt, or arrives damaged, go to the Skelvane Air baggage desk in the arrivals hall before you leave the airport. Our staff will make a report and give you a reference number that you can use to track your bag online.\n\nDelayed bags\nMost delayed bags are found and delivered to you within 48 hours. We will deliver your bag to your home or hotel free of charge. While you wait, you can buy essential items such as toiletries and a change of clothes, and claim the cost back from us. Keep your receipts.\n\nDamaged bags\nIf your bag is damaged, report it at the airport if you can, and in any case within 7 days of your flight. We will arrange a repair or, if your bag cannot be repaired, pay you its current value.\n\nLost bags\nIf your bag has not been found 21 days after your flight, we treat it as lost. You can then claim for the bag and its contents, up to the limit set by international air travel rules.\n\nMaking a claim\nClaims can be made online using your reference number. Include your boarding pass, your bag tag and receipts for any items you bought or are claiming for."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "For travel between 1 December 2026 and 15 January 2027, every Skelvane Air ticket includes one free checked bag of up to 23 kg.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "For travel between 1 December 2026 and 15 January 2027, every Skelvane Air ticket includes one free checked bag of up to 23 kg."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the free-bag sentence copied verbatim from S2; the travel period 'For travel between 1 December 2026 and 15 January 2027' is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q12-f11-ql-date-range",
+          "family_id": "q12-f11",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "Is a checked bag included with my Skelvane Air ticket?",
+          "answer": "Every Skelvane Air ticket includes one free checked bag of up to 23 kg.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Skelvane Air - Cabin bags",
+              "retrieved_at": "2026-10-02",
+              "text": "Every Skelvane Air passenger can bring one small personal item on board, such as a handbag, laptop bag or small backpack. It must fit under the seat in front of you and be no larger than 40 x 30 x 15 cm.\n\nCabin bags\nYou can also bring one cabin bag for the overhead locker, up to 55 x 40 x 20 cm and 10 kg, including handles and wheels. On busy flights, we may ask some passengers to leave their cabin bag at the gate. These bags are labelled and returned to you at the baggage reclaim belt.\n\nLiquids\nLiquids in your cabin bag must be in containers of 100 ml or less, packed together in one clear, resealable bag of up to 1 litre. Medicines and baby food needed during the flight are allowed in larger amounts.\n\nPower banks and batteries\nPower banks and spare lithium batteries must be carried in your cabin bag or personal item. Each passenger can carry up to two power banks of up to 100 Wh each.\n\nDuty-free shopping\nItems bought in the airport after security can be carried on board in addition to your cabin bag, as long as they fit in one shopping bag."
+            },
+            {
+              "id": "S2",
+              "title": "Skelvane Air - Checked bags",
+              "retrieved_at": "2026-10-02",
+              "text": "Checked bags are dropped off at the bag drop desk after you check in online, or at the check-in desk if you check in at the airport. Bag drop closes 45 minutes before departure, and we cannot accept bags after that time.\n\nFor travel between 1 December 2026 and 15 January 2027, every Skelvane Air ticket includes one free checked bag of up to 23 kg. The bag can measure up to 158 cm when you add together its length, width and height, including handles and wheels.\n\nHeavy bags\nBags weighing more than 23 kg are accepted up to a maximum of 32 kg, and must have a heavy-bag label attached at the desk so that baggage handlers know to take care when lifting them. No single bag can weigh more than 32 kg.\n\nSports equipment\nSkis, golf clubs and bicycles can be checked in, but they must be packed in a dedicated bag or box. Bicycles must have the pedals removed and the handlebars turned sideways.\n\nWhat not to pack\nKeep valuables, keys, medicines and electronic devices in your cabin bag. Power banks and spare lithium batteries are not allowed in checked bags at all."
+            },
+            {
+              "id": "S3",
+              "title": "Skelvane Air - Delayed, damaged or lost bags",
+              "retrieved_at": "2026-10-02",
+              "text": "If your checked bag does not arrive on the baggage belt, or arrives damaged, go to the Skelvane Air baggage desk in the arrivals hall before you leave the airport. Our staff will make a report and give you a reference number that you can use to track your bag online.\n\nDelayed bags\nMost delayed bags are found and delivered to you within 48 hours. We will deliver your bag to your home or hotel free of charge. While you wait, you can buy essential items such as toiletries and a change of clothes, and claim the cost back from us. Keep your receipts.\n\nDamaged bags\nIf your bag is damaged, report it at the airport if you can, and in any case within 7 days of your flight. We will arrange a repair or, if your bag cannot be repaired, pay you its current value.\n\nLost bags\nIf your bag has not been found 21 days after your flight, we treat it as lost. You can then claim for the bag and its contents, up to the limit set by international air travel rules.\n\nMaking a claim\nClaims can be made online using your reference number. Include your boarding pass, your bag tag and receipts for any items you bought or are claiming for."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Every Skelvane Air ticket includes one free checked bag of up to 23 kg, whatever the travel date.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "For travel between 1 December 2026 and 15 January 2027, every Skelvane Air ticket includes one free checked bag of up to 23 kg."
+              }
+            ],
+            "dropped_qualifier": "For travel between 1 December 2026 and 15 January 2027",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q12-f11-sup-verbatim",
+            "note": "Deleted only the travel period (and capitalised 'Every'); S2 includes a free checked bag for travel between 1 December 2026 and 15 January 2027 and no passage states the allowance for other dates, so the undated claim is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q12-f12",
+      "items": [
+        {
+          "id": "q12-f12-sup-verbatim",
+          "family_id": "q12-f12",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Can I cancel a Tarnwell booking and get my money back?",
+          "answer": "During the first 24 hours after booking, you can cancel any Tarnwell reservation for a full refund.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Tarnwell Stays - Paying for your stay",
+              "retrieved_at": "2026-09-08",
+              "text": "When you book a stay on Tarnwell, you see the full price before you confirm, including the nightly rate, any cleaning fee set by the host, taxes, and the Tarnwell service fee. There are no extra charges added at checkout.\n\nWays to pay\nYou can pay with a debit or credit card, with Tarnwell credit, or with a combination of the two. We do not accept cash or bank transfers, and you should never pay a host directly outside Tarnwell.\n\nPaying in two parts\nFor stays booked more than 30 days before check-in, you can choose to pay half now and half later. The second payment is taken automatically from the same card 14 days before check-in, and we will email you three days before we take it.\n\nCurrency\nPrices are shown in the currency you choose in your account settings. If your card is in a different currency, your bank may apply its own exchange rate or fees.\n\nReceipts\nYour receipt is available in the app under Trips as soon as your booking is confirmed. Business travellers can add a company name and tax number to the receipt before downloading it."
+            },
+            {
+              "id": "S2",
+              "title": "Tarnwell Stays - Checking in and out",
+              "retrieved_at": "2026-09-08",
+              "text": "Each listing shows its check-in and check-out times, which are set by the host. Most hosts offer check-in from 3 p.m. and ask guests to check out by 11 a.m.\n\nGetting the keys\nYour host's check-in instructions appear in the Tarnwell app under Trips 48 hours before your stay begins. Many listings offer self check-in using a key box or smart lock, with a code that is shown only to you. For other listings, the host or a co-host will meet you to hand over the keys.\n\nArriving early or late\nIf you expect to arrive earlier or later than the listed check-in time, message your host through the app as soon as you can. Hosts are not required to offer early check-in, but many will store your luggage if they can.\n\nBefore you leave\nFollow the host's checkout list, which usually asks you to load the dishwasher, take out the rubbish and lock up. Leave the keys where the host asked you to.\n\nProblems during your stay\nIf something at the listing is not as described, such as a broken shower or no hot water, report it in the app with photos within 24 hours of finding it. We will work with the host to fix it."
+            },
+            {
+              "id": "S3",
+              "title": "Tarnwell Stays - Cancelling a reservation",
+              "retrieved_at": "2026-09-08",
+              "text": "You can cancel a reservation in the Tarnwell app or on our website. Go to Trips, select the reservation, tap Cancel reservation and confirm. We will send you an email confirming the cancellation, and your host is told straight away.\n\nDuring the first 24 hours after booking, you can cancel any Tarnwell reservation for a full refund. A full refund includes the nightly rate, the cleaning fee, taxes and the Tarnwell service fee.\n\nHow refunds are paid\nRefunds go back to the payment method you used to book. If you paid by card, the refund usually appears on your statement within 5 to 10 business days, depending on your bank. If you paid with Tarnwell credit, the credit is returned to your account straight away. If you used both, each part is refunded to where it came from.\n\nOther guests on the reservation\nOnly the person who made the booking can cancel it. Other guests you added to the reservation receive an email to let them know the trip has been cancelled, so you do not need to tell them yourself."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Any Tarnwell reservation can be cancelled for a full refund during the first 24 hours after booking.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "During the first 24 hours after booking, you can cancel any Tarnwell reservation for a full refund."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the cancellation sentence copied verbatim from S3; the period 'During the first 24 hours after booking' is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q12-f12-ql-date-range",
+          "family_id": "q12-f12",
+          "domain": "privacy_fintech_travel_policies",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "Can I cancel a Tarnwell booking and get my money back?",
+          "answer": "You can cancel any Tarnwell reservation for a full refund.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Tarnwell Stays - Paying for your stay",
+              "retrieved_at": "2026-09-08",
+              "text": "When you book a stay on Tarnwell, you see the full price before you confirm, including the nightly rate, any cleaning fee set by the host, taxes, and the Tarnwell service fee. There are no extra charges added at checkout.\n\nWays to pay\nYou can pay with a debit or credit card, with Tarnwell credit, or with a combination of the two. We do not accept cash or bank transfers, and you should never pay a host directly outside Tarnwell.\n\nPaying in two parts\nFor stays booked more than 30 days before check-in, you can choose to pay half now and half later. The second payment is taken automatically from the same card 14 days before check-in, and we will email you three days before we take it.\n\nCurrency\nPrices are shown in the currency you choose in your account settings. If your card is in a different currency, your bank may apply its own exchange rate or fees.\n\nReceipts\nYour receipt is available in the app under Trips as soon as your booking is confirmed. Business travellers can add a company name and tax number to the receipt before downloading it."
+            },
+            {
+              "id": "S2",
+              "title": "Tarnwell Stays - Checking in and out",
+              "retrieved_at": "2026-09-08",
+              "text": "Each listing shows its check-in and check-out times, which are set by the host. Most hosts offer check-in from 3 p.m. and ask guests to check out by 11 a.m.\n\nGetting the keys\nYour host's check-in instructions appear in the Tarnwell app under Trips 48 hours before your stay begins. Many listings offer self check-in using a key box or smart lock, with a code that is shown only to you. For other listings, the host or a co-host will meet you to hand over the keys.\n\nArriving early or late\nIf you expect to arrive earlier or later than the listed check-in time, message your host through the app as soon as you can. Hosts are not required to offer early check-in, but many will store your luggage if they can.\n\nBefore you leave\nFollow the host's checkout list, which usually asks you to load the dishwasher, take out the rubbish and lock up. Leave the keys where the host asked you to.\n\nProblems during your stay\nIf something at the listing is not as described, such as a broken shower or no hot water, report it in the app with photos within 24 hours of finding it. We will work with the host to fix it."
+            },
+            {
+              "id": "S3",
+              "title": "Tarnwell Stays - Cancelling a reservation",
+              "retrieved_at": "2026-09-08",
+              "text": "You can cancel a reservation in the Tarnwell app or on our website. Go to Trips, select the reservation, tap Cancel reservation and confirm. We will send you an email confirming the cancellation, and your host is told straight away.\n\nDuring the first 24 hours after booking, you can cancel any Tarnwell reservation for a full refund. A full refund includes the nightly rate, the cleaning fee, taxes and the Tarnwell service fee.\n\nHow refunds are paid\nRefunds go back to the payment method you used to book. If you paid by card, the refund usually appears on your statement within 5 to 10 business days, depending on your bank. If you paid with Tarnwell credit, the credit is returned to your account straight away. If you used both, each part is refunded to where it came from.\n\nOther guests on the reservation\nOnly the person who made the booking can cancel it. Other guests you added to the reservation receive an email to let them know the trip has been cancelled, so you do not need to tell them yourself."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Any Tarnwell reservation can be cancelled for a full refund at any time, not only during the first 24 hours after booking.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "During the first 24 hours after booking, you can cancel any Tarnwell reservation for a full refund."
+              }
+            ],
+            "dropped_qualifier": "During the first 24 hours after booking",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q12-f12-sup-verbatim",
+            "note": "Deleted only the 24-hour period (and capitalised 'You'); S3 guarantees a full refund for cancellations in the first 24 hours after booking and no passage covers later cancellations, so the claim with no time limit is unsupported."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    }
+  ],
+  "standalone": []
+}

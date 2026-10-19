@@ -1,0 +1,231 @@
+{
+  "parity_version": "0.1.0",
+  "fixture_sha256": "708138509eab9d51a91b75dda0929dd0dcdbd0a3610fe735274e92eebd0c833b",
+  "history": {
+    "pairs": 98,
+    "labels": {
+      "real": 37,
+      "cosmetic": 3,
+      "none": 58
+    },
+    "detected_by_label": {
+      "none": {
+        "none": 58
+      },
+      "real": {
+        "real": 37
+      },
+      "cosmetic": {
+        "real": 3
+      }
+    },
+    "confusion": {
+      "tp": 37,
+      "fp": 3,
+      "fn": 0,
+      "tn": 58
+    },
+    "precision": {
+      "k": 37,
+      "n": 40,
+      "p": 0.925,
+      "lo95": 0.801,
+      "hi95": 0.974
+    },
+    "recall": {
+      "k": 37,
+      "n": 37,
+      "p": 1,
+      "lo95": 0.906,
+      "hi95": 1
+    },
+    "identical_text_not_none": [],
+    "misses": [],
+    "false_flags": [
+      {
+        "id": "16-310.3@2024-04-16..2024-05-16",
+        "label": "cosmetic",
+        "cosmetic_kind": "rename_and_footnote_renumbering",
+        "named": [
+          "condition_changed",
+          "wording_changed"
+        ]
+      },
+      {
+        "id": "16-310.8@2024-04-16..2024-05-16",
+        "label": "cosmetic",
+        "cosmetic_kind": "rename",
+        "named": [
+          "wording_changed"
+        ]
+      },
+      {
+        "id": "7-273.13@2017-02-21..2017-05-08",
+        "label": "cosmetic",
+        "cosmetic_kind": "rename",
+        "named": [
+          "wording_changed"
+        ]
+      }
+    ],
+    "naming": {
+      "checked": 32,
+      "named": 32,
+      "failures": [],
+      "rate": {
+        "k": 32,
+        "n": 32,
+        "p": 1,
+        "lo95": 0.893,
+        "hi95": 1
+      }
+    }
+  },
+  "derived_cosmetic": {
+    "pairs": 8,
+    "flagged": 0,
+    "flagged_ids": []
+  },
+  "synthetic": {
+    "bases": 43,
+    "cosmetic": {
+      "cases": 360,
+      "flagged": 0,
+      "by_transform": {
+        "rewrap": {
+          "cases": 43,
+          "flagged": 0,
+          "failures": []
+        },
+        "quotes": {
+          "cases": 17,
+          "flagged": 0,
+          "failures": []
+        },
+        "dashes": {
+          "cases": 23,
+          "flagged": 0,
+          "failures": []
+        },
+        "shall_must": {
+          "cases": 26,
+          "flagged": 0,
+          "failures": []
+        },
+        "spelled_numbers": {
+          "cases": 18,
+          "flagged": 0,
+          "failures": []
+        },
+        "section_sign": {
+          "cases": 43,
+          "flagged": 0,
+          "failures": []
+        },
+        "hyphenation": {
+          "cases": 43,
+          "flagged": 0,
+          "failures": []
+        },
+        "nbsp": {
+          "cases": 43,
+          "flagged": 0,
+          "failures": []
+        },
+        "capitals": {
+          "cases": 30,
+          "flagged": 0,
+          "failures": []
+        },
+        "per_cent_email": {
+          "cases": 9,
+          "flagged": 0,
+          "failures": []
+        },
+        "sentence_punctuation": {
+          "cases": 22,
+          "flagged": 0,
+          "failures": []
+        },
+        "all_cosmetic": {
+          "cases": 43,
+          "flagged": 0,
+          "failures": []
+        }
+      }
+    },
+    "conservative": {
+      "cases": 43,
+      "flagged": 43,
+      "by_transform": {
+        "typo": {
+          "cases": 43,
+          "flagged": 43,
+          "failures": []
+        }
+      }
+    },
+    "real": {
+      "cases": 176,
+      "flagged": 176,
+      "named": 176,
+      "recall": {
+        "k": 176,
+        "n": 176,
+        "p": 1,
+        "lo95": 0.979,
+        "hi95": 1
+      },
+      "by_transform": {
+        "amount": {
+          "cases": 4,
+          "flagged": 4,
+          "named": 4,
+          "failures": []
+        },
+        "period": {
+          "cases": 18,
+          "flagged": 18,
+          "named": 18,
+          "failures": []
+        },
+        "negation": {
+          "cases": 35,
+          "flagged": 35,
+          "named": 35,
+          "failures": []
+        },
+        "modality": {
+          "cases": 31,
+          "flagged": 31,
+          "named": 31,
+          "failures": []
+        },
+        "exception_removed": {
+          "cases": 19,
+          "flagged": 19,
+          "named": 19,
+          "failures": []
+        },
+        "citation": {
+          "cases": 28,
+          "flagged": 28,
+          "named": 28,
+          "failures": []
+        },
+        "party_swap": {
+          "cases": 7,
+          "flagged": 7,
+          "named": 7,
+          "failures": []
+        },
+        "sentence_removed": {
+          "cases": 34,
+          "flagged": 34,
+          "named": 34,
+          "failures": []
+        }
+      }
+    }
+  }
+}

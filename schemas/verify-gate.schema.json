@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://xyntherium.com/schemas/verify-gate.schema.json",
+  "title": "Verify Gate golden set (verify-gate.yml), schema version 1",
+  "description": "Questions, approved sources and expected material claims for Xyntherium Verify Gate. Evidence support for supplied sources only; not a compliance certification, legal assessment, or determination of real-world truth.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "sources"],
+  "anyOf": [{ "required": ["suites"] }, { "required": ["tests"] }],
+  "properties": {
+    "version": { "description": "Schema version.", "enum": [1, "1"] },
+    "draft": { "type": "boolean", "description": "true while a person has not approved the golden set: the Gate reports but never enforces." },
+    "mode": { "enum": ["local", "hosted"], "description": "local: code only, no API key. hosted: model-assisted claim splitting and qualifier analysis." },
+    "network_mode": { "enum": ["public", "local"], "description": "local allows http and private/loopback endpoints (for an app started inside the job)." },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Checked-in files only. The Gate never fetches a source from a URL.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "path", "sha256"],
+        "properties": {
+          "id": { "$ref": "#/definitions/id" },
+          "path": { "type": "string", "minLength": 1, "not": { "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://" }, "description": "Relative to the repository root." },
+          "version": { "type": ["string", "number"] },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$", "description": "A changed file holds the run. Fill in with: npx @xyntherium/verify-cli pin" },
+          "effective_date": { "type": "string" },
+          "supersedes": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "endpoint": { "$ref": "#/definitions/endpoint" },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_contradicted": { "$ref": "#/definitions/counts" },
+        "max_unsupported": { "$ref": "#/definitions/counts" },
+        "min_material_supported_ratio": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "require_citations": { "type": "boolean" },
+        "treat_unverifiable_as": { "enum": ["warn", "block", "hold", "pass"] },
+        "fail_on_material_qualifier_loss": { "type": "boolean" },
+        "model_findings": { "enum": ["warn", "block"] },
+        "missing_expected_claim": { "enum": ["warn", "block"] },
+        "max_unresolved_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+        "enforcement": { "enum": ["report_only", "enforce"] },
+        "overrides": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "label": { "type": "string", "minLength": 1 },
+            "require_team": { "type": ["string", "null"], "pattern": "^[\\w.-]+/[\\w.-]+$" }
+          }
+        }
+      }
+    },
+    "paths": { "type": "array", "items": { "type": "string" }, "description": "Extra glob patterns whose changes trigger a run (prompts/, retrieval/, the sources and this file always do)." },
+    "cost": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_cases_per_run": { "type": ["integer", "null"], "minimum": 1 },
+        "sample_rate": { "type": ["number", "null"], "exclusiveMinimum": 0, "maximum": 1 },
+        "cache": { "type": "boolean" },
+        "expected_prs_per_day": { "type": ["number", "null"], "minimum": 0 }
+      }
+    },
+    "ledger": { "type": "object", "additionalProperties": false, "properties": { "include_text": { "type": "boolean" } } },
+    "policy_change": {
+      "description": "Document change mode: when a source changes in a pull request, re-run the tests linked to it against the new version. Report-only by default.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": { "type": "boolean", "default": true },
+        "enforcement": { "enum": ["report_only", "enforce"], "default": "report_only" },
+        "policy_paths": { "type": "array", "items": { "type": "string" }, "description": "Globs of policy-like files: a change to one that no test links is an \"unprotected source change\" warning." }
+      }
+    },
+    "tests": {
+      "description": "Document change mode tests: a question linked to sources, its saved answer, and the conditions the answer must keep.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "source_ids", "question"],
+        "anyOf": [{ "required": ["answer"] }, { "required": ["required_conditions"] }],
+        "properties": {
+          "id": { "$ref": "#/definitions/id" },
+          "source_ids": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/id" } },
+          "question": { "type": "string", "minLength": 1 },
+          "answer": { "type": "string", "description": "The saved answer, re-checked against each new version of its sources." },
+          "required_conditions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["class", "text"],
+              "properties": {
+                "class": { "enum": ["eligibility", "deadline", "exception", "scope", "modality", "negation", "quantity"] },
+                "text": { "type": "string", "minLength": 1, "description": "The condition as the source states it." }
+              }
+            }
+          }
+        }
+      }
+    },
+    "concurrency": { "type": "integer", "minimum": 1, "maximum": 10 },
+    "suites": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "cases"],
+        "properties": {
+          "name": { "$ref": "#/definitions/id" },
+          "endpoint": { "$ref": "#/definitions/endpoint" },
+          "cases": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "question"],
+              "properties": {
+                "id": { "$ref": "#/definitions/id" },
+                "question": { "type": "string", "minLength": 1 },
+                "answer": { "type": "string", "description": "A recorded answer, used when the suite has no endpoint." },
+                "sources": { "type": "array", "items": { "type": "string" } },
+                "require_citations": { "type": "boolean" },
+                "material_claims": {
+                  "type": "array",
+                  "description": "The expected atomic claims. Local mode locates each in the answer and checks it in code; a declared quote lets code settle a paraphrase.",
+                  "items": {
+                    "oneOf": [
+                      { "type": "string", "minLength": 1 },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": ["claim"],
+                        "properties": {
+                          "id": { "$ref": "#/definitions/id" },
+                          "claim": { "type": "string", "minLength": 1 },
+                          "materiality": { "enum": ["critical", "high", "medium", "low"] },
+                          "quote": { "type": "string", "minLength": 8 },
+                          "source": { "type": "string" },
+                          "require_citation": { "type": "boolean" }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "policy": { "type": "object", "description": "Per-case threshold overrides (same keys as policy)." }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "id": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$" },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "critical": { "type": ["integer", "null"], "minimum": 0 },
+        "high": { "type": ["integer", "null"], "minimum": 0 },
+        "medium": { "type": ["integer", "null"], "minimum": 0 },
+        "low": { "type": ["integer", "null"], "minimum": 0 }
+      }
+    },
+    "endpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url"],
+      "properties": {
+        "url": { "type": "string", "minLength": 1, "description": "https (http only with network_mode: local). For GET, contains {{question}}." },
+        "method": { "enum": ["GET", "POST", "PUT", "get", "post", "put"] },
+        "headers": { "type": "object", "additionalProperties": { "type": "string" }, "description": "Credentials only as ${env.NAME}." },
+        "body": { "type": ["string", "object"], "description": "Request template containing {{question}}." },
+        "answer_path": { "type": "string", "description": "JSON pointer to the answer (default /answer; empty string = the whole body)." },
+        "timeout_ms": { "type": "integer", "minimum": 1000, "maximum": 120000 },
+        "max_response_bytes": { "type": "integer", "minimum": 1024, "maximum": 4194304 },
+        "retries": { "type": "integer", "minimum": 0, "maximum": 5 }
+      }
+    }
+  }
+}

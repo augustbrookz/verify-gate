@@ -1,0 +1,54 @@
+{
+  "name": "@xyntherium/verify-policy",
+  "version": "0.1.0",
+  "description": "Verify Gate release policy: pass / warn / hold / block over Xyntherium Verify claim results, the XYN-001\u2026006 failure taxonomy, and the signed (Ed25519, RFC 8785) Gate ledger v1.0.0. Rules decide; a model never does.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.build.json && node ../../scripts/fix-esm-specifiers.mjs dist",
+    "test": "vitest run --root ../.. packages/verify-policy"
+  },
+  "dependencies": {
+    "@xyntherium/verify-core": "^1.0.0",
+    "@xyntherium/verify-parity": "^0.1.0"
+  },
+  "keywords": [
+    "rag",
+    "grounding",
+    "ci",
+    "github-action",
+    "release-gate",
+    "evidence",
+    "verification"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augustbrookz/verify-gate.git",
+    "directory": "packages/verify-policy"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "homepage": "https://xyntherium.com/developers",
+  "bugs": {
+    "url": "https://github.com/augustbrookz/verify-gate/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

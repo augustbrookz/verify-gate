@@ -1,0 +1,109 @@
+# Verify Gate golden set for the Lumen Desk support bot (fictional).
+# The Gate starts nothing itself: the workflow starts bot/server.mjs, and each case calls it.
+# Evidence support for supplied sources only; not a compliance certification.
+version: 1
+mode: local
+network_mode: local
+sources:
+  - id: refunds
+    path: kb/refunds.md
+    version: 2026-10
+    sha256: 72e1546c935b33c4f95d521390843cdb10dfa43a3a201d8b62ffb94a14a14ec6
+  - id: plans
+    path: kb/plans.md
+    version: 2026-10
+    sha256: d7e57a2ef93371e03809c6ddf275c83b8600ac89fd5de9f168bb632425412845
+  - id: retention
+    path: kb/data-retention.md
+    version: 2026-10
+    sha256: 8faa1af1095bb38de64a728a9c0769303f30ce2583e7efd1f529250a8229e28f
+endpoint:
+  url: http://127.0.0.1:8787/ask
+  method: POST
+  body: "{\"question\": \"{{question}}\"}"
+  answer_path: /answer
+  timeout_ms: 5000
+  retries: 1
+policy:
+  enforcement: enforce
+# Document change mode: when a source changes in a pull request, the tests linked
+# to it re-run against the new version (report-only by default).
+tests:
+  - id: annual-refund-window
+    source_ids: [refunds]
+    question: Can I get a refund on an annual plan?
+    answer: Annual plans can be cancelled for a full refund within 30 days of purchase.
+    required_conditions:
+      - { class: deadline, text: within 30 days of purchase }
+  - id: refund-payment-method
+    source_ids: [refunds]
+    question: How are refunds paid?
+    answer: Refunds are issued to the original payment method within 5 business days of approval.
+    required_conditions:
+      - { class: deadline, text: within 5 business days of approval }
+  - id: monthly-not-refundable
+    source_ids: [refunds]
+    question: Are monthly plans refundable?
+    answer: Monthly plans are not refundable, but you can cancel at any time and keep access until the end of the billing period.
+    required_conditions:
+      - { class: negation, text: not refundable }
+      - { class: deadline, text: until the end of the billing period }
+  - id: phone-support-scope
+    source_ids: [plans]
+    question: Do you offer phone support?
+    answer: Phone support is available only on the Business plan, Monday through Friday from 8 a.m. to 6 p.m. Eastern Time.
+    required_conditions:
+      - { class: scope, text: only on the Business plan }
+paths:
+  - prompts/**
+  - bot/**
+cost:
+  expected_prs_per_day: 5
+suites:
+  - name: support
+    cases:
+      - id: annual-refund-window
+        question: Can I get a refund on an annual plan?
+        material_claims:
+          - claim: Annual plans can be cancelled for a full refund within 30 days of purchase
+            materiality: critical
+            quote: Annual plans can be cancelled for a full refund within 30 days of purchase.
+            source: refunds
+        sources:
+          - refunds
+      - id: monthly-not-refundable
+        question: Are monthly plans refundable?
+        material_claims:
+          - claim: Monthly plans are not refundable
+            materiality: critical
+            quote: Monthly plans are not refundable, but you can cancel at any time and keep access until the end of the billing period.
+            source: refunds
+        sources:
+          - refunds
+      - id: team-price
+        question: How much is the Team plan?
+        material_claims:
+          - claim: The Team plan costs $29 per agent per month when billed annually
+            materiality: critical
+            quote: The Team plan costs $29 per agent per month when billed annually, or $35 per agent per month when billed monthly.
+            source: plans
+        sources:
+          - plans
+      - id: phone-support
+        question: Do you offer phone support?
+        material_claims:
+          - claim: Phone support is available only on the Business plan
+            materiality: high
+            quote: Phone support is available only on the Business plan, Monday through Friday from 8 a.m. to 6 p.m. Eastern Time.
+            source: plans
+        sources:
+          - plans
+      - id: ticket-retention
+        question: How long do you keep closed tickets?
+        material_claims:
+          - claim: Closed tickets are kept for 24 months on the Team plan and for 60 months on the Business plan
+            materiality: high
+            quote: Closed tickets are kept for 24 months on the Team plan and for 60 months on the Business plan.
+            source: retention
+        sources:
+          - retention

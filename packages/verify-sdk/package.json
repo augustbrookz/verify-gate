@@ -1,0 +1,52 @@
+{
+  "name": "@xyntherium/verify-sdk",
+  "version": "1.0.0",
+  "description": "TypeScript client for Xyntherium Verify: check whether an AI answer is supported by the sources you gave it.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./adapters/promptfoo": {
+      "types": "./dist/adapters/promptfoo.d.ts",
+      "import": "./dist/adapters/promptfoo.js"
+    },
+    "./adapters/scorer": {
+      "types": "./dist/adapters/scorer.d.ts",
+      "import": "./dist/adapters/scorer.js"
+    }
+  },
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.build.json && node ../../scripts/fix-esm-specifiers.mjs dist"
+  },
+  "dependencies": {
+    "@xyntherium/verify-core": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augustbrookz/verify-gate.git",
+    "directory": "packages/verify-sdk"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://xyntherium.com/developers",
+  "bugs": {
+    "url": "https://github.com/augustbrookz/verify-gate/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

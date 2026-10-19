@@ -1,0 +1,2750 @@
+{
+  "version": "verify-bench-v1.1",
+  "split": "heldout",
+  "min_published_category_n": 80,
+  "interval": "95% Wilson",
+  "runs": [
+    {
+      "file": "packages/verify-bench/results/2026-10-18-v1.1-code-only-rules-1.0.0.json",
+      "rules_version": "1.0.0",
+      "method": "code_only",
+      "run_at": "2026-10-18T07:00:55.738Z",
+      "preregistration_sha256": "4c8cb6050ea42e1f106a9945fe181b1472497e7193258c15654a1ae357a56448",
+      "dataset_sha256": {
+        "dev": "25320d61d717480ed1002b51b5a30e82adf5e23a6c8cb34fb0741360079986a1",
+        "heldout": "0ee369192836b1704d10f7fae10291e625a7985e48b91f94461a9d5ed820dcb0",
+        "review_queue": "a64df584065af306e628edb3ebd3f7bb4738495c7fbde2e86778866ebe4ff5cc"
+      },
+      "heldout": {
+        "n": 820,
+        "false_supported_rate": {
+          "k": 12,
+          "n": 612,
+          "p": 0.0196,
+          "lo": 0.0113,
+          "hi": 0.034
+        },
+        "unsupported_release_rate": {
+          "k": 12,
+          "n": 308,
+          "p": 0.039,
+          "lo": 0.0224,
+          "hi": 0.0669
+        },
+        "supported_recall": {
+          "k": 141,
+          "n": 208,
+          "p": 0.6779,
+          "lo": 0.6117,
+          "hi": 0.7377
+        },
+        "qualifier_loss_detection": {
+          "k": 142,
+          "n": 154,
+          "p": 0.9221,
+          "lo": 0.8687,
+          "hi": 0.9549
+        },
+        "qualifier_loss_named": {
+          "k": 135,
+          "n": 154,
+          "p": 0.8766,
+          "lo": 0.8153,
+          "hi": 0.9196
+        },
+        "contradiction_detection": {
+          "k": 265,
+          "n": 282,
+          "p": 0.9397,
+          "lo": 0.9056,
+          "hi": 0.962
+        },
+        "abstention_rate": {
+          "k": 263,
+          "n": 820,
+          "p": 0.3207,
+          "lo": 0.2897,
+          "hi": 0.3535
+        },
+        "exact_verdict_accuracy": {
+          "k": 563,
+          "n": 820,
+          "p": 0.6866,
+          "lo": 0.654,
+          "hi": 0.7174
+        }
+      },
+      "heldout_by_category": {
+        "adversarial": {
+          "status": "preliminary",
+          "n": 29,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 28,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.1206
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 10,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.2775
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 1,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.7935
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 2,
+            "n": 14,
+            "p": 0.1429,
+            "lo": 0.0401,
+            "hi": 0.3994
+          },
+          "abstention_rate": {
+            "k": 27,
+            "n": 29,
+            "p": 0.931,
+            "lo": 0.7804,
+            "hi": 0.9809
+          },
+          "exact_verdict_accuracy": {
+            "k": 6,
+            "n": 29,
+            "p": 0.2069,
+            "lo": 0.0985,
+            "hi": 0.3839
+          }
+        },
+        "contradicted": {
+          "status": "published",
+          "n": 142,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 142,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0263
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 137,
+            "n": 142,
+            "p": 0.9648,
+            "lo": 0.9202,
+            "hi": 0.9849
+          },
+          "abstention_rate": {
+            "k": 5,
+            "n": 142,
+            "p": 0.0352,
+            "lo": 0.0151,
+            "hi": 0.0798
+          },
+          "exact_verdict_accuracy": {
+            "k": 137,
+            "n": 142,
+            "p": 0.9648,
+            "lo": 0.9202,
+            "hi": 0.9849
+          }
+        },
+        "numeric": {
+          "status": "published",
+          "n": 126,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 126,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0296
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 126,
+            "n": 126,
+            "p": 1,
+            "lo": 0.9704,
+            "hi": 1
+          },
+          "abstention_rate": {
+            "k": 0,
+            "n": 126,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0296
+          },
+          "exact_verdict_accuracy": {
+            "k": 126,
+            "n": 126,
+            "p": 1,
+            "lo": 0.9704,
+            "hi": 1
+          }
+        },
+        "qualifier_loss": {
+          "status": "published",
+          "n": 154,
+          "false_supported_rate": {
+            "k": 12,
+            "n": 154,
+            "p": 0.0779,
+            "lo": 0.0451,
+            "hi": 0.1313
+          },
+          "unsupported_release_rate": {
+            "k": 12,
+            "n": 154,
+            "p": 0.0779,
+            "lo": 0.0451,
+            "hi": 0.1313
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 142,
+            "n": 154,
+            "p": 0.9221,
+            "lo": 0.8687,
+            "hi": 0.9549
+          },
+          "qualifier_loss_named": {
+            "k": 135,
+            "n": 154,
+            "p": 0.8766,
+            "lo": 0.8153,
+            "hi": 0.9196
+          },
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 7,
+            "n": 154,
+            "p": 0.0455,
+            "lo": 0.0222,
+            "hi": 0.0908
+          },
+          "exact_verdict_accuracy": {
+            "k": 135,
+            "n": 154,
+            "p": 0.8766,
+            "lo": 0.8153,
+            "hi": 0.9196
+          }
+        },
+        "supported": {
+          "status": "published",
+          "n": 207,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 141,
+            "n": 207,
+            "p": 0.6812,
+            "lo": 0.6149,
+            "hi": 0.7408
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 62,
+            "n": 207,
+            "p": 0.2995,
+            "lo": 0.2412,
+            "hi": 0.3651
+          },
+          "exact_verdict_accuracy": {
+            "k": 141,
+            "n": 207,
+            "p": 0.6812,
+            "lo": 0.6149,
+            "hi": 0.7408
+          }
+        },
+        "unsupported": {
+          "status": "published",
+          "n": 144,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 144,
+            "n": 144,
+            "p": 1,
+            "lo": 0.974,
+            "hi": 1
+          },
+          "exact_verdict_accuracy": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          }
+        },
+        "unverifiable": {
+          "status": "preliminary",
+          "n": 18,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 18,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.1759
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 18,
+            "n": 18,
+            "p": 1,
+            "lo": 0.8241,
+            "hi": 1
+          },
+          "exact_verdict_accuracy": {
+            "k": 18,
+            "n": 18,
+            "p": 1,
+            "lo": 0.8241,
+            "hi": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "packages/verify-bench/results/2026-10-18-v1.1-code-only-rules-1.1.0.json",
+      "rules_version": "1.1.0",
+      "method": "code_only",
+      "run_at": "2026-10-18T07:09:27.181Z",
+      "preregistration_sha256": "4c8cb6050ea42e1f106a9945fe181b1472497e7193258c15654a1ae357a56448",
+      "dataset_sha256": {
+        "dev": "25320d61d717480ed1002b51b5a30e82adf5e23a6c8cb34fb0741360079986a1",
+        "heldout": "0ee369192836b1704d10f7fae10291e625a7985e48b91f94461a9d5ed820dcb0",
+        "review_queue": "a64df584065af306e628edb3ebd3f7bb4738495c7fbde2e86778866ebe4ff5cc"
+      },
+      "heldout": {
+        "n": 820,
+        "false_supported_rate": {
+          "k": 2,
+          "n": 612,
+          "p": 0.0033,
+          "lo": 0.0009,
+          "hi": 0.0118
+        },
+        "unsupported_release_rate": {
+          "k": 2,
+          "n": 308,
+          "p": 0.0065,
+          "lo": 0.0018,
+          "hi": 0.0234
+        },
+        "supported_recall": {
+          "k": 141,
+          "n": 208,
+          "p": 0.6779,
+          "lo": 0.6117,
+          "hi": 0.7377
+        },
+        "qualifier_loss_detection": {
+          "k": 152,
+          "n": 154,
+          "p": 0.987,
+          "lo": 0.9539,
+          "hi": 0.9964
+        },
+        "qualifier_loss_named": {
+          "k": 145,
+          "n": 154,
+          "p": 0.9416,
+          "lo": 0.8927,
+          "hi": 0.969
+        },
+        "contradiction_detection": {
+          "k": 265,
+          "n": 282,
+          "p": 0.9397,
+          "lo": 0.9056,
+          "hi": 0.962
+        },
+        "abstention_rate": {
+          "k": 263,
+          "n": 820,
+          "p": 0.3207,
+          "lo": 0.2897,
+          "hi": 0.3535
+        },
+        "exact_verdict_accuracy": {
+          "k": 573,
+          "n": 820,
+          "p": 0.6988,
+          "lo": 0.6665,
+          "hi": 0.7292
+        }
+      },
+      "heldout_by_category": {
+        "adversarial": {
+          "status": "preliminary",
+          "n": 29,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 28,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.1206
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 10,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.2775
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 1,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.7935
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 2,
+            "n": 14,
+            "p": 0.1429,
+            "lo": 0.0401,
+            "hi": 0.3994
+          },
+          "abstention_rate": {
+            "k": 27,
+            "n": 29,
+            "p": 0.931,
+            "lo": 0.7804,
+            "hi": 0.9809
+          },
+          "exact_verdict_accuracy": {
+            "k": 6,
+            "n": 29,
+            "p": 0.2069,
+            "lo": 0.0985,
+            "hi": 0.3839
+          }
+        },
+        "contradicted": {
+          "status": "published",
+          "n": 142,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 142,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0263
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 137,
+            "n": 142,
+            "p": 0.9648,
+            "lo": 0.9202,
+            "hi": 0.9849
+          },
+          "abstention_rate": {
+            "k": 5,
+            "n": 142,
+            "p": 0.0352,
+            "lo": 0.0151,
+            "hi": 0.0798
+          },
+          "exact_verdict_accuracy": {
+            "k": 137,
+            "n": 142,
+            "p": 0.9648,
+            "lo": 0.9202,
+            "hi": 0.9849
+          }
+        },
+        "numeric": {
+          "status": "published",
+          "n": 126,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 126,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0296
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 126,
+            "n": 126,
+            "p": 1,
+            "lo": 0.9704,
+            "hi": 1
+          },
+          "abstention_rate": {
+            "k": 0,
+            "n": 126,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0296
+          },
+          "exact_verdict_accuracy": {
+            "k": 126,
+            "n": 126,
+            "p": 1,
+            "lo": 0.9704,
+            "hi": 1
+          }
+        },
+        "qualifier_loss": {
+          "status": "published",
+          "n": 154,
+          "false_supported_rate": {
+            "k": 2,
+            "n": 154,
+            "p": 0.013,
+            "lo": 0.0036,
+            "hi": 0.0461
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 154,
+            "p": 0.013,
+            "lo": 0.0036,
+            "hi": 0.0461
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "p": 0.987,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "p": 0.9416,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 7,
+            "n": 154,
+            "p": 0.0455,
+            "lo": 0.0222,
+            "hi": 0.0908
+          },
+          "exact_verdict_accuracy": {
+            "k": 145,
+            "n": 154,
+            "p": 0.9416,
+            "lo": 0.8927,
+            "hi": 0.969
+          }
+        },
+        "supported": {
+          "status": "published",
+          "n": 207,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 141,
+            "n": 207,
+            "p": 0.6812,
+            "lo": 0.6149,
+            "hi": 0.7408
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 62,
+            "n": 207,
+            "p": 0.2995,
+            "lo": 0.2412,
+            "hi": 0.3651
+          },
+          "exact_verdict_accuracy": {
+            "k": 141,
+            "n": 207,
+            "p": 0.6812,
+            "lo": 0.6149,
+            "hi": 0.7408
+          }
+        },
+        "unsupported": {
+          "status": "published",
+          "n": 144,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 144,
+            "n": 144,
+            "p": 1,
+            "lo": 0.974,
+            "hi": 1
+          },
+          "exact_verdict_accuracy": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          }
+        },
+        "unverifiable": {
+          "status": "preliminary",
+          "n": 18,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 18,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.1759
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 18,
+            "n": 18,
+            "p": 1,
+            "lo": 0.8241,
+            "hi": 1
+          },
+          "exact_verdict_accuracy": {
+            "k": 18,
+            "n": 18,
+            "p": 1,
+            "lo": 0.8241,
+            "hi": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "packages/verify-bench/results/2026-10-18-v1.1-code-only-rules-1.2.0.json",
+      "rules_version": "1.2.0",
+      "method": "code_only",
+      "run_at": "2026-10-18T07:36:07.700Z",
+      "preregistration_sha256": "4c8cb6050ea42e1f106a9945fe181b1472497e7193258c15654a1ae357a56448",
+      "dataset_sha256": {
+        "dev": "25320d61d717480ed1002b51b5a30e82adf5e23a6c8cb34fb0741360079986a1",
+        "heldout": "0ee369192836b1704d10f7fae10291e625a7985e48b91f94461a9d5ed820dcb0",
+        "review_queue": "a64df584065af306e628edb3ebd3f7bb4738495c7fbde2e86778866ebe4ff5cc"
+      },
+      "heldout": {
+        "n": 820,
+        "false_supported_rate": {
+          "k": 2,
+          "n": 612,
+          "p": 0.0033,
+          "lo": 0.0009,
+          "hi": 0.0118
+        },
+        "unsupported_release_rate": {
+          "k": 2,
+          "n": 308,
+          "p": 0.0065,
+          "lo": 0.0018,
+          "hi": 0.0234
+        },
+        "supported_recall": {
+          "k": 141,
+          "n": 208,
+          "p": 0.6779,
+          "lo": 0.6117,
+          "hi": 0.7377
+        },
+        "qualifier_loss_detection": {
+          "k": 152,
+          "n": 154,
+          "p": 0.987,
+          "lo": 0.9539,
+          "hi": 0.9964
+        },
+        "qualifier_loss_named": {
+          "k": 145,
+          "n": 154,
+          "p": 0.9416,
+          "lo": 0.8927,
+          "hi": 0.969
+        },
+        "contradiction_detection": {
+          "k": 265,
+          "n": 282,
+          "p": 0.9397,
+          "lo": 0.9056,
+          "hi": 0.962
+        },
+        "abstention_rate": {
+          "k": 263,
+          "n": 820,
+          "p": 0.3207,
+          "lo": 0.2897,
+          "hi": 0.3535
+        },
+        "exact_verdict_accuracy": {
+          "k": 573,
+          "n": 820,
+          "p": 0.6988,
+          "lo": 0.6665,
+          "hi": 0.7292
+        }
+      },
+      "heldout_by_category": {
+        "adversarial": {
+          "status": "preliminary",
+          "n": 29,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 28,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.1206
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 10,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.2775
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 1,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.7935
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 2,
+            "n": 14,
+            "p": 0.1429,
+            "lo": 0.0401,
+            "hi": 0.3994
+          },
+          "abstention_rate": {
+            "k": 27,
+            "n": 29,
+            "p": 0.931,
+            "lo": 0.7804,
+            "hi": 0.9809
+          },
+          "exact_verdict_accuracy": {
+            "k": 6,
+            "n": 29,
+            "p": 0.2069,
+            "lo": 0.0985,
+            "hi": 0.3839
+          }
+        },
+        "contradicted": {
+          "status": "published",
+          "n": 142,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 142,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0263
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 137,
+            "n": 142,
+            "p": 0.9648,
+            "lo": 0.9202,
+            "hi": 0.9849
+          },
+          "abstention_rate": {
+            "k": 5,
+            "n": 142,
+            "p": 0.0352,
+            "lo": 0.0151,
+            "hi": 0.0798
+          },
+          "exact_verdict_accuracy": {
+            "k": 137,
+            "n": 142,
+            "p": 0.9648,
+            "lo": 0.9202,
+            "hi": 0.9849
+          }
+        },
+        "numeric": {
+          "status": "published",
+          "n": 126,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 126,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0296
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 126,
+            "n": 126,
+            "p": 1,
+            "lo": 0.9704,
+            "hi": 1
+          },
+          "abstention_rate": {
+            "k": 0,
+            "n": 126,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0296
+          },
+          "exact_verdict_accuracy": {
+            "k": 126,
+            "n": 126,
+            "p": 1,
+            "lo": 0.9704,
+            "hi": 1
+          }
+        },
+        "qualifier_loss": {
+          "status": "published",
+          "n": 154,
+          "false_supported_rate": {
+            "k": 2,
+            "n": 154,
+            "p": 0.013,
+            "lo": 0.0036,
+            "hi": 0.0461
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 154,
+            "p": 0.013,
+            "lo": 0.0036,
+            "hi": 0.0461
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "p": 0.987,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "p": 0.9416,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 7,
+            "n": 154,
+            "p": 0.0455,
+            "lo": 0.0222,
+            "hi": 0.0908
+          },
+          "exact_verdict_accuracy": {
+            "k": 145,
+            "n": 154,
+            "p": 0.9416,
+            "lo": 0.8927,
+            "hi": 0.969
+          }
+        },
+        "supported": {
+          "status": "published",
+          "n": 207,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 141,
+            "n": 207,
+            "p": 0.6812,
+            "lo": 0.6149,
+            "hi": 0.7408
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 62,
+            "n": 207,
+            "p": 0.2995,
+            "lo": 0.2412,
+            "hi": 0.3651
+          },
+          "exact_verdict_accuracy": {
+            "k": 141,
+            "n": 207,
+            "p": 0.6812,
+            "lo": 0.6149,
+            "hi": 0.7408
+          }
+        },
+        "unsupported": {
+          "status": "published",
+          "n": 144,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 144,
+            "n": 144,
+            "p": 1,
+            "lo": 0.974,
+            "hi": 1
+          },
+          "exact_verdict_accuracy": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          }
+        },
+        "unverifiable": {
+          "status": "preliminary",
+          "n": 18,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 18,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.1759
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 18,
+            "n": 18,
+            "p": 1,
+            "lo": 0.8241,
+            "hi": 1
+          },
+          "exact_verdict_accuracy": {
+            "k": 18,
+            "n": 18,
+            "p": 1,
+            "lo": 0.8241,
+            "hi": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "packages/verify-bench/results/2026-10-18-v1.1-code-only-rules-1.3.0.json",
+      "rules_version": "1.3.0",
+      "method": "code_only",
+      "run_at": "2026-10-18T08:40:55.169Z",
+      "preregistration_sha256": "4c8cb6050ea42e1f106a9945fe181b1472497e7193258c15654a1ae357a56448",
+      "dataset_sha256": {
+        "dev": "25320d61d717480ed1002b51b5a30e82adf5e23a6c8cb34fb0741360079986a1",
+        "heldout": "0ee369192836b1704d10f7fae10291e625a7985e48b91f94461a9d5ed820dcb0",
+        "review_queue": "a64df584065af306e628edb3ebd3f7bb4738495c7fbde2e86778866ebe4ff5cc"
+      },
+      "heldout": {
+        "n": 820,
+        "false_supported_rate": {
+          "k": 2,
+          "n": 612,
+          "p": 0.0033,
+          "lo": 0.0009,
+          "hi": 0.0118
+        },
+        "unsupported_release_rate": {
+          "k": 2,
+          "n": 308,
+          "p": 0.0065,
+          "lo": 0.0018,
+          "hi": 0.0234
+        },
+        "supported_recall": {
+          "k": 141,
+          "n": 208,
+          "p": 0.6779,
+          "lo": 0.6117,
+          "hi": 0.7377
+        },
+        "qualifier_loss_detection": {
+          "k": 152,
+          "n": 154,
+          "p": 0.987,
+          "lo": 0.9539,
+          "hi": 0.9964
+        },
+        "qualifier_loss_named": {
+          "k": 145,
+          "n": 154,
+          "p": 0.9416,
+          "lo": 0.8927,
+          "hi": 0.969
+        },
+        "contradiction_detection": {
+          "k": 265,
+          "n": 282,
+          "p": 0.9397,
+          "lo": 0.9056,
+          "hi": 0.962
+        },
+        "abstention_rate": {
+          "k": 263,
+          "n": 820,
+          "p": 0.3207,
+          "lo": 0.2897,
+          "hi": 0.3535
+        },
+        "exact_verdict_accuracy": {
+          "k": 573,
+          "n": 820,
+          "p": 0.6988,
+          "lo": 0.6665,
+          "hi": 0.7292
+        }
+      },
+      "heldout_by_category": {
+        "adversarial": {
+          "status": "preliminary",
+          "n": 29,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 28,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.1206
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 10,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.2775
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 1,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.7935
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 2,
+            "n": 14,
+            "p": 0.1429,
+            "lo": 0.0401,
+            "hi": 0.3994
+          },
+          "abstention_rate": {
+            "k": 27,
+            "n": 29,
+            "p": 0.931,
+            "lo": 0.7804,
+            "hi": 0.9809
+          },
+          "exact_verdict_accuracy": {
+            "k": 6,
+            "n": 29,
+            "p": 0.2069,
+            "lo": 0.0985,
+            "hi": 0.3839
+          }
+        },
+        "contradicted": {
+          "status": "published",
+          "n": 142,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 142,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0263
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 137,
+            "n": 142,
+            "p": 0.9648,
+            "lo": 0.9202,
+            "hi": 0.9849
+          },
+          "abstention_rate": {
+            "k": 5,
+            "n": 142,
+            "p": 0.0352,
+            "lo": 0.0151,
+            "hi": 0.0798
+          },
+          "exact_verdict_accuracy": {
+            "k": 137,
+            "n": 142,
+            "p": 0.9648,
+            "lo": 0.9202,
+            "hi": 0.9849
+          }
+        },
+        "numeric": {
+          "status": "published",
+          "n": 126,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 126,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0296
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 126,
+            "n": 126,
+            "p": 1,
+            "lo": 0.9704,
+            "hi": 1
+          },
+          "abstention_rate": {
+            "k": 0,
+            "n": 126,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0296
+          },
+          "exact_verdict_accuracy": {
+            "k": 126,
+            "n": 126,
+            "p": 1,
+            "lo": 0.9704,
+            "hi": 1
+          }
+        },
+        "qualifier_loss": {
+          "status": "published",
+          "n": 154,
+          "false_supported_rate": {
+            "k": 2,
+            "n": 154,
+            "p": 0.013,
+            "lo": 0.0036,
+            "hi": 0.0461
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 154,
+            "p": 0.013,
+            "lo": 0.0036,
+            "hi": 0.0461
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "p": 0.987,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "p": 0.9416,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 7,
+            "n": 154,
+            "p": 0.0455,
+            "lo": 0.0222,
+            "hi": 0.0908
+          },
+          "exact_verdict_accuracy": {
+            "k": 145,
+            "n": 154,
+            "p": 0.9416,
+            "lo": 0.8927,
+            "hi": 0.969
+          }
+        },
+        "supported": {
+          "status": "published",
+          "n": 207,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 141,
+            "n": 207,
+            "p": 0.6812,
+            "lo": 0.6149,
+            "hi": 0.7408
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 62,
+            "n": 207,
+            "p": 0.2995,
+            "lo": 0.2412,
+            "hi": 0.3651
+          },
+          "exact_verdict_accuracy": {
+            "k": 141,
+            "n": 207,
+            "p": 0.6812,
+            "lo": 0.6149,
+            "hi": 0.7408
+          }
+        },
+        "unsupported": {
+          "status": "published",
+          "n": 144,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 144,
+            "n": 144,
+            "p": 1,
+            "lo": 0.974,
+            "hi": 1
+          },
+          "exact_verdict_accuracy": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          }
+        },
+        "unverifiable": {
+          "status": "preliminary",
+          "n": 18,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 18,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.1759
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 18,
+            "n": 18,
+            "p": 1,
+            "lo": 0.8241,
+            "hi": 1
+          },
+          "exact_verdict_accuracy": {
+            "k": 18,
+            "n": 18,
+            "p": 1,
+            "lo": 0.8241,
+            "hi": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "packages/verify-bench/results/2026-10-18-v1.1-code-only-rules-2.0.0.json",
+      "rules_version": "2.0.0",
+      "method": "code_only",
+      "run_at": "2026-10-18T10:32:32.702Z",
+      "preregistration_sha256": "4c8cb6050ea42e1f106a9945fe181b1472497e7193258c15654a1ae357a56448",
+      "dataset_sha256": {
+        "dev": "25320d61d717480ed1002b51b5a30e82adf5e23a6c8cb34fb0741360079986a1",
+        "heldout": "0ee369192836b1704d10f7fae10291e625a7985e48b91f94461a9d5ed820dcb0",
+        "review_queue": "a64df584065af306e628edb3ebd3f7bb4738495c7fbde2e86778866ebe4ff5cc"
+      },
+      "heldout": {
+        "n": 820,
+        "false_supported_rate": {
+          "k": 2,
+          "n": 612,
+          "p": 0.0033,
+          "lo": 0.0009,
+          "hi": 0.0118
+        },
+        "unsupported_release_rate": {
+          "k": 2,
+          "n": 308,
+          "p": 0.0065,
+          "lo": 0.0018,
+          "hi": 0.0234
+        },
+        "supported_recall": {
+          "k": 143,
+          "n": 208,
+          "p": 0.6875,
+          "lo": 0.6216,
+          "hi": 0.7466
+        },
+        "qualifier_loss_detection": {
+          "k": 152,
+          "n": 154,
+          "p": 0.987,
+          "lo": 0.9539,
+          "hi": 0.9964
+        },
+        "qualifier_loss_named": {
+          "k": 145,
+          "n": 154,
+          "p": 0.9416,
+          "lo": 0.8927,
+          "hi": 0.969
+        },
+        "contradiction_detection": {
+          "k": 265,
+          "n": 282,
+          "p": 0.9397,
+          "lo": 0.9056,
+          "hi": 0.962
+        },
+        "abstention_rate": {
+          "k": 264,
+          "n": 820,
+          "p": 0.322,
+          "lo": 0.2909,
+          "hi": 0.3547
+        },
+        "exact_verdict_accuracy": {
+          "k": 575,
+          "n": 820,
+          "p": 0.7012,
+          "lo": 0.669,
+          "hi": 0.7316
+        }
+      },
+      "heldout_by_category": {
+        "adversarial": {
+          "status": "preliminary",
+          "n": 29,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 28,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.1206
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 10,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.2775
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 1,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.7935
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 2,
+            "n": 14,
+            "p": 0.1429,
+            "lo": 0.0401,
+            "hi": 0.3994
+          },
+          "abstention_rate": {
+            "k": 27,
+            "n": 29,
+            "p": 0.931,
+            "lo": 0.7804,
+            "hi": 0.9809
+          },
+          "exact_verdict_accuracy": {
+            "k": 6,
+            "n": 29,
+            "p": 0.2069,
+            "lo": 0.0985,
+            "hi": 0.3839
+          }
+        },
+        "contradicted": {
+          "status": "published",
+          "n": 142,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 142,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0263
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 137,
+            "n": 142,
+            "p": 0.9648,
+            "lo": 0.9202,
+            "hi": 0.9849
+          },
+          "abstention_rate": {
+            "k": 5,
+            "n": 142,
+            "p": 0.0352,
+            "lo": 0.0151,
+            "hi": 0.0798
+          },
+          "exact_verdict_accuracy": {
+            "k": 137,
+            "n": 142,
+            "p": 0.9648,
+            "lo": 0.9202,
+            "hi": 0.9849
+          }
+        },
+        "numeric": {
+          "status": "published",
+          "n": 126,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 126,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0296
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 126,
+            "n": 126,
+            "p": 1,
+            "lo": 0.9704,
+            "hi": 1
+          },
+          "abstention_rate": {
+            "k": 0,
+            "n": 126,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0296
+          },
+          "exact_verdict_accuracy": {
+            "k": 126,
+            "n": 126,
+            "p": 1,
+            "lo": 0.9704,
+            "hi": 1
+          }
+        },
+        "qualifier_loss": {
+          "status": "published",
+          "n": 154,
+          "false_supported_rate": {
+            "k": 2,
+            "n": 154,
+            "p": 0.013,
+            "lo": 0.0036,
+            "hi": 0.0461
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 154,
+            "p": 0.013,
+            "lo": 0.0036,
+            "hi": 0.0461
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "p": 0.987,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "p": 0.9416,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 7,
+            "n": 154,
+            "p": 0.0455,
+            "lo": 0.0222,
+            "hi": 0.0908
+          },
+          "exact_verdict_accuracy": {
+            "k": 145,
+            "n": 154,
+            "p": 0.9416,
+            "lo": 0.8927,
+            "hi": 0.969
+          }
+        },
+        "supported": {
+          "status": "published",
+          "n": 207,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 143,
+            "n": 207,
+            "p": 0.6908,
+            "lo": 0.6249,
+            "hi": 0.7498
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 63,
+            "n": 207,
+            "p": 0.3043,
+            "lo": 0.2457,
+            "hi": 0.3701
+          },
+          "exact_verdict_accuracy": {
+            "k": 143,
+            "n": 207,
+            "p": 0.6908,
+            "lo": 0.6249,
+            "hi": 0.7498
+          }
+        },
+        "unsupported": {
+          "status": "published",
+          "n": 144,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 144,
+            "n": 144,
+            "p": 1,
+            "lo": 0.974,
+            "hi": 1
+          },
+          "exact_verdict_accuracy": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          }
+        },
+        "unverifiable": {
+          "status": "preliminary",
+          "n": 18,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 18,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.1759
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 18,
+            "n": 18,
+            "p": 1,
+            "lo": 0.8241,
+            "hi": 1
+          },
+          "exact_verdict_accuracy": {
+            "k": 18,
+            "n": 18,
+            "p": 1,
+            "lo": 0.8241,
+            "hi": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "packages/verify-bench/results/2026-10-19-v1.1-code-only-rules-2.1.0.json",
+      "rules_version": "2.1.0",
+      "method": "code_only",
+      "run_at": "2026-10-19T15:25:31.226Z",
+      "preregistration_sha256": "4c8cb6050ea42e1f106a9945fe181b1472497e7193258c15654a1ae357a56448",
+      "dataset_sha256": {
+        "dev": "25320d61d717480ed1002b51b5a30e82adf5e23a6c8cb34fb0741360079986a1",
+        "heldout": "0ee369192836b1704d10f7fae10291e625a7985e48b91f94461a9d5ed820dcb0",
+        "review_queue": "a64df584065af306e628edb3ebd3f7bb4738495c7fbde2e86778866ebe4ff5cc"
+      },
+      "heldout": {
+        "n": 820,
+        "false_supported_rate": {
+          "k": 2,
+          "n": 612,
+          "p": 0.0033,
+          "lo": 0.0009,
+          "hi": 0.0118
+        },
+        "unsupported_release_rate": {
+          "k": 2,
+          "n": 308,
+          "p": 0.0065,
+          "lo": 0.0018,
+          "hi": 0.0234
+        },
+        "supported_recall": {
+          "k": 143,
+          "n": 208,
+          "p": 0.6875,
+          "lo": 0.6216,
+          "hi": 0.7466
+        },
+        "qualifier_loss_detection": {
+          "k": 152,
+          "n": 154,
+          "p": 0.987,
+          "lo": 0.9539,
+          "hi": 0.9964
+        },
+        "qualifier_loss_named": {
+          "k": 145,
+          "n": 154,
+          "p": 0.9416,
+          "lo": 0.8927,
+          "hi": 0.969
+        },
+        "contradiction_detection": {
+          "k": 265,
+          "n": 282,
+          "p": 0.9397,
+          "lo": 0.9056,
+          "hi": 0.962
+        },
+        "abstention_rate": {
+          "k": 264,
+          "n": 820,
+          "p": 0.322,
+          "lo": 0.2909,
+          "hi": 0.3547
+        },
+        "exact_verdict_accuracy": {
+          "k": 575,
+          "n": 820,
+          "p": 0.7012,
+          "lo": 0.669,
+          "hi": 0.7316
+        }
+      },
+      "heldout_by_category": {
+        "adversarial": {
+          "status": "preliminary",
+          "n": 29,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 28,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.1206
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 10,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.2775
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 1,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.7935
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 2,
+            "n": 14,
+            "p": 0.1429,
+            "lo": 0.0401,
+            "hi": 0.3994
+          },
+          "abstention_rate": {
+            "k": 27,
+            "n": 29,
+            "p": 0.931,
+            "lo": 0.7804,
+            "hi": 0.9809
+          },
+          "exact_verdict_accuracy": {
+            "k": 6,
+            "n": 29,
+            "p": 0.2069,
+            "lo": 0.0985,
+            "hi": 0.3839
+          }
+        },
+        "contradicted": {
+          "status": "published",
+          "n": 142,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 142,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0263
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 137,
+            "n": 142,
+            "p": 0.9648,
+            "lo": 0.9202,
+            "hi": 0.9849
+          },
+          "abstention_rate": {
+            "k": 5,
+            "n": 142,
+            "p": 0.0352,
+            "lo": 0.0151,
+            "hi": 0.0798
+          },
+          "exact_verdict_accuracy": {
+            "k": 137,
+            "n": 142,
+            "p": 0.9648,
+            "lo": 0.9202,
+            "hi": 0.9849
+          }
+        },
+        "numeric": {
+          "status": "published",
+          "n": 126,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 126,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0296
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 126,
+            "n": 126,
+            "p": 1,
+            "lo": 0.9704,
+            "hi": 1
+          },
+          "abstention_rate": {
+            "k": 0,
+            "n": 126,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.0296
+          },
+          "exact_verdict_accuracy": {
+            "k": 126,
+            "n": 126,
+            "p": 1,
+            "lo": 0.9704,
+            "hi": 1
+          }
+        },
+        "qualifier_loss": {
+          "status": "published",
+          "n": 154,
+          "false_supported_rate": {
+            "k": 2,
+            "n": 154,
+            "p": 0.013,
+            "lo": 0.0036,
+            "hi": 0.0461
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 154,
+            "p": 0.013,
+            "lo": 0.0036,
+            "hi": 0.0461
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "p": 0.987,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "p": 0.9416,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 7,
+            "n": 154,
+            "p": 0.0455,
+            "lo": 0.0222,
+            "hi": 0.0908
+          },
+          "exact_verdict_accuracy": {
+            "k": 145,
+            "n": 154,
+            "p": 0.9416,
+            "lo": 0.8927,
+            "hi": 0.969
+          }
+        },
+        "supported": {
+          "status": "published",
+          "n": 207,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 143,
+            "n": 207,
+            "p": 0.6908,
+            "lo": 0.6249,
+            "hi": 0.7498
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 63,
+            "n": 207,
+            "p": 0.3043,
+            "lo": 0.2457,
+            "hi": 0.3701
+          },
+          "exact_verdict_accuracy": {
+            "k": 143,
+            "n": 207,
+            "p": 0.6908,
+            "lo": 0.6249,
+            "hi": 0.7498
+          }
+        },
+        "unsupported": {
+          "status": "published",
+          "n": 144,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 144,
+            "n": 144,
+            "p": 1,
+            "lo": 0.974,
+            "hi": 1
+          },
+          "exact_verdict_accuracy": {
+            "k": 0,
+            "n": 144,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.026
+          }
+        },
+        "unverifiable": {
+          "status": "preliminary",
+          "n": 18,
+          "false_supported_rate": {
+            "k": 0,
+            "n": 18,
+            "p": 0,
+            "lo": 0,
+            "hi": 0.1759
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "supported_recall": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "qualifier_loss_named": null,
+          "contradiction_detection": {
+            "k": 0,
+            "n": 0,
+            "p": null,
+            "lo": null,
+            "hi": null
+          },
+          "abstention_rate": {
+            "k": 18,
+            "n": 18,
+            "p": 1,
+            "lo": 0.8241,
+            "hi": 1
+          },
+          "exact_verdict_accuracy": {
+            "k": 18,
+            "n": 18,
+            "p": 1,
+            "lo": 0.8241,
+            "hi": 1
+          }
+        }
+      }
+    }
+  ]
+}

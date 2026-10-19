@@ -1,0 +1,41 @@
+name: CI
+on:
+  push: { branches: [main] }
+  pull_request:
+permissions: { contents: read }
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm install --no-audit --no-fund
+      - run: npm run build
+      - run: npm test
+      - name: The committed Action bundle matches its sources
+        run: git diff --exit-code -- packages/verify-action/dist
+  examples:
+    name: Gate example (${{ matrix.example }})
+    strategy:
+      fail-fast: false
+      matrix: { example: [support-bot, hr-assistant, docs-rag] }
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: Start the app under test
+        if: hashFiles(format('examples/{0}/bot/server.mjs', matrix.example)) != ''
+        run: |
+          node examples/${{ matrix.example }}/bot/server.mjs &
+          for i in $(seq 1 20); do curl -fsS http://127.0.0.1:8787/healthz && break; sleep 0.5; done
+      - uses: ./
+        id: gate
+        with:
+          working-directory: examples/${{ matrix.example }}
+          config: verify-gate.yml
+          comment-pr: 'false'
+          upload-sarif: 'false'
+          cache-dir: ''
+      - run: echo "decision=${{ steps.gate.outputs.decision }} claims=${{ steps.gate.outputs.claims-total }}"

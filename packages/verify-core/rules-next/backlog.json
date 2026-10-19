@@ -1,0 +1,59 @@
+{
+  "description": "Candidate changes for the next verification rules version. Nothing here changes a rule: each entry is a fixture pinned at the CURRENT behaviour by packages/verify-core/test/rules-next-backlog.test.ts. An entry moves into a release only through the normal process: rule change, version bump, rules-changelog.json entry with a held-out before / after, and the pin updated to the new behaviour.",
+  "entries": [
+    {
+      "id": "RN-003-trailing-exception-crosses-sentence",
+      "priority": "low: no benchmark verdict changes; verify-parity clips the phrase on its side",
+      "found": "2026-10-19",
+      "found_by": "rules 2.1.0 release: verify-parity's eCFR fixtures (a list item and the sentence after it, re-punctuated \". A\" → \"; a\")",
+      "summary": "The 2.1.0 trailing-exception phrase reads up to 60 characters past its trigger and can cross a full stop when the text holds several sentences (\"… are not eligible to participate in the Program. Dormitories are covered sepa\"). Verify's own claim checks read a clause context, so a verdict changes only if a limiting next sentence is attached to it; 0 of 2,040 benchmark predictions are affected.",
+      "fixture": {
+        "mode": "extract_qualifiers",
+        "text": "Residents of a commercial boarding house are not eligible to participate in the Program. Dormitories are covered separately."
+      },
+      "current": {
+        "condition_texts": [
+          "Residents of a commercial boarding house are not eligible to participate in the Program. Dormitories are covered sepa"
+        ]
+      },
+      "candidate": "End the phrase at the sentence end (a full stop followed by a space and a capital), as verify-parity now does. Direction: shorter phrases can only remove a dropped-condition row, so it can release more: a major version under the changelog policy, with a dev check and a held-out run.",
+      "impact_today": "Condition text shown in evidence can include the start of the next sentence."
+    },
+    {
+      "id": "RN-001-case-only-proper-noun",
+      "found": "2026-10-18",
+      "found_by": "verify-parity deploy smoke (PR #9): support-bot example, kb/plans.md edited \"Eastern Time\" → \"Eastern time\"",
+      "summary": "A source edit that changes only the capitalisation of a proper noun (a time zone) drops a verbatim claim from supported to not adjudicated in code-only mode.",
+      "fixture": {
+        "question": "Do you offer phone support?",
+        "answer": "Phone support is available only on the Business plan, Monday through Friday from 8 a.m. to 6 p.m. Eastern Time.",
+        "sources": [
+          {
+            "id": "plans",
+            "text": "Phone support is available only on the Business plan, Monday through Friday from 8 a.m. to 6 p.m. Eastern time."
+          }
+        ],
+        "mode": "code_only"
+      },
+      "current": {
+        "verdict": "unverifiable",
+        "failure_reason": "not_adjudicated",
+        "rule_id": "R-NOT-ADJUDICATED"
+      },
+      "control": {
+        "note": "the same answer against the source as first written (\"Eastern Time\")",
+        "verdict": "supported",
+        "rule_id": "R-VERBATIM-SUPPORTED"
+      },
+      "candidate": "Let the verbatim tier match through a case-only difference in a token outside numbers and identifiers (\"Eastern Time\" / \"Eastern time\"), keeping case-sensitive comparison for codes and identifiers. Direction: releases more (unverifiable → supported), so a major version under the changelog policy; needs a held-out run.",
+      "impact_today": "None on release: unverifiable is held, never released. In Verify Gate's document change mode, verify-parity reads the edit as cosmetic and the linked test passes with that reason."
+    }
+  ],
+  "released": [
+    {
+      "id": "RN-002-postpositive-exclusion",
+      "released_in": "2.1.0",
+      "fixture": "packages/verify-core/test/rules-2.1.test.ts"
+    }
+  ]
+}

@@ -1,0 +1,682 @@
+{
+  "description": "Public changelog of Xyntherium Verify's rules, by track: verification (verdict and release rules, prompts, default thresholds; RULES_VERSION), freshness (source-freshness reporting; FRESHNESS_VERSION) and gate_policy (Verify Gate's policy engine and default thresholds; POLICY_VERSION). Every change to a file in rules-manifest.json has an entry here. Ledger entries carry the verification rules version inside their hashed payload.",
+  "entries": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-15",
+      "previous_label": "rules-2026-10-15",
+      "summary": "The rules Verify v1 shipped with.",
+      "what_changed": [
+        "Span matching in code: exact, then normalised (whitespace, quote and dash style, ellipsis, sentence-initial case), then punctuation-tolerant under a hard edit-distance cap; offsets always map back to the original source text and a model-proposed quote that is not found is discarded.",
+        "Qualifier engine: dates and time ranges, entities, quantities and units, conditions, scope, modality and negation compared in code; each material qualifier is preserved, dropped, contradicted or ambiguous.",
+        "Code-only verdict rules: arithmetic recomputed, verbatim support, verbatim qualifier loss, one-value and negation template contradictions, superseded and conflicting passages, external comparisons and out-of-scope predictions.",
+        "Model adjudication is a proposal checked in code; a model can never produce 'supported' without a located span. Deliberation can only downgrade a verdict to unverifiable.",
+        "Release recommendation: revise > human_review > cite_required > allow, with max_unsupported 0 and max_unverifiable 0 by default.",
+        "Prompts verify-extract-2026-10-15.1 and verify-adjudicate-2026-10-15.1."
+      ],
+      "why": "First public version, registered before the first held-out run (docs/benchmark-methodology.md, SHA-256 060dc63d…7457). Six faults found on the dev split before registration were fixed as regression tests; the held-out split was not read.",
+      "benchmark": {
+        "dataset": "verify-bench-v1-alpha",
+        "split": "heldout",
+        "method": "code_only",
+        "n": 189,
+        "results_file": "packages/verify-bench/results/2026-10-15-code-only.json",
+        "before": null,
+        "after": {
+          "false_supported_rate": {
+            "k": 0,
+            "n": 112,
+            "lo": 0,
+            "hi": 0.0332
+          },
+          "unsupported_release_rate": {
+            "k": 0,
+            "n": 57,
+            "lo": 0,
+            "hi": 0.0631
+          },
+          "qualifier_loss_detection": {
+            "k": 26,
+            "n": 26,
+            "lo": 0.8713,
+            "hi": 1
+          },
+          "qualifier_loss_named": {
+            "k": 21,
+            "n": 26,
+            "lo": 0.6212,
+            "hi": 0.9149
+          },
+          "supported_recall": {
+            "k": 45,
+            "n": 77,
+            "lo": 0.4729,
+            "hi": 0.6879
+          },
+          "contradiction_detection": {
+            "k": 18,
+            "n": 33,
+            "lo": 0.3799,
+            "hi": 0.7016
+          },
+          "abstention_rate": {
+            "k": 104,
+            "n": 189,
+            "lo": 0.479,
+            "hi": 0.6195
+          }
+        },
+        "note": "Baseline entry: there is no earlier version to compare against. 95% Wilson intervals."
+      }
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-18",
+      "summary": "Catches deadlines and conditions dropped around a verbatim quote, and a claim made firmer than its source (\"may\" → \"will\"); NFKC in span matching.",
+      "what_changed": [
+        "Deadline phrases are time windows by themselves: \"not later than\", \"in no event later than\", \"no/not earlier than\"; ordinal days (\"the seventh business day\"), business days and billing cycles count as time anchors.",
+        "A time window after a comma (\", within 2 billing cycles\", \", no later than the date listed …\") limits the clause before it, when it names a time.",
+        "A qualifier lying wholly outside a verbatim span is dropped unless the claim restates it word for word; its words turning up elsewhere in the claim no longer count as a restatement.",
+        "A span that stops on a dangling conjunction (\"…as soon as possible, but\") takes the following clause into its context.",
+        "R-TEMPLATE-MODALITY: modal verbs are aligned like values. A claim identical to a source sentence except that it makes firmer what the source leaves open (may/might/can/could → will/must/shall; should → must/shall) is unsupported with failure_reason qualifier_loss and a conflicting modality row. A softer claim than its source is left undecided.",
+        "Span matching applies NFKC per grapheme with exact original offsets (ligatures, full-width forms, compatibility spaces). Superscripts, subscripts, vulgar fractions and enclosed numbers are never folded, so 10² never matches 102."
+      ],
+      "why": "The first run of 1.0.0 on the verify-bench v1.1 held-out split released 12 of 154 dropped-deadline and dropped-condition answers as supported. The same pattern on the dev split (18 of 225) traced to the gaps above; each fix was developed and tested on dev only, then frozen before this version's single held-out run. NFKC and the modality rule are requirements of Verify Gate's local mode (exact span validation under Unicode variation; \"may\" → \"will\" fixtures).",
+      "benchmark": {
+        "dataset": "verify-bench-v1.1",
+        "split": "heldout",
+        "method": "code_only",
+        "before": {
+          "false_supported_rate": {
+            "k": 12,
+            "n": 612,
+            "lo": 0.0113,
+            "hi": 0.034
+          },
+          "unsupported_release_rate": {
+            "k": 12,
+            "n": 308,
+            "lo": 0.0224,
+            "hi": 0.0669
+          },
+          "qualifier_loss_detection": {
+            "k": 142,
+            "n": 154,
+            "lo": 0.8687,
+            "hi": 0.9549
+          },
+          "qualifier_loss_named": {
+            "k": 135,
+            "n": 154,
+            "lo": 0.8153,
+            "hi": 0.9196
+          },
+          "supported_recall": {
+            "k": 141,
+            "n": 208,
+            "lo": 0.6117,
+            "hi": 0.7377
+          },
+          "contradiction_detection": {
+            "k": 265,
+            "n": 282,
+            "lo": 0.9056,
+            "hi": 0.962
+          },
+          "abstention_rate": {
+            "k": 263,
+            "n": 820,
+            "lo": 0.2897,
+            "hi": 0.3535
+          }
+        },
+        "after": {
+          "false_supported_rate": {
+            "k": 2,
+            "n": 612,
+            "lo": 0.0009,
+            "hi": 0.0118
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 308,
+            "lo": 0.0018,
+            "hi": 0.0234
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "supported_recall": {
+            "k": 141,
+            "n": 208,
+            "lo": 0.6117,
+            "hi": 0.7377
+          },
+          "contradiction_detection": {
+            "k": 265,
+            "n": 282,
+            "lo": 0.9056,
+            "hi": 0.962
+          },
+          "abstention_rate": {
+            "k": 263,
+            "n": 820,
+            "lo": 0.2897,
+            "hi": 0.3535
+          }
+        },
+        "results_before": "packages/verify-bench/results/2026-10-18-v1.1-code-only-rules-1.0.0.json",
+        "note": "Single held-out run after the rules were frozen (commit bf91af8). Two dropped-condition items are still released as supported; they are published as losses. Supported recall, contradiction detection and abstention are unchanged. 95% Wilson intervals.",
+        "results_after": "packages/verify-bench/results/2026-10-18-v1.1-code-only-rules-1.1.0.json"
+      }
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-18",
+      "summary": "A model can no longer confirm support across a polarity difference that code finds in the quoted span.",
+      "what_changed": [
+        "R-SUPPORT-POLARITY-CONFLICT: when a model proposes 'supported' and the quoted span carries the claim's content words (80% or more) but negates them where the claim does not, or the reverse, the claim is unsupported with failure_reason unverified_contradiction. No tier, and no fast-tier fallback, may overrule it.",
+        "Known limitation kept and pinned by tests: a sentence under five tokens that flips its source's polarity (\"Monthly plans are refundable.\" against \"Monthly plans are not refundable.\") is below the template rule's minimum, so code alone does not decide it; it comes back unverifiable (Gate: warn) in local mode, and is never supported in hosted mode."
+      ],
+      "why": "A test pinning the short-sentence negation case found that in model-assisted mode a credulous model quoting the negated sentence as support got the claim released as supported, because code flagged the polarity difference only as ambiguous and the strong tier resolved ambiguity. On the dev split, a credulous adjudicator's false-supported count fell from 86/916 to 82/916 (supported recall 285/304 to 283/304); developed on dev only.",
+      "benchmark": {
+        "dataset": "verify-bench-v1.1",
+        "split": "heldout",
+        "method": "code_only",
+        "before": {
+          "false_supported_rate": {
+            "k": 2,
+            "n": 612,
+            "lo": 0.0009,
+            "hi": 0.0118
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 308,
+            "lo": 0.0018,
+            "hi": 0.0234
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "supported_recall": {
+            "k": 141,
+            "n": 208,
+            "lo": 0.6117,
+            "hi": 0.7377
+          },
+          "contradiction_detection": {
+            "k": 265,
+            "n": 282,
+            "lo": 0.9056,
+            "hi": 0.962
+          },
+          "abstention_rate": {
+            "k": 263,
+            "n": 820,
+            "lo": 0.2897,
+            "hi": 0.3535
+          }
+        },
+        "after": {
+          "false_supported_rate": {
+            "k": 2,
+            "n": 612,
+            "lo": 0.0009,
+            "hi": 0.0118
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 308,
+            "lo": 0.0018,
+            "hi": 0.0234
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "supported_recall": {
+            "k": 141,
+            "n": 208,
+            "lo": 0.6117,
+            "hi": 0.7377
+          },
+          "contradiction_detection": {
+            "k": 265,
+            "n": 282,
+            "lo": 0.9056,
+            "hi": 0.962
+          },
+          "abstention_rate": {
+            "k": 263,
+            "n": 820,
+            "lo": 0.2897,
+            "hi": 0.3535
+          }
+        },
+        "results_before": "packages/verify-bench/results/2026-10-18-v1.1-code-only-rules-1.1.0.json",
+        "note": "Single held-out run after freezing (commit 54cd968). The deterministic layer is unchanged, as expected for a model-path rule: identical numbers. Model-based methods have not yet been run on this benchmark (provider credit). 95% Wilson intervals.",
+        "results_after": "packages/verify-bench/results/2026-10-18-v1.1-code-only-rules-1.2.0.json"
+      }
+    },
+    {
+      "version": "0.1.0",
+      "track": "freshness",
+      "date": "2026-10-18",
+      "summary": "Source freshness v0: whether the source a claim relies on is dated, and whether a controlling newer supplied source states otherwise. Reported separately; never changes a verdict.",
+      "what_changed": [
+        "Optional source fields effective_date, published_at, version, supersedes[] and authority_rank (primary | secondary), read only while the verify_freshness_enabled flag is on.",
+        "A separate response object `freshness` per request and per claim: established | unknown | conflicted_by_newer_source, with the cited source, the newer source, the conflict type and an explanation.",
+        "A newer source is never presumed controlling: only `supersedes` naming the cited source, or a newer primary source over a secondary one, makes it so. A newer non-controlling source that differs leaves the status unknown.",
+        "Release effect is reported inside the freshness object (recommended_release: human_review when conflicted, or when unknown and require_dated_sources is set); the response's own release_recommendation is unchanged."
+      ],
+      "why": "An answer can quote its source exactly and still rely on a version the company has since replaced. Master Reference v5.2 specifies freshness reported apart from support, so the two are never conflated.",
+      "benchmark": {
+        "dataset": "verify-bench-v1.1 (all published items) + the service test body",
+        "split": "heldout",
+        "method": "code_only",
+        "verdicts_unchanged": {
+          "items": 2041,
+          "changed": 0
+        },
+        "note": "Merge-blocking non-regression (tests/verify/freshness-nonregression.test.ts): with the flag off every response is byte-identical to the snapshot recorded before this code existed; with it on, only the additive freshness object differs; the held-out numbers are those of rules 1.1.0."
+      }
+    },
+    {
+      "version": "0.1.0",
+      "track": "gate_policy",
+      "date": "2026-10-18",
+      "summary": "Verify Gate v0.1 policy: pass / warn / hold / block over Verify claim results, with precision-first defaults.",
+      "what_changed": [
+        "Decisions: hold (XYN-006: the check could not complete; never converted to pass, never overridable) > block > warn > pass.",
+        "Defaults: block on material contradictions (XYN-001: max_contradicted critical/high/medium 0) and material dropped or conflicting qualifiers (XYN-002); block on critical/high unsupported claims (XYN-003: max_unsupported critical/high 0); block on a missing required citation on a material claim (XYN-004); unresolved claims warn (treat_unverifiable_as: warn).",
+        "A block-level finding that depends on a model judgement is reported as warn unless model_findings: block. A missing expected claim warns unless missing_expected_claim: block (live answers are reworded run to run).",
+        "Hosted mode holds when more than max_unresolved_ratio (0.5) of material claims the verifier tried stay unresolved.",
+        "New installations are report-only (enforcement: report_only); overrides need the verify-gate:override label from a writer plus a reasoned /verify-override comment."
+      ],
+      "why": "A gate that blocks good changes gets uninstalled, so out of the box only code-confirmed contradictions and dropped conditions on material claims block, and nothing blocks on a low-confidence model judgement (Master Reference §10).",
+      "benchmark": {
+        "dataset": "verify-bench-v1.1 (all published items) + the service test body",
+        "split": "heldout",
+        "method": "code_only",
+        "verdicts_unchanged": {
+          "items": 2041,
+          "changed": 0
+        },
+        "note": "The Gate policy is applied after Verify and is not used by the Verify API or the benchmark; the Verify responses for every item are byte-identical (tests/verify/freshness-nonregression.test.ts)."
+      }
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-10-18",
+      "summary": "A stated total whose own figures add up is no longer reported as a contradiction, one that does not add up is contradicted by code, and invisible characters in an answer no longer change its sentences or numbers.",
+      "what_changed": [
+        "claimComputation (checks.ts): code now recognises three more computations stated inside a claim, each reported pass or fail: a total of two or more figures in the same unit joined by \"and\"/\"plus\", with the cue directly before the total (\"15 days … and 5 days …, for a total of 20 days\"); a difference introduced by a consequence word and followed by more/fewer/less/extra (\"… so the Business plan includes 240,000 more requests\"); and a monthly price over a year (\"$49 per month, so a full year costs $588\"; never when the claim mentions a discount or annual billing). Figures joined by \"or\", mixed units, or a cue elsewhere in the sentence are not read as a computation.",
+        "A wrong stated computation whose operand is in a passage is contradicted by code (R-ARITH-CONTRADICTED, arithmetic_error), as the existing percent, discount and unit-price checks already were.",
+        "finishSupport: a claim figure that is the result of a computation code recomputes from values in the cited evidence (the claim's own stated computation, or the model's arithmetic when the claim carries a computation cue) is derived, not a different value for the same fact: it no longer yields number_mismatch or unsupported_detail. Without a computation cue the conflict stands: model arithmetic cannot explain away \"60 days\" against \"30 days\".",
+        "Segmentation (sentences.ts) treats zero-width characters (U+200B, U+200C, U+200D, U+2060, U+FEFF) as whitespace: \". \\u200bThe\" ends a sentence like \". The\", clause breaks see through them, and sentence ranges are trimmed of them.",
+        "Number and date extraction (numbers.ts, foldSpaces) reads no-break, thin and zero-width spaces as plain spaces one for one, so \"5\\u00a0business days\" is five business days and offsets into the original text are unchanged; multi-word units (business days, calendar days) accept any run of whitespace."
+      ],
+      "why": "The Verify Gate regression corpus (tests/fixtures/gate-corpus, 20 categories) found that every arithmetic control (a total that adds up) was blocked in local mode: \"15 days … and 5 days …, for a total of 20 days\" with its declared source quote came back contradicted (20 days against 15 days), a deterministic false block, while the wrong total (25 days) only warned. In hosted mode the same happened through the model path. The corpus's Unicode-noise check found that a zero-width space after a full stop merged two sentences and that a no-break space detached \"business days\" from its number. Developed against the corpus and the dev split only: the verify-bench v1.1 + v1-alpha dev output (n=1220) is byte-identical before and after (no item states a total or carries these characters), and the 2041-item flag-off response snapshot is unchanged.",
+      "benchmark": {
+        "dataset": "verify-bench-v1.1",
+        "split": "heldout",
+        "method": "code_only",
+        "before": {
+          "false_supported_rate": {
+            "k": 2,
+            "n": 612,
+            "lo": 0.0009,
+            "hi": 0.0118
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 308,
+            "lo": 0.0018,
+            "hi": 0.0234
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "supported_recall": {
+            "k": 141,
+            "n": 208,
+            "lo": 0.6117,
+            "hi": 0.7377
+          },
+          "contradiction_detection": {
+            "k": 265,
+            "n": 282,
+            "lo": 0.9056,
+            "hi": 0.962
+          },
+          "abstention_rate": {
+            "k": 263,
+            "n": 820,
+            "lo": 0.2897,
+            "hi": 0.3535
+          }
+        },
+        "after": {
+          "false_supported_rate": {
+            "k": 2,
+            "n": 612,
+            "lo": 0.0009,
+            "hi": 0.0118
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 308,
+            "lo": 0.0018,
+            "hi": 0.0234
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "supported_recall": {
+            "k": 141,
+            "n": 208,
+            "lo": 0.6117,
+            "hi": 0.7377
+          },
+          "contradiction_detection": {
+            "k": 265,
+            "n": 282,
+            "lo": 0.9056,
+            "hi": 0.962
+          },
+          "abstention_rate": {
+            "k": 263,
+            "n": 820,
+            "lo": 0.2897,
+            "hi": 0.3535
+          }
+        },
+        "results_before": "packages/verify-bench/results/2026-10-18-v1.1-code-only-rules-1.2.0.json",
+        "note": "Single held-out run after freezing (commit fedc365). Identical numbers: the held-out items state no totals, differences or monthly-over-a-year figures and carry no zero-width or no-break spaces, so the 1.3.0 changes do not reach them; they are covered by the Gate regression corpus and rules-1.3.test.ts. Model-based methods have not yet been run on this benchmark (provider credit). 95% Wilson intervals.",
+        "results_after": "packages/verify-bench/results/2026-10-18-v1.1-code-only-rules-1.3.0.json"
+      }
+    },
+    {
+      "version": "0.2.0",
+      "track": "gate_policy",
+      "date": "2026-10-18",
+      "summary": "Two Gate findings no longer claim more than the check established, and the policy track now covers the case evaluator.",
+      "what_changed": [
+        "Excessive-unresolved hold (XYN-006): counts only claims the hosted verifier tried and could not decide. A claim it classified (comparative, out_of_scope, conflicting_sources) is an XYN-005 warning, not a check that could not complete; a one-sentence answer with an industry comparison no longer holds the pull request.",
+        "Wrong citation (XYN-004): raised only for a decided claim (supported, contradicted or unsupported), and deterministic only when that decision was. A claim code could not settle no longer blocks as 'cites a passage that does not support it' (unknown), and a model-decided one warns unless model_findings: block. A missing required citation is still read off the answer and still blocks.",
+        "Case evaluator (evaluate.ts): when hosted mode sends an expected claim's sentence to the engine and the engine splits it into clauses, every clause is kept as a claim of that expected claim. Before, only the first clause was kept, so a wrong second clause (\"…, so the Business plan includes 225,000 more requests\") was dropped and the case could pass.",
+        "evaluate.ts and claims.ts join defaults.ts and policy.ts in the gate_policy manifest: they decide which claims the policy sees."
+      ],
+      "why": "Found by the Verify Gate regression corpus: two external-comparison fixtures held instead of warning, a correctly cited claim code could not settle blocked as a wrong citation, and the hosted arithmetic fixture passed a wrong difference because its clause was dropped. Precision first: nothing blocks on a finding the check did not establish.",
+      "benchmark": {
+        "dataset": "verify-bench-v1.1 (all published items) + the service test body",
+        "split": "heldout",
+        "method": "code_only",
+        "verdicts_unchanged": {
+          "items": 2041,
+          "changed": 0
+        },
+        "note": "The Gate policy is applied after Verify and is not used by the Verify API or the benchmark; the Verify responses for every item are byte-identical (tests/verify/freshness-nonregression.test.ts). Gate decisions are covered by the regression corpus (tests/verify/gate-corpus.test.ts, 227 tests)."
+      }
+    },
+    {
+      "version": "2.0.0",
+      "date": "2026-10-18",
+      "summary": "A claim extracted as a fragment of an answer clause is no longer flagged for dropping a condition that the answer clause itself states.",
+      "what_changed": [
+        "engine.ts (answer-clause check): when a claim is unsupported for a dropped qualifier, and every dropped qualifier is stated in the clause of the answer the claim sits in (clauseContext, so a condition in another clause of the answer does not count), the claim is a fragment split off by extraction, and the answer clause is decided instead, through the same pipeline (code first, then the model path when one is configured). The result carries rule_id R-ANSWER-CLAUSE:<rule> and a check naming the condition the clause states.",
+        "Major under this file's policy: it can flip a claim from unsupported to supported, so it can release an answer an earlier version held back. A condition absent from the answer clause is still flagged, unchanged.",
+        "1.1.0, 1.2.0 and 1.3.0 were never released; under our versioning policy they would have been major versions, and they are folded into 2.0.0."
+      ],
+      "why": "The production smoke check on 2026-10-18 (the /verify demo) flagged \"Approved refunds are returned to the original payment method.\" for dropping \"within 5–10 business days\": the extractor had returned that fragment beside the full sentence, which the answer states with the window. On the dev split only (verify-bench v1.1 dev + v1-alpha dev, n=1220) the same pattern appears with code's own clause split: 2 of 218 qualifier-loss claims, both on gold-supported items (a split at \", and\" inside a parenthesis, and at \", but no later than\" after a leading condition). Dev before → after: supported recall 208/304 = 68.4% [63.0–73.4] → 210/304 = 69.1% [63.7–74.0]; false-supported 1/916, qualifier-loss detection 225/226, contradiction detection 389/429 and abstention 405/1220 unchanged. Regression fixture: packages/verify-core/test/fragment-answer-context.test.ts (the production case, plus a condition in another clause and a condition absent from the answer, both still flagged).",
+      "benchmark": {
+        "dataset": "verify-bench-v1.1",
+        "split": "heldout",
+        "method": "code_only",
+        "before": {
+          "false_supported_rate": {
+            "k": 2,
+            "n": 612,
+            "lo": 0.0009,
+            "hi": 0.0118
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 308,
+            "lo": 0.0018,
+            "hi": 0.0234
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "supported_recall": {
+            "k": 141,
+            "n": 208,
+            "lo": 0.6117,
+            "hi": 0.7377
+          },
+          "contradiction_detection": {
+            "k": 265,
+            "n": 282,
+            "lo": 0.9056,
+            "hi": 0.962
+          },
+          "abstention_rate": {
+            "k": 263,
+            "n": 820,
+            "lo": 0.2897,
+            "hi": 0.3535
+          }
+        },
+        "after": {
+          "false_supported_rate": {
+            "k": 2,
+            "n": 612,
+            "lo": 0.0009,
+            "hi": 0.0118
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 308,
+            "lo": 0.0018,
+            "hi": 0.0234
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "supported_recall": {
+            "k": 143,
+            "n": 208,
+            "lo": 0.6216,
+            "hi": 0.7466
+          },
+          "contradiction_detection": {
+            "k": 265,
+            "n": 282,
+            "lo": 0.9056,
+            "hi": 0.962
+          },
+          "abstention_rate": {
+            "k": 264,
+            "n": 820,
+            "lo": 0.2909,
+            "hi": 0.3547
+          }
+        },
+        "results_before": "packages/verify-bench/results/2026-10-18-v1.1-code-only-rules-1.3.0.json",
+        "note": "Single held-out run after freezing (commit 9e8ffb2). Supported recall 141/208 -> 143/208 and exact verdict accuracy 573/820 -> 575/820; abstention 263/820 -> 264/820 (one fragment claim whose answer clause code cannot settle is now unverifiable instead of a qualifier-loss flag); false-supported, unsupported released, qualifier-loss detection and naming, and contradiction detection unchanged. Model-based methods have not yet been run on this benchmark. 95% Wilson intervals.",
+        "results_after": "packages/verify-bench/results/2026-10-18-v1.1-code-only-rules-2.0.0.json"
+      }
+    },
+    {
+      "version": "2.1.0",
+      "date": "2026-10-19",
+      "summary": "An exception written after the thing it limits is a condition: an answer that stops before \"final-sale items excluded\", \"gift cards not included\", \"clearance items are not eligible\", \"other than X\", \"with the exception of X\" or \"does not apply to X\" drops a condition and is not released.",
+      "what_changed": [
+        "qualifiers.ts: a trailing-exception pass reads a noun phrase of at most seven words, after a comma, semicolon, colon, parenthesis or sentence start, followed by \"excluded\", \"not included\", \"not eligible\" or \"ineligible\", as a condition; \"with the exception of\", \"does not apply to\", \"do not apply to\", \"doesn't apply to\", \"don't apply to\" and \"not applicable to\" join the condition triggers (\"other than\" already was one).",
+        "sentences.ts (clauseContext): a following clause of the same sentence that is an exception (after \";\" or a dash) is part of the context the claim's conditions are read from.",
+        "rules.ts (verbatim qualifiers): an explicit exception in a following sentence that limits this one (\"This does not apply to final-sale items.\") is a dropped condition, no longer an ambiguous one that sends the claim to adjudication.",
+        "Minor under this file's policy: a verdict can only move toward holding (supported or unverifiable to unsupported); nothing that was held is released. Checked on every benchmark item after the run: 0 of 2,040 predictions changed in either direction.",
+        "Fixtures: packages/verify-core/test/rules-2.1.test.ts (the production final-sale case, each form, the forward forms, and controls: the restated exception, an unrelated next sentence, a long clause). rules-next RN-002 released; RN-001 stays a pinned fixture with no rule change."
+      ],
+      "why": "RN-002 (found 2026-10-18 preparing the homepage demo): \"within 30 days of delivery, final-sale items excluded\" was not recognised, so an answer that left the exclusion out was supported verbatim and released, by code and by the production pipeline. Developed on the dev split only (verify-bench v1.1 dev + v1-alpha dev, n=1220): dev before = after on every metric (false-supported 1/916, supported recall 210/304, qualifier-loss detection 225/226, contradiction detection 389/429, abstention 405/1220), 0 of 1,220 dev predictions changed; the benchmark has no item where a trailing exception decides the verdict, so the rule is carried by the new fixtures. Disclosure: before the freeze, the source-freshness non-regression test (which hashes every benchmark response, held-out included, without scoring) was run once and showed that some responses changed; no held-out score was computed before the freeze. Re-recorded snapshot: 6 of 2,041 response bodies changed (new condition rows; no verdict changed).",
+      "benchmark": {
+        "dataset": "verify-bench-v1.1",
+        "split": "heldout",
+        "method": "code_only",
+        "before": {
+          "false_supported_rate": {
+            "k": 2,
+            "n": 612,
+            "lo": 0.0009,
+            "hi": 0.0118
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 308,
+            "lo": 0.0018,
+            "hi": 0.0234
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "supported_recall": {
+            "k": 143,
+            "n": 208,
+            "lo": 0.6216,
+            "hi": 0.7466
+          },
+          "contradiction_detection": {
+            "k": 265,
+            "n": 282,
+            "lo": 0.9056,
+            "hi": 0.962
+          },
+          "abstention_rate": {
+            "k": 264,
+            "n": 820,
+            "lo": 0.2909,
+            "hi": 0.3547
+          }
+        },
+        "after": {
+          "false_supported_rate": {
+            "k": 2,
+            "n": 612,
+            "lo": 0.0009,
+            "hi": 0.0118
+          },
+          "unsupported_release_rate": {
+            "k": 2,
+            "n": 308,
+            "lo": 0.0018,
+            "hi": 0.0234
+          },
+          "qualifier_loss_detection": {
+            "k": 152,
+            "n": 154,
+            "lo": 0.9539,
+            "hi": 0.9964
+          },
+          "qualifier_loss_named": {
+            "k": 145,
+            "n": 154,
+            "lo": 0.8927,
+            "hi": 0.969
+          },
+          "supported_recall": {
+            "k": 143,
+            "n": 208,
+            "lo": 0.6216,
+            "hi": 0.7466
+          },
+          "contradiction_detection": {
+            "k": 265,
+            "n": 282,
+            "lo": 0.9056,
+            "hi": 0.962
+          },
+          "abstention_rate": {
+            "k": 264,
+            "n": 820,
+            "lo": 0.2909,
+            "hi": 0.3547
+          }
+        },
+        "note": "Single held-out run after freezing (commit b9eed1c). Every held-out metric is unchanged from 2.0.0, and 0 of 2,040 predictions changed: the benchmark has no trailing-exception item that decides a verdict. Model-based methods have not yet been run on this benchmark. 95% Wilson intervals."
+      }
+    }
+  ]
+}

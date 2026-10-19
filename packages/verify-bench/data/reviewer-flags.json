@@ -1,0 +1,254 @@
+[
+  {
+    "shard": 4,
+    "id": "s4-f6-ql-date-range",
+    "kind": "ambiguous",
+    "reason": "The dropped date window may not be what makes this answer wrong. The answer says 'Employees may finish work at 1 pm on Fridays without using annual leave.' S1 says 'Most office-based roles at Tamberlyn are part of the flexi-time scheme' and Friday core hours are '10 am to 12 noon on Fridays' within a 7:30 am to 7 pm bandwidth, so flexi staff can finish at 1 pm on any Friday without using annual leave. S2 says that outside the window an early finish 'must be covered by annual leave or flexi-time in the usual way', which names flexi-time as an alternative to annual leave. So the gold target_claim ('Year-round, employees may finish work at 1 pm on Fridays without using annual leave') is actually true for most office staff all year. It is false only for rota staff ('Neighbourhood officers, repairs operatives and contact centre staff ... are not part of the flexi-time scheme'). Annotators could label this supported, unsupported for scope (not date range), or contradicted."
+  },
+  {
+    "shard": 4,
+    "id": "s4-f4-ql-condition",
+    "kind": "ambiguous",
+    "reason": "Two problems. First, the dropped qualifier may not be material. The question asks 'What mileage rate does Sorrelwick pay', and the answer gives the rate and start date correctly ('52 pence per mile from 1 April 2026'). The dropped 'provided the journey is recorded in the mileage log within 30 days of travel' is a claims-filing deadline, not part of the rate, so many annotators would call the answer supported. Second, annotators who do treat it as material could choose contradicted over unsupported, because S3 explicitly says 'Journeys recorded after that deadline are not reimbursed.' The gold target_claim also adds 'whenever it is logged', which the answer does not say."
+  },
+  {
+    "shard": 4,
+    "id": "s4-f5-ql-scope",
+    "kind": "ambiguous",
+    "reason": "The evidence explicitly excludes the groups that the unscoped claim covers. The answer 'Individual contributors have an annual learning budget of EUR 1,500' replies to a company-wide question, and S1 says of all other divisions: 'They are not individual allowances.' CONSTRUCTION.md's own wrong_scope rule says to 'use contradicted only if the evidence explicitly excludes the claimed group'. Under that rule a careful annotator could label this contradicted rather than unsupported/qualifier_loss, and the gold target_claim ('in every Halcyra division') is explicitly negated by S1."
+  },
+  {
+    "shard": 4,
+    "id": "s4-f1-ql-condition",
+    "kind": "ambiguous",
+    "reason": "This could be contradicted rather than unsupported. The answer 'Primary caregivers receive 18 weeks of parental leave at full base pay' drops the 26-week condition. The second gold span says explicitly that employees under 26 weeks are 'not [entitled] to the enhanced company pay described in this section', so the gold target_claim ('All primary caregivers, regardless of length of service ...') is directly negated. By the wrong_scope precedent ('contradicted ... if the evidence explicitly excludes the claimed group'), annotators could reasonably choose contradicted."
+  },
+  {
+    "shard": 4,
+    "id": "s4-f3-ql-date-range",
+    "kind": "ambiguous",
+    "reason": "The answer 'Employees may work from a location outside their home country for up to 15 working days' can be read three ways. Read as 'there is an allowance of up to 15 days', it is literally true, so supported. Read as a year-round limit, it is unsupported. Annotators could also say contradicted, because S1 says explicitly 'Outside that window, working from abroad is limited to 5 working days per calendar year and needs written approval from your director', which directly negates the gold target_claim ('At any time of year ... up to 15 working days'). On an annual reading the true total is 15 + 5 = 20 days, not 15."
+  },
+  {
+    "shard": 4,
+    "id": "s4-f4-unver-out-of-scope",
+    "kind": "ambiguous",
+    "reason": "S3 partly addresses the claim that the 52p rate 'fully covers what it actually costs colleagues to run their cars on business journeys'. It says business use requires suitable insurance and 'Sorrelwick does not reimburse the extra cost of business-use cover'. An annotator could treat that as an explicit unreimbursed cost of running the car on business and label the claim contradicted, not unverifiable. The opposite reading is that the per-mile rate is meant to absorb such costs. This is a weaker flag than the qualifier-loss ones."
+  },
+  {
+    "shard": 4,
+    "id": "s4-f4-sup-second",
+    "kind": "construction_defect",
+    "reason": "The item is subcategorised supported/verbatim, but the answer is a restructured paraphrase, not a copied clause. The answer reads 'Drivers can add 5 pence per mile for each colleague they carry who is also travelling on business', while the source reads 'If you carry a colleague who is also travelling on business, you can add 5 pence per mile for each passenger.' It also widens 'you' (a colleague using their own vehicle, as S3 is scoped) to 'Drivers'. The supported verdict is fine, but it is counted in the verbatim bucket, which skews per-subcategory scores."
+  },
+  {
+    "shard": 3,
+    "id": "s3-a7",
+    "kind": "ambiguous",
+    "reason": "The gold label is multi_hop / unsupported, but annotators could reasonably differ. S3 gives Arc Plus 'a built-in humidity sensor'. S1 says Dry Air alerts 'are available on Tessaline thermostats that have a built-in humidity sensor and are running software version 5.5 or later'. The answer uses the capability modal: 'Arc Plus thermostats CAN send Dry Air alerts'. On that reading S1+S3 jointly entail the claim, because the model meets the hardware requirement and the version is a software state the device can reach, so some annotators will say supported. Even where unsupported is right, the gap is a dropped condition ('running software version 5.5 or later'), not an unstated bridging assumption about the world. That makes this a qualifier_loss item rather than multi_hop, which conflicts with the contract's definition of multi_hop ('the passages do not jointly entail it')."
+  },
+  {
+    "shard": 3,
+    "id": "s3-f6-ql-date-range",
+    "kind": "ambiguous",
+    "reason": "The gold label is unsupported (qualifier_loss), but S2 frames the change as a migration that keeps the rest of the history: 'We are moving alarm history to a new storage system so that the History tab loads faster and can be searched.' Only events 'recorded between 1 January 2023 and 31 May 2024' are deleted. The answer 'All alarm events will be permanently deleted on 1 December 2026' is universally quantified, so events after 31 May 2024 surviving the move would make it false. A careful annotator could label it contradicted rather than merely unsupported. Dropping this qualifier does more than remove support: it conflicts with the passage's implied retention of the other events."
+  },
+  {
+    "shard": 3,
+    "id": "s3-f2-unver-out-of-scope",
+    "kind": "ambiguous",
+    "reason": "The gold label is unverifiable / out_of_scope, but the passages give evidence against the absolute claim 'Requiring two-step verification will stop anyone from gaining unauthorised access to your Vista Doorbell footage'. S3 says 'Shared users sign in with their own Corvane accounts. Their security settings are separate from yours, and turning on two-step verification for your account does not change how they sign in'. S1 says shared users 'can watch live video, view recorded clips'. S3 also says the requirement covers only 'account owners who have invited shared users'. The passages therefore describe an access path to the footage that the requirement does not cover, and an annotator could label the claim contradicted, or unsupported, instead of unverifiable."
+  },
+  {
+    "shard": 2,
+    "id": "s2-f4-unver-out-of-scope",
+    "kind": "ambiguous",
+    "reason": "The gold is unverifiable/out_of_scope because the claim is a judgement. But the answer, \"Turning on extended retries is the best way for a small merchant to make sure no payment events are ever missed\", also makes a factual guarantee (\"make sure no payment events are ever missed\"), and S2 speaks to that directly. S2 says extended retries run only \"for up to 72 hours\", apply only \"From 1 December 2026\", and that \"Events that occurred while the endpoint was disabled are not redelivered automatically, but you can replay them from the event log\". S1 adds that the event log keeps events for only 30 days. A careful annotator could therefore label this contradicted, since the evidence shows extended retries cannot guarantee that no events are missed and that replay is a separate recovery path. Another could label it unsupported. The \"best way\" judgement would then be secondary rather than the deciding claim."
+  },
+  {
+    "shard": 2,
+    "id": "s2-a10",
+    "kind": "ambiguous",
+    "reason": "Gold is unsupported/multi_hop, and that is defensible. The passages, however, go beyond failing to bridge the claim: they give a reason it is false in the default case. The answer says \"Requests sent with the Kestrelline Node.js SDK 6.x will be rejected with HTTP 410 once version 2025-02 is retired\". S3 says \"The SDK sends a Kestrelline-Version header only when you set the apiVersion option on the client.\" S2 limits the 410 rule to \"requests that name it\", and says \"Requests without the header use the version that was pinned to your account\". So by default, SDK 6.x requests do not name 2025-02 and fall outside the stated 410 rule. Some annotators would read the blanket claim as contradicted rather than merely unsupported. A human should confirm that unsupported is the intended label."
+  },
+  {
+    "shard": 8,
+    "id": "s8-f2-ql-scope",
+    "kind": "ambiguous",
+    "reason": "Gold is unsupported/qualifier_loss, but S3's Europe section says 'The Classic fare includes one checked bag'. That is nearly the same sentence as the answer 'The Classic fare includes two checked bags.' with a different number, and the question 'How many checked bags does Halvard Air's Classic fare include?' sets no route. A careful annotator could reasonably label this contradicted (number_mismatch). The author's own second gold span is that conflicting sentence."
+  },
+  {
+    "shard": 8,
+    "id": "s8-f3-ql-date-range",
+    "kind": "ambiguous",
+    "reason": "The answer 'Verified users can send up to $5,000 per day to other Pocketlark users' gives no date window. S1 explicitly sets the standing verified limit at a different value: 'can send up to $2,500 per day ... to other Pocketlark users'. S1 was also retrieved on 2026-10-01, outside the 1 Dec to 15 Jan window, so annotators could label this contradicted (number_mismatch) rather than unsupported. The second gold span is the $2,500 sentence, which points to contradiction."
+  },
+  {
+    "shard": 8,
+    "id": "s8-f4-ql-condition",
+    "kind": "ambiguous",
+    "reason": "The answer 'For tickets issued on or after 1 March 2026, Standard fares can be changed with no change fee.' has three defensible labels. Read existentially ('can' be changed fee-free, which is true when done at least 14 days ahead), it is supported. Read as fee-free at any time, S2's 'Changes made less than 14 days before the original departure cost USD 50 per passenger per direction' contradicts it. The gold label is unsupported. The author put the USD 50 sentence in gold_spans, which reads as contradiction evidence."
+  },
+  {
+    "shard": 8,
+    "id": "s8-f6-ql-date-range",
+    "kind": "ambiguous",
+    "reason": "Without the dates, 'If you are booked to fly to or from Port Ellery, you can cancel your booking and receive a full refund' is jointly contradicted for most fares. S1 says 'outside these dates ... the standard fare rules apply', and S2 says 'Saver fares are non-refundable' and Plus cancellations get only travel credit. So annotators could label it contradicted. For Flexi it is true ('Flexi fares are fully refundable to the original form of payment'), so others might call it partly supported. Gold is unsupported. The decisive S2 sentence is also missing from gold_spans, although the construction note relies on it ('Saver non-refundable')."
+  },
+  {
+    "shard": 8,
+    "id": "s8-f5-ql-scope",
+    "kind": "ambiguous",
+    "reason": "The answer 'The fee is 0.45% for transfers received in euros.' is true for personal accounts and false for business accounts: S2 says 'For business accounts, the fee is 0.35% for euros'. The question 'What fee does Tidewell charge on transfers received in euros?' sets no account type, so an annotator could label it contradicted (a wrong value for business accounts) rather than unsupported. This is a weaker case than f2/f3, but annotators could still disagree."
+  },
+  {
+    "shard": 8,
+    "id": "s8-f5-unver-comparative",
+    "kind": "ambiguous",
+    "reason": "The answer has two checkable claims. 'Tidewell\u2019s 0.45% fee on euro transfers' states the fee without the 'For personal accounts' scope, and S2 gives business accounts 0.35%. The shard's own s8-f5-ql-scope labels that exact unscoped claim unsupported. The second claim, 'lower than what high-street banks typically charge', is the comparative part. An annotator could label the item unsupported for the embedded fee claim instead of unverifiable. This breaks the 'exactly one checkable claim' rule."
+  },
+  {
+    "shard": 8,
+    "id": "s8-a9",
+    "kind": "ambiguous",
+    "reason": "Gold is unsupported/scope_mismatch on the grounds that no passage 'explicitly excludes' UK bookings. But S1 opens with 'This policy applies to bookings made on the Wrenfield Airways United States website or through our US reservations line.' and is titled '24-hour cancellation for US bookings'. S2 also treats the 'United Kingdom website' as a separate channel. Many annotators would read that applicability sentence as an explicit restriction that excludes UK-website bookings, and so label the claim contradicted."
+  },
+  {
+    "shard": 5,
+    "id": "s5-f4-ql-condition",
+    "kind": "ambiguous",
+    "reason": "The question is 'Does the Silvermarsh Standard Plan cover home health aide visits?' and the answer is 'The Standard Plan covers home health aide visits.' Read as a statement that the benefit exists, this is literally what S2 says, so some annotators would label it supported. The supported base claim also leaves out an equally binding condition, 'Silvermarsh must approve it before the first visit', along with the 60-visit limit and the 20% coinsurance, so where the line between supported and qualifier_loss falls is inconsistent. A third reading is possible too: gold target_claim is 'covers home health aide visits without any homebound certification requirement', which S2 directly negates ('Without that certification, home health aide visits are not covered'). Under that reading the label would be contradicted, not unsupported. So annotators could pick any of three labels."
+  },
+  {
+    "shard": 5,
+    "id": "s5-f5-ql-scope",
+    "kind": "ambiguous",
+    "reason": "The answer 'The plan covers 2 routine cleanings and exams per plan year at no cost.' has two competing readings. (a) Contradicted: gold target_claim says 'for all members, regardless of age', and S1 explicitly excludes adults ('Adult dental care is not part of the Horizon HMO; members age 19 and older who want dental coverage can buy the separate Thistlegate Dental Plus policy'). CONSTRUCTION.md's own wrong_scope rule says to use contradicted when 'the evidence explicitly excludes the claimed group'. (b) Supported: S1 frames the whole dental benefit as pediatric ('includes dental and vision benefits for children'), so 'the plan covers 2 cleanings' accurately describes the plan's only dental cleaning benefit. The gold label, unsupported/qualifier_loss, sits between two rules in the contract that conflict here."
+  },
+  {
+    "shard": 5,
+    "id": "s5-f2-ql-scope",
+    "kind": "ambiguous",
+    "reason": "The answer is 'Employees can enroll, change plans, or add dependents from November 2 through November 20, 2026.' Gold target_claim is 'All Corvane Workplace PPO employees, not only full-time employees, can enroll...'. S3 explicitly gives part-time employees a different window ('Benefit-eligible part-time employees have a separate window that runs from October 12 through October 30, 2026') and says 'Outside your open enrollment window, you can change elections only after a qualifying life event'. That rules out the November window for part-timers, which points to contradicted under the explicit-exclusion rule. Read as a generic statement ('employees can enroll' in that window), others might call it supported. The label depends on how the bare plural 'Employees' is read."
+  },
+  {
+    "shard": 5,
+    "id": "s5-f1-ql-condition",
+    "kind": "construction_defect",
+    "reason": "gold.target_claim does not match the verdict. It restates the answer as 'specialist visits cost $65 per visit regardless of whether a referral is on file', but the gold span says 'Without a referral on file, specialist visits are covered at 50% coinsurance after the deductible.' That span directly contradicts the target_claim as written. Either the target_claim should be the bare answer with no stated condition, or an annotator scoring against the target_claim would say contradicted rather than unsupported."
+  },
+  {
+    "shard": 5,
+    "id": "s5-f3-ql-date-range",
+    "kind": "construction_defect",
+    "reason": "gold.target_claim does not match the verdict. It restates the answer as 'Bronze 7000 members pay $0 per virtual visit at any time in the plan year', but the gold span itself says 'after which the copay becomes $45 per virtual visit for the rest of the plan year'. That span explicitly contradicts the target_claim as written. The target_claim should restate the bare undated answer if the label is to be unsupported/qualifier_loss."
+  },
+  {
+    "shard": 5,
+    "id": "s5-f6-ql-date-range",
+    "kind": "construction_defect",
+    "reason": "gold.target_claim does not match the verdict. It restates the answer as coverage beginning January 1, 2027 'whenever they enroll', but the second gold span says 'If you enroll between December 16, 2026 and January 15, 2027, your coverage begins on February 1, 2027.' That span explicitly contradicts the target_claim as written. A contradicted target is paired with an unsupported verdict. The target_claim should be the bare answer without 'whenever they enroll'."
+  },
+  {
+    "shard": 1,
+    "id": "s1-f3-ql-date-range",
+    "kind": "ambiguous",
+    "reason": "The question already scopes the answer to the offer: \"What do workspaces get under the Pallister Docs autumn upgrade offer?\" S3 defines that offer as running \"From 1 October to 30 November 2026\". Read as a reply to that question, \"Workspaces that upgrade to the annual Business plan receive 3 additional months free\" means \"under the autumn offer, Business upgrades get 3 free months\", which S3 supports. So the dropped qualifier \"between 1 October and 30 November 2026\" is arguably not material here. The gold target_claim adds \"at any time\", which the answer does not say. Annotators who take the question into account would likely label this supported, not unsupported."
+  },
+  {
+    "shard": 1,
+    "id": "s1-f2-ql-scope",
+    "kind": "ambiguous",
+    "reason": "S1 says other countries are explicitly on a different pricing track: \"Workspaces with a billing address in any other country are on regional pricing, which is being reviewed separately and is not covered by this notice.\" A reviewer may therefore read the unscoped \"From 1 March 2026, the Team plan costs $22 per seat per month\" as contradicted for those workspaces, not just unsupported. This is the same unsupported-vs-contradicted split the author flagged on s1-f4-ql-condition and s1-f6-ql-date-range, but this item was not flagged. Release is revise either way."
+  },
+  {
+    "shard": 1,
+    "id": "s1-f5-ql-scope",
+    "kind": "ambiguous",
+    "reason": "The dropped qualifier \"On the Team plan\" may not be material. The question asks generically \"How much does extra backup storage cost on Halvanta Backup?\" The only extra-storage pricing in any passage is Team's: S3 is titled \"Buying extra storage on the Team plan\". Personal has \"unlimited backup storage\" (S2), so add-on blocks do not apply to it, and Business is \"priced by quote\". A lenient annotator may accept the answer as a correct response to the question. A strict one reads it as covering Business (the gold target_claim says \"on any plan\", which the answer does not literally say). Reasonable annotators could split between supported and unsupported."
+  },
+  {
+    "shard": 1,
+    "id": "s1-a4",
+    "kind": "ambiguous",
+    "reason": "The passages arguably entail the claim together without an unstated bridge. S1: Studios are created by \"Organisations on the Growth plan\", each has \"its own booking page, staff calendars\", and each is \"billed on the parent organisation's monthly invoice, with its calendars listed as a separate line\". S2: \"The Growth plan includes the Payments add-on at no extra charge for every staff calendar in the workspace\". The only gap is whether a Studio's calendars count as \"in the workspace\", and many annotators would take that as given for a sub-account of the Growth organisation, which gives supported. Others may read \"Add-ons are switched on separately for each Studio\" as a hint that Studios are handled separately, which gives unsupported or even contradicted. The gold unsupported/multi_hop label is open to dispute."
+  },
+  {
+    "shard": 1,
+    "id": "s1-a3",
+    "kind": "ambiguous",
+    "reason": "S2 is the dedicated \"Nonprofit discount\" page. It opens \"Saltmere Helpdesk offers a discount to eligible nonprofit organisations\" and gives one eligibility rule: \"Registered charities in the United Kingdom and Ireland receive 40% off the Growth plan\". Many annotators would read that as the complete eligibility list and label \"Registered charities in Canada receive 40% off\" as contradicted, not unsupported. The contract's tie-break (contradicted only if explicitly excluded) favours the gold label, but disagreement is likely. Release is revise either way."
+  },
+  {
+    "shard": 1,
+    "id": "s1-a10",
+    "kind": "construction_defect",
+    "reason": "The recorded planted_change is {\"from\": \"Tessaline Cloud refunds\", \"to\": \"Arbourline Marketplace refunds\"}, but the answer also differs from the S2 source sentence in other ways. It drops \"the full amount paid for\", changes \"the original purchase date\" to \"purchase\", and deletes the condition \"provided the workspace has used less than 50 GB of outbound data transfer during that period\". The \"fact correct for entity A\" is therefore itself a qualifier-loss version of A's policy, so the item mixes an entity swap with qualifier loss. The gold label contradicted still holds, because S1 says Arbourline refunds \"only if the cancellation is made within 14 days of purchase\"."
+  },
+  {
+    "shard": 7,
+    "id": "s7-f5-con-number",
+    "kind": "ambiguous",
+    "reason": "The planted change loosens an upper bound, so the answer is still logically entailed. S2 says Orrinvale 'will notify the merchant of a confirmed security incident affecting their data within 24 hours'. Notifying within 24 hours also means notifying 'within 48 hours'. A strict-entailment annotator could label the answer supported, or at least not contradicted. Others would call it contradicted because it misstates the 24-hour SLA. The planted value should be one the evidence actually rules out, such as 'within 12 hours'. Changing the frame to an exact time point would also work."
+  },
+  {
+    "shard": 7,
+    "id": "s7-f6-con-date",
+    "kind": "ambiguous",
+    "reason": "Same upper-bound problem as s7-f5-con-number. S3 says 'By 31 July 2026, Halvicor will write to every policyholder...'. The answer says 'By 31 August 2026', a later deadline that the source entails: anyone written to by 31 July has also been written to by 31 August. The answer is less informative but not false given the evidence, so annotators could split between contradicted and supported. A date before 31 July, such as 'By 30 June 2026', would make the contradiction unambiguous."
+  },
+  {
+    "shard": 7,
+    "id": "s7-f5-sup-second",
+    "kind": "ambiguous",
+    "reason": "The answer widens the scope of the source sentence. S2 says suspected incidents 'are not covered by the commitments on this page'. The answer says 'not covered by Orrinvale's incident notification commitments', which covers all of them. The same page says 'Notification timelines for merchants on other contracts are set out in the Orrinvale Merchant Agreement' and that it 'should be read alongside the merchant's own contract'. Neither document is supplied. So the passages do not show that no Orrinvale commitment covers suspected incidents, and a careful annotator could label it unsupported. The item is also tagged supported/verbatim although the wording was changed."
+  },
+  {
+    "shard": 7,
+    "id": "s7-a12",
+    "kind": "ambiguous",
+    "reason": "S1 states a general retention rule that covers non-Irish customers, so the claim is arguably addressed, not just unscoped. S1 says 'While a subscription is active, Tessaline People Cloud keeps employee and payroll data for as long as the customer keeps it in the platform. The customer ... decides how long it should be kept.' It presents the Ireland 6-year rule as an exception that applies 'even if a shorter deletion rule has been set, because local payroll rules require it'. On that reading, Netherlands payslips follow the customer's own deletion rule, which conflicts with a fixed 6-year retention. That would make the label contradicted. Others will apply the 'not explicitly excluded' rule and say unsupported. Annotators could reasonably split."
+  },
+  {
+    "shard": 7,
+    "id": "s7-a3",
+    "kind": "ambiguous",
+    "reason": "The gold label depends on the on-device rule applying only to EU customers, but the next sentence in the same paragraph has no scope: 'When you sign in, the app asks your phone to confirm that the face or fingerprint matches, and Telvanor receives only a yes or no answer.' The page opens with 'This page explains how your biometric data is handled.' An annotator could read that sentence as describing how sign-in works for every customer. That reading implies fingerprint templates never reach Telvanor's servers, which would support the Swiss claim. The opposite reading keeps the gold label of unsupported/scope_mismatch. The construction would be cleaner if that sentence were explicitly scoped to the EU, or if only the EU sentence mentioned the mechanism."
+  },
+  {
+    "shard": 6,
+    "id": "s6-a6",
+    "kind": "ambiguous",
+    "reason": "Gold is unsupported/scope_mismatch on the grounds that one-time purchases are 'a group no passage addresses or explicitly excludes'. But S2 does more than stay silent about one-time buyers. It defines the benefit only as 'Autoship subscribers can return an opened bag...', and the only way it gives to claim it is 'To use the promise, open the Autoship order in your account and choose Picky Eater Return'. A one-time order is not an Autoship order, so it cannot go through that procedure. A careful annotator could read this as an exclusion of one-time purchases in practice and label the claim contradicted. Under the wrong_scope rule, contradicted is allowed 'only if the evidence explicitly excludes the claimed group', and whether a required claim procedure counts as explicit exclusion is exactly the point annotators could split on. Either a human should decide, or the passage should be rewritten so that one-time buyers are either clearly excluded or clearly not covered either way."
+  },
+  {
+    "shard": 10,
+    "id": "q10-f12-ql-date-range",
+    "kind": "ambiguous",
+    "reason": "S3 does not state hours outside the window, so gold 'unsupported' is defensible. But the passage presents the 1 p.m. close as a seasonal exception: \"Summer Fridays give everyone at Quillfen time to enjoy the long evenings while the weather is good.\" It also says \"The studio buildings are locked from 1.30 p.m. on these Fridays\" (\"these\" Fridays, not all Fridays), and \"Anyone who works a Friday afternoon during the period can take the same number of hours off on another day\". From that, a careful annotator could argue that the year-round answer \"Quillfen studios close at 1 p.m. on Fridays.\" is contradicted, not just unsupported. That reading is stronger because the passage was retrieved on 2026-10-12, outside the 2027 window. Consider rewording the seasonal framing, or mark this item for human review."
+  },
+  {
+    "shard": 12,
+    "id": "q12-f9-ql-date-range",
+    "kind": "ambiguous",
+    "reason": "Annotators could reasonably split between supported and unsupported here. The answer \"You can restore deleted photos from the Recently Deleted album.\" uses the possibility modal \"can\" and names the album. Dropping a restriction from a \"can\" claim leaves a weaker claim that still follows from the source, which is S3: \"You can restore deleted photos from the Recently Deleted album during the first 30 days after you delete them.\" S3 also gives the mechanism: \"To restore a photo, open Albums > Recently Deleted, select the photo and tap Restore.\" The answer never says there is no time limit. That idea appears only in gold.target_claim (\"with no time limit\"), not in the answer under test. Naming the Recently Deleted album also suggests a temporary holding area, so a careful annotator could call this supported but incomplete. The 30-day window only matters on an \"at any time\" reading. q12-f3 and q12-f12 have the same \"can\" structure, but their answers assert a money benefit for every case (\"once without a change fee\", \"any Tarnwell reservation for a full refund\"). That makes the every-case reading dominant there, so I did not flag them."
+  },
+  {
+    "shard": 12,
+    "id": "q12-f7-ql-scope",
+    "kind": "ambiguous",
+    "reason": "The answer \"Small dogs and cats can travel in the cabin in a soft-sided carrier that fits under the seat in front of you.\" uses the possibility modal \"can\" and has no quantifier over flights. Read as \"small dogs and cats can travel in the cabin on some Merrowind flights\", it follows from S1: \"On domestic flights, small dogs and cats can travel in the cabin in a soft-sided carrier that fits under the seat in front of you.\" On that reading an annotator could label it supported but incomplete. On the every-flight reading it is unsupported, as gold says. The scope is material, because S3 shows Merrowind flies internationally: \"For international flights, check-in closes 60 minutes before departure.\" No passage says pets are barred on international flights, so contradicted is not defensible. The disagreement is between supported and unsupported. This is less clear-cut than f9, but the answer has no universal word like \"any\" or \"every\" to force the every-flight reading."
+  },
+  {
+    "shard": 9,
+    "id": "q9-f9-ql-date-range",
+    "kind": "ambiguous",
+    "reason": "The window is an absolute date in the future relative to the evidence. S1 (retrieved_at \"2026-10-05\") says \"Between 1 February and 31 March 2027, Ostrevia CRM discounts the first year of any new annual subscription by 25%.\" The QL answer, \"Ostrevia CRM discounts the first year of any new annual subscription by 25%.\", is in the present tense. It replies to \"Is there a discount on Ostrevia CRM annual subscriptions?\", which asks about the current state. Read as a statement about the evidence's own time (October 2026), the answer attaches the discount to a period the evidence places in the future. CONSTRUCTION.md's own wrong_date rule (\"a correct fact attached to the wrong date or period, where the evidence states the date\" -> contradicted, date_mismatch) therefore makes contradicted/date_mismatch a defensible label. The author's note also relies on this point: \"S1 was retrieved on 2026-10-05, before the window\". My own label stays unsupported/qualifier_loss, because no passage says outright that there is no discount outside the window. Annotators could still split between qualifier_loss and wrong_date. The relative-window items f10 and f12 do not have this problem. Side note: the author's summary table lists only 20 of the 24 items and leaves out the 4 qualifier_loss/date_range items (f9-f12)."
+  },
+  {
+    "shard": 9,
+    "id": "q9-f11-ql-date-range",
+    "kind": "ambiguous",
+    "reason": "This has the same absolute future-window problem as f9. S3 (retrieved_at \"2026-10-02\") says \"Between 1 March and 31 August 2027, every response to a request sent to the v2 endpoints of the Corvinth Storage API includes a Deprecation header.\" S3 also shows that v2 is in use now: \"You can call v2 and v3 from the same application with the same access keys\". The QL answer, \"Every response to a request sent to the v2 endpoints of the Corvinth Storage API includes a Deprecation header.\", replies to \"What should I expect when I call the v2 endpoints...\". It is in the present tense, so it reads as describing current v2 behaviour, while the evidence starts the header only in March 2027. Under the wrong_date rule (\"a correct fact attached to the wrong date or period, where the evidence states the date\" -> contradicted), annotators could defensibly pick contradicted/date_mismatch over unsupported/qualifier_loss. No passage says outright that current v2 responses lack the header. Nothing addresses responses after 31 August 2027 either, which is the argument for unsupported. The label is defensible but sits on a category boundary the guide does not settle."
+  }
+]

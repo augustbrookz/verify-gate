@@ -1,0 +1,19 @@
+{
+  "name": "@xyntherium/verify-action",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GitHub Action: fail CI when AI answers in your fixtures are not supported by their sources (Xyntherium Verify).",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augustbrookz/verify-gate.git",
+    "directory": "packages/verify-action"
+  },
+  "homepage": "https://xyntherium.com/developers",
+  "bugs": {
+    "url": "https://github.com/augustbrookz/verify-gate/issues"
+  }
+}

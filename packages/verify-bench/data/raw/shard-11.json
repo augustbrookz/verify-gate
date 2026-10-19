@@ -1,0 +1,1123 @@
+{
+  "shard": 11,
+  "domain": "health_insurance_and_ecommerce",
+  "families": [
+    {
+      "family_id": "q11-f1",
+      "items": [
+        {
+          "id": "q11-f1-sup-verbatim",
+          "family_id": "q11-f1",
+          "domain": "health_insurance_benefits",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Does Quarrybrook Health Plan give members a credit toward their annual deductible?",
+          "answer": "Quarrybrook credits $150 toward your annual deductible if you complete the Wellness Check questionnaire within 60 days of your coverage start date.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Quarrybrook Health Plan - How your deductible works",
+              "retrieved_at": "2026-09-28",
+              "text": "Your deductible is the amount you pay for covered services each plan year before Quarrybrook starts to share the cost. On the Quarrybrook Choice plan, the deductible is $1,800 for an individual and $3,600 for a family. The plan year runs from 1 January to 31 December.\n\nSome services are covered before you meet your deductible. Preventive care, such as your annual physical, routine immunizations and recommended cancer screenings, is covered at no cost when you see an in-network provider. Primary care office visits have a $25 copay from the first visit of the year, and that copay does not count toward the deductible.\n\nOnce you have met your deductible, you pay 20% coinsurance for most covered services until you reach the out-of-pocket maximum of $6,500 for an individual or $13,000 for a family. After that, Quarrybrook pays 100% of covered in-network services for the rest of the plan year.\n\nOn a family plan, each person's spending counts toward the family deductible, and no one person pays more than the individual deductible amount. You can see how much of your deductible you have met on the deductible tracker in your member account."
+            },
+            {
+              "id": "S2",
+              "title": "Quarrybrook Health Plan - The Wellness Check",
+              "retrieved_at": "2026-09-28",
+              "text": "The Wellness Check is a short online questionnaire about your health history, sleep, physical activity and any ongoing conditions. Most members finish it in about 15 minutes. You will find it under My Health in your Quarrybrook member account and in the Quarrybrook mobile app.\n\nYour answers are confidential. We use them to suggest programs that may help you, such as sleep coaching or the Steps Together walking group, and to let a nurse know if a follow-up call might be useful. Your answers are never shared with your employer, and they never affect your premium or whether a claim is paid.\n\nDeductible credit\nQuarrybrook credits $150 toward your annual deductible if you complete the Wellness Check questionnaire within 60 days of your coverage start date. The credit shows on the deductible tracker in your member account within 10 business days, and it counts toward your deductible in the same way as an amount you have paid yourself.\n\nIf you have questions about the Wellness Check, send us a secure message from your member account or call Member Services at the number on the back of your ID card, Monday to Friday, 8 am to 8 pm."
+            },
+            {
+              "id": "S3",
+              "title": "Quarrybrook Health Plan - Sleep coaching",
+              "retrieved_at": "2026-09-28",
+              "text": "Poor sleep can make almost every health condition harder to manage. Quarrybrook's sleep coaching program pairs you with a certified sleep coach for six video sessions over about three months.\n\nIn the first session, your coach reviews a two-week sleep diary that you keep in the Quarrybrook app, and together you agree on one or two changes to try first, such as a fixed wake-up time or a wind-down routine. Later sessions look at what is working and adjust the plan. Coaches do not prescribe medication, but they can suggest that you talk to your doctor if your diary points to a condition such as sleep apnea.\n\nSleep coaching sessions are covered at no cost to you and do not need a referral. To get started, open the Quarrybrook app, go to My Health, then Programs, and choose Sleep coaching. You can book sessions in the early morning or the evening to fit around work, and you can change or cancel a session up to 24 hours before it starts."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Quarrybrook credits $150 toward a member's annual deductible if the member completes the Wellness Check questionnaire within 60 days of their coverage start date.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Quarrybrook credits $150 toward your annual deductible if you complete the Wellness Check questionnaire within 60 days of your coverage start date."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the deductible-credit sentence copied verbatim from S2; the Wellness Check completion condition is the material qualifier."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q11-f1-ql-condition",
+          "family_id": "q11-f1",
+          "domain": "health_insurance_benefits",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "Does Quarrybrook Health Plan give members a credit toward their annual deductible?",
+          "answer": "Quarrybrook credits $150 toward your annual deductible.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Quarrybrook Health Plan - How your deductible works",
+              "retrieved_at": "2026-09-28",
+              "text": "Your deductible is the amount you pay for covered services each plan year before Quarrybrook starts to share the cost. On the Quarrybrook Choice plan, the deductible is $1,800 for an individual and $3,600 for a family. The plan year runs from 1 January to 31 December.\n\nSome services are covered before you meet your deductible. Preventive care, such as your annual physical, routine immunizations and recommended cancer screenings, is covered at no cost when you see an in-network provider. Primary care office visits have a $25 copay from the first visit of the year, and that copay does not count toward the deductible.\n\nOnce you have met your deductible, you pay 20% coinsurance for most covered services until you reach the out-of-pocket maximum of $6,500 for an individual or $13,000 for a family. After that, Quarrybrook pays 100% of covered in-network services for the rest of the plan year.\n\nOn a family plan, each person's spending counts toward the family deductible, and no one person pays more than the individual deductible amount. You can see how much of your deductible you have met on the deductible tracker in your member account."
+            },
+            {
+              "id": "S2",
+              "title": "Quarrybrook Health Plan - The Wellness Check",
+              "retrieved_at": "2026-09-28",
+              "text": "The Wellness Check is a short online questionnaire about your health history, sleep, physical activity and any ongoing conditions. Most members finish it in about 15 minutes. You will find it under My Health in your Quarrybrook member account and in the Quarrybrook mobile app.\n\nYour answers are confidential. We use them to suggest programs that may help you, such as sleep coaching or the Steps Together walking group, and to let a nurse know if a follow-up call might be useful. Your answers are never shared with your employer, and they never affect your premium or whether a claim is paid.\n\nDeductible credit\nQuarrybrook credits $150 toward your annual deductible if you complete the Wellness Check questionnaire within 60 days of your coverage start date. The credit shows on the deductible tracker in your member account within 10 business days, and it counts toward your deductible in the same way as an amount you have paid yourself.\n\nIf you have questions about the Wellness Check, send us a secure message from your member account or call Member Services at the number on the back of your ID card, Monday to Friday, 8 am to 8 pm."
+            },
+            {
+              "id": "S3",
+              "title": "Quarrybrook Health Plan - Sleep coaching",
+              "retrieved_at": "2026-09-28",
+              "text": "Poor sleep can make almost every health condition harder to manage. Quarrybrook's sleep coaching program pairs you with a certified sleep coach for six video sessions over about three months.\n\nIn the first session, your coach reviews a two-week sleep diary that you keep in the Quarrybrook app, and together you agree on one or two changes to try first, such as a fixed wake-up time or a wind-down routine. Later sessions look at what is working and adjust the plan. Coaches do not prescribe medication, but they can suggest that you talk to your doctor if your diary points to a condition such as sleep apnea.\n\nSleep coaching sessions are covered at no cost to you and do not need a referral. To get started, open the Quarrybrook app, go to My Health, then Programs, and choose Sleep coaching. You can book sessions in the early morning or the evening to fit around work, and you can change or cancel a session up to 24 hours before it starts."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Quarrybrook credits $150 toward a member's annual deductible.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "Quarrybrook credits $150 toward your annual deductible if you complete the Wellness Check questionnaire within 60 days of your coverage start date."
+              }
+            ],
+            "dropped_qualifier": "if you complete the Wellness Check questionnaire within 60 days of your coverage start date",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q11-f1-sup-verbatim",
+            "note": "Deleted only the trailing condition; S2 grants the $150 credit only to members who complete the Wellness Check within 60 days of coverage start and no passage says what other members receive, so the unconditional credit is unsupported, not contradicted."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q11-f2",
+      "items": [
+        {
+          "id": "q11-f2-sup-verbatim",
+          "family_id": "q11-f2",
+          "domain": "health_insurance_benefits",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Does Ombrevale Health Cooperative cover a blood pressure monitor for use at home?",
+          "answer": "Ombrevale covers one home blood pressure monitor every two years if your doctor has diagnosed you with high blood pressure.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Ombrevale Health Cooperative - Home health equipment",
+              "retrieved_at": "2026-09-30",
+              "text": "Some conditions are easier to manage when you can take readings at home between appointments. This page explains the home health equipment Ombrevale covers and how to get it.\n\nBlood pressure monitors\nOmbrevale covers one home blood pressure monitor every two years if your doctor has diagnosed you with high blood pressure. Bring the monitor to your next appointment so your care team can compare its readings with theirs and show you how to position the cuff correctly.\n\nPeak flow meters\nOmbrevale covers one peak flow meter and up to two replacement mouthpieces each plan year for members who have an asthma action plan on file with their primary care provider.\n\nGetting your equipment\nYou can order covered equipment from the Health supplies page of your member account and have it delivered to your home, usually within three to five business days. You can track the order from the same page. If you would rather pick it up in person, choose a pharmacy from the list on the Health supplies page when you place the order."
+            },
+            {
+              "id": "S2",
+              "title": "Ombrevale Health Cooperative - Choosing your primary care provider",
+              "retrieved_at": "2026-09-30",
+              "text": "Every Ombrevale member chooses a primary care provider, or PCP. Your PCP is the doctor, nurse practitioner or physician assistant you see for checkups, everyday illnesses and help managing long-term conditions. They also coordinate your care with specialists when you need it.\n\nYou can choose any PCP who is accepting new patients in the Ombrevale network. Each family member can have a different PCP, and children can see a pediatrician as their PCP. If you do not choose a PCP within 30 days of joining, we will suggest one near your home address, and you can change that suggestion at any time.\n\nTo change your PCP, use the Find Care tool in your member account or call Member Services. Changes made by the 20th of the month take effect on the first day of the next month. Your new PCP's name and phone number will appear on your digital ID card, and a new printed card is mailed to you within ten days.\n\nPCP office visits have a $20 copay. Annual wellness visits with your PCP are covered at no cost."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Ombrevale covers one home blood pressure monitor every two years for a member whose doctor has diagnosed them with high blood pressure.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Ombrevale covers one home blood pressure monitor every two years if your doctor has diagnosed you with high blood pressure."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the blood pressure monitor sentence copied verbatim from S1; the high blood pressure diagnosis is the material eligibility condition."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q11-f2-ql-condition",
+          "family_id": "q11-f2",
+          "domain": "health_insurance_benefits",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "Does Ombrevale Health Cooperative cover a blood pressure monitor for use at home?",
+          "answer": "Ombrevale covers one home blood pressure monitor every two years.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Ombrevale Health Cooperative - Home health equipment",
+              "retrieved_at": "2026-09-30",
+              "text": "Some conditions are easier to manage when you can take readings at home between appointments. This page explains the home health equipment Ombrevale covers and how to get it.\n\nBlood pressure monitors\nOmbrevale covers one home blood pressure monitor every two years if your doctor has diagnosed you with high blood pressure. Bring the monitor to your next appointment so your care team can compare its readings with theirs and show you how to position the cuff correctly.\n\nPeak flow meters\nOmbrevale covers one peak flow meter and up to two replacement mouthpieces each plan year for members who have an asthma action plan on file with their primary care provider.\n\nGetting your equipment\nYou can order covered equipment from the Health supplies page of your member account and have it delivered to your home, usually within three to five business days. You can track the order from the same page. If you would rather pick it up in person, choose a pharmacy from the list on the Health supplies page when you place the order."
+            },
+            {
+              "id": "S2",
+              "title": "Ombrevale Health Cooperative - Choosing your primary care provider",
+              "retrieved_at": "2026-09-30",
+              "text": "Every Ombrevale member chooses a primary care provider, or PCP. Your PCP is the doctor, nurse practitioner or physician assistant you see for checkups, everyday illnesses and help managing long-term conditions. They also coordinate your care with specialists when you need it.\n\nYou can choose any PCP who is accepting new patients in the Ombrevale network. Each family member can have a different PCP, and children can see a pediatrician as their PCP. If you do not choose a PCP within 30 days of joining, we will suggest one near your home address, and you can change that suggestion at any time.\n\nTo change your PCP, use the Find Care tool in your member account or call Member Services. Changes made by the 20th of the month take effect on the first day of the next month. Your new PCP's name and phone number will appear on your digital ID card, and a new printed card is mailed to you within ten days.\n\nPCP office visits have a $20 copay. Annual wellness visits with your PCP are covered at no cost."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Ombrevale covers one home blood pressure monitor every two years.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Ombrevale covers one home blood pressure monitor every two years if your doctor has diagnosed you with high blood pressure."
+              }
+            ],
+            "dropped_qualifier": "if your doctor has diagnosed you with high blood pressure",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q11-f2-sup-verbatim",
+            "note": "Deleted only the diagnosis condition; S1 covers the monitor only for members diagnosed with high blood pressure and no passage addresses members without that diagnosis, so the unconditional coverage claim is unsupported, not contradicted."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q11-f3",
+      "items": [
+        {
+          "id": "q11-f3-sup-verbatim",
+          "family_id": "q11-f3",
+          "domain": "ecommerce_shipping_returns_warranty",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Is standard shipping free at Pelloran Outfitters?",
+          "answer": "Standard shipping on Pelloran orders is free if your order subtotal is $75 or more after discounts are applied.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Pelloran Outfitters - Gear repair service",
+              "retrieved_at": "2026-10-01",
+              "text": "A torn jacket or a broken tent zip does not have to mean buying new gear. The Pelloran repair workshop fixes outdoor clothing, tents, sleeping bags and packs, whichever brand they are.\n\nCommon repairs include replacing zip sliders and full zips, patching tears in jackets and tents, re-taping seams on waterproof shells, and replacing buckles and straps on packs. Our technicians do not repair footwear or inflatable sleeping pads.\n\nTo request a repair, fill in the repair form on our website with a description of the problem and a few photos. We reply within two business days with an estimate and instructions for sending the item to the workshop. Most repairs are completed within three weeks of the item arriving, and we email you when the work starts and again when it is finished.\n\nIf the estimate is higher than you expected, you can decline it before any work starts. Please clean and dry items before sending them, because we cannot repair items that are wet, muddy or moldy."
+            },
+            {
+              "id": "S2",
+              "title": "Pelloran Outfitters - Gift cards",
+              "retrieved_at": "2026-10-01",
+              "text": "Pelloran gift cards are available in any amount from $10 to $500, and they never expire. Digital gift cards are sent by email, either straight away or on a date you choose, together with a short message from you. Physical gift cards come in a recycled card sleeve and are packed with the rest of your order.\n\nGift cards can be used for anything in our online store and for work done by our repair workshop. If an order costs more than the balance on your card, you can pay the difference with a credit or debit card.\n\nTo check a balance, enter the 16-digit card number and PIN on the Gift cards page. Lost digital gift cards can be resent to the email address they were first sent to. We cannot replace a lost physical gift card unless you have the card number, so keep a photo of it somewhere safe.\n\nGift cards cannot be exchanged for cash, except where the law requires it."
+            },
+            {
+              "id": "S3",
+              "title": "Pelloran Outfitters - Shipping options",
+              "retrieved_at": "2026-10-01",
+              "text": "We ship every order from our own warehouse, and most orders leave the building within one business day of being placed. You will get an email with a tracking link as soon as your parcel is handed to the carrier.\n\nStandard shipping\nStandard shipping on Pelloran orders is free if your order subtotal is $75 or more after discounts are applied. Standard parcels usually arrive within four to six business days of dispatch. We choose the carrier for each order based on the delivery address and the size of the parcel.\n\nExpress shipping\nExpress parcels usually arrive within two business days of dispatch. The price of express shipping depends on the weight of the order and the delivery address, and it is shown at checkout before you pay. Express orders placed after 12 noon Pacific time leave the warehouse on the next business day.\n\nChanging a delivery address\nIf you entered the wrong address, contact us within one hour of placing your order and we will update it. After that, the order may already be packed, and we can only redirect it once the carrier has it."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Standard shipping on Pelloran Outfitters orders is free when the order subtotal is $75 or more after discounts are applied.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Standard shipping on Pelloran orders is free if your order subtotal is $75 or more after discounts are applied."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the standard shipping sentence copied verbatim from S3; the $75 subtotal threshold is the material trigger condition."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q11-f3-ql-condition",
+          "family_id": "q11-f3",
+          "domain": "ecommerce_shipping_returns_warranty",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "Is standard shipping free at Pelloran Outfitters?",
+          "answer": "Standard shipping on Pelloran orders is free.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Pelloran Outfitters - Gear repair service",
+              "retrieved_at": "2026-10-01",
+              "text": "A torn jacket or a broken tent zip does not have to mean buying new gear. The Pelloran repair workshop fixes outdoor clothing, tents, sleeping bags and packs, whichever brand they are.\n\nCommon repairs include replacing zip sliders and full zips, patching tears in jackets and tents, re-taping seams on waterproof shells, and replacing buckles and straps on packs. Our technicians do not repair footwear or inflatable sleeping pads.\n\nTo request a repair, fill in the repair form on our website with a description of the problem and a few photos. We reply within two business days with an estimate and instructions for sending the item to the workshop. Most repairs are completed within three weeks of the item arriving, and we email you when the work starts and again when it is finished.\n\nIf the estimate is higher than you expected, you can decline it before any work starts. Please clean and dry items before sending them, because we cannot repair items that are wet, muddy or moldy."
+            },
+            {
+              "id": "S2",
+              "title": "Pelloran Outfitters - Gift cards",
+              "retrieved_at": "2026-10-01",
+              "text": "Pelloran gift cards are available in any amount from $10 to $500, and they never expire. Digital gift cards are sent by email, either straight away or on a date you choose, together with a short message from you. Physical gift cards come in a recycled card sleeve and are packed with the rest of your order.\n\nGift cards can be used for anything in our online store and for work done by our repair workshop. If an order costs more than the balance on your card, you can pay the difference with a credit or debit card.\n\nTo check a balance, enter the 16-digit card number and PIN on the Gift cards page. Lost digital gift cards can be resent to the email address they were first sent to. We cannot replace a lost physical gift card unless you have the card number, so keep a photo of it somewhere safe.\n\nGift cards cannot be exchanged for cash, except where the law requires it."
+            },
+            {
+              "id": "S3",
+              "title": "Pelloran Outfitters - Shipping options",
+              "retrieved_at": "2026-10-01",
+              "text": "We ship every order from our own warehouse, and most orders leave the building within one business day of being placed. You will get an email with a tracking link as soon as your parcel is handed to the carrier.\n\nStandard shipping\nStandard shipping on Pelloran orders is free if your order subtotal is $75 or more after discounts are applied. Standard parcels usually arrive within four to six business days of dispatch. We choose the carrier for each order based on the delivery address and the size of the parcel.\n\nExpress shipping\nExpress parcels usually arrive within two business days of dispatch. The price of express shipping depends on the weight of the order and the delivery address, and it is shown at checkout before you pay. Express orders placed after 12 noon Pacific time leave the warehouse on the next business day.\n\nChanging a delivery address\nIf you entered the wrong address, contact us within one hour of placing your order and we will update it. After that, the order may already be packed, and we can only redirect it once the carrier has it."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Standard shipping on Pelloran Outfitters orders is free.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Standard shipping on Pelloran orders is free if your order subtotal is $75 or more after discounts are applied."
+              }
+            ],
+            "dropped_qualifier": "if your order subtotal is $75 or more after discounts are applied",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q11-f3-sup-verbatim",
+            "note": "Deleted only the $75 subtotal condition; S3 makes standard shipping free only above that threshold and no passage states a standard shipping charge for smaller orders, so the unconditional claim is unsupported, not contradicted."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q11-f4",
+      "items": [
+        {
+          "id": "q11-f4-sup-verbatim",
+          "family_id": "q11-f4",
+          "domain": "ecommerce_shipping_returns_warranty",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "How long is a Tindlecroft sofa frame covered under warranty?",
+          "answer": "Tindlecroft covers your sofa frame against breaks and joint failures for ten years from the delivery date, provided the sofa is registered on the Tindlecroft website within 30 days of delivery.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Tindlecroft Home - Sofa frame warranty",
+              "retrieved_at": "2026-09-29",
+              "text": "Every Tindlecroft sofa is built in our own workshop on a kiln-dried hardwood frame, with corner blocks that are glued and screwed rather than stapled.\n\nWhat the warranty covers\nTindlecroft covers your sofa frame against breaks and joint failures for ten years from the delivery date, provided the sofa is registered on the Tindlecroft website within 30 days of delivery. A break is a crack or split in the wooden frame, and a joint failure is a corner or rail that has come loose from the rest of the frame. If we confirm a frame fault, we will repair the sofa in your home or, if a repair is not possible, replace it with the same model or the closest current equivalent.\n\nHow to register\nGo to the Register your sofa page and enter the order number from your delivery note and the serial number printed on the label under the seat cushions. You will receive a confirmation email with a warranty reference. Keep that email, because we will ask for the reference if you ever need to make a claim.\n\nMaking a claim\nSend us your warranty reference, a short description of the problem and a few photos of the part of the frame that has failed. Our service team replies within three business days."
+            },
+            {
+              "id": "S2",
+              "title": "Tindlecroft Home - Delivery and setup",
+              "retrieved_at": "2026-09-29",
+              "text": "Every Tindlecroft sofa, armchair and bed is delivered by a two-person team. They carry the furniture into the room you choose, unwrap it, fit any legs or headboards, and take all of the packaging away for recycling.\n\nWhen your order is ready, we will email you to book a delivery day. On the evening before delivery, you will get a text with a two-hour time slot. If nobody is home during the slot, the team will call you and wait for up to 15 minutes before moving on to their next delivery, and we will contact you to rebook.\n\nBefore delivery day, please measure the doorways, hallways and stairs the furniture needs to pass through and compare them with the delivery dimensions on the product page. If a piece will not fit, the team will not force it through, and we will talk to you about other options.\n\nYour delivery note lists your order number and the items delivered. Please keep it somewhere safe."
+            },
+            {
+              "id": "S3",
+              "title": "Tindlecroft Home - Caring for your sofa",
+              "retrieved_at": "2026-09-29",
+              "text": "A little regular care keeps a sofa looking good for years. Vacuum the cushions and the gaps between them once a week with a soft brush attachment, and plump and turn the seat and back cushions every few days so they wear evenly.\n\nKeep your sofa out of strong direct sunlight, which can fade fabric and dry out leather, and at least a foot away from radiators and heaters.\n\nFor spills on fabric, blot straight away with a clean white cloth. Do not rub, because rubbing pushes the liquid deeper into the weave. Check the care code on the label under the seat cushions before using any cleaning product. Code W fabrics can be cleaned with a little water-based upholstery cleaner, while code S fabrics need a solvent-based cleaner or a professional cleaning service.\n\nLeather sofas need conditioning about every six months. Use a conditioner made for pigmented leather and test it on a hidden area first. Removable cushion covers should not be machine washed, because they can shrink and will no longer fit the cushions."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Tindlecroft covers a sofa frame against breaks and joint failures for ten years from the delivery date, provided the sofa is registered on the Tindlecroft website within 30 days of delivery.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Tindlecroft covers your sofa frame against breaks and joint failures for ten years from the delivery date, provided the sofa is registered on the Tindlecroft website within 30 days of delivery."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the frame warranty sentence copied verbatim from S1; registration within 30 days of delivery is the material eligibility condition."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q11-f4-ql-condition",
+          "family_id": "q11-f4",
+          "domain": "ecommerce_shipping_returns_warranty",
+          "category": "qualifier_loss",
+          "subcategory": "condition",
+          "question": "How long is a Tindlecroft sofa frame covered under warranty?",
+          "answer": "Tindlecroft covers your sofa frame against breaks and joint failures for ten years from the delivery date.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Tindlecroft Home - Sofa frame warranty",
+              "retrieved_at": "2026-09-29",
+              "text": "Every Tindlecroft sofa is built in our own workshop on a kiln-dried hardwood frame, with corner blocks that are glued and screwed rather than stapled.\n\nWhat the warranty covers\nTindlecroft covers your sofa frame against breaks and joint failures for ten years from the delivery date, provided the sofa is registered on the Tindlecroft website within 30 days of delivery. A break is a crack or split in the wooden frame, and a joint failure is a corner or rail that has come loose from the rest of the frame. If we confirm a frame fault, we will repair the sofa in your home or, if a repair is not possible, replace it with the same model or the closest current equivalent.\n\nHow to register\nGo to the Register your sofa page and enter the order number from your delivery note and the serial number printed on the label under the seat cushions. You will receive a confirmation email with a warranty reference. Keep that email, because we will ask for the reference if you ever need to make a claim.\n\nMaking a claim\nSend us your warranty reference, a short description of the problem and a few photos of the part of the frame that has failed. Our service team replies within three business days."
+            },
+            {
+              "id": "S2",
+              "title": "Tindlecroft Home - Delivery and setup",
+              "retrieved_at": "2026-09-29",
+              "text": "Every Tindlecroft sofa, armchair and bed is delivered by a two-person team. They carry the furniture into the room you choose, unwrap it, fit any legs or headboards, and take all of the packaging away for recycling.\n\nWhen your order is ready, we will email you to book a delivery day. On the evening before delivery, you will get a text with a two-hour time slot. If nobody is home during the slot, the team will call you and wait for up to 15 minutes before moving on to their next delivery, and we will contact you to rebook.\n\nBefore delivery day, please measure the doorways, hallways and stairs the furniture needs to pass through and compare them with the delivery dimensions on the product page. If a piece will not fit, the team will not force it through, and we will talk to you about other options.\n\nYour delivery note lists your order number and the items delivered. Please keep it somewhere safe."
+            },
+            {
+              "id": "S3",
+              "title": "Tindlecroft Home - Caring for your sofa",
+              "retrieved_at": "2026-09-29",
+              "text": "A little regular care keeps a sofa looking good for years. Vacuum the cushions and the gaps between them once a week with a soft brush attachment, and plump and turn the seat and back cushions every few days so they wear evenly.\n\nKeep your sofa out of strong direct sunlight, which can fade fabric and dry out leather, and at least a foot away from radiators and heaters.\n\nFor spills on fabric, blot straight away with a clean white cloth. Do not rub, because rubbing pushes the liquid deeper into the weave. Check the care code on the label under the seat cushions before using any cleaning product. Code W fabrics can be cleaned with a little water-based upholstery cleaner, while code S fabrics need a solvent-based cleaner or a professional cleaning service.\n\nLeather sofas need conditioning about every six months. Use a conditioner made for pigmented leather and test it on a hidden area first. Removable cushion covers should not be machine washed, because they can shrink and will no longer fit the cushions."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Tindlecroft covers a sofa frame against breaks and joint failures for ten years from the delivery date.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "Tindlecroft covers your sofa frame against breaks and joint failures for ten years from the delivery date, provided the sofa is registered on the Tindlecroft website within 30 days of delivery."
+              }
+            ],
+            "dropped_qualifier": "provided the sofa is registered on the Tindlecroft website within 30 days of delivery",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q11-f4-sup-verbatim",
+            "note": "Deleted only the registration condition (and its comma); S1 gives the ten-year frame cover only to sofas registered within 30 days and no passage says what cover an unregistered sofa has, so the unconditional claim is unsupported, not contradicted."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q11-f5",
+      "items": [
+        {
+          "id": "q11-f5-sup-verbatim",
+          "family_id": "q11-f5",
+          "domain": "health_insurance_benefits",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Does Merrowind Health cover acupuncture?",
+          "answer": "On the Merrowind Premier plan, acupuncture is covered for up to 20 visits per plan year.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Merrowind Health - Compare our 2027 plans",
+              "retrieved_at": "2026-10-06",
+              "text": "Merrowind offers three individual and family plans for 2027: Essential, Plus and Premier. All three plans use the same network of doctors and hospitals, and all three cover preventive care, such as annual checkups, vaccines and screenings, at no cost when you see an in-network provider.\n\nFor an individual, the monthly premium is $318 on Essential, $402 on Plus and $541 on Premier. The annual deductible is $4,200 on Essential, $2,100 on Plus and $800 on Premier, and the out-of-pocket maximum is $8,700, $6,900 and $4,500 respectively. Family deductibles and out-of-pocket maximums are twice the individual amounts.\n\nIf you expect to use a lot of care during the year, a plan with a higher premium and a lower deductible may cost less overall. If you rarely see a doctor, Essential keeps your monthly cost lowest.\n\nOpen enrollment for 2027 coverage runs from 1 November 2026 to 15 January 2027, and you can switch between plans during that time. Our plan advisors can talk you through the options by phone or video chat."
+            },
+            {
+              "id": "S2",
+              "title": "Merrowind Health - Premier plan: complementary care",
+              "retrieved_at": "2026-10-06",
+              "text": "Members on the Merrowind Premier plan have a set of complementary care benefits alongside their medical coverage. These benefits are aimed at long-term pain, stress and recovery after an injury. To use them, book an appointment with the practitioner and show your Merrowind member ID card at the visit.\n\nAcupuncture\nOn the Merrowind Premier plan, acupuncture is covered for up to 20 visits per plan year. Visits count toward the limit whether they are for a new problem or an ongoing one, and a first assessment appointment counts as one visit.\n\nMassage therapy\nMassage therapy is included when it is part of a treatment plan written by a physical therapist or chiropractor.\n\nTracking your visits\nYour member account shows how many complementary care visits you have used so far this plan year. The plan year starts on 1 January, and visit counts go back to zero at the start of each plan year."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "On the Merrowind Premier plan, acupuncture is covered for up to 20 visits per plan year.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "On the Merrowind Premier plan, acupuncture is covered for up to 20 visits per plan year."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the acupuncture sentence copied verbatim from S2; the Premier plan is the material scope, and S1 shows Essential and Plus plans also exist."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q11-f5-ql-scope",
+          "family_id": "q11-f5",
+          "domain": "health_insurance_benefits",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "Does Merrowind Health cover acupuncture?",
+          "answer": "Acupuncture is covered for up to 20 visits per plan year.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Merrowind Health - Compare our 2027 plans",
+              "retrieved_at": "2026-10-06",
+              "text": "Merrowind offers three individual and family plans for 2027: Essential, Plus and Premier. All three plans use the same network of doctors and hospitals, and all three cover preventive care, such as annual checkups, vaccines and screenings, at no cost when you see an in-network provider.\n\nFor an individual, the monthly premium is $318 on Essential, $402 on Plus and $541 on Premier. The annual deductible is $4,200 on Essential, $2,100 on Plus and $800 on Premier, and the out-of-pocket maximum is $8,700, $6,900 and $4,500 respectively. Family deductibles and out-of-pocket maximums are twice the individual amounts.\n\nIf you expect to use a lot of care during the year, a plan with a higher premium and a lower deductible may cost less overall. If you rarely see a doctor, Essential keeps your monthly cost lowest.\n\nOpen enrollment for 2027 coverage runs from 1 November 2026 to 15 January 2027, and you can switch between plans during that time. Our plan advisors can talk you through the options by phone or video chat."
+            },
+            {
+              "id": "S2",
+              "title": "Merrowind Health - Premier plan: complementary care",
+              "retrieved_at": "2026-10-06",
+              "text": "Members on the Merrowind Premier plan have a set of complementary care benefits alongside their medical coverage. These benefits are aimed at long-term pain, stress and recovery after an injury. To use them, book an appointment with the practitioner and show your Merrowind member ID card at the visit.\n\nAcupuncture\nOn the Merrowind Premier plan, acupuncture is covered for up to 20 visits per plan year. Visits count toward the limit whether they are for a new problem or an ongoing one, and a first assessment appointment counts as one visit.\n\nMassage therapy\nMassage therapy is included when it is part of a treatment plan written by a physical therapist or chiropractor.\n\nTracking your visits\nYour member account shows how many complementary care visits you have used so far this plan year. The plan year starts on 1 January, and visit counts go back to zero at the start of each plan year."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Acupuncture is covered by Merrowind Health for up to 20 visits per plan year.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "On the Merrowind Premier plan, acupuncture is covered for up to 20 visits per plan year."
+              }
+            ],
+            "dropped_qualifier": "On the Merrowind Premier plan",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q11-f5-sup-verbatim",
+            "note": "Deleted only the plan scope and recapitalised; S2 states acupuncture cover only for Premier, S1 shows Essential and Plus exist, and no passage says anything about acupuncture on those plans, so the unscoped claim is unsupported, not contradicted."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q11-f6",
+      "items": [
+        {
+          "id": "q11-f6-sup-verbatim",
+          "family_id": "q11-f6",
+          "domain": "health_insurance_benefits",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Does the Calderwyn Benefit Plan cover prescription eyeglasses?",
+          "answer": "For covered children under age 19, one pair of prescription eyeglasses is covered in full each plan year.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Calderwyn Benefit Plan - Adding a dependent",
+              "retrieved_at": "2026-10-07",
+              "text": "You can add your spouse or domestic partner and your children to your Calderwyn Benefit Plan coverage. Children can stay on the plan until the end of the month in which they turn 26, whether or not they live with you, are in school or are married.\n\nYou can add dependents during the annual enrollment period each November. Outside that period, you can add a dependent within 31 days of a qualifying life event, such as a marriage, the birth or adoption of a child, or your partner losing other coverage. Coverage for a newborn starts from the date of birth as long as you add the baby within the 31 days.\n\nTo add a dependent, sign in to the benefits portal, choose Life events, and upload the document that confirms the event, such as a marriage certificate or birth certificate. The benefits team reviews documents within five business days, and new ID cards arrive by mail about a week after approval.\n\nAdding a dependent can change the amount taken from your paycheck. The portal shows the new amount before you confirm."
+            },
+            {
+              "id": "S2",
+              "title": "Calderwyn Benefit Plan - Vision benefits",
+              "retrieved_at": "2026-10-07",
+              "text": "The Calderwyn Benefit Plan includes vision benefits, so you do not need to enroll in a separate vision plan. You do not need a referral to see an optometrist.\n\nEye exams\nRoutine eye exams are covered for members of all ages once every plan year, with a $10 copay. The exam includes a check of your eye health and, if you need it, an updated prescription for glasses.\n\nEyeglasses\nFor covered children under age 19, one pair of prescription eyeglasses is covered in full each plan year. This includes both the frames and the lenses, and the lenses come with a scratch-resistant coating at no extra cost.\n\nUsing your benefit\nShow your Calderwyn member ID card when you book your exam and again at the appointment. The optometrist's office will bill the plan directly, so there is no claim form to fill in. If you have questions about what your visit will cost, call Member Services before your appointment."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "For covered children under age 19, the Calderwyn Benefit Plan covers one pair of prescription eyeglasses in full each plan year.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "For covered children under age 19, one pair of prescription eyeglasses is covered in full each plan year."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the eyeglasses sentence copied verbatim from S2; covered children under 19 is the material group scope, and the plan also covers adults and children aged 19 to 25."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q11-f6-ql-scope",
+          "family_id": "q11-f6",
+          "domain": "health_insurance_benefits",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "Does the Calderwyn Benefit Plan cover prescription eyeglasses?",
+          "answer": "One pair of prescription eyeglasses is covered in full each plan year.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Calderwyn Benefit Plan - Adding a dependent",
+              "retrieved_at": "2026-10-07",
+              "text": "You can add your spouse or domestic partner and your children to your Calderwyn Benefit Plan coverage. Children can stay on the plan until the end of the month in which they turn 26, whether or not they live with you, are in school or are married.\n\nYou can add dependents during the annual enrollment period each November. Outside that period, you can add a dependent within 31 days of a qualifying life event, such as a marriage, the birth or adoption of a child, or your partner losing other coverage. Coverage for a newborn starts from the date of birth as long as you add the baby within the 31 days.\n\nTo add a dependent, sign in to the benefits portal, choose Life events, and upload the document that confirms the event, such as a marriage certificate or birth certificate. The benefits team reviews documents within five business days, and new ID cards arrive by mail about a week after approval.\n\nAdding a dependent can change the amount taken from your paycheck. The portal shows the new amount before you confirm."
+            },
+            {
+              "id": "S2",
+              "title": "Calderwyn Benefit Plan - Vision benefits",
+              "retrieved_at": "2026-10-07",
+              "text": "The Calderwyn Benefit Plan includes vision benefits, so you do not need to enroll in a separate vision plan. You do not need a referral to see an optometrist.\n\nEye exams\nRoutine eye exams are covered for members of all ages once every plan year, with a $10 copay. The exam includes a check of your eye health and, if you need it, an updated prescription for glasses.\n\nEyeglasses\nFor covered children under age 19, one pair of prescription eyeglasses is covered in full each plan year. This includes both the frames and the lenses, and the lenses come with a scratch-resistant coating at no extra cost.\n\nUsing your benefit\nShow your Calderwyn member ID card when you book your exam and again at the appointment. The optometrist's office will bill the plan directly, so there is no claim form to fill in. If you have questions about what your visit will cost, call Member Services before your appointment."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "The Calderwyn Benefit Plan covers one pair of prescription eyeglasses in full each plan year.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "For covered children under age 19, one pair of prescription eyeglasses is covered in full each plan year."
+              }
+            ],
+            "dropped_qualifier": "For covered children under age 19",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q11-f6-sup-verbatim",
+            "note": "Deleted only the age-group scope and recapitalised; S2 states eyeglasses cover only for covered children under 19 and no passage says anything about eyeglasses for adults or older dependents, so the unscoped claim is unsupported, not contradicted."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q11-f7",
+      "items": [
+        {
+          "id": "q11-f7-sup-verbatim",
+          "family_id": "q11-f7",
+          "domain": "ecommerce_shipping_returns_warranty",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "What warranty does Brackenfold Cycles give on bike frames?",
+          "answer": "On Harlow-brand bicycles, Brackenfold covers frame defects with a lifetime warranty.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Brackenfold Cycles - Choosing your frame size",
+              "retrieved_at": "2026-10-04",
+              "text": "Getting the right frame size matters more than almost any other choice you make when buying a bike. A frame that is too big or too small is uncomfortable on long rides and harder to control on descents.\n\nWhether you choose a Harlow bike or one from the other makers we stock, every product page has a size chart that lists a recommended rider height range for each frame size. If your height falls between two sizes, the smaller size usually gives a more upright, relaxed position, and the larger size a longer, stretched-out one.\n\nFor a closer fit, measure your inside leg: stand barefoot with your back against a wall, put a hardback book between your legs and pull it up firmly, then measure from the top of the book to the floor. Enter that measurement, with your height, into the fit calculator on the product page.\n\nIf you are still unsure, book a free 20-minute video fit call with our workshop team. They can talk you through the geometry charts and help you compare models."
+            },
+            {
+              "id": "S2",
+              "title": "Brackenfold Cycles - Harlow frame warranty",
+              "retrieved_at": "2026-10-04",
+              "text": "Harlow is Brackenfold's own range of road, gravel and commuter bicycles. Every Harlow frame is designed by our team, made by a single partner factory, and checked again in our workshop before the bike is built up.\n\nWarranty cover\nOn Harlow-brand bicycles, Brackenfold covers frame defects with a lifetime warranty. A frame defect is a crack, break or failed weld that comes from the way the frame was made, rather than from a crash, an impact or a modification. If we confirm a defect, we will send you a replacement frame of the same model, or the closest current model if yours is no longer made.\n\nMaking a claim\nEmail our workshop team with your order number, the serial number from the underside of the frame, and clear photos of the damage. We may ask you to take the bike to a local bike shop for an inspection, and we will pay the inspection fee if the shop confirms a frame defect.\n\nPaint and finish\nChips and scratches in the paint are not frame defects. Touch-up paint in every Harlow colour can be ordered from the Spares section of our website."
+            },
+            {
+              "id": "S3",
+              "title": "Brackenfold Cycles - How your bike is delivered",
+              "retrieved_at": "2026-10-04",
+              "text": "Every complete bike we send out is built up, adjusted and test-ridden in our workshop before it is boxed. That means it arrives almost ready to ride: you only need to straighten and tighten the handlebar, fit the pedals and pump up the tyres.\n\nEach box includes a multi-tool, a pedal spanner and a printed setup guide, and there is a step-by-step video for every model on our website. Most people are ready to ride within 20 minutes of opening the box.\n\nBikes travel with a specialist courier in a double-walled box, with foam protection on the frame and fork. You will get a two-hour delivery window by text on the morning of delivery, and someone needs to be at home to sign for the bike.\n\nCheck the box for damage before you sign. If the box is badly damaged, note that on the courier's device and send us photos within 48 hours so we can sort it out with the courier."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "On Harlow-brand bicycles, Brackenfold covers frame defects with a lifetime warranty.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "On Harlow-brand bicycles, Brackenfold covers frame defects with a lifetime warranty."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the frame warranty sentence copied verbatim from S2; the Harlow product line is the material scope, and S1 shows Brackenfold also sells bikes from other makers."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q11-f7-ql-scope",
+          "family_id": "q11-f7",
+          "domain": "ecommerce_shipping_returns_warranty",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "What warranty does Brackenfold Cycles give on bike frames?",
+          "answer": "Brackenfold covers frame defects with a lifetime warranty.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Brackenfold Cycles - Choosing your frame size",
+              "retrieved_at": "2026-10-04",
+              "text": "Getting the right frame size matters more than almost any other choice you make when buying a bike. A frame that is too big or too small is uncomfortable on long rides and harder to control on descents.\n\nWhether you choose a Harlow bike or one from the other makers we stock, every product page has a size chart that lists a recommended rider height range for each frame size. If your height falls between two sizes, the smaller size usually gives a more upright, relaxed position, and the larger size a longer, stretched-out one.\n\nFor a closer fit, measure your inside leg: stand barefoot with your back against a wall, put a hardback book between your legs and pull it up firmly, then measure from the top of the book to the floor. Enter that measurement, with your height, into the fit calculator on the product page.\n\nIf you are still unsure, book a free 20-minute video fit call with our workshop team. They can talk you through the geometry charts and help you compare models."
+            },
+            {
+              "id": "S2",
+              "title": "Brackenfold Cycles - Harlow frame warranty",
+              "retrieved_at": "2026-10-04",
+              "text": "Harlow is Brackenfold's own range of road, gravel and commuter bicycles. Every Harlow frame is designed by our team, made by a single partner factory, and checked again in our workshop before the bike is built up.\n\nWarranty cover\nOn Harlow-brand bicycles, Brackenfold covers frame defects with a lifetime warranty. A frame defect is a crack, break or failed weld that comes from the way the frame was made, rather than from a crash, an impact or a modification. If we confirm a defect, we will send you a replacement frame of the same model, or the closest current model if yours is no longer made.\n\nMaking a claim\nEmail our workshop team with your order number, the serial number from the underside of the frame, and clear photos of the damage. We may ask you to take the bike to a local bike shop for an inspection, and we will pay the inspection fee if the shop confirms a frame defect.\n\nPaint and finish\nChips and scratches in the paint are not frame defects. Touch-up paint in every Harlow colour can be ordered from the Spares section of our website."
+            },
+            {
+              "id": "S3",
+              "title": "Brackenfold Cycles - How your bike is delivered",
+              "retrieved_at": "2026-10-04",
+              "text": "Every complete bike we send out is built up, adjusted and test-ridden in our workshop before it is boxed. That means it arrives almost ready to ride: you only need to straighten and tighten the handlebar, fit the pedals and pump up the tyres.\n\nEach box includes a multi-tool, a pedal spanner and a printed setup guide, and there is a step-by-step video for every model on our website. Most people are ready to ride within 20 minutes of opening the box.\n\nBikes travel with a specialist courier in a double-walled box, with foam protection on the frame and fork. You will get a two-hour delivery window by text on the morning of delivery, and someone needs to be at home to sign for the bike.\n\nCheck the box for damage before you sign. If the box is badly damaged, note that on the courier's device and send us photos within 48 hours so we can sort it out with the courier."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Brackenfold covers frame defects with a lifetime warranty.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "On Harlow-brand bicycles, Brackenfold covers frame defects with a lifetime warranty."
+              }
+            ],
+            "dropped_qualifier": "On Harlow-brand bicycles",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q11-f7-sup-verbatim",
+            "note": "Deleted only the product-line scope; S2 gives the lifetime frame warranty only for Harlow bikes, S1 shows Brackenfold also sells other makers' bikes, and no passage states a warranty for those, so the unscoped claim is unsupported, not contradicted."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q11-f8",
+      "items": [
+        {
+          "id": "q11-f8-sup-verbatim",
+          "family_id": "q11-f8",
+          "domain": "ecommerce_shipping_returns_warranty",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Do I have to pay return postage to send back a Fernquill Paper Co. order?",
+          "answer": "For orders delivered to addresses in the United Kingdom, return postage is free.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Fernquill Paper Co. - Returning an order",
+              "retrieved_at": "2026-10-08",
+              "text": "If something you ordered from Fernquill is not quite right, you can send it back within 30 days of delivery for a refund to your original payment method. Please keep notebooks in their wrapping until you are sure you want to keep them, because we can only accept items back in the condition they arrived in.\n\nReturn postage\nFor orders delivered to addresses in the United Kingdom, return postage is free. UK customers can start a return from the Orders page of their Fernquill account and will receive a prepaid label by email, which can be printed at home or shown on a phone at a post office counter.\n\nRefunds\nWe check returned items within three working days of receiving them. Once a return has been checked, we send the refund straight away, and your bank may take a further three to five working days to show it.\n\nPersonalised items\nNotebooks and cards that have been embossed or printed with a name cannot be returned unless they arrive damaged or with a printing mistake."
+            },
+            {
+              "id": "S2",
+              "title": "Fernquill Paper Co. - Delivery",
+              "retrieved_at": "2026-10-08",
+              "text": "Every Fernquill order is packed by hand in our studio, wrapped in tissue and posted in a recyclable box. Orders placed before 1 pm on a working day are posted the same day.\n\nWe deliver to addresses in the United Kingdom and to more than 40 other countries, including every country in the European Union, the United States, Canada, Australia, New Zealand and Japan. UK standard delivery takes two to three working days and costs GBP 3.50, or nothing for orders over GBP 40. UK next-day delivery costs GBP 6.95 for orders placed before 1 pm.\n\nInternational orders are sent by tracked airmail and usually arrive within five to ten working days. The delivery charge is calculated at checkout from the weight of your parcel and the destination. Orders sent outside the UK may be charged import duties or taxes by the destination country, and these are collected by the carrier before delivery.\n\nIf your parcel has not arrived within 15 working days of posting, email us and we will trace it."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "For Fernquill orders delivered to addresses in the United Kingdom, return postage is free.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "For orders delivered to addresses in the United Kingdom, return postage is free."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the return postage sentence copied verbatim from S1; UK delivery addresses are the material region scope, and S2 shows Fernquill also delivers to more than 40 other countries."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q11-f8-ql-scope",
+          "family_id": "q11-f8",
+          "domain": "ecommerce_shipping_returns_warranty",
+          "category": "qualifier_loss",
+          "subcategory": "scope",
+          "question": "Do I have to pay return postage to send back a Fernquill Paper Co. order?",
+          "answer": "Return postage is free.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Fernquill Paper Co. - Returning an order",
+              "retrieved_at": "2026-10-08",
+              "text": "If something you ordered from Fernquill is not quite right, you can send it back within 30 days of delivery for a refund to your original payment method. Please keep notebooks in their wrapping until you are sure you want to keep them, because we can only accept items back in the condition they arrived in.\n\nReturn postage\nFor orders delivered to addresses in the United Kingdom, return postage is free. UK customers can start a return from the Orders page of their Fernquill account and will receive a prepaid label by email, which can be printed at home or shown on a phone at a post office counter.\n\nRefunds\nWe check returned items within three working days of receiving them. Once a return has been checked, we send the refund straight away, and your bank may take a further three to five working days to show it.\n\nPersonalised items\nNotebooks and cards that have been embossed or printed with a name cannot be returned unless they arrive damaged or with a printing mistake."
+            },
+            {
+              "id": "S2",
+              "title": "Fernquill Paper Co. - Delivery",
+              "retrieved_at": "2026-10-08",
+              "text": "Every Fernquill order is packed by hand in our studio, wrapped in tissue and posted in a recyclable box. Orders placed before 1 pm on a working day are posted the same day.\n\nWe deliver to addresses in the United Kingdom and to more than 40 other countries, including every country in the European Union, the United States, Canada, Australia, New Zealand and Japan. UK standard delivery takes two to three working days and costs GBP 3.50, or nothing for orders over GBP 40. UK next-day delivery costs GBP 6.95 for orders placed before 1 pm.\n\nInternational orders are sent by tracked airmail and usually arrive within five to ten working days. The delivery charge is calculated at checkout from the weight of your parcel and the destination. Orders sent outside the UK may be charged import duties or taxes by the destination country, and these are collected by the carrier before delivery.\n\nIf your parcel has not arrived within 15 working days of posting, email us and we will trace it."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Return postage on Fernquill orders is free.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "For orders delivered to addresses in the United Kingdom, return postage is free."
+              }
+            ],
+            "dropped_qualifier": "For orders delivered to addresses in the United Kingdom",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q11-f8-sup-verbatim",
+            "note": "Deleted only the UK region scope and recapitalised; S1 makes return postage free only for UK deliveries, S2 shows orders also go to 40+ other countries, and no passage says who pays return postage for those, so the unscoped claim is unsupported, not contradicted."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q11-f9",
+      "items": [
+        {
+          "id": "q11-f9-sup-verbatim",
+          "family_id": "q11-f9",
+          "domain": "health_insurance_benefits",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "How much is the copay for a video visit with Wyncourt Virtual Care?",
+          "answer": "From 1 January 2027 through 30 June 2027, video visits with Wyncourt Virtual Care have a $0 copay.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Wyncourt Health Alliance - Urgent care or the emergency room?",
+              "retrieved_at": "2026-10-02",
+              "text": "When you need care quickly, choosing the right place can save you time and money. Urgent care centers treat problems that need attention today but are not life-threatening, such as sprains, minor cuts that need stitches, ear infections and high fevers. Most Wyncourt network urgent care centers are open from 8 am to 8 pm every day, and you do not need an appointment.\n\nOn Wyncourt plans, an in-network urgent care visit has a $50 copay. An emergency room visit has a $350 copay, which is waived if you are admitted to the hospital from the emergency room.\n\nGo to the emergency room or call 911 for chest pain, trouble breathing, signs of a stroke, severe bleeding or a serious head injury. Emergency care is covered at the in-network level at any hospital, including hospitals outside the Wyncourt network.\n\nIf you are not sure where to go, call the 24-hour nurse line on the back of your member ID card. A registered nurse can talk through your symptoms and suggest the right setting."
+            },
+            {
+              "id": "S2",
+              "title": "Wyncourt Health Alliance - Wyncourt Virtual Care",
+              "retrieved_at": "2026-10-02",
+              "text": "Wyncourt Virtual Care lets you see a board-certified clinician by video from your phone, tablet or computer, usually within 30 minutes of requesting a visit. Clinicians can diagnose and treat common conditions such as colds, sinus infections, rashes and urinary tract infections, and they can send prescriptions to the pharmacy you choose.\n\nVideo visit copay\nFrom 1 January 2027 through 30 June 2027, video visits with Wyncourt Virtual Care have a $0 copay. You do not need a code or any sign-up to get this, and it is applied automatically when the visit starts.\n\nWhen to choose in-person care\nThe clinician will tell you if your symptoms need a physical exam, lab tests or imaging, and can help you find an in-network clinic. If you have chest pain, trouble breathing or signs of a stroke, call 911 instead of starting a video visit.\n\nGetting set up\nDownload the Wyncourt app, sign in with your member account details and add your preferred pharmacy. Setting up before you feel unwell means your first visit can start more quickly. Visits are available 24 hours a day, seven days a week."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "From 1 January 2027 through 30 June 2027, video visits with Wyncourt Virtual Care have a $0 copay.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "From 1 January 2027 through 30 June 2027, video visits with Wyncourt Virtual Care have a $0 copay."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the video visit copay sentence copied verbatim from S2; the 1 January to 30 June 2027 period is the material date range, and the sources were retrieved before it starts."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q11-f9-ql-date-range",
+          "family_id": "q11-f9",
+          "domain": "health_insurance_benefits",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "How much is the copay for a video visit with Wyncourt Virtual Care?",
+          "answer": "Video visits with Wyncourt Virtual Care have a $0 copay.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Wyncourt Health Alliance - Urgent care or the emergency room?",
+              "retrieved_at": "2026-10-02",
+              "text": "When you need care quickly, choosing the right place can save you time and money. Urgent care centers treat problems that need attention today but are not life-threatening, such as sprains, minor cuts that need stitches, ear infections and high fevers. Most Wyncourt network urgent care centers are open from 8 am to 8 pm every day, and you do not need an appointment.\n\nOn Wyncourt plans, an in-network urgent care visit has a $50 copay. An emergency room visit has a $350 copay, which is waived if you are admitted to the hospital from the emergency room.\n\nGo to the emergency room or call 911 for chest pain, trouble breathing, signs of a stroke, severe bleeding or a serious head injury. Emergency care is covered at the in-network level at any hospital, including hospitals outside the Wyncourt network.\n\nIf you are not sure where to go, call the 24-hour nurse line on the back of your member ID card. A registered nurse can talk through your symptoms and suggest the right setting."
+            },
+            {
+              "id": "S2",
+              "title": "Wyncourt Health Alliance - Wyncourt Virtual Care",
+              "retrieved_at": "2026-10-02",
+              "text": "Wyncourt Virtual Care lets you see a board-certified clinician by video from your phone, tablet or computer, usually within 30 minutes of requesting a visit. Clinicians can diagnose and treat common conditions such as colds, sinus infections, rashes and urinary tract infections, and they can send prescriptions to the pharmacy you choose.\n\nVideo visit copay\nFrom 1 January 2027 through 30 June 2027, video visits with Wyncourt Virtual Care have a $0 copay. You do not need a code or any sign-up to get this, and it is applied automatically when the visit starts.\n\nWhen to choose in-person care\nThe clinician will tell you if your symptoms need a physical exam, lab tests or imaging, and can help you find an in-network clinic. If you have chest pain, trouble breathing or signs of a stroke, call 911 instead of starting a video visit.\n\nGetting set up\nDownload the Wyncourt app, sign in with your member account details and add your preferred pharmacy. Setting up before you feel unwell means your first visit can start more quickly. Visits are available 24 hours a day, seven days a week."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Video visits with Wyncourt Virtual Care have a $0 copay.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "From 1 January 2027 through 30 June 2027, video visits with Wyncourt Virtual Care have a $0 copay."
+              }
+            ],
+            "dropped_qualifier": "From 1 January 2027 through 30 June 2027",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q11-f9-sup-verbatim",
+            "note": "Deleted only the date range and recapitalised; S2 states the $0 copay only for 1 January to 30 June 2027 and no passage gives a video visit copay for any other period, so the undated claim is unsupported, not contradicted."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q11-f10",
+      "items": [
+        {
+          "id": "q11-f10-sup-verbatim",
+          "family_id": "q11-f10",
+          "domain": "health_insurance_benefits",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Does Ostrel Family Health Plans cover visits to an out-of-network specialist?",
+          "answer": "During the first 90 days after your coverage start date, Ostrel covers visits to an out-of-network specialist you were already seeing at the in-network cost share.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Ostrel Family Health Plans - Transition of care for new members",
+              "retrieved_at": "2026-10-09",
+              "text": "Changing health plans can mean changing doctors, but it should not mean stopping treatment partway through. Our transition of care benefit helps new members keep seeing the specialists who already know their history while they get to know the Ostrel network.\n\nSeeing your current specialist\nDuring the first 90 days after your coverage start date, Ostrel covers visits to an out-of-network specialist you were already seeing at the in-network cost share. This means you pay the same copay or coinsurance as you would for a network specialist, and the amounts you pay count toward your in-network deductible and out-of-pocket maximum.\n\nTelling us about your care\nIt helps to tell us which specialists you see. You can list them on the Current Care form in your member account, and a care coordinator will call you to answer questions about your treatment and your coverage.\n\nBilling\nYour current specialist does not need to sign a contract with Ostrel. We will send them a short letter explaining how to bill us, and they can call our provider line if they have questions."
+            },
+            {
+              "id": "S2",
+              "title": "Ostrel Family Health Plans - Seeing a specialist",
+              "retrieved_at": "2026-10-09",
+              "text": "Ostrel plans do not require a referral to see a specialist in the Ostrel network. You can book directly with a dermatologist, cardiologist, orthopedic surgeon or any other network specialist, although your primary care provider can still help you choose one.\n\nTo find a network specialist, use the Find Care tool in your member account. You can search by specialty, distance, languages spoken and whether the specialist is accepting new patients. Each listing shows the specialist's hospital affiliations and any other offices where they see patients.\n\nA visit to a network specialist has a $45 copay on the Ostrel Family Silver plan and a $30 copay on the Ostrel Family Gold plan. Tests and procedures done during the visit, such as an X-ray or a skin biopsy, may have their own cost share.\n\nBefore your first appointment, call the specialist's office to confirm that they are still in the Ostrel network. Networks can change during the year, and the Find Care tool is updated weekly."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "During the first 90 days after a member's coverage start date, Ostrel covers visits to an out-of-network specialist the member was already seeing at the in-network cost share.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "During the first 90 days after your coverage start date, Ostrel covers visits to an out-of-network specialist you were already seeing at the in-network cost share."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the transition-of-care sentence copied verbatim from S1; the first 90 days after the coverage start date is the material date range."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q11-f10-ql-date-range",
+          "family_id": "q11-f10",
+          "domain": "health_insurance_benefits",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "Does Ostrel Family Health Plans cover visits to an out-of-network specialist?",
+          "answer": "Ostrel covers visits to an out-of-network specialist you were already seeing at the in-network cost share.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Ostrel Family Health Plans - Transition of care for new members",
+              "retrieved_at": "2026-10-09",
+              "text": "Changing health plans can mean changing doctors, but it should not mean stopping treatment partway through. Our transition of care benefit helps new members keep seeing the specialists who already know their history while they get to know the Ostrel network.\n\nSeeing your current specialist\nDuring the first 90 days after your coverage start date, Ostrel covers visits to an out-of-network specialist you were already seeing at the in-network cost share. This means you pay the same copay or coinsurance as you would for a network specialist, and the amounts you pay count toward your in-network deductible and out-of-pocket maximum.\n\nTelling us about your care\nIt helps to tell us which specialists you see. You can list them on the Current Care form in your member account, and a care coordinator will call you to answer questions about your treatment and your coverage.\n\nBilling\nYour current specialist does not need to sign a contract with Ostrel. We will send them a short letter explaining how to bill us, and they can call our provider line if they have questions."
+            },
+            {
+              "id": "S2",
+              "title": "Ostrel Family Health Plans - Seeing a specialist",
+              "retrieved_at": "2026-10-09",
+              "text": "Ostrel plans do not require a referral to see a specialist in the Ostrel network. You can book directly with a dermatologist, cardiologist, orthopedic surgeon or any other network specialist, although your primary care provider can still help you choose one.\n\nTo find a network specialist, use the Find Care tool in your member account. You can search by specialty, distance, languages spoken and whether the specialist is accepting new patients. Each listing shows the specialist's hospital affiliations and any other offices where they see patients.\n\nA visit to a network specialist has a $45 copay on the Ostrel Family Silver plan and a $30 copay on the Ostrel Family Gold plan. Tests and procedures done during the visit, such as an X-ray or a skin biopsy, may have their own cost share.\n\nBefore your first appointment, call the specialist's office to confirm that they are still in the Ostrel network. Networks can change during the year, and the Find Care tool is updated weekly."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Ostrel covers visits to an out-of-network specialist the member was already seeing at the in-network cost share.",
+            "gold_spans": [
+              {
+                "source_id": "S1",
+                "quote": "During the first 90 days after your coverage start date, Ostrel covers visits to an out-of-network specialist you were already seeing at the in-network cost share."
+              }
+            ],
+            "dropped_qualifier": "During the first 90 days after your coverage start date",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q11-f10-sup-verbatim",
+            "note": "Deleted only the 90-day period and recapitalised; S1 gives in-network cost share for a current out-of-network specialist only in the first 90 days and no passage says what applies after that, so the undated claim is unsupported, not contradicted."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q11-f11",
+      "items": [
+        {
+          "id": "q11-f11-sup-verbatim",
+          "family_id": "q11-f11",
+          "domain": "ecommerce_shipping_returns_warranty",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "How long do I have to return something I bought from Gildmoor Kitchenware?",
+          "answer": "For purchases made between 1 November and 31 December 2026, the return window is 60 days from delivery.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Gildmoor Kitchenware - Caring for carbon steel pans",
+              "retrieved_at": "2026-10-03",
+              "text": "Carbon steel pans heat quickly, last for decades and become more non-stick the more you cook with them. They need a little more care than stainless steel, but the routine is simple.\n\nBefore first use, wash the pan in hot soapy water to remove the protective wax coating applied at the factory, dry it completely, and season it: wipe a very thin layer of neutral oil over the inside, then heat the pan on the hob until it stops smoking. Repeat this two or three times. The surface will turn brown and then black over the first few months of use, which is normal.\n\nAfter cooking, rinse the pan with hot water and scrub off any stuck food with a brush. Dry it over a low heat and rub in a drop of oil while it is still warm. Avoid soaking the pan or putting it in the dishwasher, because both cause rust.\n\nIf rust does appear, scrub it off with steel wool, rinse, dry, and season the pan again."
+            },
+            {
+              "id": "S2",
+              "title": "Gildmoor Kitchenware - Holiday gifting 2026",
+              "retrieved_at": "2026-10-03",
+              "text": "Buying a gift is easier when you know it can go back if it is not quite right. Here is what you need to know about gifts bought from Gildmoor this holiday season.\n\nReturn window\nFor purchases made between 1 November and 31 December 2026, the return window is 60 days from delivery. To start a return, enter your order number and email address on the Returns page, and we will email you a label for the parcel.\n\nGift receipts\nAdd a gift receipt at checkout and we will leave the prices off the packing slip. The person you give the gift to can use the gift receipt to return it for a Gildmoor gift card, and the return will not be refunded to your payment card.\n\nLast order dates\nTo receive your order before 24 December, order by 16 December for standard delivery or by 21 December for express delivery. Engraved knives and personalised chopping boards take three extra working days, so please order them by 11 December."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "For Gildmoor purchases made between 1 November and 31 December 2026, the return window is 60 days from delivery.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "For purchases made between 1 November and 31 December 2026, the return window is 60 days from delivery."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the return window sentence copied verbatim from S2; the 1 November to 31 December 2026 purchase period is the material date range."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q11-f11-ql-date-range",
+          "family_id": "q11-f11",
+          "domain": "ecommerce_shipping_returns_warranty",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "How long do I have to return something I bought from Gildmoor Kitchenware?",
+          "answer": "The return window is 60 days from delivery.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Gildmoor Kitchenware - Caring for carbon steel pans",
+              "retrieved_at": "2026-10-03",
+              "text": "Carbon steel pans heat quickly, last for decades and become more non-stick the more you cook with them. They need a little more care than stainless steel, but the routine is simple.\n\nBefore first use, wash the pan in hot soapy water to remove the protective wax coating applied at the factory, dry it completely, and season it: wipe a very thin layer of neutral oil over the inside, then heat the pan on the hob until it stops smoking. Repeat this two or three times. The surface will turn brown and then black over the first few months of use, which is normal.\n\nAfter cooking, rinse the pan with hot water and scrub off any stuck food with a brush. Dry it over a low heat and rub in a drop of oil while it is still warm. Avoid soaking the pan or putting it in the dishwasher, because both cause rust.\n\nIf rust does appear, scrub it off with steel wool, rinse, dry, and season the pan again."
+            },
+            {
+              "id": "S2",
+              "title": "Gildmoor Kitchenware - Holiday gifting 2026",
+              "retrieved_at": "2026-10-03",
+              "text": "Buying a gift is easier when you know it can go back if it is not quite right. Here is what you need to know about gifts bought from Gildmoor this holiday season.\n\nReturn window\nFor purchases made between 1 November and 31 December 2026, the return window is 60 days from delivery. To start a return, enter your order number and email address on the Returns page, and we will email you a label for the parcel.\n\nGift receipts\nAdd a gift receipt at checkout and we will leave the prices off the packing slip. The person you give the gift to can use the gift receipt to return it for a Gildmoor gift card, and the return will not be refunded to your payment card.\n\nLast order dates\nTo receive your order before 24 December, order by 16 December for standard delivery or by 21 December for express delivery. Engraved knives and personalised chopping boards take three extra working days, so please order them by 11 December."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "The Gildmoor Kitchenware return window is 60 days from delivery.",
+            "gold_spans": [
+              {
+                "source_id": "S2",
+                "quote": "For purchases made between 1 November and 31 December 2026, the return window is 60 days from delivery."
+              }
+            ],
+            "dropped_qualifier": "For purchases made between 1 November and 31 December 2026",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q11-f11-sup-verbatim",
+            "note": "Deleted only the purchase-date range and recapitalised; S2 gives the 60-day window only for purchases made 1 November to 31 December 2026 and no passage states a return window for other purchases, so the undated claim is unsupported, not contradicted."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    },
+    {
+      "family_id": "q11-f12",
+      "items": [
+        {
+          "id": "q11-f12-sup-verbatim",
+          "family_id": "q11-f12",
+          "domain": "ecommerce_shipping_returns_warranty",
+          "category": "supported",
+          "subcategory": "verbatim",
+          "question": "Does Nettlefield Mattress Co. charge to take away an old mattress?",
+          "answer": "Between 1 March and 31 May 2027, Nettlefield removes your old mattress free of charge when it delivers a new one.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Nettlefield Mattress Co. - Choosing your firmness",
+              "retrieved_at": "2026-10-05",
+              "text": "Nettlefield mattresses come in three firmness levels: Soft, Medium and Firm. The right choice depends mostly on how you sleep and how much you weigh.\n\nSide sleepers usually prefer Soft or Medium, because the shoulders and hips need to sink in a little to keep the spine straight. Back sleepers tend to be most comfortable on Medium. Front sleepers often choose Firm, which stops the hips from sinking and arching the lower back.\n\nHeavier sleepers, around 230 pounds or more, usually find that a firmer option gives better support, and lighter sleepers often find Firm too hard. If two people share a bed and want different firmness levels, our king and California king sizes can be made with a different firmness on each side at no extra charge.\n\nIf you are unsure, Medium suits the widest range of people. You can also visit one of our showrooms to try all three levels before you order."
+            },
+            {
+              "id": "S2",
+              "title": "Nettlefield Mattress Co. - Mattress warranty",
+              "retrieved_at": "2026-10-05",
+              "text": "Every Nettlefield mattress comes with a 15-year warranty against defects in materials and workmanship. The warranty covers body impressions deeper than 1.5 inches that remain when nobody is lying on the mattress, broken or loose coils, and seams that split or come apart.\n\nThe warranty does not cover normal softening of the foam over time, stains, burns, or damage caused by an unsuitable base. Use a slatted base with gaps of no more than 3 inches between slats, a solid platform, or an adjustable base designed for a mattress of this type.\n\nTo make a claim, send us your order number, a description of the problem and photos that show it. For body impressions, lay a straight edge across the mattress and photograph a tape measure at the deepest point. We aim to reply within five business days and will repair or replace the mattress if we confirm a defect.\n\nThe warranty is for the original purchaser and cannot be transferred if the mattress is sold or given away."
+            },
+            {
+              "id": "S3",
+              "title": "Nettlefield Mattress Co. - Spring delivery offer",
+              "retrieved_at": "2026-10-05",
+              "text": "Our two-person delivery team brings your new mattress into the room you choose, unwraps it, places it on your bed frame and takes all of the packaging away with them.\n\nOld mattress removal\nBetween 1 March and 31 May 2027, Nettlefield removes your old mattress free of charge when it delivers a new one. The delivery team carries the old mattress out during the same visit and takes it to a recycling partner, where the steel springs, foam and fabric are separated so they can be reused.\n\nBooking your delivery\nAfter you order, we will email you a link to choose a delivery day. We deliver Monday to Saturday, and on the evening before delivery we send a text with a two-hour time slot. Someone aged 18 or over needs to be at home to let the team in.\n\nGetting ready\nPlease clear a path from the front door to the bedroom before the team arrives, and move any fragile items away from the bed."
+            }
+          ],
+          "gold": {
+            "verdict": "supported",
+            "failure_reason": null,
+            "target_claim": "Between 1 March and 31 May 2027, Nettlefield removes a customer's old mattress free of charge when it delivers a new one.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Between 1 March and 31 May 2027, Nettlefield removes your old mattress free of charge when it delivers a new one."
+              }
+            ],
+            "expected_release": "allow"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": null,
+            "note": "Base claim: the old mattress removal sentence copied verbatim from S3; the 1 March to 31 May 2027 period is the material date range, and the sources were retrieved before it starts."
+          },
+          "ambiguity_flag": false
+        },
+        {
+          "id": "q11-f12-ql-date-range",
+          "family_id": "q11-f12",
+          "domain": "ecommerce_shipping_returns_warranty",
+          "category": "qualifier_loss",
+          "subcategory": "date_range",
+          "question": "Does Nettlefield Mattress Co. charge to take away an old mattress?",
+          "answer": "Nettlefield removes your old mattress free of charge when it delivers a new one.",
+          "sources": [
+            {
+              "id": "S1",
+              "title": "Nettlefield Mattress Co. - Choosing your firmness",
+              "retrieved_at": "2026-10-05",
+              "text": "Nettlefield mattresses come in three firmness levels: Soft, Medium and Firm. The right choice depends mostly on how you sleep and how much you weigh.\n\nSide sleepers usually prefer Soft or Medium, because the shoulders and hips need to sink in a little to keep the spine straight. Back sleepers tend to be most comfortable on Medium. Front sleepers often choose Firm, which stops the hips from sinking and arching the lower back.\n\nHeavier sleepers, around 230 pounds or more, usually find that a firmer option gives better support, and lighter sleepers often find Firm too hard. If two people share a bed and want different firmness levels, our king and California king sizes can be made with a different firmness on each side at no extra charge.\n\nIf you are unsure, Medium suits the widest range of people. You can also visit one of our showrooms to try all three levels before you order."
+            },
+            {
+              "id": "S2",
+              "title": "Nettlefield Mattress Co. - Mattress warranty",
+              "retrieved_at": "2026-10-05",
+              "text": "Every Nettlefield mattress comes with a 15-year warranty against defects in materials and workmanship. The warranty covers body impressions deeper than 1.5 inches that remain when nobody is lying on the mattress, broken or loose coils, and seams that split or come apart.\n\nThe warranty does not cover normal softening of the foam over time, stains, burns, or damage caused by an unsuitable base. Use a slatted base with gaps of no more than 3 inches between slats, a solid platform, or an adjustable base designed for a mattress of this type.\n\nTo make a claim, send us your order number, a description of the problem and photos that show it. For body impressions, lay a straight edge across the mattress and photograph a tape measure at the deepest point. We aim to reply within five business days and will repair or replace the mattress if we confirm a defect.\n\nThe warranty is for the original purchaser and cannot be transferred if the mattress is sold or given away."
+            },
+            {
+              "id": "S3",
+              "title": "Nettlefield Mattress Co. - Spring delivery offer",
+              "retrieved_at": "2026-10-05",
+              "text": "Our two-person delivery team brings your new mattress into the room you choose, unwraps it, places it on your bed frame and takes all of the packaging away with them.\n\nOld mattress removal\nBetween 1 March and 31 May 2027, Nettlefield removes your old mattress free of charge when it delivers a new one. The delivery team carries the old mattress out during the same visit and takes it to a recycling partner, where the steel springs, foam and fabric are separated so they can be reused.\n\nBooking your delivery\nAfter you order, we will email you a link to choose a delivery day. We deliver Monday to Saturday, and on the evening before delivery we send a text with a two-hour time slot. Someone aged 18 or over needs to be at home to let the team in.\n\nGetting ready\nPlease clear a path from the front door to the bedroom before the team arrives, and move any fragile items away from the bed."
+            }
+          ],
+          "gold": {
+            "verdict": "unsupported",
+            "failure_reason": "qualifier_loss",
+            "target_claim": "Nettlefield removes a customer's old mattress free of charge when it delivers a new one.",
+            "gold_spans": [
+              {
+                "source_id": "S3",
+                "quote": "Between 1 March and 31 May 2027, Nettlefield removes your old mattress free of charge when it delivers a new one."
+              }
+            ],
+            "dropped_qualifier": "Between 1 March and 31 May 2027",
+            "expected_release": "revise"
+          },
+          "construction": {
+            "method": "minimal_pair",
+            "base_item": "q11-f12-sup-verbatim",
+            "note": "Deleted only the date range and recapitalised; S3 offers free old-mattress removal only for 1 March to 31 May 2027 and no passage says what removal costs at other times, so the undated claim is unsupported, not contradicted."
+          },
+          "ambiguity_flag": false
+        }
+      ]
+    }
+  ],
+  "standalone": []
+}

@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://xyntherium.com/schemas/verify-gate-ledger-1.0.0.schema.json",
+  "title": "Verify Gate ledger, version 1.0.0",
+  "description": "One document per Verify Gate run, hash-chained and (optionally) cryptographically signed by the configured verifier key. A valid signature establishes integrity and origin for the signed record, not that any claim is true.",
+  "type": "object",
+  "required": ["ledger_version", "kind", "assurance_scope", "run", "cases", "summary", "decision", "chain", "signing", "signature"],
+  "additionalProperties": false,
+  "properties": {
+    "ledger_version": { "const": "1.0.0" },
+    "kind": { "const": "verify-gate-run" },
+    "assurance_scope": { "const": "evidence support for supplied sources only; not a compliance certification, legal assessment, or determination of real-world truth." },
+    "run": {
+      "type": "object",
+      "required": ["run_id", "created_at", "gate_version", "mode", "trigger", "config", "engine", "policy", "sources", "sampling", "cost", "include_text"],
+      "properties": {
+        "run_id": { "type": "string" },
+        "created_at": { "type": "string" },
+        "gate_version": { "type": "string" },
+        "mode": { "enum": ["local", "hosted"] },
+        "trigger": { "type": "string" },
+        "repository": { "type": ["string", "null"] },
+        "commit_sha": { "type": ["string", "null"] },
+        "ref": { "type": ["string", "null"] },
+        "pull_request": { "type": ["integer", "null"] },
+        "workflow_run_id": { "type": ["string", "null"] },
+        "actor": { "type": ["string", "null"] },
+        "config": { "type": "object", "required": ["path", "sha256", "schema_version"] },
+        "engine": { "type": "object", "required": ["core_version", "rules_version", "policy_version", "verify_schema"] },
+        "policy": { "type": "object" },
+        "endpoint": { "type": ["object", "null"], "properties": { "fingerprint": { "type": "string", "pattern": "^[0-9a-f]{64}$" }, "method": { "type": "string" } } },
+        "sources": {
+          "type": "array",
+          "items": { "type": "object", "required": ["id", "path", "sha256", "status"], "properties": { "status": { "enum": ["ok", "hash_mismatch", "missing"] } } }
+        },
+        "sampling": { "type": "object", "required": ["total_cases", "selected_cases", "full_run"] },
+        "cost": { "type": "object", "required": ["billable_units", "cached_cases"] },
+        "include_text": { "type": "boolean" }
+      }
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["suite", "case_id", "location", "status", "question_hash", "claims", "findings", "decision", "reasons", "counts", "billable_units"],
+        "properties": {
+          "status": { "enum": ["checked", "cached", "error", "skipped"] },
+          "decision": { "$ref": "#/definitions/decision" },
+          "question_hash": { "$ref": "#/definitions/sha256" },
+          "answer_hash": { "anyOf": [{ "$ref": "#/definitions/sha256" }, { "type": "null" }] },
+          "claims": { "type": "array", "items": { "$ref": "#/definitions/claim" } },
+          "findings": { "type": "array", "items": { "$ref": "#/definitions/finding" } }
+        }
+      }
+    },
+    "summary": { "type": "object", "required": ["cases_total", "claims_total", "material_failures", "findings_by_rule", "deterministic_findings", "model_findings", "decisions"] },
+    "decision": {
+      "type": "object",
+      "required": ["decision", "enforcement", "fail_on", "exit_code", "conclusion", "title", "reasons", "override"],
+      "properties": {
+        "decision": { "$ref": "#/definitions/decision" },
+        "enforcement": { "enum": ["report_only", "enforce"] },
+        "exit_code": { "enum": [0, 1] },
+        "conclusion": { "enum": ["success", "neutral", "failure"] },
+        "override": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "object", "required": ["actor", "reason", "timestamp", "overridden_claims"], "properties": { "actor": { "type": "string" }, "reason": { "type": "string", "minLength": 10 }, "timestamp": { "type": "string" }, "overridden_claims": { "type": "array" } } }
+          ]
+        }
+      }
+    },
+    "chain": {
+      "type": "object",
+      "required": ["algorithm", "formula", "prev_run_hash", "entries", "head"],
+      "properties": {
+        "algorithm": { "const": "sha256" },
+        "entries": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "type": "object", "required": ["seq", "kind", "payload_hash", "prev_hash", "entry_hash"], "properties": { "kind": { "enum": ["run", "case", "decision"] }, "payload_hash": { "$ref": "#/definitions/sha256" }, "entry_hash": { "$ref": "#/definitions/sha256" } } }
+        },
+        "head": { "$ref": "#/definitions/sha256" }
+      }
+    },
+    "signing": {
+      "type": "object",
+      "required": ["alg", "key_id", "key_source", "wording"],
+      "properties": {
+        "alg": { "enum": ["Ed25519", "none"] },
+        "key_id": { "type": ["string", "null"], "pattern": "^[0-9a-f]{16}$" },
+        "key_source": { "enum": ["repository-secret", "xyntherium-managed", "none"] },
+        "wording": { "const": "cryptographically signed by the configured verifier key" }
+      }
+    },
+    "signature": { "oneOf": [{ "type": "null" }, { "type": "object", "required": ["value", "public_key"], "properties": { "value": { "type": "string" }, "public_key": { "type": "string" } } }] }
+  },
+  "definitions": {
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "decision": { "enum": ["pass", "warn", "hold", "block"] },
+    "claim": {
+      "type": "object",
+      "required": ["index", "origin", "materiality", "claim_hash", "present_in_answer", "verdict", "span_valid", "support_assessment", "qualifier_checks", "resolved_by", "review_required", "deterministic", "spans"],
+      "properties": {
+        "origin": { "enum": ["expected", "answer"] },
+        "materiality": { "enum": ["critical", "high", "medium", "low"] },
+        "verdict": { "enum": ["supported", "contradicted", "unsupported", "unverifiable", null] },
+        "span_valid": { "type": ["boolean", "null"] },
+        "support_assessment": { "enum": ["supported", "contradicted", "unresolved"] },
+        "resolved_by": { "enum": ["code", "model", "deliberation"] },
+        "qualifier_checks": {
+          "type": "array",
+          "items": { "type": "object", "required": ["type", "status", "material", "proposed_by"], "properties": { "status": { "enum": ["preserved", "missing", "conflicting", "ambiguous"] } } }
+        },
+        "spans": {
+          "type": "array",
+          "items": { "type": "object", "required": ["source_id", "start", "end", "role", "source_hash", "quote_hash", "valid"], "properties": { "start": { "type": "integer", "minimum": 0 }, "end": { "type": "integer", "minimum": 0 } } }
+        }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "required": ["rule", "level", "deterministic", "kind", "reason", "decision", "fingerprint"],
+      "properties": {
+        "rule": { "enum": ["XYN-001", "XYN-002", "XYN-003", "XYN-004", "XYN-005", "XYN-006"] },
+        "decision": { "$ref": "#/definitions/decision" },
+        "fingerprint": { "$ref": "#/definitions/sha256" }
+      }
+    }
+  }
+}

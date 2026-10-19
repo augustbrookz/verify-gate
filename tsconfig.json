@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "types": [
+      "node"
+    ],
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "paths": {
+      "@xyntherium/verify-core": [
+        "./packages/verify-core/src/index.ts"
+      ],
+      "@xyntherium/verify-sdk": [
+        "./packages/verify-sdk/src/index.ts"
+      ],
+      "@xyntherium/verify-bench": [
+        "./packages/verify-bench/src/index.ts"
+      ],
+      "@xyntherium/verify-policy": [
+        "./packages/verify-policy/src/index.ts"
+      ],
+      "@xyntherium/verify-parity": [
+        "./packages/verify-parity/src/index.ts"
+      ]
+    },
+    "esModuleInterop": true
+  },
+  "include": [
+    "packages/*/src",
+    "packages/*/test"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "@xyntherium/verify-core",
+  "version": "1.1.0",
+  "description": "Deterministic core of Xyntherium Verify: span matching, qualifier rules, numeric and date checks, verdict and release rules, evidence ledger. No network, no secrets, no dependencies.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.build.json && node ../../scripts/fix-esm-specifiers.mjs dist",
+    "test": "vitest run --root ../.. packages/verify-core"
+  },
+  "keywords": [
+    "rag",
+    "grounding",
+    "citations",
+    "evidence",
+    "verification"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augustbrookz/verify-gate.git",
+    "directory": "packages/verify-core"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://xyntherium.com/developers",
+  "bugs": {
+    "url": "https://github.com/augustbrookz/verify-gate/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

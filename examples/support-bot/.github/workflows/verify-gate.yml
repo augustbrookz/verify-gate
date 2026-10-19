@@ -1,0 +1,26 @@
+# Copy this folder into its own repository to try Verify Gate.
+name: Verify Gate
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+  issue_comment:
+    types: [created]
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+jobs:
+  verify-gate:
+    if: github.event_name != 'issue_comment' || (github.event.issue.pull_request && startsWith(github.event.comment.body, '/verify-override'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Start the app under test
+        run: node bot/server.mjs & sleep 1
+      - uses: augustbrookz/verify-gate@v0
+        with:
+          config: verify-gate.yml
+          fail-on: block

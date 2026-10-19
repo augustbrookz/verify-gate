@@ -1,0 +1,7 @@
+node_modules/
+packages/*/dist/
+!packages/verify-action/dist/
+.xyntherium/
+*.tgz
+.DS_Store
+coverage/

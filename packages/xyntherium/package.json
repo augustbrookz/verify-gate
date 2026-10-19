@@ -1,0 +1,33 @@
+{
+  "name": "xyntherium",
+  "version": "0.1.0",
+  "description": "The `xyntherium` command (npx xyntherium init --policy-gate): a thin wrapper around @xyntherium/verify-cli. Evidence support for supplied sources only; not a compliance certification.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "xyntherium": "bin.mjs"
+  },
+  "files": [
+    "bin.mjs",
+    "README.md"
+  ],
+  "dependencies": {
+    "@xyntherium/verify-cli": "0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augustbrookz/verify-gate.git",
+    "directory": "packages/xyntherium"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "homepage": "https://xyntherium.com/developers",
+  "bugs": {
+    "url": "https://github.com/augustbrookz/verify-gate/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

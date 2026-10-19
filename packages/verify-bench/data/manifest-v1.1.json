@@ -1,0 +1,58 @@
+{
+ "version": "verify-bench-v1.1",
+ "built_from": [
+  "public-shard-01.json",
+  "shard-01.json",
+  "shard-02.json",
+  "shard-03.json",
+  "shard-04.json",
+  "shard-05.json",
+  "shard-06.json",
+  "shard-07.json",
+  "shard-08.json",
+  "shard-10.json",
+  "shard-11.json",
+  "shard-12.json",
+  "shard-9.json"
+ ],
+ "public_sources": [
+  {
+   "file": "data/public-sources/ecfr-2026-10-01.json",
+   "source": "eCFR point-in-time 2026-10-01",
+   "license": "Public domain in the United States (17 U.S.C. § 105)",
+   "sha256": "da9b9f92976ba9739e6296980dc02c8957fda9ddee2d38137a849adfcbe3ae8f"
+  }
+ ],
+ "split_rule": "family-level: parseInt(sha256(family_id)[0..8], 16) % 100 < 60 => dev, else heldout",
+ "counts": {
+  "total": 2672,
+  "published": 2040,
+  "in_review_queue": 632,
+  "by_split": {
+   "dev": 1220,
+   "heldout": 820
+  },
+  "by_category": {
+   "adversarial/arithmetic_missing_input": 10,
+   "adversarial/cherry_picked": 9,
+   "adversarial/citation_wrong_sentence": 10,
+   "adversarial/contradictory_sources": 11,
+   "adversarial/multi_hop": 7,
+   "adversarial/stale_superseded": 11,
+   "adversarial/wrong_date": 11,
+   "adversarial/wrong_entity": 10,
+   "adversarial/wrong_scope": 6,
+   "contradicted": 358,
+   "numeric": 312,
+   "qualifier_loss": 379,
+   "supported": 502,
+   "unsupported": 360,
+   "unverifiable": 44
+  }
+ },
+ "sha256": {
+  "dev": "25320d61d717480ed1002b51b5a30e82adf5e23a6c8cb34fb0741360079986a1",
+  "heldout": "0ee369192836b1704d10f7fae10291e625a7985e48b91f94461a9d5ed820dcb0",
+  "review_queue": "a64df584065af306e628edb3ebd3f7bb4738495c7fbde2e86778866ebe4ff5cc"
+ }
+}

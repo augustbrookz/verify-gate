@@ -1,0 +1,55 @@
+{
+  "name": "@xyntherium/verify-bench",
+  "version": "1.1.0",
+  "description": "Open benchmark for whether a system releases RAG answers the supplied sources do not support. Labels by construction (minimal pairs), held-out enforcement, Wilson intervals.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/types/src/index.d.ts",
+  "files": [
+    "dist",
+    "data/*.json",
+    "data/public-sources",
+    "results",
+    "scripts",
+    "CONSTRUCTION.md",
+    "README.md",
+    "LICENSE",
+    "preregistration.json",
+    "preregistration-v1.1.json"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "build:data": "node scripts/build.mjs",
+    "check:shard": "node scripts/check-shard.mjs"
+  },
+  "dependencies": {
+    "@xyntherium/verify-core": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augustbrookz/verify-gate.git",
+    "directory": "packages/verify-bench"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/src/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "verify-bench-reproduce": "dist/reproduce-cli.js"
+  },
+  "engines": {
+    "node": ">=20.10"
+  },
+  "homepage": "https://xyntherium.com/developers",
+  "bugs": {
+    "url": "https://github.com/augustbrookz/verify-gate/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

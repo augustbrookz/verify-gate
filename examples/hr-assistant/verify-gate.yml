@@ -1,0 +1,76 @@
+# Verify Gate golden set for the Northwind Atelier HR assistant (fictional).
+# Evidence support for supplied sources only; not a compliance certification.
+version: 1
+mode: local
+network_mode: local
+sources:
+  - id: leave
+    path: kb/leave.md
+    version: 2026-09
+    sha256: 26fccd6392a0d0391b1d045a2b455faf829270cc6c1eca9b7fe502278aebbed2
+  - id: expenses
+    path: kb/expenses.md
+    version: 2026-09
+    sha256: 62be5a8d21b796f4024b8bc0584795ce3197e90827592b5c3b46cf57f0fcaefe
+endpoint:
+  url: http://127.0.0.1:8787/ask
+  method: POST
+  body: "{\"question\": \"{{question}}\"}"
+  answer_path: /answer
+  timeout_ms: 5000
+  retries: 1
+policy:
+  enforcement: enforce
+paths:
+  - prompts/**
+  - bot/**
+cost:
+  expected_prs_per_day: 5
+suites:
+  - name: hr
+    cases:
+      - id: vacation-accrual
+        question: How much vacation do I get?
+        material_claims:
+          - claim: Full-time employees accrue 1.5 days of paid vacation per month, up to 18 days per year
+            materiality: critical
+            quote: Full-time employees accrue 1.5 days of paid vacation per month, up to 18 days per year.
+            source: leave
+        sources:
+          - leave
+      - id: carry-over
+        question: Can I carry over unused vacation?
+        material_claims:
+          - claim: Up to 5 unused vacation days can be carried over into the next calendar year
+            materiality: high
+            quote: Up to 5 unused vacation days can be carried over into the next calendar year.
+            source: leave
+        sources:
+          - leave
+      - id: parental-leave
+        question: How long is parental leave?
+        material_claims:
+          - claim: Parental leave is 16 weeks at full pay for employees who have completed 6 months of service
+            materiality: critical
+            quote: Parental leave is 16 weeks at full pay for employees who have completed 6 months of service.
+            source: leave
+        sources:
+          - leave
+      - id: expense-deadline
+        question: When are expense reports due?
+        material_claims:
+          - claim: Expense reports must be submitted within 30 days of the purchase date
+            materiality: high
+            quote: Expense reports must be submitted within 30 days of the purchase date.
+            source: expenses
+        sources:
+          - expenses
+      - id: meal-allowance
+        question: What is the meal allowance when travelling?
+        material_claims:
+          - claim: Meals during business travel are reimbursed up to $60 per day
+            materiality: high
+            quote: Meals during business travel are reimbursed up to $60 per day.
+            source: expenses
+        sources:
+          - expenses

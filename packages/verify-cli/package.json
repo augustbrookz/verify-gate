@@ -1,0 +1,43 @@
+{
+  "name": "@xyntherium/verify-cli",
+  "version": "0.1.0",
+  "description": "xyntherium (alias xyntherium-verify): run Verify Gate locally, draft a golden set or document change tests from your docs, pin sources, and verify signed Gate ledgers offline. Evidence support for supplied sources only; not a compliance certification.",
+  "license": "MIT",
+  "bin": {
+    "xyntherium-verify": "dist/cli.js",
+    "xyntherium": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "keywords": [
+    "rag",
+    "grounding",
+    "ci",
+    "release-gate",
+    "evidence",
+    "verification",
+    "ledger"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augustbrookz/verify-gate.git",
+    "directory": "packages/verify-cli"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "homepage": "https://xyntherium.com/developers",
+  "bugs": {
+    "url": "https://github.com/augustbrookz/verify-gate/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

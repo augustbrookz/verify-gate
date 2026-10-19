@@ -1,0 +1,6 @@
+{
+  "free-tier-limits": "The free tier allows 60 requests per minute and 10,000 requests per day [rate-limits].",
+  "limit-exceeded": "When a limit is exceeded the API returns HTTP 429 with a Retry-After header [rate-limits].",
+  "key-rotation": "Keys can be rotated at any time from the dashboard, and the previous key keeps working for 24 hours after rotation [auth].",
+  "batch-endpoints": "Keys created on the free tier cannot call the batch endpoints [auth]."
+}

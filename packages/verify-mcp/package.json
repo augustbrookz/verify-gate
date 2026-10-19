@@ -1,0 +1,40 @@
+{
+  "name": "@xyntherium/verify-mcp",
+  "version": "1.0.0",
+  "description": "MCP server exposing verify_answer: check whether an AI answer is supported by the sources you gave it (Xyntherium Verify).",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "xyntherium-verify-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "vitest run --root ../.. --config packages/verify-mcp/vitest.config.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "zod": "^4.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augustbrookz/verify-gate.git",
+    "directory": "packages/verify-mcp"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://xyntherium.com/developers",
+  "bugs": {
+    "url": "https://github.com/augustbrookz/verify-gate/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "methodology_sha256": "060dc63d0cbd90a5b07977d537d0c4445fc09945007ab8ed5697c12d0c6b7457",
+  "methodology_commit": "1fd745763edbdb1da6509ca290500aca7e2da591",
+  "committed_at": "2026-10-15T11:54:49Z",
+  "note": "SHA-256 of docs/benchmark-methodology.md at the commit above, recorded before any run read the held-out split."
+}

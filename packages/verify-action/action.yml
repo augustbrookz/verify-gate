@@ -1,0 +1,97 @@
+name: Xyntherium Verify Gate
+description: Fail the pull request when your AI's answers stop being supported by your approved sources. Evidence support for supplied sources only; not a compliance certification.
+author: Xyntherium
+branding:
+  icon: check-square
+  color: orange
+inputs:
+  working-directory:
+    description: Directory the golden set's paths are relative to (for a golden set in a subfolder)
+    required: false
+    default: .
+  config:
+    description: Path to the golden set, relative to the repository root
+    required: false
+    default: verify-gate.yml
+  api-key:
+    description: Xyntherium API key (secrets.XYN_API_KEY). Needed for hosted mode only; local mode needs no key
+    required: false
+    default: ''
+  mode:
+    description: "local (code only, no key) or hosted (model-assisted claim splitting and qualifier analysis). Default: the config's mode, else local"
+    required: false
+    default: ''
+  fail-on:
+    description: "Decisions that fail the job when policy.enforcement is enforce: block, hold, warn (comma-separated), or none"
+    required: false
+    default: block
+  upload-sarif:
+    description: Upload findings to GitHub code scanning (needs security-events write)
+    required: false
+    default: 'true'
+  comment-pr:
+    description: Post or update one pull-request comment with the claims table (needs pull-requests write)
+    required: false
+    default: 'true'
+  artifact-path:
+    description: Directory for the ledger, SARIF and Markdown, written before any GitHub reporting
+    required: false
+    default: .xyntherium
+  signing-key:
+    description: Ed25519 private key for the local ledger signature (secrets.XYN_GATE_SIGNING_KEY; PKCS#8 PEM or base64 seed). Unset = unsigned ledger
+    required: false
+    default: ''
+  github-token:
+    description: Token for the PR comment, check run, SARIF upload and override checks
+    required: false
+    default: ${{ github.token }}
+  base-url:
+    description: Xyntherium API base URL (hosted mode)
+    required: false
+    default: https://xyntherium.com
+  cache-dir:
+    description: Result cache directory (persist it with actions/cache to reuse verdicts for identical inputs at zero units)
+    required: false
+    default: .xyntherium/cache
+  full-run:
+    description: Check every case, ignoring relevant-path filtering and sampling (scheduled runs do this automatically)
+    required: false
+    default: 'false'
+  fixtures:
+    description: "Deprecated (v1): a JSON/JSONL file of {question, answer, sources}. Used only when no verify-gate.yml exists"
+    required: false
+    default: ''
+  allowed-recommendations:
+    description: Deprecated (v1, with fixtures)
+    required: false
+    default: allow
+  max-failures:
+    description: Deprecated (v1, with fixtures)
+    required: false
+    default: '0'
+  concurrency:
+    description: Deprecated (v1, with fixtures)
+    required: false
+    default: '4'
+outputs:
+  decision:
+    description: pass, warn, hold or block
+  ledger-path:
+    description: Path of the Gate ledger (v1.0.0, JSON)
+  sarif-path:
+    description: Path of the SARIF 2.1.0 file
+  claims-total:
+    description: Claims checked in this run
+  material-failures:
+    description: Findings that blocked
+  policy-changed-answers:
+    description: Saved answers the policy-change check found need review (0 when no source changed)
+  total:
+    description: Deprecated (v1 fixtures mode)
+  passed:
+    description: Deprecated (v1 fixtures mode)
+  failed:
+    description: Deprecated (v1 fixtures mode)
+runs:
+  using: node24
+  main: dist/index.js

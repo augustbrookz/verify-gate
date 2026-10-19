@@ -1,0 +1,32 @@
+diff -ru a/kb/promotions.md b/kb/promotions.md
+--- a/kb/promotions.md
++++ b/kb/promotions.md
+@@ -1,3 +1,3 @@
+ # Lumen Desk promotions
+ 
+-New Team plan customers get 20% off their first three months when they sign up through the partner directory. The discount does not apply to add-on seats. Promotions cannot be combined.
++New Team plan customers get 25% off their first three months when they sign up through the partner directory. The discount does not apply to add-on seats. Promotions cannot be combined.
+diff -ru a/kb/refunds.md b/kb/refunds.md
+--- a/kb/refunds.md
++++ b/kb/refunds.md
+@@ -1,3 +1,3 @@
+ # Lumen Desk refund policy
+ 
+-Annual plans can be cancelled for a full refund within 30 days of purchase. Monthly plans are not refundable, but you can cancel at any time and keep access until the end of the billing period. Refunds are issued to the original payment method within 5 business days of approval. Add-on seats bought in the middle of a term are refunded only if they are removed within 7 days of purchase.
++Annual plans can be cancelled for a full refund within 14 days of purchase. Monthly plans are not refundable, but you can cancel at any time and keep access until the end of the billing period. Refunds are issued to the original payment method within 5 business days of approval (annual plans only). Add-on seats bought in the middle of a term are refunded only if they are removed within 7 days of purchase.
+diff -ru a/verify-gate.yml b/verify-gate.yml
+--- a/verify-gate.yml
++++ b/verify-gate.yml
+@@ -7,8 +7,10 @@
+ sources:
+   - id: refunds
+     path: kb/refunds.md
+-    version: 2026-10
+-    sha256: 72e1546c935b33c4f95d521390843cdb10dfa43a3a201d8b62ffb94a14a14ec6
++    version: 2026-11
++    effective_date: "2026-11-01"
++    supersedes: [refunds@2026-10]
++    sha256: c6d6d8b58af3f3f2e5235bf5044b52789acdfde6a1f8dfce3ed5c32a824c8fa0
+   - id: plans
+     path: kb/plans.md
+     version: 2026-10

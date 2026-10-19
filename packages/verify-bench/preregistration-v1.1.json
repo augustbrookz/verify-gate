@@ -1,0 +1,8 @@
+{
+  "version": "verify-bench-v1.1",
+  "methodology_sha256": "4c8cb6050ea42e1f106a9945fe181b1472497e7193258c15654a1ae357a56448",
+  "methodology_file": "docs/benchmark-methodology-v1.1-addendum.md",
+  "methodology_commit": "cb842bb5c2042d253a7e67569f2dcbc3d785488b",
+  "committed_at": "2026-10-18T00:58:53-06:00",
+  "note": "SHA-256 of docs/benchmark-methodology-v1.1-addendum.md at the commit above, recorded before any method read the v1.1 held-out split."
+}
