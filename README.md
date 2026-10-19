@@ -9,6 +9,22 @@ This repository holds the open parts of [Xyntherium Verify](https://xyntherium.c
 
 > Verdicts describe whether the supplied passages support each claim, not whether a claim is true in the world. Evidence support for supplied sources only; not a compliance certification or legal assessment.
 
+## One example
+
+![A support answer drafted by claude-haiku-5-5 (left) and the same answer through verify_answer (right), which names the final-sale exception the answer left out](assets/launch-side-by-side.png)
+
+A support assistant (claude-haiku-5-5, asked for one short sentence) answered a refund question from a store's return policy and left out the final-sale exception. Run the same check yourself. It needs no account and no key, because the published example inputs run free on the hosted server:
+
+```bash
+npx -y @modelcontextprotocol/inspector --cli https://www.xyntherium.com/mcp --transport http \
+  --method tools/call --tool-name verify_answer \
+  --tool-arg 'question=can I get a refund on the jacket I got 2 weeks ago? it doesn'\''t fit' \
+  --tool-arg 'answer=Yes, if it'\''s unworn with tags attached, it'\''s returnable within 30 days of delivery; non-members pay a $7 fee.' \
+  --tool-arg 'sources=[{"id":"returns","title":"Northwind Outfitters: Returns and refunds","text":"Returns and refunds\n\nUnworn items can be returned for a full refund within 30 days of delivery. Items must have their original tags attached.\n\nShipping costs are not refunded. Return shipping is free for Northwind members; other customers pay a $7 return label fee, deducted from the refund.\n\nFinal-sale items, including anything bought in the clearance section, cannot be returned or exchanged.\n\nRefunds are issued to the original payment method within 5 business days of receiving the return. Gift purchases are refunded as store credit."}]'
+```
+
+The exact wording of the result can differ between runs, because the hosted server uses a model to split an answer into claims. The full write-up is at https://xyntherium.com/developers/launch.
+
 ## Quickstart
 
 ```bash
@@ -93,6 +109,8 @@ npx -y -p @xyntherium/verify-core@1.1.0 -p @xyntherium/verify-bench@1.1.0 verify
 ```
 
 This reruns rules 2.1.0 on all 2,040 items (no model, no key, a few seconds) and checks every prediction against the published run files. Method: https://xyntherium.com/verify/benchmark/method.
+
+Those 2,040 items have been scored once per rules version, so they are no longer untouched. On 300 fresh answers scored once, code-only Verify let through 8 of 220 flawed answers (3.6%). AI judges, RAGAS and other checkers ran on the same answers. Every result, including where Verify loses: https://xyntherium.com/verify/benchmark/compare.
 
 ## Develop
 
