@@ -5117,7 +5117,7 @@ var GitHub = class {
   }
   async uploadSarif(sarif) {
     const encoded = (0, import_node_zlib.gzipSync)(Buffer.from(JSON.stringify(sarif))).toString("base64");
-    await this.call("POST", this.repoPath("/code-scanning/sarifs"), { commit_sha: this.ctx.sha, ref: this.ctx.ref, sarif: encoded, tool_name: "Xyntherium Verify Gate" });
+    await this.call("POST", this.repoPath("/code-scanning/sarifs"), { commit_sha: this.ctx.ref_sha || this.ctx.sha, ref: this.ctx.ref, sarif: encoded, tool_name: "Xyntherium Verify Gate" });
   }
   async permissionOf(user) {
     try {
@@ -5185,6 +5185,7 @@ function contextFromEnv(env, token) {
     repo,
     sha: env.XYN_HEAD_SHA ?? env.GITHUB_SHA ?? "",
     ref: env.GITHUB_REF ?? "",
+    ref_sha: env.GITHUB_SHA ?? null,
     pull_number: pull,
     base_sha: env.XYN_BASE_SHA ?? null,
     event_name: env.GITHUB_EVENT_NAME ?? "",

@@ -1,58 +1,41 @@
 /**
- * The Verify MCP server: one tool, verify_answer, a thin wrapper over the
- * same /v1/verify contract as the SDK and the GitHub Action.
+ * The Verify MCP server for stdio (npx @xyntherium/verify-mcp): one tool, verify_answer,
+ * defined, validated and formatted by tool.ts (shared with the hosted server at
+ * https://mcp.xyntherium.com/mcp), calling the same /v1/verify API as the SDK and the
+ * GitHub Action. Checks are metered against your plan and tagged source = mcp.
  */
-import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { z } from 'zod';
-import { Xyntherium, type VerifyResponseBody } from '../../verify-sdk/src/index';
+import { Server } from '@modelcontextprotocol/sdk/server/index.js';
+import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js';
+import { Xyntherium } from '../../verify-sdk/src/index';
+import { formatResult, parseArguments, TOOL, TOOL_NAME } from './tool';
 
-export const TOOL_DESCRIPTION =
-  'Check whether an AI-generated answer is supported by the source passages you supply. Splits the answer into claims and returns, per claim, supported / contradicted / unsupported / unverifiable with the exact quoted span from the sources, plus a release recommendation (allow, cite_required, revise, human_review). Verdicts describe the supplied passages, not truth in the world. Sources must be passage text; URLs are never fetched.';
+export const VERSION = '1.1.0';
+export const INSTRUCTIONS =
+  'Call verify_answer after drafting an answer that restates rules from documents in the conversation (a refund, pricing, eligibility, policy or terms passage) and before sending it. Pass the drafted answer and the passages it relies on. If the result says REVISE, fix what it names and check again; if ASK A PERSON, say what the sources do not settle. Do not call it for chit-chat, for answers with no source text, or to fact-check the world: it checks only against the sources you pass.';
 
-export function summarize(r: VerifyResponseBody): string {
-  const lines = [
-    `release_recommendation: ${r.release_recommendation} (${r.overall_status})`,
-    `claims: ${r.counts.supported} supported, ${r.counts.contradicted} contradicted, ${r.counts.unsupported} unsupported, ${r.counts.unverifiable} unverifiable`,
-  ];
-  for (const c of r.claims) {
-    if (c.verdict === 'supported') continue;
-    const span = c.provenance.spans[0];
-    lines.push(`- ${c.verdict}${c.failure_reason ? ` (${c.failure_reason})` : ''}: "${c.text}"${span ? ` — source ${span.source_id}: "${span.quote}"` : ''}`);
-    for (const q of c.provenance.qualifiers.filter((x) => x.status === 'dropped')) lines.push(`  dropped qualifier: "${q.source_text}"`);
-  }
-  if (r.partial_reasons.length) lines.push(`partial: ${r.partial_reasons.join('; ')}`);
-  lines.push(`request_id: ${r.request_id}; evidence_ledger_id: ${r.evidence_ledger_id ?? 'none'}`);
-  lines.push(r.disclaimer);
-  return lines.join('\n');
+export interface ServerOptions {
+  apiKey: string;
+  baseUrl?: string;
+  fetch?: typeof fetch;
 }
 
-export function createServer(client: Xyntherium): McpServer {
-  const server = new McpServer({ name: 'xyntherium-verify', version: '1.0.0' });
-  server.registerTool(
-    'verify_answer',
-    {
-      title: 'Verify an answer against its sources',
-      description: TOOL_DESCRIPTION,
-      inputSchema: {
-        question: z.string().min(1).describe('The question the answer responds to'),
-        answer: z.string().min(1).describe('The AI-generated answer to check'),
-        sources: z
-          .array(z.object({ id: z.string().min(1), text: z.string().min(1), title: z.string().optional(), retrieved_at: z.string().optional() }))
-          .min(1)
-          .describe('The passages the answer should be grounded in (text, not URLs)'),
-        require_citations: z.boolean().optional().describe('Require each supported claim to cite the passage that supports it'),
-      },
-      annotations: { readOnlyHint: true, openWorldHint: true },
-    },
-    async ({ question, answer, sources, require_citations }) => {
-      try {
-        const result = await client.verify({ question, answer, sources, ...(require_citations ? { options: { require_citations: true } } : {}) });
-        return { content: [{ type: 'text' as const, text: summarize(result) }], structuredContent: result as unknown as Record<string, unknown> };
-      } catch (e) {
-        const message = e instanceof Error ? e.message : 'Verify request failed';
-        return { content: [{ type: 'text' as const, text: `Xyntherium Verify error: ${message}` }], isError: true };
-      }
-    },
-  );
+export function createServer(o: ServerOptions): Server {
+  const server = new Server({ name: 'xyntherium-verify', title: 'Xyntherium Verify', version: VERSION }, { capabilities: { tools: { listChanged: false } }, instructions: INSTRUCTIONS });
+  const client = (mode: 'fast' | 'strict') =>
+    new Xyntherium({ apiKey: o.apiKey, ...(o.baseUrl ? { baseUrl: o.baseUrl } : {}), ...(o.fetch ? { fetch: o.fetch } : {}), headers: { 'X-Xyntherium-Client': `verify-mcp/${VERSION}`, 'X-Xyntherium-Mode': mode } });
+
+  server.setRequestHandler(ListToolsRequestSchema, async () => ({ tools: [TOOL as never] }));
+  server.setRequestHandler(CallToolRequestSchema, async (req) => {
+    if (req.params.name !== TOOL_NAME) return { content: [{ type: 'text', text: `Unknown tool ${req.params.name}; this server has verify_answer.` }], isError: true };
+    const parsed = parseArguments(req.params.arguments);
+    if (!parsed.ok) return { content: [{ type: 'text', text: `Invalid arguments: ${parsed.message}` }], isError: true };
+    try {
+      const result = await client(parsed.mode).verify(parsed.body);
+      const { text, structured } = formatResult(result, parsed.mode);
+      return { content: [{ type: 'text', text }], structuredContent: structured, isError: false };
+    } catch (e) {
+      return { content: [{ type: 'text', text: `Xyntherium Verify could not check this answer: ${e instanceof Error ? e.message : 'request failed'}` }], isError: true };
+    }
+  });
   return server;
 }

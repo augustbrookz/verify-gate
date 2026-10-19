@@ -62,7 +62,7 @@ export function sentencesOf(text: string): string[] {
     const line = raw.trim();
     if (!line || /^(?:#|\||!\[|<|---|>\s*$)/.test(line)) continue;
     const body = line.replace(/^(?:[-*+]|\d+\.)\s+/, '');
-    for (const s of body.split(/(?<=[.!?])\s+(?=[A-Z])/)) {
+    for (const s of splitSentences(body)) {
       const t = s.trim();
       if (t.length >= 40 && t.length <= 300 && /[.!?]$/.test(t) && !/[`[\]]/.test(t) && t.split(/\s+/).length >= 7) out.push(t);
     }
@@ -70,9 +70,30 @@ export function sentencesOf(text: string): string[] {
   return out;
 }
 
+// A full stop after these is not a sentence end ("before 1 p.m. Eastern time").
+const ABBREV = /(?:^|\s)(?:a\.m|p\.m|e\.g|i\.e|etc|vs|no|nos|inc|ltd|co|corp|st|mr|mrs|ms|dr|jr|sr|u\.s|u\.k|approx|min|max|dept|fig|sec|art)\.$/i;
+
+/** Split a line at sentence ends, but not after an abbreviation such as "p.m." or "e.g.". */
+export function splitSentences(body: string): string[] {
+  const out: string[] = [];
+  let start = 0;
+  for (const m of body.matchAll(/(?<=[.!?])\s+(?=[A-Z])/g)) {
+    const before = body.slice(start, m.index);
+    if (ABBREV.test(before)) continue;
+    out.push(before);
+    start = m.index! + m[0].length;
+  }
+  out.push(body.slice(start));
+  return out;
+}
+
+// A topic phrase should not trail off on a number or a joining word ("… delivers within 2").
+const TRAILING = /^(?:\$?\d[\d,.]*%?|a|an|the|and|or|but|of|to|for|in|on|at|by|with|within|before|after|if|than|from|per|is|are|be|can)$/i;
+
 function topicOf(sentence: string): string {
-  const words = sentence.replace(/[.!?]$/, '').split(/\s+/);
-  return words.slice(0, Math.min(8, words.length)).join(' ').replace(/[,;:]$/, '');
+  const words = sentence.replace(/[.!?]$/, '').split(/\s+/).slice(0, 8);
+  while (words.length > 3 && TRAILING.test(words[words.length - 1].replace(/[,;:]$/, ''))) words.pop();
+  return words.join(' ').replace(/[,;:]$/, '');
 }
 
 export function questionFor(sentence: string, title: string): string {

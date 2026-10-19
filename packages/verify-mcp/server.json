@@ -1,0 +1,46 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.xyntherium/verify",
+  "title": "Xyntherium Verify",
+  "description": "Check an AI-drafted answer against its sources: dropped conditions, wrong numbers, unsupported text.",
+  "websiteUrl": "https://xyntherium.com/docs/mcp",
+  "repository": {
+    "url": "https://github.com/augustbrookz/verify-gate",
+    "source": "github",
+    "subfolder": "packages/verify-mcp"
+  },
+  "version": "1.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@xyntherium/verify-mcp",
+      "version": "1.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "XYN_API_KEY",
+          "description": "Your Xyntherium API key (free: 1,000 checks a month) from https://xyntherium.com/account/api-keys",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.xyntherium.com/mcp?src=registry",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <your Xyntherium API key>",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

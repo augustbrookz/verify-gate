@@ -166,3 +166,13 @@ describe('init --policy-gate and document change mode from a terminal', () => {
     expect(report.tests.find((t: { decision: string }) => t.decision === 'block')).toBeTruthy();
   });
 });
+
+describe('init drafting (found in the outside-repository trial, 2026-10-19)', () => {
+  it('does not split a sentence after "p.m." or "e.g.", so a drafted answer keeps its whole condition', async () => {
+    const { sentencesOf, questionFor } = await import('../src/init');
+    const s = sentencesOf('Express shipping costs $15 and delivers within 2 business days if the order is placed before 1 p.m. Eastern time. Standard shipping is free on orders over $50 within the contiguous United States.');
+    expect(s[0]).toBe('Express shipping costs $15 and delivers within 2 business days if the order is placed before 1 p.m. Eastern time.');
+    expect(s).toHaveLength(2);
+    expect(questionFor(s[0], 'Shipping')).not.toMatch(/within 2\?$/);
+  });
+});

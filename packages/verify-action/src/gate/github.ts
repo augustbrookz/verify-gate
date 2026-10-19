@@ -12,8 +12,14 @@ export interface GitHubContext {
   token: string | null;
   owner: string;
   repo: string;
+  /** The commit the run checks: a pull request's head commit (check runs attach to it). */
   sha: string;
   ref: string;
+  /**
+   * The commit GitHub built for `ref` (GITHUB_SHA): on a pull request, the merge commit of
+   * refs/pull/N/merge. Code scanning requires this pair; a head SHA with a merge ref is a 400.
+   */
+  ref_sha?: string | null;
   pull_number: number | null;
   /** The pull request's base commit, for reading a source as it was before the change. */
   base_sha?: string | null;
@@ -119,7 +125,7 @@ export class GitHub {
 
   async uploadSarif(sarif: unknown): Promise<void> {
     const encoded = gzipSync(Buffer.from(JSON.stringify(sarif))).toString('base64');
-    await this.call('POST', this.repoPath('/code-scanning/sarifs'), { commit_sha: this.ctx.sha, ref: this.ctx.ref, sarif: encoded, tool_name: 'Xyntherium Verify Gate' });
+    await this.call('POST', this.repoPath('/code-scanning/sarifs'), { commit_sha: this.ctx.ref_sha || this.ctx.sha, ref: this.ctx.ref, sarif: encoded, tool_name: 'Xyntherium Verify Gate' });
   }
 
   async permissionOf(user: string): Promise<Permission> {
@@ -192,6 +198,7 @@ export function contextFromEnv(env: Record<string, string | undefined>, token: s
     repo,
     sha: env.XYN_HEAD_SHA ?? env.GITHUB_SHA ?? '',
     ref: env.GITHUB_REF ?? '',
+    ref_sha: env.GITHUB_SHA ?? null,
     pull_number: pull,
     base_sha: env.XYN_BASE_SHA ?? null,
     event_name: env.GITHUB_EVENT_NAME ?? '',

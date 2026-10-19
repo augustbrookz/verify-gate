@@ -75,6 +75,7 @@ function opts(root: string, over: Partial<GateRunOptions> = {}): GateRunOptions 
 /** A fake GitHub API recording every call; `fail` makes every write fail. */
 function fakeGitHub(o: { fail?: boolean; files?: string[]; labels?: string[]; labeledBy?: string; comments?: { user: string; body: string }[]; perms?: Record<string, string> } = {}) {
   const calls: string[] = [];
+  const sarifs: { commit_sha: string; ref: string }[] = [];
   const comments: { id: number; body: string; user: { login: string } }[] = (o.comments ?? []).map((c, i) => ({ id: i + 1, body: c.body, user: { login: c.user }, created_at: '2026-10-18T00:00:00Z' })) as never;
   const f = (async (url: string, init?: RequestInit) => {
     const u = new URL(url);
@@ -93,13 +94,19 @@ function fakeGitHub(o: { fail?: boolean; files?: string[]; labels?: string[]; la
     if (/\/issues\/\d+$/.test(u.pathname)) return json({ labels: (o.labels ?? []).map((name) => ({ name })) });
     if (u.pathname.includes('/collaborators/')) return json({ role_name: o.perms?.[decodeURIComponent(u.pathname.split('/')[5])] ?? 'read' });
     if (u.pathname.endsWith('/check-runs')) return json({ id: 1 }, 201);
-    if (u.pathname.endsWith('/code-scanning/sarifs')) return json({ id: 'x' }, 202);
+    if (u.pathname.endsWith('/code-scanning/sarifs')) {
+      const b = JSON.parse(String(init!.body)) as { commit_sha: string; ref: string };
+      sarifs.push(b);
+      // GitHub's rule: a refs/pull/N/merge ref needs the merge commit, not the head commit.
+      if (/^refs\/pull\/\d+\/merge$/.test(b.ref) && b.commit_sha === 'abc') return json({ message: 'commit_sha does not match ref' }, 400);
+      return json({ id: 'x' }, 202);
+    }
     return json({ message: 'not found' }, 404);
   }) as unknown as typeof fetch;
-  return { f, calls, comments };
+  return { f, calls, comments, sarifs };
 }
 
-const gh = { api_url: 'https://api.github.test', token: 'ghs_TOKEN', owner: 'acme', repo: 'support-bot', sha: 'abc', ref: 'refs/pull/7/merge', pull_number: 7, event_name: 'pull_request', actor: 'dev', run_id: '1' };
+const gh = { api_url: 'https://api.github.test', token: 'ghs_TOKEN', owner: 'acme', repo: 'support-bot', sha: 'abc', ref: 'refs/pull/7/merge', ref_sha: 'merge123', pull_number: 7, event_name: 'pull_request', actor: 'dev', run_id: '1' };
 
 describe('verify-gate.yml', () => {
   it('parses a valid golden set and records each case line for SARIF', () => {
@@ -277,6 +284,8 @@ describe('Gate run (local mode)', () => {
     expect(fg.calls.filter((c) => c.startsWith('PATCH /repos/acme/support-bot/issues/comments/'))).toHaveLength(1);
     expect(fg.calls).toContain('POST /repos/acme/support-bot/check-runs');
     expect(fg.calls).toContain('POST /repos/acme/support-bot/code-scanning/sarifs');
+    // SARIF goes to the merge ref with the merge commit (GITHUB_SHA), not the head commit.
+    expect(fg.sarifs[0]).toMatchObject({ ref: 'refs/pull/7/merge', commit_sha: 'merge123' });
   });
 
   it('skips when no relevant file changed', async () => {
@@ -407,5 +416,13 @@ describe('cost control helpers', () => {
     expect(a.length).toBe(20);
     expect(selectCases(cases, { max_cases_per_run: 20, sample_rate: 0.5, seed: 'abc', full_run: true })).toHaveLength(200);
     expect(selectCases(cases, { max_cases_per_run: 20, sample_rate: null, seed: 'def', full_run: false })).not.toEqual(a);
+  });
+});
+
+describe('the GitHub context from the Actions environment', () => {
+  it('keeps the head commit for check runs and the merge commit for SARIF on a pull request', async () => {
+    const { contextFromEnv } = await import('../src/gate/github');
+    const ctx = contextFromEnv({ GITHUB_REPOSITORY: 'acme/support-bot', GITHUB_REF: 'refs/pull/7/merge', GITHUB_SHA: 'merge123', XYN_HEAD_SHA: 'head456', GITHUB_EVENT_NAME: 'pull_request' }, 'ghs_x');
+    expect(ctx).toMatchObject({ sha: 'head456', ref: 'refs/pull/7/merge', ref_sha: 'merge123', pull_number: 7 });
   });
 });
