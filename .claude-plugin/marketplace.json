@@ -1,0 +1,12 @@
+{
+  "name": "verify-gate",
+  "owner": { "name": "Xyntherium", "url": "https://xyntherium.com" },
+  "description": "Xyntherium Verify for Claude: check an answer against its sources before it is sent.",
+  "plugins": [
+    {
+      "name": "xyntherium-verify",
+      "source": "./plugins/xyntherium-verify",
+      "description": "A skill that checks answers restating refund policies, prices, eligibility rules or terms against the source text with verify_answer, and the hosted MCP server it calls."
+    }
+  ]
+}

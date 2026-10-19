@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "xyntherium-verify": {
+      "type": "http",
+      "url": "https://www.xyntherium.com/mcp?src=claude-plugin",
+      "headers": {
+        "Authorization": "Bearer ${user_config.xyn_api_key}"
+      }
+    }
+  }
+}

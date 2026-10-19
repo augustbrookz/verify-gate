@@ -49,6 +49,7 @@ New installations start in **report-only** mode: the Gate comments on the pull r
 | [`verify-mcp`](packages/verify-mcp) | `@xyntherium/verify-mcp` | An MCP server (stdio) exposing `verify_answer`, a client of the hosted API |
 | [`verify-bench`](packages/verify-bench) | `@xyntherium/verify-bench` | The open benchmark: items, labels by construction, the scorer, every published run, and `verify-bench-reproduce` |
 | [`xyntherium`](packages/xyntherium) | `xyntherium` | The `npx xyntherium …` alias for the CLI |
+| [`plugins/xyntherium-verify`](plugins/xyntherium-verify) | Claude plugin | A skill that tells Claude when to call `verify_answer` (and when not to), with the hosted MCP server: `/plugin marketplace add augustbrookz/verify-gate` |
 
 ## What is public and what is not
 

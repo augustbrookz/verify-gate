@@ -1,0 +1,283 @@
+{
+  "tools": [
+    {
+      "name": "verify_answer",
+      "title": "Verify an answer against its sources",
+      "description": "Check whether an AI-drafted answer preserved the conditions, exceptions, dates, limits and eligibility rules in the supplied sources.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "answer": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 20000,
+            "description": "The AI-drafted answer to check, exactly as it would be sent."
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 25,
+            "description": "The passages the answer must follow (policy text, terms, product docs). Text only: URLs are never fetched.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "maxLength": 100,
+                  "description": "A short id to cite this source by (default: s1, s2, …)."
+                },
+                "title": {
+                  "type": "string",
+                  "maxLength": 300
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100000
+                }
+              },
+              "required": [
+                "text"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "question": {
+            "type": "string",
+            "maxLength": 2000,
+            "description": "The user's question, if there was one."
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "fast",
+              "strict"
+            ],
+            "default": "fast",
+            "description": "fast: code checks plus a fast model. strict: also escalates uncertain statements to a stronger model (slower, more thorough)."
+          }
+        },
+        "required": [
+          "answer",
+          "sources"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "send",
+              "cite_sources",
+              "revise",
+              "ask_a_person"
+            ]
+          },
+          "release_recommendation": {
+            "type": "string",
+            "enum": [
+              "allow",
+              "cite_required",
+              "revise",
+              "human_review"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          },
+          "dropped": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "statement": {
+                  "type": "string",
+                  "description": "The statement in the answer"
+                },
+                "source_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The source wording it drops, contradicts or lacks"
+                },
+                "source_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "source_text",
+                "source_id",
+                "reason"
+              ]
+            }
+          },
+          "contradicted": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "statement": {
+                  "type": "string",
+                  "description": "The statement in the answer"
+                },
+                "source_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The source wording it drops, contradicts or lacks"
+                },
+                "source_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "source_text",
+                "source_id",
+                "reason"
+              ]
+            }
+          },
+          "unsupported": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "statement": {
+                  "type": "string",
+                  "description": "The statement in the answer"
+                },
+                "source_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The source wording it drops, contradicts or lacks"
+                },
+                "source_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "source_text",
+                "source_id",
+                "reason"
+              ]
+            }
+          },
+          "unresolved": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "statement": {
+                  "type": "string",
+                  "description": "The statement in the answer"
+                },
+                "source_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The source wording it drops, contradicts or lacks"
+                },
+                "source_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "statement",
+                "source_text",
+                "source_id",
+                "reason"
+              ]
+            }
+          },
+          "statements": {
+            "type": "integer"
+          },
+          "supported": {
+            "type": "integer"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "fast",
+              "strict"
+            ]
+          },
+          "request_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "evidence_ledger_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "rules_version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "verdict",
+          "release_recommendation",
+          "summary",
+          "dropped",
+          "contradicted",
+          "unsupported",
+          "unresolved",
+          "statements",
+          "supported",
+          "mode",
+          "request_id",
+          "evidence_ledger_id",
+          "rules_version"
+        ]
+      },
+      "annotations": {
+        "title": "Verify an answer against its sources",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ]
+}

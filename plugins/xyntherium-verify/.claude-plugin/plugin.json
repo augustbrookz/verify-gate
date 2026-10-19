@@ -1,0 +1,19 @@
+{
+  "name": "xyntherium-verify",
+  "displayName": "Xyntherium Verify",
+  "version": "0.1.0",
+  "description": "Before Claude sends an answer that restates a refund policy, price, eligibility rule or term, it checks the draft against the source text with Xyntherium Verify, and fixes what the check names: a dropped condition, a changed number.",
+  "author": { "name": "Xyntherium", "url": "https://xyntherium.com" },
+  "homepage": "https://xyntherium.com/docs/mcp",
+  "repository": "https://github.com/augustbrookz/verify-gate",
+  "license": "MIT",
+  "keywords": ["verification", "grounding", "rag", "customer-support", "mcp"],
+  "userConfig": {
+    "xyn_api_key": {
+      "type": "string",
+      "title": "Xyntherium API key",
+      "description": "From https://xyntherium.com/account/api-keys (free: 1,000 checks a month)",
+      "sensitive": true
+    }
+  }
+}
