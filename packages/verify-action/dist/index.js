@@ -4119,6 +4119,15 @@ function renderReport(l, o) {
     out.push("");
     if (det.length) out.push("### Deterministic findings (reproduce identically)", "", "| Case | Claim | Rule | Decision | Detail |", "|---|---|---|---|---|", ...det.map((x) => findingRow(x.c, x.f, o.texts[caseKey(x.c)])), "");
     if (model.length) out.push("### Model-dependent findings", "", "| Case | Claim | Rule | Decision | Detail |", "|---|---|---|---|---|", ...model.map((x) => findingRow(x.c, x.f, o.texts[caseKey(x.c)])), "");
+    const changed = [...new Set(findings.filter((x) => x.f.kind === "source_hash_mismatch").map((x) => /: (\S+) sha256 is /.exec(x.f.reason)?.[1]).filter((p) => !!p))];
+    if (changed.length) {
+      out.push(
+        "### A source changed",
+        "",
+        `${changed.map((p) => `\`${cell(p, 120)}\``).join(", ")} changed since the golden set pinned ${changed.length === 1 ? "it" : "them"}, so the cases that use ${changed.length === 1 ? "it" : "them"} hold until someone reviews the change. If the saved answers still hold for the new text, re-pin and commit \`verify-gate.yml\`: \`npx @xyntherium/verify-cli pin\`. If they no longer hold, update the answers and their quotes first, then pin.`,
+        ""
+      );
+    }
     for (const c of cases.filter((x) => x.claims.length)) out.push(evidence(c, o.texts[caseKey(c)]), "");
   }
   out.push(

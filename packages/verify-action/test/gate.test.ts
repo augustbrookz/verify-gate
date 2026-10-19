@@ -245,6 +245,10 @@ describe('Gate run (local mode)', () => {
     expect(r1.exit_code).toBe(0);
     expect(r1.ledger!.cases[0].findings[0]).toMatchObject({ rule: 'XYN-006', kind: 'source_hash_mismatch', decision: 'hold' });
     expect(r1.ledger!.run.sources[0].status).toBe('hash_mismatch');
+    // The summary says what to do (found missing in the outside-repo trial, 2026-10-19).
+    const md = readFileSync(r1.paths.markdown, 'utf8');
+    expect(md).toContain('### A source changed');
+    expect(md).toMatch(/`policies\/refunds\.md` changed since the golden set pinned it[\s\S]*npx @xyntherium\/verify-cli pin/);
     const r2 = await runGate(opts(root, { fail_on: ['block', 'hold'] }));
     expect(r2.exit_code).toBe(1);
   });

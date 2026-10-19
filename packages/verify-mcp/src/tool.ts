@@ -8,7 +8,10 @@
  * check, and the result quotes source text only inside quotation marks, labelled as quoted.
  */
 import { createHash } from 'node:crypto';
+import { missingPart } from './missing';
 import type { VerifyRequestBody, VerifyResponseBody } from '../../verify-sdk/src/index';
+
+export { missingPart };
 
 export const TOOL_NAME = 'verify_answer';
 export const TOOL_DESCRIPTION =
@@ -151,20 +154,6 @@ const REASON: Record<string, string> = {
   out_of_scope: 'is a prediction or judgement the sources cannot settle',
   not_adjudicated: 'needs a model to check; none was used',
 };
-
-/**
- * The part of a dropped source phrase the statement really lacks: leading words the statement
- * already contains are trimmed ("within 30 days for unopened items" against "…within 30 days."
- * → "for unopened items").
- */
-export function missingPart(statement: string, sourceText: string): string {
-  const norm = (x: string) => x.toLowerCase().replace(/[^\p{L}\p{N}$%]+/gu, ' ').trim();
-  const have = ` ${norm(statement)} `;
-  const words = sourceText.trim().split(/\s+/);
-  let k = 0;
-  while (k < words.length - 1 && have.includes(` ${norm(words.slice(0, k + 1).join(' '))} `)) k++;
-  return words.slice(k).join(' ');
-}
 
 /** Quote untrusted text for display: one line, bounded, inside quotation marks. */
 export const quote = (s: string | null | undefined, max = 240): string => {
